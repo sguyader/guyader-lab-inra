@@ -1,9 +1,11 @@
 ---
 title: "Analyse en économétrie"
-output: html_notebook
+output:
+  html_notebook: default
+  pdf_document: default
 ---
 
-Ce script a pour vocation à préparer un jeu de données pour une analyse économétrique. Dans le jeu de données exemple, des agriculteurs sont présentés à des choix de cartes (ici 6 cartes) auxquelles correspondent des attributs. A chaque carte, les agriculteurs ont 3 choix ("0", "A", ou "B").
+Ce script a pour vocation à préparer un jeu de données pour une analyse économétrique. 
 
 La première partie consiste à charger le jeu de données minimal -- 3 agriculteurs (AM01, AM02, AM03), 6 cartes, et 3 attributs de l'agriculteur (Age, Année d'installation, Commune) et à l'inspecter :
 
@@ -11,8 +13,8 @@ La première partie consiste à charger le jeu de données minimal -- 3 agricult
 ign_2018 <- read.csv("ign_2018.csv", header=T)
 attributs <- read.csv("attributs.csv", header=T)
 
-ign_2018
-attributs
+head(ign_2018, n=12)
+head(attributs, n=12)
 ```
 
 Ensuite, on réorganise et on transforme le tableau de manière adéquate pour le traitement statistique futur :
@@ -31,7 +33,7 @@ ign_2018_long <- arrange(ign_2018_long, ident)
 ign_2018_long_rep <- slice(ign_2018_long, rep(1:dplyr::n(), each = 3))
 
 # inspectons
-ign_2018_long_rep
+head(ign_2018_long_rep, n=12)
 ```
 
 
@@ -55,7 +57,7 @@ for (i in seq(1, nrow(ign_2018_long_rep), 3)) { # on incrémente la boucle de 3 
 }
 
 # inspection du tableau
-ign_2018_long_rep
+head(ign_2018_long_rep, n=12)
 ```
 
 Ca fonctionne.
@@ -65,7 +67,8 @@ Enfin, on peut si on veut, réorganiser les colonnes pour retrouver l'ordre init
 ```{r}
 # Réordonner les colonnes
 ign_2018_long_rep <- select(ign_2018_long_rep, ident, Carte:Choix, everything())
-ign_2018_long_rep
+
+head(ign_2018_long_rep, n=12)
 ```
 
 Pour finir, on colle les attributs à droite du tableau :
@@ -81,5 +84,7 @@ stopifnot(nrow(ign_2018_long_rep)==nrow(attributs_long)) # le test échoie avec 
 # coller les 2 tableaux en 1 tableau final
 
 ign_2018_final <- cbind(ign_2018_long_rep, attributs_long)
+
+head(ign_2018_final, n=12)
 ```
 
