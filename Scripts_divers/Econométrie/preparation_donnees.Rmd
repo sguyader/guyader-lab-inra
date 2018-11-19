@@ -1,8 +1,6 @@
 ---
 title: "Analyse en économétrie"
-output:
-  html_document:
-    df_print: paged
+output: html_notebook
 ---
 
 Ce script a pour vocation à préparer un jeu de données pour une analyse économétrique. Dans le jeu de données exemple, des agriculteurs sont présentés à des choix de cartes (ici 6 cartes) auxquelles correspondent des attributs. A chaque carte, les agriculteurs ont 3 choix ("0", "A", ou "B").
