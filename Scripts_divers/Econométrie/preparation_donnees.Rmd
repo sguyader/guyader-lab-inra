@@ -10,9 +10,11 @@ Ce script a pour vocation à préparer un jeu de données pour une analyse écon
 La première partie consiste à charger le jeu de données minimal -- 3 agriculteurs (AM01, AM02, AM03), 6 cartes, et 3 attributs de l'agriculteur (Age, Année d'installation, Commune) et à l'inspecter :
 
 ```{r}
-donn <- read.csv("Test_cavalbio.csv", header=T)
+ign_2018 <- read.csv("ign_2018.csv", header=T)
+attributs <- read.csv("attributs.csv", header=T)
 
-donn
+ign_2018
+attributs
 ```
 
 Ensuite, on réorganise et on transforme le tableau de manière adéquate pour le traitement statistique futur :
@@ -21,17 +23,17 @@ Ensuite, on réorganise et on transforme le tableau de manière adéquate pour l
 library(tidyr) # pour la fonction "gather"
 library(dplyr) # pour les fonctions "arrange" et "slice"
 
-# assembler le tableau selon deux longues colonnes "Carte" et "Choix"
-donn_long <- gather(donn, Carte, Choix, 2:7)
+# assembler le tableau selon deux longues colonnes "Carte" et "Profil"
+ign_2018_long <- gather(ign_2018, Carte, Profil, 3:8)
 
-# classer par ordre croissant du numéro enquête
-donn_long <- arrange(donn_long, Numero)
+# classer par ordre croissant d'identifiant "ident"
+ign_2018_long <- arrange(ign_2018_long, ident)
 
 # répéter chaque ligne 3 fois
-donn_long_rep <- slice(donn_long, rep(1:dplyr::n(), each = 3))
+ign_2018_long_rep <- slice(ign_2018_long, rep(1:dplyr::n(), each = 3))
 
 # inspectons
-donn_long_rep
+ign_2018_long_rep
 ```
 
 
@@ -39,32 +41,32 @@ Ensuite on crée une nouvelle colonne "Choisi" dans laquelle on va, grâce à un
 
 ```{r}
 # Initialiser la colonne "Choisi" avec la valeur "0"
-donn_long_rep$Choisi <- "0"
+ign_2018_long_rep$Choix <- "0"
 
 # Boucle d'attribution de la valeur 1 pour la carte choisie
-for (i in seq(1, nrow(donn_long_rep), 3)) { # on incrémente la boucle de 3 en 3, car chaque ligne est répétée 3 fois
-  if (donn_long_rep[i,"Choix"]=="0") {      # si le choix est "0"...
-    donn_long_rep[i,"Choisi"] <- "1"        # on attribue "1" à la première ligne
+for (i in seq(1, nrow(ign_2018_long_rep), 3)) { # on incrémente la boucle de 3 en 3, car chaque ligne est répétée 3 fois
+  if (ign_2018_long_rep[i,"Profil"]=="0") {      # si le choix est "0"...
+    ign_2018_long_rep[i,"Choix"] <- "1"        # on attribue "1" à la première ligne
   }
-  else if (donn_long_rep[i,"Choix"]=="A") { # si le choix est "A"...
-    donn_long_rep[i+1,"Choisi"] <- "1"      # on attribue "1" à la deuxième ligne
+  else if (ign_2018_long_rep[i,"Profil"]=="1") { # si le choix est "A"...
+    ign_2018_long_rep[i+1,"Choix"] <- "1"      # on attribue "1" à la deuxième ligne
   }
-  else if (donn_long_rep[i,"Choix"]=="B") { # si le choix est "B"...
-    donn_long_rep[i+2,"Choisi"] <- "1"      # on attribue "1" à la troisième ligne
+  else if (ign_2018_long_rep[i,"Profil"]=="2") { # si le choix est "B"...
+    ign_2018_long_rep[i+2,"Choix"] <- "1"      # on attribue "1" à la troisième ligne
   }
 }
 
 # inspection du tableau
-donn_long_rep
+ign_2018_long_rep
 ```
 
-Ca focntionne.
+Ca fonctionne.
 
 Enfin, on peut si on veut, réorganiser les colonnes pour retrouver l'ordre initial :
 
 ```{r}
 # Réordonner les colonnes
-donn_long_rep <- select(donn_long_rep, Numero, Carte:Choisi, everything())
-donn_long_rep
+ign_2018_long_rep <- select(ign_2018_long_rep, ident, Carte:Choix, everything())
+ign_2018_long_rep
 ```
 
