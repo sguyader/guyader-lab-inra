@@ -68,3 +68,18 @@ ign_2018_long_rep <- select(ign_2018_long_rep, ident, Carte:Choix, everything())
 ign_2018_long_rep
 ```
 
+Pour finir, on colle les attributs à droite du tableau :
+
+```{r}
+# on commence par mutliplier le tableau par le nombre d'enquêtés 
+attributs_long <- slice(attributs, rep(1:dplyr::n(), nrow(ign_2018)))
+
+# on vérifie que les 2 tableaux on le même nombre total de lignes :
+
+stopifnot(nrow(ign_2018_long_rep)==nrow(attributs_long)) # le test échoie avec une erreur si les nombres de lignes diffèrent
+
+# coller les 2 tableaux en 1 tableau final
+
+ign_2018_final <- cbind(ign_2018_long_rep, attributs_long)
+```
+
