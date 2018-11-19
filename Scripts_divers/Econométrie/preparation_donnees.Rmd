@@ -1,0 +1,70 @@
+---
+title: "Analyse en économétrie"
+output:
+  html_document:
+    df_print: paged
+---
+
+Ce script a pour vocation à préparer un jeu de données pour une analyse économétrique. Dans le jeu de données exemple, des agriculteurs sont présentés à des choix de cartes (ici 6 cartes) auxquelles correspondent des attributs. A chaque carte, les agriculteurs ont 3 choix ("0", "A", ou "B").
+
+La première partie consiste à charger le jeu de données minimal -- 3 agriculteurs (AM01, AM02, AM03), 6 cartes, et 3 attributs de l'agriculteur (Age, Année d'installation, Commune) et à l'inspecter :
+
+```{r}
+donn <- read.csv("Test_cavalbio.csv", header=T)
+
+donn
+```
+
+Ensuite, on réorganise et on transforme le tableau de manière adéquate pour le traitement statistique futur :
+
+```{r}
+library(tidyr) # pour la fonction "gather"
+library(dplyr) # pour les fonctions "arrange" et "slice"
+
+# assembler le tableau selon deux longues colonnes "Carte" et "Choix"
+donn_long <- gather(donn, Carte, Choix, 2:7)
+
+# classer par ordre croissant du numéro enquête
+donn_long <- arrange(donn_long, Numero)
+
+# répéter chaque ligne 3 fois
+donn_long_rep <- slice(donn_long, rep(1:dplyr::n(), each = 3))
+
+# inspectons
+donn_long_rep
+```
+
+
+Ensuite on crée une nouvelle colonne "Choisi" dans laquelle on va, grâce à une boucle, attribuer la valeur "1" en fonction du choix de chaque agriculteur pour chacune des 6 cartes :
+
+```{r}
+# Initialiser la colonne "Choisi" avec la valeur "0"
+donn_long_rep$Choisi <- "0"
+
+# Boucle d'attribution de la valeur 1 pour la carte choisie
+for (i in seq(1, nrow(donn_long_rep), 3)) { # on incrémente la boucle de 3 en 3, car chaque ligne est répétée 3 fois
+  if (donn_long_rep[i,"Choix"]=="0") {      # si le choix est "0"...
+    donn_long_rep[i,"Choisi"] <- "1"        # on attribue "1" à la première ligne
+  }
+  else if (donn_long_rep[i,"Choix"]=="A") { # si le choix est "A"...
+    donn_long_rep[i+1,"Choisi"] <- "1"      # on attribue "1" à la deuxième ligne
+  }
+  else if (donn_long_rep[i,"Choix"]=="B") { # si le choix est "B"...
+    donn_long_rep[i+2,"Choisi"] <- "1"      # on attribue "1" à la troisième ligne
+  }
+}
+
+# inspection du tableau
+donn_long_rep
+```
+
+Ca focntionne.
+
+Enfin, on peut si on veut, réorganiser les colonnes pour retrouver l'ordre initial :
+
+```{r}
+# Réordonner les colonnes
+donn_long_rep <- select(donn_long_rep, Numero, Carte:Choisi, everything())
+donn_long_rep
+```
+
