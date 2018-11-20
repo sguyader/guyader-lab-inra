@@ -2,12 +2,13 @@
 title: "Analyse en économétrie"
 output:
   html_notebook: default
-  pdf_document: default
+  pdf_document:
+    latex_engine: xelatex
 ---
 
 Ce script a pour vocation à préparer un jeu de données pour une analyse économétrique. 
 
-La première partie consiste à charger le jeu de données minimal -- 3 agriculteurs (AM01, AM02, AM03), 6 cartes, et 3 attributs de l'agriculteur (Age, Année d'installation, Commune) et à l'inspecter :
+La première partie consiste à charger le jeu de données et à l'inspecter :
 
 ```{r}
 ign_2018 <- read.csv("ign_2018.csv", header=T)
@@ -74,7 +75,7 @@ head(ign_2018_long_rep, n=12)
 Pour finir, on colle les attributs à droite du tableau :
 
 ```{r}
-# on commence par mutliplier le tableau par le nombre d'enquêtés 
+# on commence par multiplier le tableau par le nombre d'enquêtés 
 attributs_long <- slice(attributs, rep(1:dplyr::n(), nrow(ign_2018)))
 
 # on vérifie que les 2 tableaux on le même nombre total de lignes :
