@@ -1,11 +1,11 @@
 ---
 title: "Analyse en économétrie"
 output:
-  word_document: default
-  pdf_document:
-    keep_tex: no
-  html_document:
-    df_print: paged
+  html_notebook: default
+  pdf_document: default
+header-includes:
+- \usepackage[sfdefault]{roboto}
+- \usepackage[T1]{fontenc}
 ---
 
 Ce script a pour vocation à préparer un jeu de données pour une analyse économétrique. 
