@@ -1,9 +1,11 @@
 ---
 title: "Analyse en économétrie"
 output:
-  html_notebook: default
+  word_document: default
   pdf_document:
-    latex_engine: xelatex
+    keep_tex: no
+  html_document:
+    df_print: paged
 ---
 
 Ce script a pour vocation à préparer un jeu de données pour une analyse économétrique. 
@@ -45,15 +47,15 @@ Ensuite on crée une nouvelle colonne "Choisi" dans laquelle on va, grâce à un
 ign_2018_long_rep$Choix <- "0"
 
 # Boucle d'attribution de la valeur 1 pour la carte choisie
-for (i in seq(1, nrow(ign_2018_long_rep), 3)) { # on incrémente la boucle de 3 en 3, car chaque ligne est répétée 3 fois
+for (i in seq(1, nrow(ign_2018_long_rep), 3)) {  # on incrémente la boucle de 3 en 3
   if (ign_2018_long_rep[i,"Profil"]=="0") {      # si le choix est "0"...
-    ign_2018_long_rep[i,"Choix"] <- "1"        # on attribue "1" à la première ligne
+    ign_2018_long_rep[i,"Choix"] <- "1"          # on attribue "1" à la première ligne
   }
   else if (ign_2018_long_rep[i,"Profil"]=="1") { # si le choix est "A"...
-    ign_2018_long_rep[i+1,"Choix"] <- "1"      # on attribue "1" à la deuxième ligne
+    ign_2018_long_rep[i+1,"Choix"] <- "1"        # on attribue "1" à la deuxième ligne
   }
   else if (ign_2018_long_rep[i,"Profil"]=="2") { # si le choix est "B"...
-    ign_2018_long_rep[i+2,"Choix"] <- "1"      # on attribue "1" à la troisième ligne
+    ign_2018_long_rep[i+2,"Choix"] <- "1"        # on attribue "1" à la troisième ligne
   }
 }
 
@@ -80,12 +82,17 @@ attributs_long <- slice(attributs, rep(1:dplyr::n(), nrow(ign_2018)))
 
 # on vérifie que les 2 tableaux on le même nombre total de lignes :
 
-stopifnot(nrow(ign_2018_long_rep)==nrow(attributs_long)) # le test échoie avec une erreur si les nombres de lignes diffèrent
+stopifnot(nrow(ign_2018_long_rep)==nrow(attributs_long)) # le test échoie avec une erreur
+                                                         #  si les nombres de lignes diffèrent
 
 # coller les 2 tableaux en 1 tableau final
-
 ign_2018_final <- cbind(ign_2018_long_rep, attributs_long)
 
 head(ign_2018_final, n=12)
 ```
 
+Pour finir, on sauve le tableau dans un fichier csv :
+
+```{r}
+write.csv(ign_2018_final, file="ign_2018_final.csv", row.names=F)
+```
