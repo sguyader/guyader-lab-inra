@@ -116,4 +116,6 @@ Installation et configuration d'Emacs org-mode pour ce journal
 - emacs 26.1 (version modifiée pour Windows, obtenue [[https://vigou3.gitlab.io/emacs-modified-windows/][à partir de cette
   source]])
 **** Travail sur un script pour convertir un tableau (aide à F. Causeret pour Cavalbio)
-
+*** 2018-11-20 Tuesday
+**** Script et tableaux finaux pour l'analyse économétrique envoyés à F. Causeret
+Entered on [2018-11-20 Tue 08:38]
