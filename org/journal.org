@@ -1,4 +1,4 @@
-# -*- mode: org -*-
+﻿# -*- mode: org -*-
 # -*- coding: utf-8 -*-
 #+STARTUP: overview indent inlineimages logdrawer
 #+TITLE:       Journal
@@ -116,6 +116,13 @@ Installation et configuration d'Emacs org-mode pour ce journal
 - emacs 26.1 (version modifiée pour Windows, obtenue [[https://vigou3.gitlab.io/emacs-modified-windows/][à partir de cette
   source]])
 **** Travail sur un script pour convertir un tableau (aide à F. Causeret pour Cavalbio)
+<<<<<<< HEAD
 *** 2018-11-20 Tuesday
 **** Script et tableaux finaux pour l'analyse économétrique envoyés à F. Causeret
 Entered on [2018-11-20 Tue 08:38]
+=======
+	Script et tableaux finaux envoyés à F. causeret
+*** 2018-11-21 mercredi
+**** Test de modification du journal sur mini-PC perso
+Entered on [2018-11-21 mer. 08:45]
+>>>>>>> dca19ef4a1e2e4833af82493e3ce8ce9fa208c2e
