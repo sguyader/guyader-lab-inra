@@ -40,7 +40,7 @@ head(ign_2018_long_rep, n=12)
 ```
 
 
-Ensuite on crée une nouvelle colonne "Choisi" dans laquelle on va, grâce à une boucle, attribuer la valeur "1" en fonction du choix de chaque agriculteur pour chacune des 6 cartes :
+Ensuite on crée une nouvelle colonne "Choix" dans laquelle on va, grâce à une boucle, attribuer la valeur "1" en fonction du profil choisi par chaque agriculteur pour chaque carte :
 
 ```{r}
 # Initialiser la colonne "Choisi" avec la valeur "0"
