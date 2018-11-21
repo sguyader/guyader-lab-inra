@@ -126,3 +126,47 @@ Entered on [2018-11-20 Tue 08:38]
 **** Test de modification du journal sur mini-PC perso
 Entered on [2018-11-21 mer. 08:45]
 >>>>>>> dca19ef4a1e2e4833af82493e3ce8ce9fa208c2e
+**** Recyclage SST
+
+***** Intro :
+
+	- penser à renseigner le "registre santé et sécurité au travail" disponible dans chaque unité, si on a une chose à faire remonter (amélioration, danger potentiel)
+	- document "autorisation de sortie" sans infirmière (disponible sur le site intranet prévention, auprès des AP)
+	- fiche d'appel d'urgence dans chaque unité
+	- site internet www.apo.com
+
+***** Plan d'intervention SST :
+
+***** numéros d'appel :
+	- 15 (SAMU, en priorité si à la maison ou au travail)
+	- 18 (pompiers)
+	- 17 (gendarmerie, sur voie publique)
+	- 112 (numéro européen, y compris en cas d'attaque terroriste)
+	- 114 (texto, pour personnes malentendantes)
+	- 196 (à terre, si on voit un danger en mer)
+
+***** malaise :
+	- communiquer, poser des questions
+	- AVC : inspecter les signes (déformation visage, douleur tête et bras...)
+	- appel :
+		- je me présente, SST, numéro par lequel j'appelle
+		- je décris la situation, le nb de victimes, ce que j'ai fait
+		- le lieu exact
+		- si on envoie une personne à tel endroit
+		- attendre que le service nous dise de raccrocher
+	- si crise d'épilepsie, dégager l'espace et attendre que la crise passe
+
+***** PLS :
+	- si victime inconsciente qui respire
+	- pour dégager les voies respiratoires
+	
+***** Saignements
+	- faire se moucher vigoureusement si saignement de nez, pincer les narines 10 minutes
+	- abondant : Arrêter, Allonger, Alerter
+	- arrêter par compression ; pansement si on doit s'éloigner ; si pansement imbibé au retour, reprendre compression
+	- garrot si besoin de s'absenter pour porter secours à d'autres victimes
+	
+***** Brûlure
+	- thermique ou électrique : arroser par ruissellement
+	- inhalation
+Entered on [2018-11-21 mer. 09:11]
