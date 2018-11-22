@@ -1,11 +1,13 @@
 ---
 title: "Analyse en économétrie"
 output:
-  html_notebook: default
-  pdf_document: default
+  html_document:
+    df_print: paged
+  pdf_document:
+    latex_engine: xelatex
 header-includes:
-- \usepackage[sfdefault]{roboto}
-- \usepackage[T1]{fontenc}
+- \usepackage{fontspec}
+- \setmainfont{Calibri}
 ---
 
 Ce script a pour vocation à préparer un jeu de données pour une analyse économétrique. 
