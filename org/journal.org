@@ -1,14 +1,26 @@
 ﻿# -*- mode: org -*-
 # -*- coding: utf-8 -*-
-#+STARTUP: overview indent inlineimages logdrawer
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+
+#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+#+STARTUP: overview indent inlineimages logdrawerhh
 #+TITLE:       Journal
 #+AUTHOR:      Sébastien Guyader
-#+LANGUAGE:    en
-#+TAGS: LIG(L) HOME(H) Europe(E) Blog(B) noexport(n) Stats(S)
-#+TAGS: Epistemology(E) Vulgarization(V) Teaching(T) R(R) OrgMode(O) Python(P)
-#+EXPORT_SELECT_TAGS: Blog
-#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
-#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+LANGUAGE:    fr
+#+TAGS: export(e) noexport(n) Stats(S)
+#+TAGS: Teaching(T) R(R) OrgMode(O)
+#+OPTIONS:   H:3 num:4 toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:nil
+#+LATEX_COMPILER: xelatex
+#+LATE-CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+LATEX_HEADER: \usepackage[margin=2.5cm]{geometry}
+#+LATEX_HEADER_EXTRA: \usepackage{fontspec}
+#+LATEX_HEADER_EXTRA: \setmainfont{Calibri}
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 #+COLUMNS: %25ITEM %TODO %3PRIORITY %TAGS
@@ -55,6 +67,8 @@ shortcuts. This can be changed from the Options menu.
   - =C-c C-a= attach files
   - =C-c C-d= set a deadl1ine (use =S-arrows= to navigate in the dates)
   - =A-arrows= move subtree (add shift for the whole subtree)
+  - table des matières : ajouter  =#+TOC: headlines 2= à l'endroit
+    souhaité (avec ici 2 niveaux)
 ***** Org-mode Babel (for literate programming)
   - =<s + tab= template for source bloc. You can easily adapt it to get
     this:
@@ -97,76 +111,73 @@ turday
 * 2018
 ** 2018-11 November
 *** 2018-11-17 Saturday
-Installation et configuration d'Emacs org-mode pour ce journal
+**** *Installation et configuration d'Emacs org-mode pour ce journal*
 *** 2018-11-19 Monday
-**** Installation du système complet sur mon mini-pc Windows 10 perso :
-- notepad++ 7.5.9 (à partir du Windows store pour pouvoir le définir
-  comme éditeur de fichiers .txt par défaut)
-- Git 2.19.1
-- R 3.5.1
-- Python 3.7.1
-- Perl (Strawberry) 5.28.0.1
-- ImageMagick 7.0.8 Q16
-- Ghostscript 9.25 (ajout du répertoire du binaire dans la variable
-  d'environnement PATH)
-- MikTex 2.9.6
-- paquet TeX "pdfcrop"
-- Xournal 0.4.8
-- TexMaker 5.0.3
-- emacs 26.1 (version modifiée pour Windows, obtenue [[https://vigou3.gitlab.io/emacs-modified-windows/][à partir de cette
+**** *Installation du système complet sur mon mini-pc Windows 10 perso*
+
+  - notepad++ 7.5.9 (à partir du Windows store pour pouvoir le définir comme éditeur de fichiers .txt par défaut)
+  - Git 2.19.1
+  - R 3.5.1
+  - Python 3.7.1
+  - Perl (Strawberry) 5.28.0.1
+  - ImageMagick 7.0.8 Q16
+  - Ghostscript 9.25 (ajout du répertoire du binaire dans la variable d'environnement PATH)
+  - MikTex 2.9.6
+  - paquet TeX "pdfcrop"
+  - Xournal 0.4.8
+  - TexMaker 5.0.3
+  - emacs 26.1 (version modifiée pour Windows, obtenue [[https://vigou3.gitlab.io/emacs-modified-windows/][à partir de cette
   source]])
-**** Travail sur un script pour convertir un tableau (aide à F. Causeret pour Cavalbio)
-<<<<<<< HEAD
+
+**** *Travail sur un script pour convertir un tableau (aide à F. Causeret pour Cavalbio)* :R:
+
 *** 2018-11-20 Tuesday
-**** Script et tableaux finaux pour l'analyse économétrique envoyés à F. Causeret
-Entered on [2018-11-20 Tue 08:38]
-=======
-	Script et tableaux finaux envoyés à F. causeret
+**** *Script et tableaux finaux pour l'analyse économétrique envoyés à F. Causeret* :R:
+
+**** *Recyclage SST*                                                 :SST:export:
+
+  - Intro :
+    - penser à renseigner le "registre santé et sécurité au travail" disponible dans chaque unité, si on a une chose à faire remonter (amélioration, danger potentiel)
+    - document "autorisation de sortie" sans infirmière (disponible sur le site intranet prévention, auprès des AP)
+    - fiche d'appel d'urgence dans chaque unité
+    - site internet www.apo.com
+
+  - Plan d'intervention SST
+
+  - numéros d'appel :
+    - 15 (SAMU, en priorité si à la maison ou au travail)
+    - 18 (pompiers)
+    - 17 (gendarmerie, sur voie publique)
+    - 112 (numéro européen, y compris en cas d'attaque terroriste)
+    - 114 (texto, pour personnes malentendantes)
+    - 196 (à terre, si on voit un danger en mer)
+
+  - malaise :
+    - communiquer, poser des questions
+    - AVC : inspecter les signes (déformation visage, douleur tête et bras...)
+    - appel :
+      - je me présente, SST, numéro par lequel j'appelle
+      - je décris la situation, le nb de victimes, ce que j'ai fait
+      - le lieu exact
+      - si on envoie une personne à tel endroit
+      - attendre que le service nous dise de raccrocher
+    - si crise d'épilepsie, dégager l'espace et attendre que la crise passe
+
+  - PLS :
+    - si victime inconsciente qui respire
+    - pour dégager les voies respiratoires
+	
+  - Saignements
+    - faire se moucher vigoureusement si saignement de nez, pincer les narines 10 minutes
+    - abondant : Arrêter, Allonger, Alerter
+    - arrêter par compression ; pansement si on doit s'éloigner ; si pansement imbibé au retour, reprendre compression
+    - garrot si besoin de s'absenter pour porter secours à d'autres victimes
+	
+  - Brûlure
+    - thermique ou électrique : arroser par ruissellement
+    - inhalation
+
 *** 2018-11-21 mercredi
-**** Test de modification du journal sur mini-PC perso
-Entered on [2018-11-21 mer. 08:45]
->>>>>>> dca19ef4a1e2e4833af82493e3ce8ce9fa208c2e
-**** Recyclage SST
+**** *Test de modification du journal sur mini-PC perso*         :OrgMode:
 
-***** Intro :
-
-	- penser à renseigner le "registre santé et sécurité au travail" disponible dans chaque unité, si on a une chose à faire remonter (amélioration, danger potentiel)
-	- document "autorisation de sortie" sans infirmière (disponible sur le site intranet prévention, auprès des AP)
-	- fiche d'appel d'urgence dans chaque unité
-	- site internet www.apo.com
-
-***** Plan d'intervention SST :
-
-***** numéros d'appel :
-	- 15 (SAMU, en priorité si à la maison ou au travail)
-	- 18 (pompiers)
-	- 17 (gendarmerie, sur voie publique)
-	- 112 (numéro européen, y compris en cas d'attaque terroriste)
-	- 114 (texto, pour personnes malentendantes)
-	- 196 (à terre, si on voit un danger en mer)
-
-***** malaise :
-	- communiquer, poser des questions
-	- AVC : inspecter les signes (déformation visage, douleur tête et bras...)
-	- appel :
-		- je me présente, SST, numéro par lequel j'appelle
-		- je décris la situation, le nb de victimes, ce que j'ai fait
-		- le lieu exact
-		- si on envoie une personne à tel endroit
-		- attendre que le service nous dise de raccrocher
-	- si crise d'épilepsie, dégager l'espace et attendre que la crise passe
-
-***** PLS :
-	- si victime inconsciente qui respire
-	- pour dégager les voies respiratoires
-	
-***** Saignements
-	- faire se moucher vigoureusement si saignement de nez, pincer les narines 10 minutes
-	- abondant : Arrêter, Allonger, Alerter
-	- arrêter par compression ; pansement si on doit s'éloigner ; si pansement imbibé au retour, reprendre compression
-	- garrot si besoin de s'absenter pour porter secours à d'autres victimes
-	
-***** Brûlure
-	- thermique ou électrique : arroser par ruissellement
-	- inhalation
-Entered on [2018-11-21 mer. 09:11]
+**** *Améliorations au journal / OrgMode*                        :OrgMode:
