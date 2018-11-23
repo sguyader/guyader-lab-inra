@@ -1,19 +1,17 @@
 ﻿# -*- mode: org -*-
 # -*- coding: utf-8 -*-
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
 
-#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
 #+STARTUP: overview indent inlineimages logdrawerhh
+
 #+TITLE:       Journal
 #+AUTHOR:      Sébastien Guyader
 #+LANGUAGE:    fr
-#+TAGS: export(e) noexport(n) Stats(S)
-#+TAGS: Teaching(T) R(R) OrgMode(O)
-#+OPTIONS:   H:3 num:4 toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+TAGS: export(e) noexport(n) 
+#+TAGS: R(R) OrgMode(O) RechRepro(RR) Stats(S) 
+#+TAGS: meeting(m)
+#+OPTIONS:   H:3 num:nil toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:nil
 #+LATEX_COMPILER: xelatex
 #+LATE-CLASS: article
@@ -25,8 +23,9 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 #+COLUMNS: %25ITEM %TODO %3PRIORITY %TAGS
 #+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
-informations were gathered and first demonstrated in my [[https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org][First
-webinar on reproducible research: litterate programming]].
+
+informations were gathered and first demonstrated in my [https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org][First
+webinar on reproducible research: litterate programming].
 ***** Emacs shortcuts
 Here are a few convenient emacs shortcuts for those that have never
 used emacs. In all of the emacs shortcuts, =C=Ctrl=, =M=Alt/Esc= and
@@ -134,7 +133,7 @@ turday
 *** 2018-11-20 Tuesday
 **** *Script et tableaux finaux pour l'analyse économétrique envoyés à F. Causeret* :R:
 
-**** *Recyclage SST*                                                 :SST:export:
+**** *Recyclage SST*                                                 :SST:
 
   - Intro :
     - penser à renseigner le "registre santé et sécurité au travail" disponible dans chaque unité, si on a une chose à faire remonter (amélioration, danger potentiel)
@@ -175,9 +174,38 @@ turday
 	
   - Brûlure
     - thermique ou électrique : arroser par ruissellement
-    - inhalation
-
+    - inhalat
 *** 2018-11-21 mercredi
 **** *Test de modification du journal sur mini-PC perso*         :OrgMode:
 
 **** *Améliorations au journal / OrgMode*                        :OrgMode:
+*** 2018-11-22 Thursday
+**** *Configuration autour de la recherche reproductible*        :RechRepro:
+- lu pas mal de références sur rmarkdown, emacs-OrgMode,
+  bookdown... pour trouver la solution idéale pour la prise de notes
+- installé =bookdown= mais ça paraît compliqué : pas de gestion au jour
+  le jour, ou alors il faut créer un chapitre par jour et/ou activité,
+  ce qui rend ensuite difficile de tout avir sous l'oeil ->
+  emacs-OrgMode gagne haut la main
+- désinstallé TexLive pour installer TinyTeX sous R/RStudio, mais ça
+  casse le fonctionnement de LaTeX avec emacs, donc désinstallé
+  TinyTex et réinstallé TexLive (à partir du site web de TexLive, non
+  pas à partir du gestionnaire de paquets de la distribution Linux)
+- installé la librarie "citr" pour tester l'intégration de références
+  biblio directement depuis Zotero dans un fichier rmarkdown
+- à propos de =bookdown=, j'ai trouvé comment initialiser un nouveau
+  book :
+  - créer un nouveau projet R
+  - dans la console, taper : =bookdown:::bookdown_skeleton(getwd())=
+  - cela va créer un squelette de livre à éditer
+
+Entered on [2018-11-22 Thu 20:23]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+*** 2018-11-23 Friday
+**** *Customisation des templates OrgMode*                         :OrgMode:
+**** *Envoi de la version finale de l'exercice 3 du module 3 pour le MOOC RR* :RechRepro:
+**** *Aide à Laurent Penet sur un script R pour sortie graphique ACP*    :R:
+Entered on [2018-11-23 Fri 16:15]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org::**Envoi%20de%20la%20version%20finale%20de%20l'exercice%203%20du%20module%203%20pour%20le%20MOOC%20RR*][*Envoi de la version finale de l'exercice 3 du module 3 pour le MOOC RR*]]

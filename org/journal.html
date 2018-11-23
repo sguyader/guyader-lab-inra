@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
 <head>
-<!-- 2018-11-21 Wed 22:51 -->
+<!-- 2018-11-23 Fri 10:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Journal</title>
@@ -181,11 +181,7 @@
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -240,11 +236,15 @@ for the JavaScript code in this tag.
 <h2>Table des matières</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org4152ee8">1. 2018</a>
+<li><a href="#org4a18a1f">2018</a>
 <ul>
-<li><a href="#org2f23f50">1.1. 2018-11 November</a>
+<li><a href="#orgc21fd9f">2018-11 November</a>
 <ul>
-<li><a href="#org2b6cbb6">1.1.1. 2018-11-20 Tuesday</a></li>
+<li><a href="#orgc9819df">2018-11-17 Saturday</a></li>
+<li><a href="#org3badb5c">2018-11-19 Monday</a></li>
+<li><a href="#org60fd73d">2018-11-20 Tuesday</a></li>
+<li><a href="#org67e22e5">2018-11-21 mercredi</a></li>
+<li><a href="#orge3af403">2018-11-22 Thursday</a></li>
 </ul>
 </li>
 </ul>
@@ -252,21 +252,178 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org4152ee8" class="outline-2">
-<h2 id="org4152ee8"><span class="section-number-2">1</span> 2018</h2>
-<div class="outline-text-2" id="text-1">
+<p>
+informations were gathered and first demonstrated in my [<a href="https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org">https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org</a>][First
+webinar on reproducible research: litterate programming].
+</p>
+<ul class="org-ul">
+<li><a id="org2f60bb1"></a>Emacs shortcuts<br />
+<div class="outline-text-6" id="text-org2f60bb1">
+<p>
+Here are a few convenient emacs shortcuts for those that have never
+used emacs. In all of the emacs shortcuts, <code>C=Ctrl</code>, <code>M=Alt/Esc</code> and
+<code>S=Shift</code>.  Note that you may want to use two hours to follow the emacs
+tutorial (<code>C-h t</code>). In the configuration file CUA keys have been
+activated and allow you to use classical copy/paste (<code>C-c/C-v</code>)
+shortcuts. This can be changed from the Options menu.
+</p>
+<ul class="org-ul">
+<li><code>C-x C-c</code> exit</li>
+<li><code>C-x C-s</code> save buffer</li>
+<li><code>C-g</code> panic mode ;) type this whenever you want to exit an awful
+series of shortcuts</li>
+<li><code>C-Space</code> start selection marker although selection with shift and
+arrows should work as well</li>
+<li><code>C-l</code> reposition the screen</li>
+<li><code>C-_</code> (or <code>C-z</code> if CUA keys have been activated)</li>
+<li><code>C-s</code> search</li>
+<li><code>M-%</code> replace</li>
+<li><code>C-x C-h</code> get the list of emacs shortcuts</li>
+<li><code>C-c C-h</code> get the list of emacs shortcuts considering the mode you are
+currently using (e.g., C, Lisp, org, &#x2026;)</li>
+<li>With the "<i>reproducible research</i>" emacs configuration, <code>C-x g</code> allows
+you to invoke <a href="https://magit.vc/">Magit</a> (provided you installed it beforehand!) which
+is a nice git interface for Emacs.</li>
+</ul>
+<p>
+There are a bunch of cheatsheets also available out there (e.g.,
+<a href="http://www.shortcutworld.com/en/linux/Emacs_23.2.1.html">this one for emacs</a> and <a href="http://orgmode.org/orgcard.txt">this one for org-mode</a> or this <a href="http://sachachua.com/blog/wp-content/uploads/2013/05/How-to-Learn-Emacs-v2-Large.png">graphical one</a>).
+</p>
 </div>
-<div id="outline-container-org2f23f50" class="outline-3">
-<h3 id="org2f23f50"><span class="section-number-3">1.1</span> 2018-11 November</h3>
-<div class="outline-text-3" id="text-1-1">
+</li>
+<li><a id="org5567dee"></a>Org-mode<br />
+<div class="outline-text-6" id="text-org5567dee">
+<p>
+Many emacs shortcuts start by <code>C-x</code>. Org-mode's shortcuts generaly
+start with <code>C-c</code>.
+</p>
+<ul class="org-ul">
+<li><code>Tab</code> fold/unfold</li>
+<li><code>C-c c</code> capture (finish capturing with <code>C-c C-c</code>, this is explained on
+the top of the buffer that just opened)</li>
+<li><code>C-c C-c</code> do something useful here (tag, execute, &#x2026;)</li>
+<li><code>C-c C-o</code> open link</li>
+<li><code>C-c C-t</code> switch todo</li>
+<li><code>C-c C-e</code> export</li>
+<li><code>M-Enter</code> new item/section</li>
+<li><code>C-c a</code> agenda (try the <code>L</code> option)</li>
+<li><code>C-c C-a</code> attach files</li>
+<li><code>C-c C-d</code> set a deadl1ine (use <code>S-arrows</code> to navigate in the dates)</li>
+<li><code>A-arrows</code> move subtree (add shift for the whole subtree)</li>
+<li>table des matières : ajouter  <code>#+TOC: headlines 2</code> à l'endroit
+souhaité (avec ici 2 niveaux)</li>
+</ul>
 </div>
-<div id="outline-container-org2b6cbb6" class="outline-4">
-<h4 id="org2b6cbb6"><span class="section-number-4">1.1.1</span> 2018-11-20 Tuesday</h4>
-<div class="outline-text-4" id="text-1-1-1">
+</li>
+<li><a id="org6ac99a3"></a>Org-mode Babel (for literate programming)<br />
+<div class="outline-text-6" id="text-org6ac99a3">
+<ul class="org-ul">
+<li><p>
+<code>&lt;s + tab</code> template for source bloc. You can easily adapt it to get
+this:
+</p>
+<pre class="example">
+      #+begin_src shell
+      ls
+      #+end_src
+</pre>
+<p>
+Now if you <code>C-c C-c</code>, it will execute the block.
+</p>
+<pre class="example">
+  #+RESULTS:
+  | #journal.org# |
+  | journal.html  |
+  | journal.org   |
+  | journal.org~  |
+</pre></li>
+
+<li><p>
+Source blocks have many options (formatting, arguments, names,
+sessions,&#x2026;), which is why I have my own shortcuts <code>&lt;b + tab</code> bash
+block (or <code>B</code> for sessions).
+</p>
+<pre class="example">
+  #+begin_src shell :results output :exports both
+  ls /tmp/*201*.pdf
+  #+end_src
+
+  #+RESULTS:
+  : /tmp/2015_02_bordeaux_otl_tutorial.pdf
+  : /tmp/2015-ASPLOS.pdf
+  : /tmp/2015-Europar-Threadmap.pdf
+  : /tmp/europar2016-1.pdf
+  : /tmp/europar2016.pdf
+  : /tmp/M2-PDES-planning-examens-janvier2016.pdf
+</pre></li>
+<li>I have defined many such templates in my configuration. You can
+give a try to <code>&lt;r</code>, <code>&lt;R</code>, <code>&lt;RR</code>, <code>&lt;g</code>, <code>&lt;p</code>, <code>&lt;P</code>, <code>&lt;m</code> &#x2026;</li>
+<li>Some of these templates are not specific to babel: e.g., <code>&lt;h</code>, <code>&lt;l</code>,
+<code>&lt;L</code>, <code>&lt;c</code>, <code>&lt;e</code>, &#x2026;</li>
+</ul>
+<p>
+turday
+</p>
 </div>
-<ol class="org-ol">
-<li><a id="org0c34867"></a><b>Recyclage SST</b><br />
-<div class="outline-text-5" id="text-1-1-1-1">
+</li>
+</ul>
+
+<div id="outline-container-org4a18a1f" class="outline-2">
+<h2 id="org4a18a1f">2018</h2>
+<div class="outline-text-2" id="text-org4a18a1f">
+</div>
+<div id="outline-container-orgc21fd9f" class="outline-3">
+<h3 id="orgc21fd9f">2018-11 November</h3>
+<div class="outline-text-3" id="text-orgc21fd9f">
+</div>
+<div id="outline-container-orgc9819df" class="outline-4">
+<h4 id="orgc9819df">2018-11-17 Saturday</h4>
+<div class="outline-text-4" id="text-orgc9819df">
+</div>
+<ul class="org-ul">
+<li><a id="org9bd4bf6"></a><b>Installation et configuration d'Emacs org-mode pour ce journal</b><br /></li>
+</ul>
+</div>
+<div id="outline-container-org3badb5c" class="outline-4">
+<h4 id="org3badb5c">2018-11-19 Monday</h4>
+<div class="outline-text-4" id="text-org3badb5c">
+</div>
+<ul class="org-ul">
+<li><a id="org98fcff9"></a><b>Installation du système complet sur mon mini-pc Windows 10 perso</b><br />
+<div class="outline-text-5" id="text-org98fcff9">
+<ul class="org-ul">
+<li>notepad++ 7.5.9 (à partir du Windows store pour pouvoir le définir comme éditeur de fichiers .txt par défaut)</li>
+<li>Git 2.19.1</li>
+<li>R 3.5.1</li>
+<li>Python 3.7.1</li>
+<li>Perl (Strawberry) 5.28.0.1</li>
+<li>ImageMagick 7.0.8 Q16</li>
+<li>Ghostscript 9.25 (ajout du répertoire du binaire dans la variable d'environnement PATH)</li>
+<li>MikTex 2.9.6</li>
+<li>paquet TeX "pdfcrop"</li>
+<li>Xournal 0.4.8</li>
+<li>TexMaker 5.0.3</li>
+<li>emacs 26.1 (version modifiée pour Windows, obtenue [[<a href="https://vigou3.gitlab.io/emacs-modified-windows/">https://vigou3.gitlab.io/emacs-modified-windows/</a>][à partir de cette</li>
+</ul>
+<p>
+source]])
+</p>
+</div>
+</li>
+
+<li><a id="orge27b766"></a><b>Travail sur un script pour convertir un tableau (aide à F. Causeret pour Cavalbio)</b><br /></li>
+</ul>
+</div>
+
+<div id="outline-container-org60fd73d" class="outline-4">
+<h4 id="org60fd73d">2018-11-20 Tuesday</h4>
+<div class="outline-text-4" id="text-org60fd73d">
+</div>
+<ul class="org-ul">
+<li><a id="orge798e67"></a><b>Script et tableaux finaux pour l'analyse économétrique envoyés à F. Causeret</b><br /></li>
+
+<li><a id="org0093ddd"></a><b>Recyclage SST</b><br />
+<div class="outline-text-5" id="text-org0093ddd">
 <ul class="org-ul">
 <li>Intro :
 <ul class="org-ul">
@@ -320,19 +477,69 @@ for the JavaScript code in this tag.
 <li>Brûlure
 <ul class="org-ul">
 <li>thermique ou électrique : arroser par ruissellement</li>
-<li>inhalation</li>
+<li>inhalat</li>
 </ul></li>
 </ul>
 </div>
 </li>
-</ol>
+</ul>
+</div>
+<div id="outline-container-org67e22e5" class="outline-4">
+<h4 id="org67e22e5">2018-11-21 mercredi</h4>
+<div class="outline-text-4" id="text-org67e22e5">
+</div>
+<ul class="org-ul">
+<li><a id="orgdc01cc8"></a><b>Test de modification du journal sur mini-PC perso</b><br /></li>
+
+<li><a id="org6d6a4a9"></a><b>Améliorations au journal / OrgMode</b><br /></li>
+</ul>
+</div>
+<div id="outline-container-orge3af403" class="outline-4">
+<h4 id="orge3af403">2018-11-22 Thursday</h4>
+<div class="outline-text-4" id="text-orge3af403">
+</div>
+<ul class="org-ul">
+<li><a id="org7451cef"></a><b>Configuration autour de la recherche reproductible</b><br />
+<div class="outline-text-5" id="text-org7451cef">
+<ul class="org-ul">
+<li>lu pas mal de références sur rmarkdown, emacs-OrgMode,
+bookdown&#x2026; pour trouver la solution idéale pour la prise de notes</li>
+<li>installé <code>bookdown</code> mais ça paraît compliqué : pas de gestion au jour
+le jour, ou alors il faut créer un chapitre par jour et/ou activité,
+ce qui rend ensuite difficile de tout avir sous l'oeil -&gt;
+emacs-OrgMode gagne haut la main</li>
+<li>désinstallé TexLive pour installer TinyTeX sous R/RStudio, mais ça
+casse le fonctionnement de LaTeX avec emacs, donc désinstallé
+TinyTex et réinstallé TexLive (à partir du site web de TexLive, non
+pas à partir du gestionnaire de paquets de la distribution Linux)</li>
+<li>installé la librarie "citr" pour tester l'intégration de références
+biblio directement depuis Zotero dans un fichier rmarkdown</li>
+<li>à propos de <code>bookdown</code>, j'ai trouvé comment initialiser un nouveau
+book :
+<ul class="org-ul">
+<li>créer un nouveau projet R</li>
+<li>dans la console, taper : <code>bookdown:::bookdown_skeleton(getwd())</code></li>
+<li>cela va créer un squelette de livre à éditer</li>
+</ul></li>
+</ul>
+
+<p>
+Entered on <span class="timestamp-wrapper"><span class="timestamp">[2018-11-22 Thu 20:23]</span></span>
+</p>
+
+<p>
+<a href="file:///home/sguyader/TRAVAIL/github/guyader-lab-inra/org/journal.html">file:///home/sguyader/TRAVAIL/github/guyader-lab-inra/org/journal.html</a>
+</p>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Auteur: Sébastien Guyader</p>
-<p class="date">Created: 2018-11-21 Wed 22:51</p>
+<p class="date">Created: 2018-11-23 Fri 10:03</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
