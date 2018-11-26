@@ -232,3 +232,7 @@ Entered on [2018-11-23 Fri 16:15]
 Entered on [2018-11-26 Mon 11:00]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org::**Aide%20%C3%A0%20Laurent%20Penet%20sur%20un%20script%20R%20pour%20sortie%20graphique%20ACP*][*Aide à Laurent Penet sur un script R pour sortie graphique ACP*]]
+**** *Fin de configuration d'emacs OrgMode sur minpc perso*
+Entered on [2018-11-26 lun. 15:48]
+  
+  [[file:~/Documents/guyader-lab-inra/org/journal.org]]
