@@ -4,13 +4,20 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
+;(setq load-prefer-newer t)
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 
+;(when window-system (set-frame-size (selected-frame) 220 55))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 (require 'org-install)
 (require 'org)
 (require 'ox-pandoc)
+
+(require 'golden-ratio)
+(golden-ratio-mode 1)
 
 (setq inhibit-splash-screen t)
 
@@ -274,6 +281,8 @@ before runnind ant hen run the `cua--precommand-handler'"
 (global-set-key (kbd "C-c <left>") 'outline-previous-visible-heading)
 (global-set-key (kbd "C-c <right>") 'outline-next-visible-heading)
 
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; In org-mode 9 you need to have #+PROPERTY: header-args :eval never-export 
 ;; in the beginning or your document to tell org-mode not to evaluate every 
 ;; code block every time you export.
@@ -344,4 +353,7 @@ before runnind ant hen run the `cua--precommand-handler'"
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(custom-enabled-themes (quote (leuven)))
  '(package-selected-packages (quote (auctex htmlize ess-view ess-R-data-view ess org))))
