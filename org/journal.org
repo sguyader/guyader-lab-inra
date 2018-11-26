@@ -133,8 +133,22 @@ turday
 *** 2018-11-20 Tuesday
 **** *Script et tableaux finaux pour l'analyse économétrique envoyés à F. Causeret* :R:
 
-**** *Recyclage SST*                                                 :SST:
+**** *Recyclage SST*                                                   :SST:
 
+- State "DEFERRED"   from "CANCELLED"  [2018-11-26 Mon 11:14]
+- State "CANCELLED"  from "DONE"       [2018-11-26 Mon 11:14]
+- State "DONE"       from "APPT"       [2018-11-26 Mon 11:14]
+- State "APPT"       from "WAITING"    [2018-11-26 Mon 11:14]
+- State "STARTED"    from "TODO"       [2018-11-26 Mon 11:13]
+- State "TODO"       from              [2018-11-26 Mon 11:13]
+- State "DEFERRED"   from "CANCELLED"  [2018-11-26 Mon 11:13]
+- State "CANCELLED"  from "DONE"       [2018-11-26 Mon 11:13]
+- State "DONE"       from "APPT"       [2018-11-26 Mon 11:13]
+- State "APPT"       from "WAITING"    [2018-11-26 Mon 11:13]
+- State "APPT"       from "DONE"       [2018-11-26 Mon 11:12]
+- State "DONE"       from "CANCELLED"  [2018-11-26 Mon 11:12]
+- State "CANCELLED"  from "DEFERRED"   [2018-11-26 Mon 11:12]
+- State "DEFERRED"   from              [2018-11-26 Mon 11:12]
   - Intro :
     - penser à renseigner le "registre santé et sécurité au travail" disponible dans chaque unité, si on a une chose à faire remonter (amélioration, danger potentiel)
     - document "autorisation de sortie" sans infirmière (disponible sur le site intranet prévention, auprès des AP)
@@ -209,3 +223,12 @@ Entered on [2018-11-22 Thu 20:23]
 Entered on [2018-11-23 Fri 16:15]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org::**Envoi%20de%20la%20version%20finale%20de%20l'exercice%203%20du%20module%203%20pour%20le%20MOOC%20RR*][*Envoi de la version finale de l'exercice 3 du module 3 pour le MOOC RR*]]
+*** 2018-11-26 Monday
+**** *Setup sur emacs :*
+- installation des paquets :
+  - magit : gestion du dépôt git depuis emacs
+  - golden-ratio : gestion auto des tailles de fenêtres
+  - ox-pandoc : options multiples d'export
+Entered on [2018-11-26 Mon 11:00]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org::**Aide%20%C3%A0%20Laurent%20Penet%20sur%20un%20script%20R%20pour%20sortie%20graphique%20ACP*][*Aide à Laurent Penet sur un script R pour sortie graphique ACP*]]
