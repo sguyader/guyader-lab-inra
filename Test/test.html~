@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-11-23 Fri 08:50 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A reproducible comparison between  GNU MPFR and machine double-precision</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Paul Zimmermann (reproduction with org-mode by Arnaud Legrand)" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">A reproducible comparison between  GNU MPFR and machine double-precision</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0dc1984">1. Reproducible Experimental Setup</a>
+<ul>
+<li><a href="#org76b3e2d">1.1. Experimental Results From Arnaud Legrand</a>
+<ul>
+<li><a href="#orgb831681">1.1.1. Code</a></li>
+<li><a href="#org11b8fe6">1.1.2. Setup</a></li>
+<li><a href="#orgfd04796">1.1.3. A first measurement</a></li>
+<li><a href="#orgaeb415d">1.1.4. A second measurement</a></li>
+</ul>
+</li>
+<li><a href="#org33e093a">1.2. References</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+Local version
+</p>
+
+<p>
+Several authors claim that GNU MPFR [1] is \(x\) times slower than
+double-precision floating-point numbers, for various values of \(x\),
+without any way for the reader to reproduce their claim. For example
+in [2], Joris van der Hoeven writes “the MPFR library for arbitrary
+precision and IEEE-style standardized floating-point arithmetic is
+typically about a factor 100 slower than double precision machine
+arithmetic”. Such a claim typically: (i) does not say which version of
+MPFR was used (and which version of GMP, since MPFR being based on
+GMP, its efficiency also depends on GMP); (ii) does not detail the
+environment used (processor, compiler, operating system); (iii) does
+not explain which application was used for the comparison. Therefore
+it cannot be reproduced by the reader, which could thus have no
+confidence in the claimed factor of 100. In this short note we provide
+reproducible figures that can be checked by the reader.
+</p>
+
+<div id="outline-container-org0dc1984" class="outline-2">
+<h2 id="org0dc1984"><span class="section-number-2">1</span> Reproducible Experimental Setup</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+We use the programs in appendix to multiply two \(1000 × 1000\)
+matrices. The matrix \(A\) has coefficients \(1/(i + j + 1)\) for \(0 ≤ i,
+j < 1000\), and matrix \(b\) has coefficients \(1/(ij + 1)\). Both programs
+print the time for the matrix product (not counting the time to
+initialize the matrix), and the sum of coefficients of the product
+matrix (used as a simple checksum between both programs).  
+</p>
+
+<p>
+We used MFPR version 3.1.5, configured with GMP 6.1.2 (both are the
+latest releases as of the date of this document).  
+</p>
+
+<p>
+We used as test processor <code>gcc12.fsffrance.org</code>, which is a machine from
+the GCC Compile Farm, a set of machines available for developers of
+free software. The compiler used was GCC 4.5.1, which is installed in
+<code>/opt/cfarm/release/4.5.1</code> on this machine, with optimization level
+<code>-O3</code>. Both GMP and MPFR were also compiled with this compiler, and the
+GMP and MPFR libraries were linked statically with the application
+programs (given in appendix).
+</p>
+</div>
+
+<div id="outline-container-org76b3e2d" class="outline-3">
+<h3 id="org76b3e2d"><span class="section-number-3">1.1</span> Experimental Results From Arnaud Legrand</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgb831681" class="outline-4">
+<h4 id="orgb831681"><span class="section-number-4">1.1.1</span> Code</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+The program (<code>a.c</code>) using the C double-precision type is the
+following. It takes as command-line argument the matrix dimension.
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdio.h&gt;</span>
+<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdlib.h&gt;</span>
+<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;sys/types.h&gt;</span>
+<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;sys/resource.h&gt;</span> 
+
+<span style="color: #a020f0;">static</span> <span style="color: #228b22;">int</span> <span style="color: #0000ff;">cputime</span>()
+{
+  <span style="color: #a020f0;">struct</span> <span style="color: #228b22;">rusage</span> <span style="color: #a0522d;">rus</span>;
+  getrusage(0, &amp;rus);
+  <span style="color: #a020f0;">return</span> rus.ru_utime.tv_sec * 1000 + rus.ru_utime.tv_usec / 1000;
+}
+
+<span style="color: #228b22;">int</span> <span style="color: #0000ff;">main</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">argc</span>, <span style="color: #228b22;">char</span> *<span style="color: #a0522d;">argv</span>[])
+{
+  <span style="color: #228b22;">double</span> **<span style="color: #a0522d;">a</span>;
+  <span style="color: #228b22;">double</span> **<span style="color: #a0522d;">b</span>;
+  <span style="color: #228b22;">double</span> **<span style="color: #a0522d;">c</span>;
+  <span style="color: #228b22;">double</span> <span style="color: #a0522d;">t</span> = 0.0;
+  <span style="color: #228b22;">int</span> <span style="color: #a0522d;">i</span>, <span style="color: #a0522d;">j</span>, <span style="color: #a0522d;">k</span>, <span style="color: #a0522d;">st</span>;
+  <span style="color: #228b22;">int</span> <span style="color: #a0522d;">N</span> = atoi(argv[1]);
+  st = cputime();
+  a = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(<span style="color: #228b22;">double</span> *));
+  b = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(<span style="color: #228b22;">double</span> *));
+  c = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(<span style="color: #228b22;">double</span> *));
+  <span style="color: #a020f0;">for</span> (i = 0; i &lt; N; i++) {
+    a[i] = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(<span style="color: #228b22;">double</span>));
+    b[i] = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(<span style="color: #228b22;">double</span>));
+    c[i] = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(<span style="color: #228b22;">double</span>));
+    <span style="color: #a020f0;">for</span> (j = 0; j &lt; N; j++) {
+      a[i][j] = 1.0 / (1.0 + i + j);
+      b[i][j] = 1.0 / (1.0 + i * j);
+    }
+  }
+  st = cputime();
+  <span style="color: #a020f0;">for</span> (i = 0; i &lt; N; i++)
+    <span style="color: #a020f0;">for</span> (j = 0; j &lt; N; j++)
+      c[i][j] = 0.0;
+  <span style="color: #a020f0;">for</span> (i = 0; i &lt; N; i++)
+    <span style="color: #a020f0;">for</span> (k = 0; k &lt; N; k++)
+      <span style="color: #a020f0;">for</span> (j = 0; j &lt; N; j++)
+        c[i][j] += a[i][k] * b[k][j];
+  <span style="color: #a020f0;">for</span> (i = 0; i &lt; N; i++)
+    <span style="color: #a020f0;">for</span> (j = 0; j &lt; N; j++)
+      t += c[i][j];
+  printf(<span style="color: #8b2252;">"matrix product took %dms\n"</span>, cputime() - st);
+  printf(<span style="color: #8b2252;">"t=%f\n"</span>, t);
+  <span style="color: #a020f0;">for</span> (i = 0; i &lt; N; i++) {
+    free(a[i]);
+    free(b[i]);
+    free(c[i]);
+  }
+  free(a);
+  free(b);
+  free(c);
+  <span style="color: #a020f0;">return</span> 0;
+}
+</pre>
+</div>
+
+<p>
+The program (<code>d.c</code>) using GNU MPFR is the following. It takes as
+command-line argument the matrix dimension and the MPFR precision (in
+bits).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdio.h&gt;</span>
+<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;stdlib.h&gt;</span>
+<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;sys/types.h&gt;</span>
+<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;sys/resource.h&gt;</span> 
+<span style="color: #483d8b;">#include</span> <span style="color: #8b2252;">&lt;mpfr.h&gt;</span>
+
+<span style="color: #a020f0;">static</span> <span style="color: #228b22;">int</span> <span style="color: #0000ff;">cputime</span>()
+{
+  <span style="color: #a020f0;">struct</span> <span style="color: #228b22;">rusage</span> <span style="color: #a0522d;">rus</span>;
+  getrusage(0, &amp;rus);
+  <span style="color: #a020f0;">return</span> rus.ru_utime.tv_sec * 1000 + rus.ru_utime.tv_usec / 1000;
+}
+
+<span style="color: #228b22;">int</span> <span style="color: #0000ff;">main</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">argc</span>, <span style="color: #228b22;">char</span> *<span style="color: #a0522d;">argv</span>[])
+{
+  <span style="color: #228b22;">mpfr_t</span> **<span style="color: #a0522d;">a</span>;
+  <span style="color: #228b22;">mpfr_t</span> **<span style="color: #a0522d;">b</span>;
+  <span style="color: #228b22;">mpfr_t</span> **<span style="color: #a0522d;">c</span>;
+  <span style="color: #228b22;">mpfr_t</span> <span style="color: #a0522d;">s</span>;
+  <span style="color: #228b22;">double</span> <span style="color: #a0522d;">t</span> = 0.0;
+  <span style="color: #228b22;">int</span> <span style="color: #a0522d;">i</span>, <span style="color: #a0522d;">j</span>, <span style="color: #a0522d;">k</span>, <span style="color: #a0522d;">st</span>;
+  <span style="color: #228b22;">int</span> <span style="color: #a0522d;">N</span> = atoi(argv[1]);
+  <span style="color: #228b22;">int</span> <span style="color: #a0522d;">prec</span> = atoi(argv[2]);
+  printf(<span style="color: #8b2252;">"MPFR library: %-12s\nMPFR header: %s (based on %d.%d.%d)\n"</span>,
+         mpfr_get_version(), MPFR_VERSION_STRING, MPFR_VERSION_MAJOR,
+         MPFR_VERSION_MINOR, MPFR_VERSION_PATCHLEVEL);
+  st = cputime();
+  a = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(<span style="color: #228b22;">mpfr_t</span> *));
+  b = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(<span style="color: #228b22;">mpfr_t</span> *));
+  c = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(<span style="color: #228b22;">mpfr_t</span> *));
+  mpfr_init2(s, prec);
+  <span style="color: #a020f0;">for</span> (i = 0; i &lt; N; i++) {
+    a[i] = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(mpfr_t));
+    b[i] = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(mpfr_t));
+    c[i] = malloc(<span style="color: #228b22;">N</span> * <span style="color: #a020f0;">sizeof</span>(mpfr_t));
+    <span style="color: #a020f0;">for</span> (j = 0; j &lt; N; j++) {
+      mpfr_init2(a[i][j], prec);
+      mpfr_init2(b[i][j], prec);
+      mpfr_init2(c[i][j], prec);
+      mpfr_set_ui(a[i][j], 1, MPFR_RNDN);
+      mpfr_div_ui(a[i][j], a[i][j], i + j + 1, MPFR_RNDN);
+      mpfr_set_ui(b[i][j], 1, MPFR_RNDN);
+      mpfr_div_ui(b[i][j], b[i][j], i * j + 1, MPFR_RNDN);
+    }
+  }
+  st = cputime();
+  <span style="color: #a020f0;">for</span> (i = 0; i &lt; N; i++)
+    <span style="color: #a020f0;">for</span> (j = 0; j &lt; N; j++)
+      mpfr_set_ui(c[i][j], 0, MPFR_RNDN);
+  <span style="color: #a020f0;">for</span> (i = 0; i &lt; N; i++)
+    <span style="color: #a020f0;">for</span> (k = 0; k &lt; N; k++)
+      <span style="color: #a020f0;">for</span> (j = 0; j &lt; N; j++) {
+        mpfr_mul(s, a[i][k], b[k][j], MPFR_RNDN);
+        mpfr_add(c[i][j], c[i][j], s, MPFR_RNDN);
+      }
+  <span style="color: #a020f0;">for</span> (i = 0; i &lt; N; i++)
+    <span style="color: #a020f0;">for</span> (j = 0; j &lt; N; j++)
+      t += mpfr_get_d(c[i][j], MPFR_RNDN);
+  printf(<span style="color: #8b2252;">"matrix product took %dms\n"</span>, cputime() - st);
+  printf(<span style="color: #8b2252;">"t=%f\n"</span>, t);
+  <span style="color: #a020f0;">for</span> (i = 0; i &lt; N; i++) {
+    <span style="color: #a020f0;">for</span> (j = 0; j &lt; N; j++) {
+      mpfr_clear(a[i][j]);
+      mpfr_clear(b[i][j]);
+      mpfr_clear(c[i][j]);
+    }
+    free(a[i]);
+    free(b[i]);
+    free(c[i]);
+  }
+  mpfr_clear(s);
+  free(a);
+  free(b);
+  free(c);
+  <span style="color: #a020f0;">return</span> 0;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org11b8fe6" class="outline-4">
+<h4 id="org11b8fe6"><span class="section-number-4">1.1.2</span> Setup</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li><p>
+Name of the machine and OS version:
+</p>
+<pre class="example">
+Linux sama 4.2.0-1-amd64 #1 SMP Debian 4.2.6-1 (2015-11-10) x86_64 GNU/Linux
+
+</pre></li>
+
+<li><p>
+CPU/architecture information:
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">  cat /proc/cpuinfo
+</pre>
+</div>
+
+<pre class="example">
+  processor	: 0
+  vendor_id	: GenuineIntel
+  cpu family	: 6
+  model		: 58
+  model name	: Intel(R) Core(TM) i7-3687U CPU @ 2.10GHz
+  stepping	: 9
+  microcode	: 0x15
+  cpu MHz		: 2165.617
+  cache size	: 4096 KB
+  physical id	: 0
+  siblings	: 4
+  core id		: 0
+  cpu cores	: 2
+  apicid		: 0
+  initial apicid	: 0
+  fpu		: yes
+  fpu_exception	: yes
+  cpuid level	: 13
+  wp		: yes
+  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt
+  bugs		:
+  bogomips	: 5182.68
+  clflush size	: 64
+  cache_alignment	: 64
+  address sizes	: 36 bits physical, 48 bits virtual
+  power management:
+
+  processor	: 1
+  vendor_id	: GenuineIntel
+  cpu family	: 6
+  model		: 58
+  model name	: Intel(R) Core(TM) i7-3687U CPU @ 2.10GHz
+  stepping	: 9
+  microcode	: 0x15
+  cpu MHz		: 3140.515
+  cache size	: 4096 KB
+  physical id	: 0
+  siblings	: 4
+  core id		: 1
+  cpu cores	: 2
+  apicid		: 2
+  initial apicid	: 2
+  fpu		: yes
+  fpu_exception	: yes
+  cpuid level	: 13
+  wp		: yes
+  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt
+  bugs		:
+  bogomips	: 5182.68
+  clflush size	: 64
+  cache_alignment	: 64
+  address sizes	: 36 bits physical, 48 bits virtual
+  power management:
+
+  processor	: 2
+  vendor_id	: GenuineIntel
+  cpu family	: 6
+  model		: 58
+  model name	: Intel(R) Core(TM) i7-3687U CPU @ 2.10GHz
+  stepping	: 9
+  microcode	: 0x15
+  cpu MHz		: 2860.000
+  cache size	: 4096 KB
+  physical id	: 0
+  siblings	: 4
+  core id		: 0
+  cpu cores	: 2
+  apicid		: 1
+  initial apicid	: 1
+  fpu		: yes
+  fpu_exception	: yes
+  cpuid level	: 13
+  wp		: yes
+  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt
+  bugs		:
+  bogomips	: 5182.68
+  clflush size	: 64
+  cache_alignment	: 64
+  address sizes	: 36 bits physical, 48 bits virtual
+  power management:
+
+  processor	: 3
+  vendor_id	: GenuineIntel
+  cpu family	: 6
+  model		: 58
+  model name	: Intel(R) Core(TM) i7-3687U CPU @ 2.10GHz
+  stepping	: 9
+  microcode	: 0x15
+  cpu MHz		: 2813.585
+  cache size	: 4096 KB
+  physical id	: 0
+  siblings	: 4
+  core id		: 1
+  cpu cores	: 2
+  apicid		: 3
+  initial apicid	: 3
+  fpu		: yes
+  fpu_exception	: yes
+  cpuid level	: 13
+  wp		: yes
+  flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt
+  bugs		:
+  bogomips	: 5182.68
+  clflush size	: 64
+  cache_alignment	: 64
+  address sizes	: 36 bits physical, 48 bits virtual
+  power management:
+
+</pre></li>
+
+<li><p>
+Compiler version
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">  gcc --version
+</pre>
+</div>
+
+<pre class="example">
+gcc (Debian 5.3.1-6) 5.3.1 20160114
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+</pre></li>
+
+<li><p>
+Libpmfr version:
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">  apt-cache show libmpfr-dev  
+</pre>
+</div>
+
+<pre class="example">
+  Package: libmpfr-dev
+  Source: mpfr4
+  Version: 3.1.5-1
+  Installed-Size: 1029
+  Maintainer: Debian GCC Maintainers &lt;debian-gcc@lists.debian.org&gt;
+  Architecture: amd64
+  Replaces: libgmp3-dev (&lt;&lt; 4.1.4-3)
+  Depends: libgmp-dev, libmpfr4 (= 3.1.5-1)
+  Suggests: libmpfr-doc
+  Breaks: libgmp3-dev (&lt;&lt; 4.1.4-3)
+  Description-en: multiple precision floating-point computation developers tools
+   This development package provides the header files and the symbolic
+   links to allow compilation and linking of programs that use the libraries
+   provided in the libmpfr4 package.
+   .
+   MPFR provides a library for multiple-precision floating-point computation
+   with correct rounding.  The computation is both efficient and has a
+   well-defined semantics. It copies the good ideas from the
+   ANSI/IEEE-754 standard for double-precision floating-point arithmetic
+   (53-bit mantissa).
+  Description-md5: a2580b68a7c6f1fcadeefc6b17102b32
+  Multi-Arch: same
+  Homepage: http://www.mpfr.org/
+  Tag: devel::lang:c, devel::library, implemented-in::c, role::devel-lib,
+   suite::gnu
+  Section: libdevel
+  Priority: optional
+  Filename: pool/main/m/mpfr4/libmpfr-dev_3.1.5-1_amd64.deb
+  Size: 207200
+  MD5sum: e5c7872461f263e27312c9ef4f4218b9
+  SHA256: 279970e210c7db4e2550f5a3b7abb2674d01e9f0afd2a4857f1589a6947e0cbd
+
+</pre></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfd04796" class="outline-4">
+<h4 id="orgfd04796"><span class="section-number-4">1.1.3</span> A first measurement</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #483d8b;">cd</span> /tmp/
+gcc -O3 a.c -o a
+./a 1000
+</pre>
+</div>
+
+<pre class="example">
+matrix product took 680ms
+t=9062.368470
+
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #483d8b;">cd</span> /tmp/
+gcc -O3 d.c -o d -lmpfr
+./d 1000 53
+</pre>
+</div>
+
+<pre class="example">
+MPFR library: 3.1.5
+MPFR header: 3.1.5 (based on 3.1.5)
+matrix product took 74460ms
+t=9062.368470
+
+</pre>
+
+<p>
+Et donc, chez moi, le ratio est plutôt de
+</p>
+<div class="org-src-container">
+<pre class="src src-R">74460/844
+</pre>
+</div>
+
+<pre class="example">
+[1] 88.22275
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgaeb415d" class="outline-4">
+<h4 id="orgaeb415d"><span class="section-number-4">1.1.4</span> A second measurement</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+Ceci étant dit, si je reexécute ces deux codes:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #483d8b;">cd</span> /tmp/
+gcc -O3 a.c -o a
+./a 1000
+</pre>
+</div>
+
+<pre class="example">
+matrix product took 676ms
+t=9062.368470
+
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #483d8b;">cd</span> /tmp/
+gcc -O3 d.c -o d -lmpfr
+./d 1000 53
+</pre>
+</div>
+
+<pre class="example">
+MPFR library: 3.1.5
+MPFR header: 3.1.5 (based on 3.1.5)
+matrix product took 68732ms
+t=9062.368470
+
+</pre>
+
+<p>
+J'obtiens une valeur assez différente qui me donnerait cette fois ci
+un ratio de
+</p>
+<div class="org-src-container">
+<pre class="src src-R">68732/676
+</pre>
+</div>
+
+<pre class="example">
+[1] 101.6746
+
+</pre>
+
+<p>
+c'est à dire "plus proche" de ce qui est annoncé dans [2] mais c'est
+un coup de chance, j'aurais tout aussi bien pu obtenir 120 !  Bref,
+c'est pas le même setup que vous mais statistiquement parlant, il doit
+aussi y avoir quelque chose à faire là, non ?
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org33e093a" class="outline-3">
+<h3 id="org33e093a"><span class="section-number-3">1.2</span> References</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+[1] Fousse, L., Hanrot, G., Lefèvre, V., Pélissier, P., and
+Zimmermann, P. MPFR: A multiple-precision binary floating- point
+library with correct rounding. ACM Trans. Math. Softw. 33, 2 (2007),
+article 13.
+</p>
+
+<p>
+[2] van der Hoeven, J. Multiple precision floating-point arithmetic on
+SIMD processors. In Proceedings of Arith’24 (2017), IEEE, pp. 2–9.
+</p>
+
+<p>
+Entered on <span class="timestamp-wrapper"><span class="timestamp">[2017-09-01 Fri 17:12]</span></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Paul Zimmermann (reproduction with org-mode by Arnaud Legrand)</p>
+<p class="date">Created: 2018-11-23 Fri 08:50</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
