@@ -1,0 +1,17 @@
+---
+title: "Titre"
+author: "Sébastien Guyader"
+date: "`r format(Sys.Date(), '%Y %B %d')`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    fig_width: 5
+    fig_height: 5
+mainfont: Calibri
+fontsize: 12pt
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(dev.args=list(pointsize=10))
+```

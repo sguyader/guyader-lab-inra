@@ -1,0 +1,89 @@
+---
+title: "Titre"
+author: "Sébastien Guyader"
+date: "`r format(Sys.Date(), '%Y %B %d')`"
+output:
+  pdf_document:
+    fig_height: 5
+    fig_width: 5
+    latex_engine: xelatex
+  html_document:
+    df_print: paged
+mainfont: Calibri
+fontsize: 12pt
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(dev.args=list(pointsize=10))
+```
+
+## Iris data
+
+The iris data set gives data on the dimensions of sepals and petals measured on 50 samples of three different species of iris (setosa, versicolor and virginica).
+
+```{r}
+library(partykit)
+```
+
+We will construct a model of iris species as a function of the other covariates.
+
+```{r}
+iris.ct <- ctree(Species ~ .,data = iris)
+plot(iris.ct)
+```
+
+Get the node p-values.
+
+```{r}
+nodeapply(iris.ct, ids = nodeids(iris.ct),
+  FUN = function(n) info_node(n)$p.value
+  )
+```
+
+The structure of the tree is essentially the same. Only the representation of the nodes differs because, whereas ozone was a continuous numerical variable, iris species is a categorical variable. The nodes are thus represented as bar plots. Node 2 is predominantly setosa, node 5 is mostly versicolor and node 7 is almost all viriginica. Node 6 is half versicolor and half virginica and corresponds to a category with long, narrow petals. It is interesting to note that the model depends only on the dimensions of the petals and not on those of the sepals.
+
+We can assess the quality of the model by constructing a confusion matrix. This shows that the model performs perfectly for setosa irises. For versicolor it also performs very well, only classifying one sample incorrectly as a virginica. For virginica it fails to correctly classify 5 samples. The model seems to perform well overall, however, this is based on the training data, so it is not really an objective assessment!
+
+```{r}
+table(iris$Species, predict(iris.ct), dnn = c("Actual species",
+                                              "Predicted species"))
+```
+
+Finally, we can use the model to predict the species for new data (no need to specify sepal length and width as they ar not use by the model).
+
+```{r}
+new.iris <- data.frame(Sepal.Length=rep(0,5), Sepal.Width=rep(0,5),
+Petal.Length=c(1,4,5,4,5), Petal.Width=c(1,2,1,1,2))
+predict(iris.ct, newdata = new.iris)
+predict(iris.ct, newdata = new.iris, type="node")
+```
+
+## Air Quality data
+
+Load Air quality dataset:
+```{r}
+airq <- subset(airquality, !is.na(Ozone))
+airct <- ctree(Ozone ~ ., data = airq)
+print(airct)
+```
+
+Summarize the data (TODO : use dplyr::summarise)
+```{r}
+tapply(airq$Ozone, predict(airct, type = "node"), function(y)
+  c("n" = length(y), "Avg." = mean(y),
+  "Variance" = var(y), "SSE" = sum((y - mean(y))^2))
+  )
+```
+
+Test the significance of changes:
+```{r}
+library("strucchange")
+
+sctest(airct)
+
+nodeapply(airct, ids = nodeids(airct), FUN = function(n) info_node(n))
+
+plot(airct)
+
+```

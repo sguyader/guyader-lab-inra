@@ -1,0 +1,88 @@
+---
+title: "Rotation de graphiques et extraction de légende (ggplot2)"
+author: "Sébastien Guyader"
+date: "`r format(Sys.Date(), '%Y %B %d')`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+  html_document:
+    df_print: paged
+fontsize: 12pt
+mainfont: Calibri
+fig_width: 5
+fig_height: 5
+---
+  
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(dev.args=list(pointsize=10))
+```
+
+
+L'objectif de ce script est de pouvoir pivoter arbitrairement des graphiques de type "grid" (par exemple, carte 2D d'une parcelle que l'on souhaite orienter selon un axe nord-sud).
+Pour l'exemple, on génère 4 grilles correspondand à une parcelle, avec `x` et `y` comme coordonnées spatiales, et `z` comme données (générées aléatoirement pour simuler une évolution dans le temps).
+Le souci est que la légende se retrouve sur le 4 graphiques, alors qu'on n'en veut qu'une seule.
+
+La fonction ci-dessous va :
+1. extraire (copier) et retirer la légende
+2. faire la rotation et afficher les graphiques
+3. afficher la légende commune
+
+Générons les données :
+```{r}
+set.seed(123)
+data <- data.frame(month=factor(rep(c("march","april","may","june"), each=100), levels=c("march","april","may","june")),
+                  x=rep(rep(1:10, each=10), 4),
+                  y=rep(rep(1:10, 10), 4),
+                  z=c(rnorm(100, 0.5, 1), rnorm(100, 3, 1.5), rnorm(100, 6, 2), rnorm(100, 9, 1)))
+```
+
+Maintenant on charge les librairies nécessaires :
+```{r}
+library(grid)
+library(gridExtra)
+library(ggplot2)
+```
+
+Voici une fonctin qui permet d'extraire la légende d'un graphique (Source: http://stackoverflow.com/questions/12539348/ggplot-separate-legend-and-plot):
+```{r}
+g_legend <- function(a.gplot){
+  tmp <- ggplot_gtable(ggplot_build(a.gplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  legend
+}
+```
+
+On réalise le graphique (en fait 4 graphiques, 1 pour chaque mois) :
+
+```{r, warning=FALSE}
+pl <- lapply(unique(data$month), function(m) {
+  p1 <- ggplot(data[data$month==m,], aes(x=x, y=y, fill=z)) +
+    geom_raster() +
+    scale_fill_gradient2(low="white", high="red", 
+                         limits=c(floor(min(data$z)), ceiling(max(data$z)))) +
+    scale_x_discrete(limit=1:10, expand = c(0, 0)) +
+    scale_y_discrete(limit=1:10, expand = c(0, 0)) +
+    coord_equal(ratio=1) +
+    facet_wrap(~month) +
+    theme_bw() +
+    theme(axis.text.x = element_text(angle = 20, vjust = 1, hjust=1)) +
+    theme(axis.text.y = element_text(angle = 20, hjust=0.5))
+  
+  # Extract legend into global environment
+  leg <<- g_legend(p1)
+  
+  # Remove legend from plot
+  p1 <- p1 + guides(fill=FALSE)
+  
+  # Return rotated plot
+  editGrob(ggplotGrob(p1), vp=viewport(angle=-20, width=unit(0.85,"npc"), 
+                                       height=unit(0.85,"npc")))                    
+})
+
+#png("rotated.png", 1100, 1000)
+grid.arrange(do.call(arrangeGrob, c(pl, ncol=2)),
+             leg, ncol=2, widths=c(0.9,0.1))
+#dev.off()
+```

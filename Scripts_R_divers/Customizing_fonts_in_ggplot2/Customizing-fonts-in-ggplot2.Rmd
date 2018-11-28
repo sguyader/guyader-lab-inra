@@ -1,0 +1,60 @@
+---
+title: "Titre"
+author: "Sébastien Guyader"
+date: "`r format(Sys.Date(), '%Y %B %d')`"
+output:
+  pdf_document:
+    fig_height: 5
+    fig_width: 5
+    latex_engine: xelatex
+  html_document:
+    df_print: paged
+mainfont: Calibri
+fontsize: 12pt
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(dev.args=list(pointsize=10))
+```
+
+Summarise a dataset and make a graph with error bars.
+Load the ToothGrowth data (tooth growth ('len') as function of supplement type ('supp') and dose ('dose')).
+
+Load the required packages.
+```{r, message=FALSE}
+library(tidyverse)
+library(grid)
+library(extrafont)
+
+tg <- ToothGrowth
+```
+
+Summarize the data set grouped by 'supp' and 'dose'.
+
+```{r}
+tg_summarised <- tg %>% group_by(supp, dose) %>% summarise(
+  N=n(),
+  length=mean(len),
+  sd=sd(len),
+  se=sd/sqrt(N),
+  ci.student=qt(0.975,df=N-1)*se
+)
+```
+
+Load extra fonts to be called in ggplot2 (type fonts() to get a list of available fonts)
+
+```{r, message=FALSE}
+loadfonts(device="pdf")
+```
+
+Generate the plot with Comic Sans MS font family.
+
+```{r}
+ggplot(tg_summarised, aes(x=dose, y=length, colour=supp)) + 
+  geom_errorbar(aes(ymin=length-se, ymax=length+se), width=.1) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  theme(text=element_text(family="Impact"))
+```
