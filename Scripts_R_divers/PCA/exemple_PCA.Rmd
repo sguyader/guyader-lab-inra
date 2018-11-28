@@ -1,0 +1,198 @@
+---
+title: 'Principal Component Analysis'
+author: 'Dataset CG.host_modif'
+output:
+  html_document: default
+---
+This dataset contains 30 individuals and 21 variables.
+
+- - -
+
+```{r, echo = FALSE}
+load('Workspace.RData')
+library(FactoMineR)
+```
+### 1. Study of the outliers
+The analysis of the graphs leads to detect an outlier that strongly influences the results. First we will describe this outlier and then we will suppress it from the analysis.
+Looking at the graph, we can note that a particular individual strongly contributes to the construction of the plane. Its contribution to the construction of the plane equals **38.9%**.
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <-
+integer(0)
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.PCA(memory, choix = 'ind', invisible = c('var', 'quali'), select = drawn, title = '', cex = cex)
+```
+
+**Figure 1.1 - Individuals factor map (PCA) before correction.** 
+*Highlighting of an outlier.* 
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <- integer(0)
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.PCA(res, choix = 'ind', invisible = c('var', 'quali'), select = drawn, title = '', cex = cex)
+```
+
+**Figure 1.2 - Individuals factor map (PCA) after correction.** 
+*Highlighting of an outlier.* 
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <- c("Composed.leaflets", "Simple.leaflets", "Height.max..cm.", 
+"ovate.shape", "toothed.border", "Petiole.max..mm.", "obtuse.apex"
+)
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.PCA(memory, choix = 'var', select = drawn, title = '', cex = cex)
+```
+
+**Figure 1.3 - Variables factor map (PCA) before correction**
+*The labeled variables are those the best shown on the plane.*
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <- c("Composed.leaflets", "Simple.leaflets", "Height.max..cm.", 
+"ovate.shape", "toothed.border", "Petiole.max..mm.", "obtuse.apex"
+)
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.PCA(res, choix = 'var', select = drawn, title = '', cex = cex)
+```
+
+**Figure 1.3 - Variables factor map (PCA) after correction**
+
+- - -
+
+**The individual 1** :
+
+- takes very high values for the variable(s) :
+*Petiole.max..mm.*, *Lenght.max..cm.*, *lobed.border* and *webbed* (variables are sorted from the strongest).
+
+- takes very low values for the variable(s) :
+This outlier is suppressed from the analysis and a second one is performed on the rest of the individuals.
+
+- - -
+
+### 2. Inertia distribution
+The inertia of the first dimensions shows if there are strong relationships between variables and suggests the number of dimensions that should be studied.
+
+The first two dimensions of PCA express **32.08%** of the total dataset inertia ; that means that 32.08% of the individuals (or variables) cloud total variability is explained by the plane.
+This is an intermediate percentage and the first plane represents a part of the data variability.
+This value is greater than the reference value that equals **28.71%**, the variability explained by this plane is thus significant
+(the reference value is the 0.95-quantile of the inertia percentages distribution obtained by simulating 3441 data tables of equivalent size on the basis of a normal distribution).
+
+From these observations, it may be interesting to consider the next dimensions which also express a high percentage of the total inertia.
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+par(mar = c(2.6, 4.1, 1.1, 2.1))
+barplot(res$eig[,2], names.arg = 1:nrow(res$eig))
+```
+
+**Figure 2 - Decomposition of the total inertia on the components of the PCA**
+
+An estimation of the right number of axis to interpret suggests to restrict the analysis to the description of the first 1 axis.
+These axis present an amount of inertia greater than those obtained by the 0.95-quantile of random distributions (19.62% against 15.98%).
+This observation suggests that only this axis is carrying a real information.
+As a consequence, the description will stand to these axis.
+
+- - -
+
+### 3. Description of the dimension 1
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <- c("Passiflora foetida", "Euphorbia sp", "Indigofera spicata", 
+"Datura stramonium", "Mimosa pudica", "Euphorbia heterophylla", 
+"Passiflora", "Canavalia", "Teramnus labialis", "Indigofera sp", 
+"Ludwigia octovalvis", "Calopogonium mucunoides", "Crotalaria retusa", 
+"Vigna unguiculata", "Stachytarfeta jamaicensis", "Erechtites hieracifolia", 
+"Euphorbia hirta (cyathophora) ou Chamaesyce Hirta")
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.PCA(res, select = drawn, axes = 1:2, choix = 'ind', invisible = 'quali', title = '', cex = cex)
+```
+
+**Figure 3.1 - Individuals factor map (PCA)**
+*The labeled individuals are those with the higher contribution to the plane construction.*
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <- c("Composed.leaflets", "Simple.leaflets", "Height.max..cm.", 
+"ovate.shape", "toothed.border", "Petiole.max..mm.", "obtuse.apex"
+)
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.PCA(res, select = drawn, axes = 1:2, choix = 'var', title = '', cex = cex)
+```
+
+**Figure 3.2 - Variables factor map (PCA)**
+*The labeled variables are those the best shown on the plane.*
+
+* * *
+
+The **dimension 1** opposes individuals such as *Passiflora foetida*, *Erechtites hieracifolia*, *Ludwigia octovalvis*, *Euphorbia sp*, *Euphorbia hirta (cyathophora) ou Chamaesyce Hirta* and *Stachytarfeta jamaicensis* (to the right of the graph, characterized by a strongly positive coordinate on the axis)
+to individuals such as *Indigofera spicata*, *Canavalia*, *Teramnus labialis*, *Calopogonium mucunoides*, *Vigna unguiculata* and *Indigofera sp* (to the left of the graph, characterized by a strongly negative coordinate on the axis).
+
+The group in which the individuals *Ludwigia octovalvis* and *Euphorbia sp* stand (characterized by a positive coordinate on the axis) is sharing :
+
+- high values for the variables *Height.max..cm.* and *pinnate.nervation* (variables are sorted from the strongest).
+
+The group in which the individuals *Passiflora foetida*, *Erechtites hieracifolia*, *Euphorbia hirta (cyathophora) ou Chamaesyce Hirta* and *Stachytarfeta jamaicensis* stand (characterized by a positive coordinate on the axis) is sharing :
+
+- high values for the variables *Opposite.disposition*, *toothed.border* and *Simple.leaflets* (variables are sorted from the strongest).
+- low values for the variables *petiolate*, *ovate.shape*, *Composed.leaflets* and *pinnate.nervation* (variables are sorted from the weakest).
+
+The group in which the individuals *Indigofera spicata*, *Canavalia*, *Teramnus labialis*, *Calopogonium mucunoides*, *Vigna unguiculata* and *Indigofera sp* stand (characterized by a negative coordinate on the axis) is sharing :
+
+- high values for the variables *Composed.leaflets*, *ovate.shape*, *Petiole.max..mm.* and *obtuse.apex* (variables are sorted from the strongest).
+- low values for the variables *Simple.leaflets*, *accute.apex*, *toothed.border* and *Height.max..cm.* (variables are sorted from the weakest).
+
+
+- - -
+
+### 4. Classification
+
+```{r, echo = FALSE}
+res.hcpc = HCPC(res, nb.clust = -1, graph = FALSE)
+```
+
+```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+drawn <- c("Passiflora foetida", "Euphorbia sp", "Indigofera spicata", 
+"Datura stramonium", "Mimosa pudica", "Euphorbia heterophylla", 
+"Passiflora", "Canavalia", "Teramnus labialis", "Indigofera sp", 
+"Ludwigia octovalvis", "Calopogonium mucunoides", "Crotalaria retusa", 
+"Vigna unguiculata", "Stachytarfeta jamaicensis", "Erechtites hieracifolia", 
+"Euphorbia hirta (cyathophora) ou Chamaesyce Hirta")
+par(mar = c(4.1, 4.1, 1.1, 2.1))
+plot.HCPC(res.hcpc, choice = 'map', draw.tree = FALSE, select = drawn, title = '')
+```
+
+**Figure 4 - Ascending Hierarchical Classification of the individuals.**
+*The classification made on individuals reveals 4 clusters.*
+
+
+The **cluster 1** is made of individuals such as *Calopogonium mucunoides*, *Canavalia*, *Indigofera sp*, *Indigofera spicata*, *Teramnus labialis* and *Vigna unguiculata*. This group is characterized by :
+
+- high values for the variables *Composed.leaflets*, *Petiole.max..mm.*, *ovate.shape* and *obtuse.apex* (variables are sorted from the strongest).
+- low values for the variables *Simple.leaflets*, *toothed.border* and *Height.max..cm.* (variables are sorted from the weakest).
+
+The **cluster 2** is made of individuals such as *Crotalaria retusa*, *Datura stramonium*, *Erechtites hieracifolia*, *Euphorbia hirta (cyathophora) ou Chamaesyce Hirta*, *Euphorbia sp*, *Ludwigia octovalvis* and *Stachytarfeta jamaicensis*. This group is characterized by :
+
+- high values for the variables *Simple.leaflets*, *Height.max..cm.* and *toothed.border* (variables are sorted from the strongest).
+- low values for the variables *Composed.leaflets*, *Petiole.max..mm.* and *Hairy.area* (variables are sorted from the weakest).
+
+The **cluster 3** is made of individuals such as *Passiflora* and *Passiflora foetida*. This group is characterized by :
+
+- high values for the variables *webbed* and *palmatipartite.shape* (variables are sorted from the strongest).
+
+The **cluster 4** is made of individuals such as *Euphorbia heterophylla* and *Mimosa pudica*. This group is characterized by :
+
+- high values for the variables *linear.shape* and *rounded.shape* (variables are sorted from the strongest).
+
+- - -
+
+## Annexes
+```{r, comment = ''}
+dimdesc(res, axes = 1:1)
+```
+**Figure 5 - List of variables characterizing the dimensions of the analysis.**
+
+
+
+```{r, comment = ''}
+res.hcpc$desc.var
+```
+**Figure 6 - List of variables characterizing the clusters of the classification.**
+
+
