@@ -7,9 +7,9 @@
 #+LANGUAGE:    en
 #+LATEX_CLASS: IEEEtran
 #+LaTeX_CLASS_OPTIONS: [onecolumn]
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/htmlize.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/bigblow.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/hideshow.css"/>
 
 Local version
 

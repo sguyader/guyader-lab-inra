@@ -1,8 +1,8 @@
 # -*- mode: org -*-
 # -*- coding: utf-8 -*-
 
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/bigblow.css"/>
 #+STARTUP: overview indent inlineimages logdrawerhh
 
 #+TITLE:       Journal
