@@ -3,8 +3,8 @@ title: "L'épidémie de choléra à Londres en 1854"
 author: "Sébastien Guyader"
 date: "29 octobre 2018"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 
@@ -45,8 +45,11 @@ library(ggmap)
 # définissons les coordonnées de la zone à télécharger 
 bbox <- c(left = -0.1433, bottom = 51.5094, right = -0.1286, top = 51.5164)
 
-# Téléchargeons la carte à partir du serveur Stamen, et utilisons le type "toner-lite" pour une visualisation plus aisée
-js_map <- get_stamenmap(bbox = bbox, zoom = 16, maptype = "toner-lite", crop = TRUE, messaging = FALSE,  urlonly = F, color = "color", force = FALSE,  where = tempdir())
+# Téléchargeons la carte à partir du serveur Stamen, et utilisons le type "toner-lite",
+# pour une visualisation plus aisée
+js_map <- get_stamenmap(bbox = bbox, zoom = 16, maptype = "toner-lite", crop = TRUE,
+                        messaging = FALSE,  urlonly = F, color = "color",
+                        force = FALSE,  where = tempdir())
 # Détermiber la classe de l'objet
 class(js_map)
 ```
@@ -76,7 +79,7 @@ unzip(data_file)
 
 Les fichiers sont localisés dans le répertoire `./SnowGIS_SHP`. Les fichiers portant l'extension `.shp` sont directement lus par la librairie `rgdal` :
 
-```{r}
+```{r, include=FALSE}
 library(rgdal)
 deces <- rgdal::readOGR("./SnowGIS_SHP/Cholera_Deaths.shp")
 
@@ -212,10 +215,13 @@ Nous obtenons un objet de classe "SpatialPointsDataFrame", qui doit maintenant �
 win <- owin(c(bbox[1], bbox[3]), c(bbox[2], bbox[4]))
 
 # convertir les coordonnées des décès en "planar point pattern"
-snow_pp <- ppp(coordinates(snow_df)[,1], coordinates(snow_df)[,2], window = win, marks = snow_df$Id)
+snow_pp <- ppp(coordinates(snow_df)[,1], coordinates(snow_df)[,2],
+               window = win, marks = snow_df$Id)
 
 summary(snow_pp)
 ```
+
+### Tesselation de Dirichlet/Voronoi
 
 Nous avons maintenant un objet analysable par `spatstat`. Ce que je propose de réaliser, c'est de faire une découpage de la carte en zones "d'influence" liées aux pompes. Une des manières les plus simples est d'utiliser la tesselation de [Dirichlet/Voronoi](https://fr.wikipedia.org/wiki/Diagramme_de_Vorono%C3%AF), qui divise le plan en "tessels" (ou cellules) de sorte que pour chaque pompe ("germe") le tessel associé est l'ensemble des points du plan qui sont plus proches de cette pompe que de toute autre pompe.
 Ainsi, si la pompe située broad Street est associée aux décès dus au choléra, l'essentiel de la densité des décès devrait se situer dans le tessel associé à cette pompe sur le gaphique.
@@ -224,10 +230,15 @@ Ainsi, si la pompe située broad Street est associée aux décès dus au cholér
 # division du plan en tessels associés aux pompes
 tessels <- dirichlet(split(snow_pp)$p)
 
-# graphique superposant la densité du nombre de décès, la position des pompes, et les tessels :
-## densité des décès
-plot(density(split(snow_pp)$d, sigma=2.5e-04), col=colorRampPalette(c("white","yellow","red")),
-     main="", show.all=F)
+# graphique superposant la densité de décès, la position des pompes, et les tessels :
+## estimation automatique de la valeur de sigma :
+bw.diggle(split(snow_pp)$d) 
+par(mar=rep(0.5, 4)) # diminue l'espace vide autour du graphique
+plot(density(split(snow_pp)$d, bw.diggle),
+     col=colorRampPalette(c("white","yellow","red")), main="", show.all=F)
+## on constate que sigma est trop petit, on l'augmente par tatonnement pour trouver : :
+plot(density(split(snow_pp)$d, sigma=2.5e-04),
+     col=colorRampPalette(c("white","yellow","red")), main="", show.all=F)
 ## position des pompes
 plot(split(snow_pp)$p, add=T, cols="blue", pch=9)
 ## ajout des tessels
@@ -239,13 +250,14 @@ A noter que pour cette première visualisation, les fonctions graphiques utilise
 La librarie Spatstat permet de tester l'association du nombre de décès avec les tessels selon un test du $\chi^2$ : ce test compare le nombre de décès observés au sein d'un tessel avec le nombre attendu si le processus était aléatoire et indépendant du tessel considéré.
 
 ```{r}
-# estimation par Khi2 de la répoartition aléatoire ou non du nombre de décès dans les tessels
+# estimation par Chi2 de la répoartition aléatoire ou non des décès dans les tessels
 quadr.test <- quadrat.test(split(snow_pp)$d, tess=tessels)
 
-# graph superposant la densité du nombre de décès, la position des pompes, et les tessels :
+# graphique superposant la densité de décès, la position des pompes, et les tessels :
 # densité des décès
-plot(density(split(snow_pp)$d, sigma=2.5e-04), col=colorRampPalette(c("white","yellow","red")),
-     main="", show.all=F)
+par(mar=rep(0.5, 4)) # diminue l'espace vide autour du graphique
+plot(density(split(snow_pp)$d, sigma=2.5e-04),
+     col=colorRampPalette(c("white","yellow","red")), main="", show.all=F)
 # position des pompes
 plot(split(snow_pp)$p, add=T, cols="blue", pch=9)
 # tessels + résultats du test de khi2 (nb de cas observés, nb de cas théorique, résidus)
@@ -279,10 +291,12 @@ js_fond +
   scale_fill_gradient(low = "yellow", high = "red", guide = FALSE) + 
   scale_alpha(range = c(0, 0.4), guide = FALSE) +
   geom_point(data=data.frame(pompes_df),
-             aes(x=coords.x1, y=coords.x2), shape=9, col="blue", size=2, alpha=0.8) +
+             aes(x=coords.x1, y=coords.x2),
+             shape=9, col="blue", size=2, alpha=0.8) +
   # ajout des tessels
   geom_polygon(data=tessels_df,
-               aes(x = long, y = lat, group = group), color = "blue", fill = NA, size=0.5) +
+               aes(x = long, y = lat, group = group),
+               color = "blue", fill = NA, size=0.5) +
   # ajout des résidus issus du test du chi2
   geom_label(data=data.frame(pompes_df),
              aes(x=coords.x1, y=coords.x2,label = round(quadr.test$residuals, 2),
@@ -290,3 +304,56 @@ js_fond +
   theme_bw()
 ```
 
+### Calcul des distances moyennes entre les décès et les pompes
+
+Si les décès forment un cluster autour d'une pompe en particulier, la distance moyenne des moyenne des décès à cette pompe devrait être statistiquement plus petite que la distance aux autres pompes. On peut utiliser la fonction `crossdist` du paquet `spatstat` pour mesurer les distances deux à deux séparant chaque décès de chaque pompe.
+
+Pour s'assurer que les mesures de distances sont corrects, il faut passer d'un système de coordonnées "latitude/longitude" en un système "cartésien" par une reprojection :
+
+```{r}
+# on crée une copie du dataframe snow_df
+car_snow_df <- snow_df
+# on assigne le système de coordonnées utilisé juque là
+proj4string(car_snow_df) <- CRS("+proj=longlat +datum=WGS84")
+# on transforme le système par projection "utm", un système cartésien
+# qui respecte bien les distances ;
+# la zone 30N correspond au royaume Uni
+car_snow_df <- as.data.frame(spTransform(car_snow_df, CRS("+proj=utm +zone=30N")))
+coordinates(car_snow_df) <- ~coords.x1+coords.x2
+
+# on extrait la fenêtre dont les limites sont déjà contenues dans le dataframe car_snow_df
+car_win <- owin(c(car_snow_df@bbox[1], car_snow_df@bbox[3]),
+                c(car_snow_df@bbox[2], car_snow_df@bbox[4]))
+
+# on convertit le dataframe en type SpatialPointPatternDataFrame echo=FALSE
+car_snow_pp <- ppp(coordinates(car_snow_df)[,1], coordinates(car_snow_df)[,2],
+                   window = car_win, marks = car_snow_df$Id)
+```
+Maintenant nous pouvons calculer les distances (en mètres) :
+
+```{r}
+# tableau des distances deux-à-deux séparant chaque décès de chaque puits
+cr_dist <- data.frame(crossdist(split(car_snow_pp)$d, split(car_snow_pp)$p,
+                                periodic=FALSE, method="C", squared=FALSE))
+
+# tableau de synthèse avec distance moyenne des décès à chaque puits
+# et une approximation de l'intervalle de confiance 95%
+library(tidyverse)
+summ_table <- gather(cr_dist, key="puits", value="distance") %>%
+  group_by(puits) %>%
+  summarise(moyenne=mean(distance), CI95=1.96*sd(distance)/sqrt(n()))
+
+summ_table
+```
+
+Pour finir, on peut visualiser les résultats sur un graphique :
+
+```{r}
+ggplot(summ_table, aes(x=puits, y=moyenne)) +
+  geom_pointrange(data=summ_table,
+                  aes(x=puits, y=moyenne, ymin=moyenne-CI95, ymax=moyenne+CI95)) +
+  ylab("distance moyenne") +
+  theme_bw()
+```
+
+On constate que la distance moyenne à la pompe numéro 1 (celle de Broad Street) est plus faible.
