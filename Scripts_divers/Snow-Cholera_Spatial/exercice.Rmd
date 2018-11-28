@@ -3,10 +3,12 @@ title: "L'épidémie de choléra à Londres en 1854"
 author: "Sébastien Guyader"
 date: "29 octobre 2018"
 output:
-  html_document: default
-  pdf_document: default
+  pdf_document:
+    latex_engine: xelatex
+  html_document:
+    df_print: paged
+mainfont: Calibri
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message=FALSE)
