@@ -109,6 +109,29 @@ turday
 
 * 2018
 ** 2018-11 November
+*** 2018-11-15 Thursday
+**** *Rapprochement GENEPI-BETWEEN - Première réunion (cadres)*
+
+  - modalité actuelles d'interaction sau sein des 2 équipes
+  - devenir des manips Between après le départ de Gladys Loranger
+  - thèse de Coraline Moulin : manips finies, analyse et valorisation en cours
+  - projet RITA plantain : stagiaires prévus coencadrés Gladys/Fred Burner
+  - questions sur ce que Victor Vaillant va faire
+  - il y a toujours des manips en cours avec des nématodes (interactions mycorhizes/nématodes)
+  - faire un point avec Gladys sur les actions en cours (proposition pour les 14, 17 ou 18 décembre)
+  - #TODO [ ] doodle
+  
+**** *Live MOOC Recherche reproductible*                               :RechReprod:
+
+  - données volumineuses : git-lfs / git-annex
+  
+**** *Réunion CHING*                                                   :ching:
+
+  - tour de table :
+    - MOOC recherche reproductible sur la fin
+    - début des réunions sur le rapprochement GENEPI-BETWEEN
+    - départ de Mirza
+
 *** 2018-11-17 Saturday
 **** *Installation et configuration d'Emacs org-mode pour ce journal*
 *** 2018-11-19 Monday
