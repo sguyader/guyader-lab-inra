@@ -119,7 +119,7 @@ turday
   - questions sur ce que Victor Vaillant va faire
   - il y a toujours des manips en cours avec des nématodes (interactions mycorhizes/nématodes)
   - faire un point avec Gladys sur les actions en cours (proposition pour les 14, 17 ou 18 décembre)
-  - #TODO [ ] doodle
+  - lancer un doodle (fait)
   
 **** *Live MOOC Recherche reproductible*                               :RechReprod:
 
