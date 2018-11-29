@@ -237,21 +237,37 @@ turday
 **** *Fin de configuration d'emacs OrgMode sur minipc perso*
 *** 2018-11-29 Thursday
 **** *Réunion ching*                                                 :CODIR:
-Ordre du jour :
-- Retour des départements sur les piliers scientifiques d'ASTRO
-- Possible nomination et lettre de mission Directeur Adjoint
-- Exécution et instruction des projets en cours
-- Questions diverses
-
 1. Retour des départements sur les piliers scientifiques d'ASTRO
-
+   - doc temporaire envoyé par Alban Thomas
+     discussions CODIR : très critiques, beaucoup de confusion
+   - prochain rendez-vous : fin janvier ou débit férier
+     finalisation des piliers scientifiques
+ 
 2. Directeur adjoint Astro
+   - R. Tournebize volontaire comme DUA
+   - tâches principales : représentation UR, intérim, appui sur
+     dossiers administratifs
+   - aussi :
+     - animation équipes techniques
+     - gestion installations expérimentales
+     - interactions/communication dans l'unité
+     - relations avec partenaires profesionnels
+   - réponse aux besoins et demandes des personnels de l'unité
+   - remarques :
+     - repondérer fonctions principales (plus) / secondaires (moins)
+     - préciser les rôles d'interlocuteur entre DU et DUA
 
 3. Exécution et instruction des projets en cours
+   - FEDER 2ème tranche :
+     - les dossiers seront distribués par la Région "dès que possible"
+     - réunions de préparation à prévoir
+   - RITA :
+     - conventions courent à partir du 15 octobre, pour 18 mois (au
+       lieu de 3 ans)
+     - le CIRAD veut déposer une 2ème tranche pour 2019-2020
 
 4. Questions diverses
+   - AAP ANSES : peut intéresser Astro
+     - possibilité de projets exploratoires (50k€ sur 2 ans), ou projet
+     - moins risqué (200k€ sur 3 ans)
 
-
-Entered on [2018-11-29 Thu 13:17]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org::**Fin%20de%20configuration%20d'emacs%20OrgMode%20sur%20minipc%20perso*][*Fin de configuration d'emacs OrgMode sur minipc perso*]]
