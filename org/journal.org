@@ -9,7 +9,7 @@
 #+AUTHOR:      Sébastien Guyader
 #+LANGUAGE:    fr
 #+TAGS: export(e) noexport(n) 
-#+TAGS: R(R) OrgMode(O) RechRepro(RR) Stats(S) 
+#+TAGS: R(R) OrgMode(O) Stats(S) 
 #+TAGS: meeting(m)
 #+OPTIONS:   H:3 num:nil toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:nil
@@ -234,4 +234,24 @@ turday
   - golden-ratio : gestion auto des tailles de fenêtres
   - ox-pandoc : options multiples d'export
 
-**** *Fin de configuration d'emacs OrgMode sur minpc perso*
+**** *Fin de configuration d'emacs OrgMode sur minipc perso*
+*** 2018-11-29 Thursday
+**** *Réunion ching*                                                 :CODIR:
+Ordre du jour :
+- Retour des départements sur les piliers scientifiques d'ASTRO
+- Possible nomination et lettre de mission Directeur Adjoint
+- Exécution et instruction des projets en cours
+- Questions diverses
+
+1. Retour des départements sur les piliers scientifiques d'ASTRO
+
+2. Directeur adjoint Astro
+
+3. Exécution et instruction des projets en cours
+
+4. Questions diverses
+
+
+Entered on [2018-11-29 Thu 13:17]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org::**Fin%20de%20configuration%20d'emacs%20OrgMode%20sur%20minipc%20perso*][*Fin de configuration d'emacs OrgMode sur minipc perso*]]
