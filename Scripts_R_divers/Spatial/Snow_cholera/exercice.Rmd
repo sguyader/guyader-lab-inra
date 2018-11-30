@@ -1,20 +1,29 @@
 ---
 title: "L'épidémie de choléra à Londres en 1854"
 author: "Sébastien Guyader"
-date: "29 octobre 2018"
+date: "`r format(Sys.Date(), '%Y %B %d')`"
 output:
-  pdf_document:
-    latex_engine: xelatex
   html_document:
     df_print: paged
+  pdf_document:
+    fig_height: 5
+    fig_width: 5
+    latex_engine: xelatex
 mainfont: Calibri
+fontsize: 10pt
 ---
+
+```{r, echo=FALSE}
+library(knitr)
+#opts_chunk$set(dev.args=list(pointsize=10))
+```
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message=FALSE)
 ```
 
-## Introduction
+# Introduction
 
 En 1854, le quartier de Soho à Londres a vécu une des pires épidémies de choléra du Royaume-Uni, avec 616 morts. Cette épidémie est devenue célèbre à cause de l'analyse détaillée de ses causes réalisée par le médecin John Snow. Ce dernier a notamment montré que le choléra est transmis par l'eau plutôt que par l'air, ce qui était la théorie dominante de l'époque.
 
@@ -35,35 +44,9 @@ if (!file.exists(img_file)) {
 knitr::include_graphics(img_file)
 ```
 
-Carte original de Snow (source Wikimedia Commons)
+**Figure 1.** Carte original de Snow (source Wikimedia Commons).
 
-## Générer un fond de carte actuel de la même zone
-
-Le paquet `ggmap` peut être utilisé pour télécharger la carte à partir de différentes API telles que `Google maps` et `OpenStreetMap`. En revanche, il devient difficile d'obtenir des tuiles à partir de ces deux sources à cause de limitations techniques (nécessité d'une clé pour Google maps, et limitations du serveur de tuiles OpenStreetMap). Le serveur de tuiles `Stamen` semble présenter moins soucis pour le téléchargement de la carte :
-
-```{r}
-library(ggmap)
-
-# définissons les coordonnées de la zone à télécharger 
-bbox <- c(left = -0.1433, bottom = 51.5094, right = -0.1286, top = 51.5164)
-
-# Téléchargeons la carte à partir du serveur Stamen, et utilisons le type "toner-lite",
-# pour une visualisation plus aisée
-js_map <- get_stamenmap(bbox = bbox, zoom = 16, maptype = "toner-lite", crop = TRUE,
-                        messaging = FALSE,  urlonly = F, color = "color",
-                        force = FALSE,  where = tempdir())
-# Détermiber la classe de l'objet
-class(js_map)
-```
-
-Pour visualiser l'objet obtenu, on utilise la fonction `ggmap` qui transforme l'objet en classe `ggplot` pour une visualisation avec les outils `ggplot2` :
-
-```{r}
-js_fond <- ggmap(js_map)
-
-# Visualisation de la carte
-js_fond
-```
+# Les données
 
 ## Obtenir les localisations des pompes à eau et des cas de décès dus au choléra
 
@@ -100,11 +83,13 @@ deces_df <- as.data.frame(deces)
 # donner l'attribut "coordonnées" aux colonnes correpondantes
 coordinates(deces_df) <- ~coords.x1+coords.x2
 
-# donne l'attribut du système d'origine de coordonnées projetées selon son code EPSG
+# donne l'attribut du système d'origine de coordonnées projetées selon
+# son code EPSG
 proj4string(deces_df) <- CRS("+init=epsg:27700")
 
 # transforme les coordonnées dans le système WGS84 utilisé par Google Maps
-deces_df <- as.data.frame(spTransform(deces_df, CRS("+proj=longlat +datum=WGS84")))
+deces_df <- as.data.frame(spTransform(deces_df,
+                                      CRS("+proj=longlat +datum=WGS84")))
 coordinates(deces_df) <- ~coords.x1+coords.x2
 
 # on inspecte la structure de l'objet :
@@ -120,12 +105,43 @@ pompes <- rgdal::readOGR("./SnowGIS_SHP/Pumps.shp")
 pompes_df <- as.data.frame(pompes)
 coordinates(pompes_df) <- ~coords.x1+coords.x2
 proj4string(pompes_df) <- CRS("+init=epsg:27700")
-pompes_df <- as.data.frame(spTransform(pompes_df, CRS("+proj=longlat +datum=WGS84")))
+pompes_df <- as.data.frame(spTransform(pompes_df,
+                                       CRS("+proj=longlat +datum=WGS84")))
 coordinates(pompes_df) <- ~coords.x1+coords.x2
 
 # inspectons le data frame
 summary(pompes_df)
 ```
+
+## Générer un fond de carte actuel de la même zone
+
+Le paquet `ggmap` peut être utilisé pour télécharger la carte à partir de différentes API telles que `Google maps` et `OpenStreetMap`. En revanche, il devient difficile d'obtenir des tuiles à partir de ces deux sources à cause de limitations techniques (nécessité d'une clé pour Google maps, et limitations du serveur de tuiles OpenStreetMap). Le serveur de tuiles `Stamen` semble présenter moins soucis pour le téléchargement de la carte :
+
+```{r}
+library(ggmap)
+
+# définissons les coordonnées de la zone à télécharger 
+bbox <- c(left = -0.1433, bottom = 51.5094, right = -0.1286, top = 51.5164)
+
+# Téléchargeons la carte à partir du serveur Stamen, et utilisons
+# le type "toner-lite", pour une visualisation plus aisée
+js_map <- get_stamenmap(bbox = bbox, zoom = 16, maptype = "toner-lite",
+                        crop = TRUE, messaging = FALSE,  urlonly = F,
+                        color = "color", force = FALSE,  where = tempdir())
+# Détermiber la classe de l'objet
+class(js_map)
+```
+
+Pour visualiser l'objet obtenu, on utilise la fonction `ggmap` qui transforme l'objet en classe `ggplot` pour une visualisation avec les outils `ggplot2` :
+
+```{r}
+js_fond <- ggmap(js_map)
+
+# Visualisation de la carte
+js_fond
+```
+
+**Figure 2.** Fond de carte Stamen au format "toner lite".
 
 ## Projection des points sur le fond de carte
 
@@ -142,16 +158,22 @@ js_fond +
   theme_bw()
 ```
 
+**Figure 3.** Projection des points correspondant aux décès (rouge) et aux pompes (bleu) sur le fond de carte.
+
 On peut aussi afficher les points avec une taille proportionnelle au nombre de décès :
 
 ```{r}
 js_fond +
-  geom_point(data=data.frame(deces_df), aes(x=coords.x1, y=coords.x2, size=Count),
-             col="red", alpha=0.4) +
+  geom_point(data=data.frame(deces_df),
+             aes(x=coords.x1, y=coords.x2,size=Count), col="red", alpha=0.4) +
   geom_point(data=data.frame(pompes_df), aes(x=coords.x1, y=coords.x2),
              shape=9, col="blue", size=2, alpha=1) +
   theme_bw()
 ```
+
+**Figure 4.** Visualisation de l'intensité des décès (points rouges) sur le fond de carte.
+
+# Approche visuelle
 
 ## Visualisation de la densité du nombre de décès
 
@@ -189,9 +211,11 @@ js_fond +
   theme_bw()
 ```
 
+**Figure 3.** Densité des décès estimées par `ggplot2`.
+
 On remarque que le maximum de densité des décès coincide avec la localisation d'une pompe en particulier, celle de Broad Street (le nom de la rue ne figure pas sur la tuile fournie par `Stamen`, mais se retrouve facilement sur la carte d'origine de Snow). Cette pompe semble donc être le point d'origine de l'épidémie de choléra.
 
-## Approche de statistique spatiale
+# Approche de statistique spatiale
 
 Pour aller un peu plus loin, nous pouvons chercher à déterminer s'il y a une relation statistique entre les localisations des décès et celles des pompes. Nous allons faire l'approximation (grossière) que la localisation des décès et des pompes est un [processus ponctuel](https://fr.wikipedia.org/wiki/Processus_ponctuel) ("point process" en anglais) spatialisé. L'analyse de ce type de processus est possible sous `R` grâce à la librairie `spatstat`.
 
@@ -223,7 +247,7 @@ snow_pp <- ppp(coordinates(snow_df)[,1], coordinates(snow_df)[,2],
 summary(snow_pp)
 ```
 
-### Tesselation de Dirichlet/Voronoi
+## Approche par tesselation de Dirichlet/Voronoi
 
 Nous avons maintenant un objet analysable par `spatstat`. Ce que je propose de réaliser, c'est de faire une découpage de la carte en zones "d'influence" liées aux pompes. Une des manières les plus simples est d'utiliser la tesselation de [Dirichlet/Voronoi](https://fr.wikipedia.org/wiki/Diagramme_de_Vorono%C3%AF), qui divise le plan en "tessels" (ou cellules) de sorte que pour chaque pompe ("germe") le tessel associé est l'ensemble des points du plan qui sont plus proches de cette pompe que de toute autre pompe.
 Ainsi, si la pompe située broad Street est associée aux décès dus au choléra, l'essentiel de la densité des décès devrait se situer dans le tessel associé à cette pompe sur le gaphique.
@@ -232,14 +256,13 @@ Ainsi, si la pompe située broad Street est associée aux décès dus au cholér
 # division du plan en tessels associés aux pompes
 tessels <- dirichlet(split(snow_pp)$p)
 
-# graphique superposant la densité de décès, la position des pompes, et les tessels :
+# graphique superposant densité de décès, position des pompes et tessels :
 ## estimation automatique de la valeur de sigma :
 bw.diggle(split(snow_pp)$d) 
 par(mar=rep(0.5, 4)) # diminue l'espace vide autour du graphique
-plot(density(split(snow_pp)$d, bw.diggle),
-     col=colorRampPalette(c("white","yellow","red")), main="", show.all=F)
-## on constate que sigma est trop petit, on l'augmente par tatonnement pour trouver : :
-plot(density(split(snow_pp)$d, sigma=2.5e-04),
+
+## par tatonnement on trouve cette valeur de sigma :
+plot(density(split(snow_pp)$d, sigma=2.5e-04), 
      col=colorRampPalette(c("white","yellow","red")), main="", show.all=F)
 ## position des pompes
 plot(split(snow_pp)$p, add=T, cols="blue", pch=9)
@@ -247,29 +270,36 @@ plot(split(snow_pp)$p, add=T, cols="blue", pch=9)
 plot(tessels, add=T)
 ```
 
+**Figure 6.** Densité des décès et tesselation de Dirichlet/Voronoi estimés par `spatstat`.
+
 A noter que pour cette première visualisation, les fonctions graphiques utilisent la librarie graphique de base de `R` (fonction `plot`) qui ne permet pas de visualiser la carte. On remarque toutefois que comme on l'attendait, la densité des décès semble concentrée autour de la pompe de Broad Street, et au sein du tessel associé.
 
 La librarie Spatstat permet de tester l'association du nombre de décès avec les tessels selon un test du $\chi^2$ : ce test compare le nombre de décès observés au sein d'un tessel avec le nombre attendu si le processus était aléatoire et indépendant du tessel considéré.
 
 ```{r}
-# estimation par Chi2 de la répoartition aléatoire ou non des décès dans les tessels
+# estimation par Chi2 de la répartition aléatoire ou non des décès
+# à l'intérieur des tessels
 quadr.test <- quadrat.test(split(snow_pp)$d, tess=tessels)
 
-# graphique superposant la densité de décès, la position des pompes, et les tessels :
-# densité des décès
+# graphique superposant la densité de décès, la position des pompes,
+# et les tessels :
+## densité des décès
 par(mar=rep(0.5, 4)) # diminue l'espace vide autour du graphique
 plot(density(split(snow_pp)$d, sigma=2.5e-04),
      col=colorRampPalette(c("white","yellow","red")), main="", show.all=F)
-# position des pompes
+## position des pompes
 plot(split(snow_pp)$p, add=T, cols="blue", pch=9)
-# tessels + résultats du test de khi2 (nb de cas observés, nb de cas théorique, résidus)
+## tessels + résultats du test de khi2
+## (nb de cas observés, nb de cas théorique, résidus)
 plot(quadr.test, add=T)
 ```
+
+**Figure 7.** Densité des décès, tesselation et test du $\chi^2$ estimés par `spatstat`.
 
 Sur le graphique ci-dessus, au sein de chaque tessel nous avons les nombres de décès observés (en haut à gauche) et attendus (en haut à droite) ainsi que les résidus (en bas). Le test est significatif, et vaut $`r round(quadr.test$statistic, 2)`$ ($P = `r signif(quadr.test$p.value, 3)`$, *d.f.* $= `r quadr.test$parameter`$).
 Les valeurs négatives ou positives de résidus indiquent un nombre de décès plus faible ou plus fort qu'attendu, respectivement. Nous notons ainsi que la valeur de résidus la plus élevée ($`r round(sort(-quadr.test$residuals)[1], 2)`$) correspond au tessel associé à la pompe de Broad Street.
 
-Pour finir, essayons de transférer ces résultats pour une visualisation plus jolie sur le fond de carte avec `ggplot2`.
+Pour le fun, essayons de transférer ces résultats pour une visualisation plus jolie sur le fond de carte avec `ggplot2`.
 
 ```{r}
 library(maptools)
@@ -299,14 +329,23 @@ js_fond +
   geom_polygon(data=tessels_df,
                aes(x = long, y = lat, group = group),
                color = "blue", fill = NA, size=0.5) +
-  # ajout des résidus issus du test du chi2
+  # ajout des labels des résidus issus du test du chi2
   geom_label(data=data.frame(pompes_df),
-             aes(x=coords.x1, y=coords.x2,label = round(quadr.test$residuals, 2),
-                 vjust = c(-0.5, 1.5, rep(-0.5, 6))), size=4, colour="blue", alpha=0.5) +
-  theme_bw()
+             aes(x=coords.x1, y=coords.x2,
+                 label = round(quadr.test$residuals, 2),
+                 vjust = c(-0.5, 1.5, rep(-0.5, 6)),
+                 colour=quadr.test$residuals),
+             size=4, alpha=0.5) +
+  # on attribue une couleur aux labels du bleu (faible) au rouge (élevé)
+  # en fonction de la valeur des résidus
+  scale_colour_gradientn(colours=c("blue","red")) +
+  theme_bw() +
+  theme(legend.title=element_blank())
 ```
 
-### Calcul des distances moyennes entre les décès et les pompes
+**Figure 8.** Projection des tessels et résidus du test du $\chi^2$ sur le fond de carte Stamen.
+
+## Approche par distances moyennes entre les décès et les pompes
 
 Si les décès forment un cluster autour d'une pompe en particulier, la distance moyenne des moyenne des décès à cette pompe devrait être statistiquement plus petite que la distance aux autres pompes. On peut utiliser la fonction `crossdist` du paquet `spatstat` pour mesurer les distances deux à deux séparant chaque décès de chaque pompe.
 
@@ -323,7 +362,8 @@ proj4string(car_snow_df) <- CRS("+proj=longlat +datum=WGS84")
 car_snow_df <- as.data.frame(spTransform(car_snow_df, CRS("+proj=utm +zone=30N")))
 coordinates(car_snow_df) <- ~coords.x1+coords.x2
 
-# on extrait la fenêtre dont les limites sont déjà contenues dans le dataframe car_snow_df
+# on extrait la fenêtre dont les limites sont déjà contenues
+# dans le dataframe car_snow_df
 car_win <- owin(c(car_snow_df@bbox[1], car_snow_df@bbox[3]),
                 c(car_snow_df@bbox[2], car_snow_df@bbox[4]))
 
@@ -341,21 +381,54 @@ cr_dist <- data.frame(crossdist(split(car_snow_pp)$d, split(car_snow_pp)$p,
 # tableau de synthèse avec distance moyenne des décès à chaque puits
 # et une approximation de l'intervalle de confiance 95%
 library(tidyverse)
-summ_table <- gather(cr_dist, key="puits", value="distance") %>%
-  group_by(puits) %>%
-  summarise(moyenne=mean(distance), CI95=1.96*sd(distance)/sqrt(n()))
-
-summ_table
+summ_table <- gather(cr_dist, key="Puits", value="distance") %>%
+  group_by(Puits) %>%
+  summarise(Distance=mean(distance),
+            IC95=qt(0.975,df=n()-1)*sd(distance)/sqrt(n()))
+summ_table$Puits <- as.character(1:8)
+knitr::kable(summ_table,
+             caption="**Tableau 1.** Distances moyennes entre les décès et chaque puits")
 ```
 
 Pour finir, on peut visualiser les résultats sur un graphique :
 
 ```{r}
-ggplot(summ_table, aes(x=puits, y=moyenne)) +
+ggplot(summ_table, aes(x=Puits, y=Distance)) +
   geom_pointrange(data=summ_table,
-                  aes(x=puits, y=moyenne, ymin=moyenne-CI95, ymax=moyenne+CI95)) +
-  ylab("distance moyenne") +
+                  aes(x=Puits, y=Distance,
+                      ymin=Distance-IC95, ymax=Distance+IC95)) +
+  ylab("Distance moyenne") +
   theme_bw()
 ```
 
+**Figure 9.** Distance cartésienne moyenne (en mètres) entre les décès et chaque puits.
+Les barres d'erreur correspondent à l'intervalle de confiance 95%.
+
 On constate que la distance moyenne à la pompe numéro 1 (celle de Broad Street) est plus faible.
+
+## Approche par distance au plus proche voisin
+
+Ici, on va chercher à regarder, pour chaque décès, quel est le puit le plus proche, et en faire la synthèse :
+```{r}
+# déterminer les puits les plus proches de chaque décès
+pp_vois <- nncross(split(car_snow_pp)$d, split(car_snow_pp)$p, what="which")
+
+# synthétiser en comptant le nombre de fois où chaque puits est déterminé
+# comme le plus proche
+synth_pp_vois <- data.frame(pp_vois) %>%
+  group_by(pp_vois) %>%
+  dplyr::summarise(N=n())
+colnames(synth_pp_vois) <- c("Puits", "Nombre de décès plus proches")
+
+# tableau de synthèse
+knitr::kable(synth_pp_vois,
+             caption="**Tableau 2.** Nombres de décès plus proches voisins des puits")
+```
+
+Comme attendu, la pompe numéro un semble être la plus proche de la majorité des cas de décès : on a $340/489 \simeq 70\%$ des décès qui sont plus proches de la pompe de Broad Street (pompe 1) que des autres pompes.
+
+# Conclusion
+
+Les différents éléments présentés ici, par approche visuelle ou par statistique spatiale, semble converger vers la pompe de Broad Street comme source probable d'une majorité des cas de choléra reportés dans cette étude.
+
+A noter cependant que les analyses présentent un écueil : elles ne prennent pas en compte les éléments de structure de la carte (rues, ruelles...) et se base simplement sur des distances "à vol d'oiseau". Une analyse plus rigoureuse demanderait de prendre en compte ces structures, ce qui est possible sous R, mais nécessiterait pour moi de passer plus de temps pour appréhender la méthode, mais cela sort de l'objectif de cet exercice qui est avant tout de faire que le code et les résultats présentés dans ce document soient reproductibles.
