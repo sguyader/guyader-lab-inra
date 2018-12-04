@@ -270,4 +270,26 @@ turday
    - AAP ANSES : peut intéresser Astro
      - possibilité de projets exploratoires (50k€ sur 2 ans), ou projet
      - moins risqué (200k€ sur 3 ans)
+** 2018-12 December
+*** 2018-12-04 Tuesday
+**** *Réunion préparation MALIN tranche 2*
+- tâches dans lesquelles j'interviens :
+  - WP1 : facteurs d'émergence
+    + tâche 3a : dynamique d'évolution des pathogènes en lien avec
+      l'émergence
+      1. cartographie anthracnose (souches/paysage/hôtes)
+      2. dispersion aérienne (capture de spores)
+      3. étude phylogéographique (microsatellites)
+  - WP2 : résistance de l'hôte
+    + tache 6 : arrangements spatiaux de variétés (modélisation + champ)
+  - WP3 : communication + formation
+    + tâche 7 : communication
+    + tâche 8 : formation (master Biologie Santé, accueil stagiaires)
+    + tâche 9 : gestion et coordination
+- temps dédié : Cf tableau
+- coût : Cf tableau
+- Question : quid de Pauline ? (non-permanente, salaire financé par ailleurs)
+- 
 
+Entered on [2018-12-04 Tue 09:17]
+  
