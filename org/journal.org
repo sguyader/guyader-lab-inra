@@ -289,7 +289,18 @@ turday
 - temps dédié : Cf tableau
 - coût : Cf tableau
 - Question : quid de Pauline ? (non-permanente, salaire financé par ailleurs)
-- 
+- Demande d'aide :
+  - on pourra référer au dossier scientifique
+  - double entrée par WP et par année
+  - années 2019 à 2021
+  - pas besoin d'incrémenter de 1% par an (on part de base 2018)
+  - mettre les temps en jours ou 1/2 jours, pas en % de temps
+  - pour coûts directs, demander les devis, en HT, les numéroter et classer par WP
+  - pour le personnel, faire 1 ligne par personne (y-compris
+    stagiaires) par année et par WP
+  - pour congrès en à l'étranger, demander coûts dans la devise étrangère
+  - devis : mettre le nom du demandeur et le numéro, copie
+    infoormatique+papier à archiver
 
 Entered on [2018-12-04 Tue 09:17]
   
