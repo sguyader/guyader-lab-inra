@@ -11,8 +11,11 @@ This dataset contains 30 individuals and 21 variables.
 ```{r, echo = FALSE}
 load('Workspace.RData')
 library(FactoMineR)
+library(factoextra)
+library(tidyverse)
 ```
-### 1. Study of the outliers
+
+# Study of the outliers
 The analysis of the graphs leads to detect an outlier that strongly influences the results. First we will describe this outlier and then we will suppress it from the analysis.
 Looking at the graph, we can note that a particular individual strongly contributes to the construction of the plane. Its contribution to the construction of the plane equals **38.9%**.
 
@@ -68,7 +71,7 @@ This outlier is suppressed from the analysis and a second one is performed on th
 
 - - -
 
-### 2. Inertia distribution
+# Inertia distribution
 The inertia of the first dimensions shows if there are strong relationships between variables and suggests the number of dimensions that should be studied.
 
 The first two dimensions of PCA express **32.08%** of the total dataset inertia ; that means that 32.08% of the individuals (or variables) cloud total variability is explained by the plane.
@@ -92,7 +95,7 @@ As a consequence, the description will stand to these axis.
 
 - - -
 
-### 3. Description of the dimension 1
+# Description of the dimension 1
 
 ```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
 drawn <- c("Passiflora foetida", "Euphorbia sp", "Indigofera spicata", 
@@ -141,7 +144,7 @@ The group in which the individuals *Indigofera spicata*, *Canavalia*, *Teramnus 
 
 - - -
 
-### 4. Classification
+# Classification
 
 ```{r, echo = FALSE}
 res.hcpc = HCPC(res, nb.clust = -1, graph = FALSE)
@@ -182,7 +185,58 @@ The **cluster 4** is made of individuals such as *Euphorbia heterophylla* and *M
 
 - - -
 
-## Annexes
+# Other stuff to check:
+```{r}
+library(tidyverse)
+library(FactoMineR)
+library(factoextra)
+
+res.PCA <- PCA(CG.host_modif[,1:21],graph=F,ncp=5)
+
+
+pcaplot <- res.PCA %>% fviz_pca_biplot(repel=T, axes=c(1,2), title="", col.var="Black",
+                            col.ind=data_CG_host2$Colleto, palette="RdBu")
+pcaplot
+
+
+pcaplot <- res.PCA %>% fviz_pca_biplot(repel=T, axes=c(1,2), title="",
+                            geom.ind=c("text"))
+
+pcaplot +
+  geom_point(aes(x=res.PCA$ind$coord[,1], y=res.PCA$ind$coord[,2],
+                 col=data_CG_host2$Colleto, shape=data_CG_host2$Colleto)) +
+  theme_bw()
+
+
+
+
+i=0
+while(i < ncol(CG.host_modif)){
+  i=i+1
+  CG.host_modif[,i] <- as.factor(CG.host_modif[,i])
+}
+
+
+
+res.FAMD <- FAMD(CG.host_modif[,1:21])
+res.FAMD %>% plot.FAMD(choix="ind")
+res.FAMD %>% plot.FAMD(choix="var")
+
+res.FAMD %>% fviz_famd(axes=c(1,2), title="") +
+  theme_bw()
+
+data(flower)
+mca <- PCAmix(X.quali=flower[,1:4],rename.level=TRUE)
+mca <- PCAmix(X.quali=flower[,1:4],rename.level=TRUE,graph=FALSE)
+plot(mca,choice="ind",main="Scores")
+plot(mca,choice="sqload",main="Correlation ratios")
+plot(mca,choice="levels",main="Levels")
+mca$levels$coord
+
+```
+
+
+# Annexes
 ```{r, comment = ''}
 dimdesc(res, axes = 1:1)
 ```
