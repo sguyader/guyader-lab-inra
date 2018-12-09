@@ -20,19 +20,25 @@ The analysis of the graphs leads to detect an outlier that strongly influences t
 Looking at the graph, we can note that a particular individual strongly contributes to the construction of the plane. Its contribution to the construction of the plane equals **38.9%**.
 
 ```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
-drawn <-
-integer(0)
+CG.host_modif <- read.csv("CG.host_modif.csv", row.names=1)
+res.PCA <- PCA(CG.host_modif[,1:21],graph=F,ncp=5)
+
+drawn <- integer(0)
 par(mar = c(4.1, 4.1, 1.1, 2.1))
-plot.PCA(memory, choix = 'ind', invisible = c('var', 'quali'), select = drawn, title = '', cex = cex)
+plot.PCA(res.PCA, choix = 'ind', invisible = c('var', 'quali'), select = drawn, title = '', cex = cex)
 ```
 
 **Figure 1.1 - Individuals factor map (PCA) before correction.** 
 *Highlighting of an outlier.* 
 
 ```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
+CG.host_modif_cleaned <- slice(CG.host_modif, -1)
+row.names(CG.host_modif_cleaned) <- rownames(CG.host_modif)[2:nrow(CG.host_modif)]
+res.PCA_cleaned <- PCA(CG.host_modif_cleaned[,1:21],graph=F,ncp=5)
+
 drawn <- integer(0)
 par(mar = c(4.1, 4.1, 1.1, 2.1))
-plot.PCA(res, choix = 'ind', invisible = c('var', 'quali'), select = drawn, title = '', cex = cex)
+plot.PCA(res.PCA_cleaned, choix = 'ind', invisible = c('var', 'quali'), select = drawn, title = '', cex = cex)
 ```
 
 **Figure 1.2 - Individuals factor map (PCA) after correction.** 
@@ -43,7 +49,7 @@ drawn <- c("Composed.leaflets", "Simple.leaflets", "Height.max..cm.",
 "ovate.shape", "toothed.border", "Petiole.max..mm.", "obtuse.apex"
 )
 par(mar = c(4.1, 4.1, 1.1, 2.1))
-plot.PCA(memory, choix = 'var', select = drawn, title = '', cex = cex)
+plot.PCA(res.PCA, choix = 'var', select = drawn, title = '', cex = cex)
 ```
 
 **Figure 1.3 - Variables factor map (PCA) before correction**
@@ -54,7 +60,7 @@ drawn <- c("Composed.leaflets", "Simple.leaflets", "Height.max..cm.",
 "ovate.shape", "toothed.border", "Petiole.max..mm.", "obtuse.apex"
 )
 par(mar = c(4.1, 4.1, 1.1, 2.1))
-plot.PCA(res, choix = 'var', select = drawn, title = '', cex = cex)
+plot.PCA(res.PCA_cleaned, choix = 'var', select = drawn, title = '', cex = cex)
 ```
 
 **Figure 1.3 - Variables factor map (PCA) after correction**
@@ -83,7 +89,7 @@ From these observations, it may be interesting to consider the next dimensions w
 
 ```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
 par(mar = c(2.6, 4.1, 1.1, 2.1))
-barplot(res$eig[,2], names.arg = 1:nrow(res$eig))
+barplot(res.PCA_cleaned$eig[,2], names.arg = 1:nrow(res.PCA_cleaned$eig))
 ```
 
 **Figure 2 - Decomposition of the total inertia on the components of the PCA**
@@ -105,7 +111,7 @@ drawn <- c("Passiflora foetida", "Euphorbia sp", "Indigofera spicata",
 "Vigna unguiculata", "Stachytarfeta jamaicensis", "Erechtites hieracifolia", 
 "Euphorbia hirta (cyathophora) ou Chamaesyce Hirta")
 par(mar = c(4.1, 4.1, 1.1, 2.1))
-plot.PCA(res, select = drawn, axes = 1:2, choix = 'ind', invisible = 'quali', title = '', cex = cex)
+plot.PCA(res.PCA_cleaned, select = drawn, axes = 1:2, choix = 'ind', invisible = 'quali', title = '', cex = cex)
 ```
 
 **Figure 3.1 - Individuals factor map (PCA)**
@@ -116,7 +122,7 @@ drawn <- c("Composed.leaflets", "Simple.leaflets", "Height.max..cm.",
 "ovate.shape", "toothed.border", "Petiole.max..mm.", "obtuse.apex"
 )
 par(mar = c(4.1, 4.1, 1.1, 2.1))
-plot.PCA(res, select = drawn, axes = 1:2, choix = 'var', title = '', cex = cex)
+plot.PCA(res.PCA_cleaned, select = drawn, axes = 1:2, choix = 'var', title = '', cex = cex)
 ```
 
 **Figure 3.2 - Variables factor map (PCA)**
@@ -147,7 +153,7 @@ The group in which the individuals *Indigofera spicata*, *Canavalia*, *Teramnus 
 # Classification
 
 ```{r, echo = FALSE}
-res.hcpc = HCPC(res, nb.clust = -1, graph = FALSE)
+res.hcpc_cleaned = HCPC(res.PCA_cleaned, nb.clust = -1, graph = FALSE)
 ```
 
 ```{r, echo = FALSE, fig.align = 'center', fig.height = 3.5, fig.width = 5.5}
@@ -158,7 +164,7 @@ drawn <- c("Passiflora foetida", "Euphorbia sp", "Indigofera spicata",
 "Vigna unguiculata", "Stachytarfeta jamaicensis", "Erechtites hieracifolia", 
 "Euphorbia hirta (cyathophora) ou Chamaesyce Hirta")
 par(mar = c(4.1, 4.1, 1.1, 2.1))
-plot.HCPC(res.hcpc, choice = 'map', draw.tree = FALSE, select = drawn, title = '')
+plot.HCPC(res.hcpc_cleaned, choice = 'map', draw.tree = FALSE, select = drawn, title = '')
 ```
 
 **Figure 4 - Ascending Hierarchical Classification of the individuals.**
@@ -187,65 +193,69 @@ The **cluster 4** is made of individuals such as *Euphorbia heterophylla* and *M
 
 # Other stuff to check:
 ```{r}
-library(tidyverse)
-library(FactoMineR)
-library(factoextra)
+data_CG_host2 <- read.csv("data_CG_host2.csv", row.names=1)
 
-res.PCA <- PCA(CG.host_modif[,1:21],graph=F,ncp=5)
+data_CG_host2_cleaned <- slice(data_CG_host2, -1)
+row.names(data_CG_host2_cleaned) <- rownames(data_CG_host2)[2:nrow(data_CG_host2)]
 
+res.PCA2_cleaned <- PCA(data_CG_host2_cleaned[,1:21],graph=F,ncp=5)
 
-pcaplot <- res.PCA %>% fviz_pca_biplot(repel=T, axes=c(1,2), title="", col.var="Black",
-                            col.ind=data_CG_host2$Colleto, palette="RdBu")
+pcaplot <- res.PCA2_cleaned %>% fviz_pca_biplot(repel=T, axes=c(1,2), title="", col.var="Black",
+                            col.ind=data_CG_host2_cleaned$Colleto, palette="RdBu")
 pcaplot
 
 
-pcaplot <- res.PCA %>% fviz_pca_biplot(repel=T, axes=c(1,2), title="",
+pcaplot_cleaned <- res.PCA2_cleaned %>% fviz_pca_biplot(repel=T, axes=c(1,2), title="",
                             geom.ind=c("text"))
 
-pcaplot +
-  geom_point(aes(x=res.PCA$ind$coord[,1], y=res.PCA$ind$coord[,2],
-                 col=data_CG_host2$Colleto, shape=data_CG_host2$Colleto)) +
+pcaplot_cleaned +
+  geom_point(aes(x=res.PCA2_cleaned$ind$coord[,1], y=res.PCA2_cleaned$ind$coord[,2],
+                 col=data_CG_host2_cleaned$Colleto, shape=data_CG_host2_cleaned$Colleto)) +
   theme_bw()
 
 
 
+CG.host_modif_cleaned2 <- CG.host_modif_cleaned
+# i=2
+# while(i < 17){
+#   i=i+1
+#   CG.host_modif_cleaned2[,i] <- as.factor(CG.host_modif_cleaned2[,i])
+# }
 
-i=0
-while(i < ncol(CG.host_modif)){
-  i=i+1
-  CG.host_modif[,i] <- as.factor(CG.host_modif[,i])
-}
 
 
+res.FAMD <- FAMD(CG.host_modif_cleaned2[,1:21], sup.var=CG.host_modif_cleaned2[,24])
 
-res.FAMD <- FAMD(CG.host_modif[,1:21])
-res.FAMD %>% plot.FAMD(choix="ind")
-res.FAMD %>% plot.FAMD(choix="var")
+fviz_screeplot(res.FAMD)
 
-res.FAMD %>% fviz_famd(axes=c(1,2), title="") +
+fviz_famd_ind(res.FAMD)
+
+# res.FAMD.ind <- res.FAMD[["ind"]][["coord"]]
+# res.FAMD.var <- res.FAMD[["var"]][["coord"]]
+
+# ggplot() +
+#   geom_point(data=data.frame(res.FAMD.ind), aes(x=Dim.1, y=Dim.2), pch=1)+
+#   geom_point(data=data.frame(res.FAMD.var), aes(x=Dim.1, y=Dim.2), fill="black")+
+#   xlim(c(-4.2,4.2)) + ylim(c(-4,4))+
+#   theme_bw()
+
+fviz_famd(res.FAMD) +
   theme_bw()
 
-data(flower)
-mca <- PCAmix(X.quali=flower[,1:4],rename.level=TRUE)
-mca <- PCAmix(X.quali=flower[,1:4],rename.level=TRUE,graph=FALSE)
-plot(mca,choice="ind",main="Scores")
-plot(mca,choice="sqload",main="Correlation ratios")
-plot(mca,choice="levels",main="Levels")
-mca$levels$coord
 
 ```
 
 
 # Annexes
 ```{r, comment = ''}
-dimdesc(res, axes = 1:1)
+dimdesc(res.PCA_cleaned, axes = 1:1)
 ```
 **Figure 5 - List of variables characterizing the dimensions of the analysis.**
 
 
 
 ```{r, comment = ''}
-res.hcpc$desc.var
+res.hcpc_cleaned$desc.var
 ```
 **Figure 6 - List of variables characterizing the clusters of the classification.**
 
