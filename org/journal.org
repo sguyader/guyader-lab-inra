@@ -317,3 +317,11 @@ Entered on [2018-12-04 Tue 09:17]
       highlight: github
   ---
   #+END_SRC
+**** *Préparation cours M1 Biologie-Santé UEP83.1*
+- les cours débutent le 14 janvier pour le module Surveillance
+  Sanitaire
+- mes cours :
+  - Maladies cryptogamique : pathogénèse et réponses de l’hôte (2h)
+  - Méthodes de lutte contre les maladies cryptogamiques des plantes :
+    diagnostic, éradication, résistance variétale, lutte chimique (3h)
+
