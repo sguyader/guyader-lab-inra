@@ -1,8 +1,9 @@
 # -*- mode: org -*-
 # -*- coding: utf-8 -*-
 
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/htmlize.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/bigblow.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/rtf-full.css"/>
 #+STARTUP: overview indent inlineimages logdrawerhh
 
 #+TITLE:       Journal
@@ -24,8 +25,7 @@
 #+COLUMNS: %25ITEM %TODO %3PRIORITY %TAGS
 #+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
 
-informations were gathered and first demonstrated in my [https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org][First
-webinar on reproducible research: litterate programming].
+informations were gathered and first demonstrated in my [[https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org][First webinar on reproducible research: litterate programming]].
 ***** Emacs shortcuts
 Here are a few convenient emacs shortcuts for those that have never
 used emacs. In all of the emacs shortcuts, =C=Ctrl=, =M=Alt/Esc= and
@@ -148,9 +148,7 @@ turday
   - paquet TeX "pdfcrop"
   - Xournal 0.4.8
   - TexMaker 5.0.3
-  - emacs 26.1 (version modifiée pour Windows, obtenue [[https://vigou3.gitlab.io/emacs-modified-windows/][à partir de cette
-  source]])
-
+  - emacs 26.1 -- version modifiée pour Windows, obtenue [[https://vigou3.gitlab.io/emacs-modified-windows/][à partir de cette source]]
 **** *Travail sur un script pour convertir un tableau (aide à F. Causeret pour Cavalbio)* :R:
 
 *** 2018-11-20 Tuesday
@@ -303,4 +301,19 @@ turday
     informatique+papier à archiver
 
 Entered on [2018-12-04 Tue 09:17]
-  
+*** 2018-12-10 Monday
+**** *Paquet R "prettydoc"*
+- permet de faire un rendu simple, joli et léger d'un document HTML à
+  partir de rmarkdown
+- exemple de header yaml à mettre :
+  #+BEGIN_SRC yaml
+  ---
+  title: Titre
+  author: Auteur
+  date: date
+  output:
+    prettydoc::html_pretty:
+      theme: architect
+      highlight: github
+  ---
+  #+END_SRC
