@@ -11,10 +11,12 @@
 
 ;(when window-system (set-frame-size (selected-frame) 220 55))
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
 (require 'org-install)
 (require 'org)
 (require 'ox-pandoc)
+(require 'ox-ravel)
 
 (require 'golden-ratio)
 (golden-ratio-mode 1)

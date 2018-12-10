@@ -25,7 +25,7 @@
 #+COLUMNS: %25ITEM %TODO %3PRIORITY %TAGS
 #+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
 
-informations were gathered and first demonstrated in my [[https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org][First webinar on reproducible research: litterate programming]].
+* informations were gathered and first demonstrated in my [[https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org][First webinar on reproducible research: litterate programming]]. :noexport:
 ***** Emacs shortcuts
 Here are a few convenient emacs shortcuts for those that have never
 used emacs. In all of the emacs shortcuts, =C=Ctrl=, =M=Alt/Esc= and
@@ -212,7 +212,7 @@ turday
   casse le fonctionnement de LaTeX avec emacs, donc désinstallé
   TinyTex et réinstallé TexLive (à partir du site web de TexLive, non
   pas à partir du gestionnaire de paquets de la distribution Linux)
-- installé la librarie "citr" pour tester l'intégration de références
+- installé la librarie =citr= pour tester l'intégration de références
   biblio directement depuis Zotero dans un fichier rmarkdown
 - à propos de =bookdown=, j'ai trouvé comment initialiser un nouveau
   book :
@@ -324,4 +324,4 @@ Entered on [2018-12-04 Tue 09:17]
   - Maladies cryptogamique : pathogénèse et réponses de l’hôte (2h)
   - Méthodes de lutte contre les maladies cryptogamiques des plantes :
     diagnostic, éradication, résistance variétale, lutte chimique (3h)
-
+***** TODO : donner les dates et heures de disponibilité
