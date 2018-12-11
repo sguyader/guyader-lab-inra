@@ -325,3 +325,19 @@ Entered on [2018-12-04 Tue 09:17]
   - Méthodes de lutte contre les maladies cryptogamiques des plantes :
     diagnostic, éradication, résistance variétale, lutte chimique (3h)
 ***** TODO : donner les dates et heures de disponibilité
+**** *remark.js*
+- installer les paquets =xaringan= et =xaringan-themer=:
+  #+BEGIN_SRC r
+  devtools::install_github("gadenbuie/xaringanthemer")
+  devtools::install_github('yihui/xaringan')
+  #+END_SRC
+- pour ajouter une barre de progression :
+  - ajouter un fichier "progress-bar.css" dans le répertoire courant
+  - dans l'en-tête yaml, déclarer le fichier css et ajouter les lignes suivantes :
+    #+BEGIN_SRC r
+    slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    #+END_SRC
