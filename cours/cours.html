@@ -4,39 +4,51 @@
     <title>Presentation Ninja</title>
     <meta charset="utf-8">
     <meta name="author" content="Yihui Xie" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/d3/d3.min.js"></script>
+    <script src="libs/dagre/dagre-d3.min.js"></script>
+    <link href="libs/mermaid/dist/mermaid.css" rel="stylesheet" />
+    <script src="libs/mermaid/dist/mermaid.slim.min.js"></script>
+    <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+    <script src="libs/chromatography/chromatography.js"></script>
+    <script src="libs/DiagrammeR-binding/DiagrammeR.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
-    <link rel="stylesheet" href="progress-bar.css" type="text/css" />
+    <link rel="stylesheet" href="tweak.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
 
-# Presentation Ninja
-## ⚔<br/>with xaringan
-### Yihui Xie
-### 2016/12/12 (updated: 2018-12-10)
+
+
+
+
+class: title-slide
+
+# Cours pathogénèse
+## Sébastien Guyader
+### INRA Astro
 
 ---
 
+layout: true
 
+&lt;div class="my-footer"&gt;&lt;/div&gt;       
+
+---
 
 class: center, middle
 
-
-![](https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-
-???
-
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+<div id="htmlwidget-1f1664422f2d5ed337fc" style="width:504px;height:504px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1f1664422f2d5ed337fc">{"x":{"diagram":"\n  graph LR\n    A-->B\n    A-->C\n    C-->E\n    B-->D\n    C-->D\n    D-->F\n    E-->F\n"},"evals":[],"jsHooks":[]}</script>
 
 ---
+
 class: center, middle
 
 # xaringan
 
-### /ʃæ.'riŋ.ɡæn/
-
 ---
+
 class: inverse, center, middle
 
 # Get Started
@@ -56,8 +68,7 @@ devtools::install_github("yihui/xaringan")
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false,
-"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div>`"
+"countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

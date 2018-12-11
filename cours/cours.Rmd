@@ -6,39 +6,62 @@ date: "2016/12/12 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: [xaringan-themer.css, progress-bar.css]
+    css: ["xaringan-themer.css", "tweak.css"]
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-      slideNumberFormat: |
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
-          </div>
-        </div>`
+    seal: false  
 ---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
 ```{r xaringan-themer, include = FALSE}
 library(xaringanthemer)
 mono_light(base_color = "#23395b")
 ```
 
-class: center, middle
+class: title-slide
 
-
-![](https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-
-???
-
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+# Cours pathogénèse
+## Sébastien Guyader
+### INRA Astro
 
 ---
+
+layout: true
+
+<div class="my-footer"></div>       
+
+---
+
+class: center, middle
+
+```{r echo=FALSE}
+library(DiagrammeR)
+
+DiagrammeR("
+  graph LR
+    A-->B
+    A-->C
+    C-->E
+    B-->D
+    C-->D
+    D-->F
+    E-->F
+")
+
+```
+
+---
+
 class: center, middle
 
 # xaringan
 
-### /ʃæ.'riŋ.ɡæn/
-
 ---
+
 class: inverse, center, middle
 
 # Get Started
