@@ -341,3 +341,7 @@ Entered on [2018-12-04 Tue 09:17]
           </div>
         </div>
     #+END_SRC
+*** 2018-12-11 Tuesday
+**** *Importer des diaporamas PPTX :*
+- installer le paquet =slidex=
+- importer avec la commande =convert_pptx()=
