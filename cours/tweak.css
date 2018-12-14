@@ -1,8 +1,3 @@
-body{
-  background-image: url("images/slide-bg-main2.png");
-  background-size: cover;
-}
-
 .remark-slide-number {
   font-family: 'Yanone Kaffeesatz';
 }
@@ -20,6 +15,12 @@ body{
   background-image: url("images/slide-bg-title2.png");
   background-size: cover;
 }
+
+.title-slide .fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
 .title-slide h1 {
   text-align: left;
   padding-top: 280px;

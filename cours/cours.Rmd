@@ -6,7 +6,7 @@ date:
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["xaringan-themer.css", "tweak.css", "animate.css"]
+    css: ["xaringan-themer.css", "tweak.css", "footer-header.css", "animate.css"]
     nature:
       highlightStyle: github
       highlightLines: true
@@ -25,21 +25,27 @@ library(xaringanthemer)
 mono_light(base_color = "#23395b")
 ```
 
-class: title-slide, fadeIn
+class: title-slide, animated, fadeIn
 
 # Maladies cryptogamiques : pathogénèse et réponses de l'hôte
 ### Sébastien GUYADER
-### *INRA - UR Astro - Petit-Bourg*
+#### INRA - UR Astro - Petit-Bourg
 
 ---
 layout: true
-class: main-slide, fadeIn
+class: main-slide, animated, fadeIn
+<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div> 
 
 ---
 class: middle
 
 .pull-left[
-```{r echo=FALSE, message=FALSE}
+* text 1
+* text 2
+* text 1
+* text 2
+<br/>
+```{r echo=FALSE, message=FALSE, out.width="50%"}
 library(car)
 coplot(prestige ~ income|education, panel=panel.car, 
   col="red", data=Prestige)
@@ -62,13 +68,13 @@ class: center, middle
 
 ---
 layout: false
-class: section-slide, inverse, center, middle, fadeIn
+class: section-slide, inverse, center, middle, animated, fadeIn
 
 # Get Started
 
 ---
 layout: true
-class: main-slide, fadeIn
+class: main-slide, animated, fadeIn
 
 ---
 
