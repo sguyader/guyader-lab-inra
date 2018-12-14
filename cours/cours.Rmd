@@ -88,6 +88,42 @@ devtools::install_github("yihui/xaringan")
 
 ---
 
+.pull-left[
+# Left column title
+
+]
+.pull-right[
+A whole sentence
+
+  + one `Markdown` bullet point
+{{content}}
+
+]
+
+--
+
+  + a second bullet point
+{{content}}
+
+--
+
+  + a third bullet point
+{{content}}
+
+--
+
+    + a sub level
+{{content}}
+
+--
+    + a second sub level
+{{content}}
+
+--
+    + athird sub
+---
+
 #Last slide
 
 To see how it works
+
