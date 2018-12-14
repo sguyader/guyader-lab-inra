@@ -1,0 +1,80 @@
+---
+title: "Stage symptômes viraux"
+author: "Sébastien Guyader"
+date: "December 14, 2018"
+output: word_document
+---
+
+Il s'agit de conduire une analyse des correspondances multiples (ACM) sur les données de symptômes viraux et d'indexation virale, réalisés sur 81 accessions d'igname.
+
+Import du fichier de données :
+
+```{r}
+data <- read.csv("viro.csv", row.names = 1)
+```
+
+On vérifie le tableau importé :
+
+```{r}
+head(data)
+```
+
+On convertit les variables en tant que facteurs pour l'ACM :
+
+```{r}
+i=0
+while(i < ncol(data)){
+  i=i+1
+  data[,i] <- as.factor(data[,i])
+}
+```
+
+
+On va charger les librairies nécessaires : `FactoMineR` et `factoextra` :
+
+```{r}
+library(FactoMineR) ; library(factoextra)
+```
+
+On commence par faire l'analyse des correspondances multiples (`MCA`) :
+
+```{r}
+res.mca <- MCA(data, graph = F, ncp=5)
+```
+
+On détermine valeurs propres des axes :
+
+```{r}
+
+1/(nrow(data)-1)*100
+val_propre <- 1/((res.mca[["call"]][["ncp"]])-1)
+
+fviz_screeplot(res.mca, addlabels=TRUE) +
+  geom_hline(yintercept = val_propre*100, linetype = 2, color = "red") +
+  xlab("dimension") + ylab("pourcentage de la variance") +
+  ggtitle("") +
+  theme_bw()
+```
+
+Graphique des variables + individus, avec coloration en fonction de leur contribution :
+
+```{r}
+fviz_mca_biplot(res.mca, col.var="contrib", repel=F) +
+  scale_color_gradient2(low="blue", mid="yellow", high="red", midpoint=5) +
+  ggtitle("") +
+  theme_bw()
+```
+
+Contributions des variables sur l'axe 1 :
+
+```{r}
+fviz_contrib(res.mca, choice="var", axes = 1) +
+  ggtitle("")
+```
+
+Contributions des variables sur l'axe 2 :
+
+```{r}
+fviz_contrib(res.mca, choice="var", axes = 2) +
+  ggtitle("")
+```

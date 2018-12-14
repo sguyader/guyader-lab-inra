@@ -1,0 +1,96 @@
+---
+title: "Stage symptômes viraux"
+author: "Sébastien Guyader"
+date: "December 14, 2018"
+output: word_document
+---
+
+Il s'agit de conduire une analyse en composantes principales (ACP) sur les données de symptômes viraux et d'indexation virale, réalisés sur 81 accessions d'igname.
+
+## Import du fichier de données :
+
+```{r}
+data <- read.csv("viro.csv", row.names = 1)
+```
+
+On vérifie le tableau importé :
+
+```{r}
+head(data)
+#data$Points_verts <- NULL
+```
+
+## ACP
+
+On va charger les librairies nécessaires : `FactoMineR` et `factoextra` :
+
+```{r}
+library(FactoMineR) ; library(factoextra)
+library(tidyverse)
+```
+
+On commence par faire l'analyse en composantes principales (`PCA`) :
+
+```{r}
+res.pca <- PCA(data, graph = F, ncp=5)
+```
+
+On détermine valeurs propres des axes :
+
+```{r}
+
+1/(nrow(data)-1)*100
+val_propre <- 1/((5)-1)
+
+fviz_screeplot(res.pca, addlabels=TRUE) +
+  geom_hline(yintercept = val_propre*100, linetype = 2, color = "red") +
+  xlab("dimension") + ylab("pourcentage de la variance") +
+  ggtitle("") +
+  theme_bw()
+```
+
+Graphique des variables, avec coloration en fonction de leur contribution :
+
+```{r}
+fviz_pca_biplot(res.pca, col.var="contrib", repel=T) +
+  scale_color_gradient(low="green", high="red") +
+  ggtitle("") +
+  theme_bw()
+```
+
+Contributions des variables sur l'axe 1 :
+
+```{r}
+fviz_contrib(res.pca, choice="var", axes = 1) +
+  ggtitle("")
+```
+
+Contributions des variables sur l'axe 2 :
+
+```{r}
+fviz_contrib(res.pca, choice="var", axes = 2) +
+  ggtitle("")
+```
+
+## Classification hiérarchique
+
+```{r}
+res.hcpc <- HCPC(res.pca, nb.clust=-1, cluster.CA="rows")
+plot(res.hcpc, choice="tree", axes=c(1,2))
+```
+
+```{r}
+clust.plot <- res.hcpc %>% fviz_cluster(repel=T, show.clust.cent=F, axes=c(1,2),
+                                      ellipse.type = "norm", legend="none",
+                                      main="Analyse Factorielle des Correspondances",
+                                      ggtheme=theme_bw())
+
+CA.cols <- as.data.frame(res.pca$col)
+
+library(ggpubr)
+
+clust.plot +
+  geom_exec(geom_point, data=CA.cols, x="coord.Dim.1", y="coord.Dim.2", shape=1:5, size=3, color="red") +
+  geom_hline(yintercept = 0, linetype = 2, color = "black") +
+  geom_vline(xintercept = 0, linetype = 2, color = "black")
+```
