@@ -1,20 +1,23 @@
 ---
-title: "Presentation Ninja"
-subtitle: "⚔<br/>with xaringan"
-author: "Yihui Xie"
-date: "2016/12/12 (updated: `r Sys.Date()`)"
+title: "Maladies cryptogamiques"
+subtitle: "Pathogénèse et réponses de l'hôte"
+author: "Sébastien GUYADER `r Sys.Date()`)"
+date: 
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["xaringan-themer.css", "tweak.css"]
+    css: ["xaringan-themer.css", "tweak.css", "animate.css"]
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-    seal: false  
+      ratio: 16:9
+      click: true
+    seal: false
+    self_contained: false
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, message=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
 ```{r xaringan-themer, include = FALSE}
@@ -22,37 +25,34 @@ library(xaringanthemer)
 mono_light(base_color = "#23395b")
 ```
 
-class: title-slide
+class: title-slide, fadeIn
 
-# Cours pathogénèse
-## Sébastien Guyader
-### INRA Astro
+# Maladies cryptogamiques : pathogénèse et réponses de l'hôte
+### Sébastien GUYADER
+### *INRA - UR Astro - Petit-Bourg*
 
 ---
-
 layout: true
-
-<div class="my-footer"></div>       
+class: main-slide, fadeIn
 
 ---
+class: middle
 
-class: center, middle
-
-```{r echo=FALSE}
-library(DiagrammeR)
-
-DiagrammeR("
-  graph LR
-    A-->B
-    A-->C
-    C-->E
-    B-->D
-    C-->D
-    D-->F
-    E-->F
-")
+.pull-left[
+```{r echo=FALSE, message=FALSE}
+library(car)
+coplot(prestige ~ income|education, panel=panel.car, 
+  col="red", data=Prestige)
+```
+]
+.pull-right[
+```{r echo=FALSE, message=F}
+plot(repwt ~ weight, pch=c(1,2)[sex], data=Davis)
+regLine(lm(repwt~weight, subset=sex=="M", data=Davis))
+regLine(lm(repwt~weight, subset=sex=="F", data=Davis), lty=2)
 
 ```
+]
 
 ---
 
@@ -61,10 +61,14 @@ class: center, middle
 # xaringan
 
 ---
-
-class: inverse, center, middle
+layout: false
+class: section-slide, inverse, center, middle, fadeIn
 
 # Get Started
+
+---
+layout: true
+class: main-slide, fadeIn
 
 ---
 
@@ -75,3 +79,9 @@ Install the **xaringan** package from [Github](https://github.com/yihui/xaringan
 ```{r eval=FALSE, tidy=FALSE}
 devtools::install_github("yihui/xaringan")
 ```
+
+---
+
+#Last slide
+
+To see how it works

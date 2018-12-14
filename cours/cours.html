@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Presentation Ninja</title>
+    <title>Maladies cryptogamiques</title>
     <meta charset="utf-8">
-    <meta name="author" content="Yihui Xie" />
-    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
-    <script src="libs/d3/d3.min.js"></script>
-    <script src="libs/dagre/dagre-d3.min.js"></script>
-    <link href="libs/mermaid/dist/mermaid.css" rel="stylesheet" />
-    <script src="libs/mermaid/dist/mermaid.slim.min.js"></script>
-    <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
-    <script src="libs/chromatography/chromatography.js"></script>
-    <script src="libs/DiagrammeR-binding/DiagrammeR.js"></script>
+    <meta name="author" content="Sébastien GUYADER 2018-12-13)" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="tweak.css" type="text/css" />
+    <link rel="stylesheet" href="animate.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -22,24 +15,25 @@
 
 
 
-class: title-slide
+class: title-slide, fadeIn
 
-# Cours pathogénèse
-## Sébastien Guyader
-### INRA Astro
+# Maladies cryptogamiques : pathogénèse et réponses de l'hôte
+### Sébastien GUYADER
+### *INRA - UR Astro - Petit-Bourg*
 
 ---
-
 layout: true
-
-&lt;div class="my-footer"&gt;&lt;/div&gt;       
+class: main-slide, fadeIn
 
 ---
+class: middle
 
-class: center, middle
-
-<div id="htmlwidget-1f1664422f2d5ed337fc" style="width:504px;height:504px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1f1664422f2d5ed337fc">{"x":{"diagram":"\n  graph LR\n    A-->B\n    A-->C\n    C-->E\n    B-->D\n    C-->D\n    D-->F\n    E-->F\n"},"evals":[],"jsHooks":[]}</script>
+.pull-left[
+![](cours_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+]
+.pull-right[
+![](cours_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+]
 
 ---
 
@@ -48,10 +42,14 @@ class: center, middle
 # xaringan
 
 ---
-
-class: inverse, center, middle
+layout: false
+class: section-slide, inverse, center, middle, fadeIn
 
 # Get Started
+
+---
+layout: true
+class: main-slide, fadeIn
 
 ---
 
@@ -63,12 +61,20 @@ Install the **xaringan** package from [Github](https://github.com/yihui/xaringan
 ```r
 devtools::install_github("yihui/xaringan")
 ```
+
+---
+
+#Last slide
+
+To see how it works
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"click": true
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

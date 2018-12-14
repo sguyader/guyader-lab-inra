@@ -1,17 +1,59 @@
-.title-slide {
-  background-image: url("bgINRA1.png");
+body{
+  background-image: url("images/slide-bg-main2.png");
   background-size: cover;
 }
-.title-slide h1, h2, h3 {
-  text-align: center;
+
+.remark-slide-number {
+  font-family: 'Yanone Kaffeesatz';
+}
+
+.inverse {
+  background-image: url("images/slide-bg-main.png");
+  background-size: cover;
+}
+
+.inverse .remark-slide-number {
+  color: #E9EBEE;
+}
+
+.title-slide {
+  background-image: url("images/slide-bg-title2.png");
+  background-size: cover;
+}
+.title-slide h1 {
+  text-align: left;
+  padding-top: 280px;
+  color: #FFFFFF;
+}
+.title-slide h2, h3 {
+  text-align: left;
+  line-height: 50%;
   color: #F7F8FA;
 }
 
-.title-slide .remark-slide-number {
-  display: none;
+.title-slide h4 {
+  color: #E9EBEE;
 }
 
-div.my-footer {
+.main-slide {
+  background-image: url("images/slide-bg-main2.png");
+  background-size: cover;
+}
+
+h4 {
+  font-family: 'Yanone Kaffeesatz';
+  font-weight: normal;
+  color: #23395b;
+}
+
+
+  
+a, a > code {
+  color: #23395b;
+  text-decoration: underline;
+}
+
+/*div.my-footer {
 content: "";
     position: absolute;
     bottom: 15px;
@@ -19,6 +61,6 @@ content: "";
     height: 40px;
     width: 120px;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("Logotype-INRA-White-transparent.png");
-}
+    background-size: cover;
+    background-image: url("images/slide-bg-main.png");
+}*/
