@@ -345,3 +345,25 @@ Entered on [2018-12-04 Tue 09:17]
 **** *Importer des diaporamas PPTX :*
 - installer le paquet =slidex=
 - importer avec la commande =convert_pptx()=
+*** 2018-12-14 vendredi
+**** *Rapprochement GENEPI-BETWEEN - Deuxième réunion (cadres)*
+- 3 projets en cours 2020-2021 (feder, et feader avec JL Diman)
+  1. fondation de france : thèse Coraline et prolongation avec 3ème
+    année au champ (2019)
+  2. intenséco plantain (ferme pilote)
+  3. agroécodiv tranche 2 (ferme pilote + UE)
+- stagiaires coencadrés par Gladys en 2019 sur les 3 projets, avec
+  surtout Fred et Philippe
+- Chantal fait moins de faune du sol, Gladys ayant récupéré les
+  échantillons
+- il faut assurer une transition avec les techniciens qui ne sont plus
+  occupés à 100% sur les projets
+- Fred : terrain > serre > labo (dispositifs expé), géré par Gladys
+- Philippe : mycorrhizes Marie + fin thèse Coraline, Laurent prendrait
+  la gestion
+- Chantal : un peu avec Marie sur interactions mycorrhizes/nématodes,
+  Laurent prendrait la gestion
+- faire entretiens individuels DU + agents
+- voir avec Chantal si elle pourrait se former en mycologie
+- faire un échange sur les projets de chacun pour préparer la fusion
+- inclure Marie Umber
