@@ -70,7 +70,7 @@ class: center, middle
 ---
 layout: false
 class: section-slide, inverse, center, middle, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
+<div class="my-footer"><span style="color:white">S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
 
 # Get Started
 
