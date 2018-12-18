@@ -6,7 +6,7 @@ date:
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["xaringan-themer.css", "tweak.css", "footer-header.css", "animate.css"]
+    css: ["tweak.css", "xaringan-themer.css", "footer-header.css", "animate.css", default]
     nature:
       highlightStyle: github
       highlightLines: true
@@ -45,18 +45,19 @@ class: middle
 * text 1
 * text 2
 <br/>
-```{r echo=FALSE, message=FALSE, out.width="50%"}
-library(car)
-coplot(prestige ~ income|education, panel=panel.car, 
-  col="red", data=Prestige)
+```{r echo=FALSE, message=FALSE, out.width="100%"}
+library(htmltools) ; library(DiagrammeR)
+DiagrammeR("
+  graph LR;
+  id1(Start)-- text -->id2(Stop);
+  style id1 fill:#f9f,stroke:#333,stroke-width:4px;
+  style id2 fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5;
+")
 ```
 ]
 .pull-right[
 ```{r echo=FALSE, message=F}
-plot(repwt ~ weight, pch=c(1,2)[sex], data=Davis)
-regLine(lm(repwt~weight, subset=sex=="M", data=Davis))
-regLine(lm(repwt~weight, subset=sex=="F", data=Davis), lty=2)
-
+plot(cars)
 ```
 ]
 
@@ -69,12 +70,14 @@ class: center, middle
 ---
 layout: false
 class: section-slide, inverse, center, middle, animated, fadeIn
+<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div> 
 
 # Get Started
 
 ---
 layout: true
 class: main-slide, animated, fadeIn
+<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div> 
 
 ---
 
@@ -120,10 +123,15 @@ A whole sentence
 {{content}}
 
 --
-    + athird sub
+    + a third sub
 ---
 
 #Last slide
 
-To see how it works
+> To see how it works <br/>
+> quote and `inline code`
+
+.blue-block[
+exemple de bloc 
+]
 

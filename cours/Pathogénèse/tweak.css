@@ -47,8 +47,32 @@ h4 {
   color: #23395b;
 }
 
+.remark-inline-code { background-color: #f2f2f2; }
 
-  
+.blue-block {
+  background-color: #c8d5ea;
+  border: solid 1px #4774b8;
+  border-left: solid 8px #4774b8;
+  border-radius: 10px;
+  padding-left: 1em;
+}
+
+.green-block {
+  background-color: #c8eac8;
+  border: solid 1px #46b946;
+  border-left: solid 8px #46b946;
+  border-radius: 10px;
+  padding-left: 1em;
+}
+
+.red-block{
+  background-color: #eac8c8;
+  border: solid 1px #b84747;
+  border-left: solid 8px #b84747;
+  border-radius: 10px;
+  padding-left: 1em;
+}
+
 a, a > code {
   color: #23395b;
   text-decoration: underline;

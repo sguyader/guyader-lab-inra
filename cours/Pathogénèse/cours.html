@@ -3,9 +3,18 @@
   <head>
     <title>Maladies cryptogamiques</title>
     <meta charset="utf-8">
-    <meta name="author" content="Sébastien GUYADER 2018-12-14)" />
-    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <meta name="author" content="Sébastien GUYADER 2018-12-17)" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/d3/d3.min.js"></script>
+    <script src="libs/dagre/dagre-d3.min.js"></script>
+    <link href="libs/mermaid/dist/mermaid.css" rel="stylesheet" />
+    <script src="libs/mermaid/dist/mermaid.slim.min.js"></script>
+    <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+    <script src="libs/chromatography/chromatography.js"></script>
+    <script src="libs/DiagrammeR-binding/DiagrammeR.js"></script>
     <link rel="stylesheet" href="tweak.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="footer-header.css" type="text/css" />
     <link rel="stylesheet" href="animate.css" type="text/css" />
   </head>
@@ -36,7 +45,8 @@ class: middle
 * text 1
 * text 2
 &lt;br/&gt;
-&lt;img src="cours_files/figure-html/unnamed-chunk-1-1.png" width="50%" /&gt;
+<div id="htmlwidget-274a2818d2adda3b1583" style="width:100%;height:504px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-274a2818d2adda3b1583">{"x":{"diagram":"\n  graph LR;\n  id1(Start)-- text -->id2(Stop);\n  style id1 fill:#f9f,stroke:#333,stroke-width:4px;\n  style id2 fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5;\n"},"evals":[],"jsHooks":[]}</script>
 ]
 .pull-right[
 ![](cours_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
@@ -51,12 +61,14 @@ class: center, middle
 ---
 layout: false
 class: section-slide, inverse, center, middle, animated, fadeIn
+&lt;div class="my-footer"&gt;&lt;span&gt;S. Guyader &amp;nbsp; - &amp;nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte&lt;/span&gt;&lt;/div&gt; 
 
 # Get Started
 
 ---
 layout: true
 class: main-slide, animated, fadeIn
+&lt;div class="my-footer"&gt;&lt;span&gt;S. Guyader &amp;nbsp; - &amp;nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte&lt;/span&gt;&lt;/div&gt; 
 
 ---
 
@@ -103,12 +115,17 @@ A whole sentence
 {{content}}
 
 --
-    + athird sub
+    + a third sub
 ---
 
 #Last slide
 
-To see how it works
+&gt; To see how it works &lt;br/&gt;
+&gt; quote and `inline code`
+
+.blue-block[
+exemple de bloc 
+]
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
