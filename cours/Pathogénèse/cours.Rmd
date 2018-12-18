@@ -1,7 +1,7 @@
 ---
 title: "Maladies cryptogamiques"
-subtitle: "Pathogénèse et réponses de l'hôte"
-author: "Sébastien GUYADER `r Sys.Date()`)"
+subtitle: "PathogÃ©nÃ¨se et rÃ©ponses de l'hÃ´te"
+author: "SÃ©bastien GUYADER `r Sys.Date()`)"
 date: 
 output:
   xaringan::moon_reader:
@@ -27,14 +27,14 @@ mono_light(base_color = "#23395b")
 
 class: title-slide, animated, fadeIn
 
-# Maladies cryptogamiques : Pathogénèse et réponses de l'hôte
-### Sébastien GUYADER
+# Maladies cryptogamiques : pathogÃ©nÃ¨se et rÃ©ponses de l'hÃ´te
+### SÃ©bastien GUYADER
 #### INRA - UR Astro - Petit-Bourg
 
 ---
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : Pathogénèse et réponses de l'hôte</span></div> 
+<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogÃ©nÃ¨se et rÃ©ponses de l'hÃ´te</span></div> 
 
 ---
 class: middle
@@ -70,14 +70,14 @@ class: center, middle
 ---
 layout: false
 class: section-slide, inverse, center, middle, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : Pathogénèse et réponses de l'hôte</span></div> 
+<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogÃ©nÃ¨se et rÃ©ponses de l'hÃ´te</span></div>
 
 # Get Started
 
 ---
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : Pathogénèse et réponses de l'hôte</span></div> 
+<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogÃ©nÃ¨se et rÃ©ponses de l'hÃ´te</span></div>
 
 ---
 
