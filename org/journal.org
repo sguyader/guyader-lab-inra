@@ -367,3 +367,78 @@ Entered on [2018-12-04 Tue 09:17]
 - voir avec Chantal si elle pourrait se former en mycologie
 - faire un échange sur les projets de chacun pour préparer la fusion
 - inclure Marie Umber
+*** 2018-12-20 jeudi
+**** Réunion Ching
+Présents: Yoana Faure (YF), Régis Tournebize (RT), Antoine Richard
+(AR), Jorge Sierra (JS), François Bussière (FB), François Causeret
+(FC), Alfred Venthou-Dumaine (AVD), Bernard Fils-Lycaon (BFL),
+Sébastien Guyader (SG), Marie-Françoise Zébus (MFZ), Jean-Bapiste
+Nanette (JBN), Thierry Bajazet (TB)
+
+1. tour de table :
+   - SG :
+     - MOOC Recherche Reproductible terminé, en cours de validation
+     - utilise les outils et pratiques apprises dans le MOOC
+   - BFL :
+     - FEDER Tr2 : a modifié les tableurs (années, grades, masse
+       salariale... ) boucler les demandes d'aide, refaire les devis
+     - tableur : pour CDDs, faire une ligne par personne (ne pas
+       pooler) ; pour missions, séparer frais de mission, frais de
+       voyage, frais d'inscription...
+     - fin FEDER : juin 2021, donc redispatcher les actions jusqu'à
+       juin 2021
+     - la DG impose les projets de plus de 1M€ (coût complet, incluant
+       35% de coûts d'environnement) à demander l'avis de la DGDS, du
+       DU, du PC, des CD
+     - ne pas demnder de CDD avant juillet 2019
+   - AVD : 
+     - regoupements EIC => changements de matériel en eic, et des
+       prises RJ45 dans les bureaux à partir de mars 2019
+     - les stagiaires ne peuvent plus tuliser de poste perso sur le réseau INRA
+     - a reçu 3 protocoles pour des demandes en serre
+   - JBN/TB :
+     - va faire le point sur les demandes de travaux pour bâtiment
+       (demande de D. Rufer)
+     - prévoient la réorganisation de l'observatoire
+   - FC :
+     - Explorer va démarrer et permettre de soutenir les activités de la microferme
+     - pas mal de personnes (stages) passent sur la microferme
+     - analyses sur les enquêtes des agriculteurs de Cavalbio Ignames
+     - sera correspondant de la mission Données (SAE2) à partir de janvier
+   - JS :
+     - rédige un papier avec P. Chopin sur changement Climatique
+     - travaille sur demande financement pour une thèse
+     - adapte Morgwaik en espagnol
+     - va changer de bureau
+   - AR :
+     - refléxion sur l'évolution de l'observatoire
+     - arrivée le 7 janvier d'une stagiaire M2 (Axelle Mordier)
+     - accueil début janvier de Pascale Bade pour travailler sur des manips sur
+       matière organique, en vue d'une éventuelle intégration
+   - RT :
+     - rédaction de rapports
+     - dossiers Rita 2 et Agroécodiv 2...
+   - YF :
+     - allée à Orléans pour rencontres des CRB
+       - réflexion sur rôle des collections à l'INRA
+       - travail à faire sur un modèle économique propre au CRB
+       - réflexion suite à publication de la normale ISO "Biobanking
+     - récoltes collection ignames surtout des /D. bulbifera/
+     - stagiaire M1 encadrée par Marie (relation symptômes/indexation),
+       a soutenu
+   - MFZ :
+     - travail sur notices Prodinra
+     - peu de dépôts de nouvelles notices
+     - a paricipé à la réunion nationale du personnel IST INRA
+     - propose une jurnée Opendata sur le centre si besoin
+2. Point échanges avec départements :
+   - 28-29 janvier 2019 :
+   - animé par C. Lannou
+   - probablement plénière avec cadres
+   - toujours pas de rapport sur l'UE
+3. Préparation des 70 ans du Centre :
+   - JS propose de montrer des obtentions concrètes (variétés...)
+   - ...
+4. Point stages
+5. Mise à jour de l'organigramme de l'unité
+
