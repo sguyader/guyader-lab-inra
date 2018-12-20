@@ -5,14 +5,24 @@
 		* saprotrophes
 		* biotrophes
 	- interaction avec microbe : grands types d'interaction :
-		- réaction gène pour gène : gène d'avirulence / gène de résistance -> interaction icompatible
+		- réaction gène pour gène : gène d'avirulence / gène de résistance -> interaction incompatible
 		- pas de réaction gène pour gène : interaction compatible
 	- conséquences de l'interaction compatible : modification du fonctionnement de la plante, symptômes de maladie
 
 2) Immunité et résistance
-	- mécanismes de reconnaissance de l'agression :2 types d'immunité
+	- mécanismes de reconnaissance de l'agression : 2 types d'immunité
 		* réponse immunitaire basale : PTI (PAMP-triggered immunity)
+			- activation de la voie JA (elle est aussi induite par les blessures) et/ou ET
+			- JA et/ou ET activent l'expression de gènes impliqués dans la défense (protéines PR)
 		* réponse immunitaire indirecte : ETI (effector-triggered immunity)
+			- gènes dits R / avirulence
+			- R souvent type NB-LRR, reconnaissance sirecte de l'effecteur avr ou reconnaissance indirecte (changements protéines de l'hôte)
+			- réaction en générale + rapide et + intense que résistance basale
+			- 2 grandes réponses marqueurs :
+				* burst oxydatif -> activité antimicrobienne directe + signal d'activation
+				* mort cellulaire programmée = HR (action sur biotrophes) et activation du signal SA qui conduit à l'expression de protéines PR
+			- activation de la voie SA permet un prémunition aux pathogènes sensibles aux mécanismes induits, on appelle cela SAR
+		* souvent , les voies SA et JA/ET sont antagonistes
 	- schéma en zigzag
 	- différences entre interactions biotrophes et nécrotrophes :
 		* biotrophes : induction quasi-systématique de la voie SA, conduisant à la mort cellulaire (si induite, la voie JA est efficace)

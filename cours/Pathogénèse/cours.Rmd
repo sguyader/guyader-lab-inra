@@ -12,15 +12,14 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       ratio: 16:9
-      click: true
+      navigation:
+        click: true
     seal: false
     self_contained: false
 ---
 
 ```{r setup, include=FALSE, message=FALSE}
 options(htmltools.dir.version = FALSE)
-```
-```{r xaringan-themer, include = FALSE}
 library(xaringanthemer)
 mono_light(base_color = "#23395b")
 ```
@@ -32,11 +31,13 @@ class: title-slide, animated, fadeIn
 #### INRA - UR Astro - Petit-Bourg
 
 ---
+
 layout: true
 class: main-slide, animated, fadeIn
 <div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div> 
 
 ---
+
 class: middle
 
 .pull-left[
@@ -44,37 +45,34 @@ class: middle
 * text 2
 * text 1
 * text 2
-<br/>
-```{r echo=FALSE, message=FALSE, out.width="100%"}
+
+```{r echo=FALSE, message=FALSE}
 library(htmltools) ; library(DiagrammeR)
-DiagrammeR("
-  graph LR;
-  id1(Start)-- text -->id2(Stop);
-  style id1 fill:#f9f,stroke:#333,stroke-width:4px;
-  style id2 fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5;
-")
+m <- mermaid("graph LR;
+   id1(Start)-- text -->id2(Stop);
+   style id1 fill:#f9f, stroke:#333, stroke-width:4px;
+   style id2 fill:#ccf, stroke:#f66, stroke-width:2px, stroke-dasharray: 5, 5;
+ ", height=100)
+#htmlwidgets::saveWidget(m, 'diagram.html', background="transparent")
+widgetframe::frameWidget(m)
 ```
 ]
+
 .pull-right[
 ```{r echo=FALSE, message=F}
 plot(cars)
 ```
 ]
-
 ---
 
-class: center, middle
-
-# xaringan
-
----
 layout: false
 class: section-slide, inverse, center, middle, animated, fadeIn
 <div class="my-footer"><span style="color:white">S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
 
-# Get Started
+# Nouvelle section
 
 ---
+
 layout: true
 class: main-slide, animated, fadeIn
 <div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
@@ -91,16 +89,13 @@ devtools::install_github("yihui/xaringan")
 
 ---
 
-.pull-left[
+.left-column[
 # Left column title
-
 ]
-.pull-right[
+.right-column[
 A whole sentence
-
   + one `Markdown` bullet point
 {{content}}
-
 ]
 
 --
@@ -123,7 +118,9 @@ A whole sentence
 {{content}}
 
 --
+
     + a third sub
+
 ---
 
 #Last slide
@@ -135,3 +132,16 @@ A whole sentence
 exemple de bloc 
 ]
 
+--
+<br/>
+.green-block[
+exemple de bloc 
+]
+
+--
+<br/>
+.red-block[
+exemple de bloc 
+]
+
+.footnote[.red.bold[*] Important footnote]
