@@ -1,0 +1,51 @@
+.Large[...]
+.large[...]
+.small[...]
+.footnotesize[...]
+.scriptsize[...]
+.tiny[...]
+.bold[...] .bolder[...]
+
+.left[...] (right, center)
+
+.blue-block[...] (green, red)
+
+.pull-left[...] .pull-right[...]  (50/50)
+.left-column[...] .right-column[...]  (25/75)
+.footnote[...]
+??? (notes de dipao en dessous)
+<!--- comment --->
+
+.black[...]
+.red[...]
+.blue[...]
+.green[...], 
+.yellow[...], 
+.orange[...], 
+.purple[...], 
+.gray[...] .grey[...]
+
+.content-box-blue (or gray/grey, army, green, purple, red, or yellow)
+.full-width[.content-box-red[...]]
+
+```{r echo=FALSE, out.width="80%"}
+knitr::include_graphics("https://www.......jpg")
+```
+![image](http://......jpg)
+
+.polaroid[...]
+.rotate-right[...]
+.blur[...]
+.opacity[...]
+.blur[.opacity[...]]
+.grayscale[...]
+.shadow[...]
+
+slide option:
+name: diapo-xxx
+	lien : aller vers [la diapo xxx](#diapo-xxx)
+background-image: url(xxx.jpg)
+count: false
+layout: true (diapo sans contenu, sert de masque aux suivantes)
+exclude: true (la diapo ne sera pas affichée)
+> texte (citation)
