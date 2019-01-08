@@ -1,0 +1,6 @@
+#NEXUS
+
+begin trees;
+    tree Tree = (8R7_B01_71_AM-R:0.145546,'KC888932.1 Colletotrichum alatae mating type protein 1-2-1 (Mat-1-2-1) gene, partial cds; and Apn2-MAT-1-2-1 intergenic spacer, partial sequence':0.00178952,(((8R7_B02_72_AM-F:0.0294572,8R7_A02_13_AM-F:0.0905861):0.0109716,8R7_E02_221_AM-F:0.0229712):0.0151036,(((((((((8R7_H02_281_AM-R:0.136402,8R7_G02_266_AM-R:0.257721):0.137949,8R7_H01_279_AM-R:0.309341):0.118546,(8R7_G01_265_AM-R:0.0629188,8R7_F01_247_AM-R:0.0189494):0.110047):0.0482021,8R7_E01_220_AM-R:0.0966804):0.0210476,8R7_D01_164_AM-R:0.00998293):0.0118397,8R7_F02_249_AM-R:0.0220996):0.00833052,(8R7_C02_138_AM-R:0.0967118,8R7_D02_165_AM-R:0.0102123):0.0134513):0.0165595,8R7_C01_118_AM-R:0.0243408):0.0186394,8R7_A01_8_AM-R:0.0122139):0.107925):0.0205328,('KJ954567.1 Colletotrichum fructicola strain LF506 mating type protein 1-2-1 (Mat-1-2-1) gene, partial cds; and Apn2-Mat1-2 intergenic spacer, partial sequence':0.0496646,'KJ954508.1 Colletotrichum siamense strain LF177 mating type protein 1-2-1 (Mat-1-2-1) gene, partial cds; and Apn2-Mat1-2 intergenic spacer, partial sequence':0.0432239):0.11172);
+end;
+
