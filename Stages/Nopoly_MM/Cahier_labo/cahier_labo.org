@@ -82,3 +82,22 @@ Entered on [2019-01-08 mar. 10:03]
 **** résultats
 ***** sous titre
 Entered on [2019-01-08 mar. 10:08]
+**** analyse de séquences 
+(voir fichier texte)
+Entered on [2019-01-08 mar. 15:06]
+*** 2019-01-09 mercredi
+**** manipulation :4L de milieu de culture PDA
+Manipulation faite en 2parties
+1) 3L de milieu de culture PDA :
+39g de poudre PDA * 3 = 117g
+1000 mL d'eau *3 = 3000mL
+
+2) 1L de milieu PDA :
+39g de poudre PDA
+1000mL d'eau
+
+agiter durant 2h puis passage à l'autoclave durant 20min à 120°c
+
+
+
+Entered on [2019-01-09 mer. 23:20]
