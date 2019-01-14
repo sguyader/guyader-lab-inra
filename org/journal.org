@@ -441,4 +441,12 @@ Nanette (JBN), Thierry Bajazet (TB)
    - ...
 4. Point stages
 5. Mise à jour de l'organigramme de l'unité
-
+* 2019
+** 2019-01 January
+*** 2019-01-14 Monday
+**** Test de la fonction de lien vers un document:
+- utiliser C-u C-c C-l
+- exemple : voici un lien vers mon "readme"
+Entered on [2019-01-14 Mon 10:36]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
