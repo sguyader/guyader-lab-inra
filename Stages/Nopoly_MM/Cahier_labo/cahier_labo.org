@@ -383,7 +383,7 @@ TMMAGGAACGCCTCTTGATGATGTATCCCGACTACCGTTACACCCCACGCAAGCCGTCTGAGAAGCGCCATCGAAAGCCT
 les positions suivantes représentent des mutations :
 1à14, 122,128,150,227,248,264,278,279,287,321,326,400,401,426,447,457,494,512,583,723,740,760,775,787,786
 
-** les amorces linéaires trouvées sont les suivantes :
+***** les amorces linéaires trouvées sont les suivantes :
 F3= TCCCGACTACCGTTACACC
 5'=24 3'=42 longueur=19 Tm=60.07 
 
@@ -407,7 +407,47 @@ BIC= CATCAGCGCGCCGACTTGTC-CGCAGTCGGTAGGTATAACTCA
 
 FIC=GCTAAGCTGGCCTTCTTGCTTTG-ACGCAAGCCGTCTGAGAA
 
-** les amorces Loop sont les suivantes:
+***** les amorces Loop sont les suivantes:
 LB=	GGCTCCAGACGGAGGAGTA
 5'=174	3'=192	l=19	Tm=61.91
 
+
+*** [#C] 2019-01-14 lundi
+Présentation NOPOLY (10minutes)
+
+Titre :
+ Développement d'un outil d'amplification isothermale "LAMP"
+pour la détection de souches Colletotrichum spp. infectant les ignames
+en Guadeloupe.
+
+Problématique :
+Comment développer un test moléculaire isothermale "LAMP" pour la
+détection rapide du champignon "Colletotrichum goleosporioides" de
+l'igname en Guadeloupe?
+
+
+PLAN
+I- Introduction 
+- Présentation de la maladie anthracnose 
+- Présentation du champignon pathogène (taxonomie - mode d'inoculation
+  et de dispersion)
+- Présentation de la technique LAMP (axée sur le locus Apn2/MAP)
+
+II- Matériels et Méthodes
+
+- Alignement de 25 séquences sur le logiciel"Uniprot UGENE"
+- Recherche d'amorces sur le site "Primer Explorer" à partir d'une des
+  séquences ( séquence RaAa16)
+- Repiquage et culture des 25 souches sélectionnées
+- Extraction d'ADN à partir d'un Kit d'extraction
+- Vérifier la nature des espèces par des tests moléculaires
+  (electrophorèse et PCR)
+- Tester les amorces susceptibles d'être associées à l'anthracnose de
+  l'igname par des tests de détection (spectrophotomètre?)
+
+III- Résultats 
+Analyse des résultats par des tests statistiques (test du Khi2?)
+
+IV- Discussion
+
+V- Conclusion 
