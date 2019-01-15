@@ -413,7 +413,8 @@ LB=	GGCTCCAGACGGAGGAGTA
 
 
 *** [#C] 2019-01-14 lundi
-Présentation NOPOLY (10minutes)
+**** Présentation NOPOLY (10 min)
+***** PLAN:
 
 Titre :
  Développement d'un outil d'amplification isothermale "LAMP"
@@ -425,8 +426,6 @@ Comment développer un test moléculaire isothermale "LAMP" pour la
 détection rapide du champignon "Colletotrichum goleosporioides" de
 l'igname en Guadeloupe?
 
-
-PLAN
 I- Introduction 
 - Présentation de la maladie anthracnose 
 - Présentation du champignon pathogène (taxonomie - mode d'inoculation
@@ -438,12 +437,13 @@ II- Matériels et Méthodes
 - Alignement de 25 séquences sur le logiciel"Uniprot UGENE"
 - Recherche d'amorces sur le site "Primer Explorer" à partir d'une des
   séquences ( séquence RaAa16)
-- Repiquage et culture des 25 souches sélectionnées
+- Repiquage sur milieu PDA (2fois par souche)/ culture des 24 souches sélectionnées
 - Extraction d'ADN à partir d'un Kit d'extraction
-- Vérifier la nature des espèces par des tests moléculaires
-  (electrophorèse et PCR)
 - Tester les amorces susceptibles d'être associées à l'anthracnose de
-  l'igname par des tests de détection (spectrophotomètre?)
+  l'igname par des tests moléculaires (LAMP, électrophorèse)
+- Si il y a amplification de l'ADN du champignon, cela voudra dire que
+  les amorces sont spécifiques de Colletotrichum goleosporioides.
+- Test de détection / confirmation à l'aide d'un fluorochrome/coloration.
 
 III- Résultats 
 Analyse des résultats par des tests statistiques (test du Khi2?)
@@ -451,3 +451,13 @@ Analyse des résultats par des tests statistiques (test du Khi2?)
 IV- Discussion
 
 V- Conclusion 
+
+*** mardi 15 janvier 2019
+**** Repiquage (2 fois/souche) sur milieu PDA de 24 souches sélectionnées 
+Les souches sont les suivantes :
+8, 13, 51, 71, 79 (séquence en mauvais état), 147, 149, 165, 168, 223
+(séquence en mauvais état), 245, 250, 253, 255, 256, 258, 274
+(séquence en mauvais état), 281, 282.
+Nous avons rajouté les souches 73; 82 et 253.
+Les souches G39 (des adventis) et G47 (de l'igname) ont été prises à
+partir des souches de Pauline.
