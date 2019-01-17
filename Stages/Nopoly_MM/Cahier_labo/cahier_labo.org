@@ -477,8 +477,11 @@ Les souches sont les suivantes :
 Nous avons rajouté les souches 73; 82 et 253.
 Les souches G39 (des adventis) et G47 (de l'igname) ont été prises à
 partir des souches de Pauline.
+Présence d'eau/buée détectée sur le couvercle de la moitié des boîtes
+de culture (PDA).
 
 ***  [#A] mercredi 16 janvier 2019
-**** Repiquage des boîtes contaminées par la présence d'une bactérie
+**** Repiquage des boîtes contaminées par la présence de bactéries
+Présence de bactéries sur près de la moitié des boîtes.
 Boîtes contaminées: G39, G47,51,79,247,250 255,258, 268,
 281. 
