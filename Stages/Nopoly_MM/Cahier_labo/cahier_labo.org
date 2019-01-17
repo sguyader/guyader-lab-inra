@@ -426,27 +426,43 @@ Comment développer un test moléculaire isothermale "LAMP" pour la
 détection rapide du champignon "Colletotrichum goleosporioides" de
 l'igname en Guadeloupe?
 
-I- Introduction 
+I- Introduction :
 - Présentation de la maladie anthracnose 
 - Présentation du champignon pathogène (taxonomie - mode d'inoculation
   et de dispersion)
 - Présentation de la technique LAMP (axée sur le locus Apn2/MAP)
 
-II- Matériels et Méthodes
+IIa- Matériels :
 
-- Alignement de 25 séquences sur le logiciel"Uniprot UGENE"
-- Recherche d'amorces sur le site "Primer Explorer" à partir d'une des
-  séquences ( séquence RaAa16)
-- Repiquage sur milieu PDA (2fois par souche)/ culture des 24 souches sélectionnées
-- Extraction d'ADN à partir d'un Kit d'extraction
-- Tester les amorces susceptibles d'être associées à l'anthracnose de
-  l'igname par des tests moléculaires (LAMP, électrophorèse)
-- Si il y a amplification de l'ADN du champignon, cela voudra dire que
-  les amorces sont spécifiques de Colletotrichum goleosporioides.
-- Test de détection / confirmation à l'aide d'un fluorochrome/coloration.
+1) Déclaration d'éthique
+2) Matériel végétal - collections de colletotrichum gloeosporioides
+3) Réactifs utilisés
+
+IIb - Méthodes :
+
+1) Alignement de 25 séquences sur le logiciel"Uniprot UGENE"
+2) Conception d'amorces sur le site "Primer Explorer" à partir d'une des
+  séquences (=séquence RaAa16). Nous avons 2 amorces externes, 2
+  amorces internes et une amorce loop LB.
+3) Repiquage sur milieu PDA (2fois par souche)/ culture des 24 souches sélectionnées
+4) Extraction d'ADN à partir d'un Kit d'extraction
+5) Méthode LAMP/ Méthode électrophorèse:
+ Tester les amorces susceptibles d'être associées à l'anthracnose de
+  l'igname par ces tests moléculaires.
+(Si il y a amplification de l'ADN du champignon, cela voudra dire que
+  les amorces sont spécifiques de Colletotrichum goleosporioides).
+6) Détection :
+6a) Test de spécificité 
+La coloration jaune-verte provoquée par la calcéine voudra dire que l'amplification a
+fonctionné et/ou La présence de bandes sur le gel électrophorétique en
+fonction du contrôle positif confirmera les résultats).
+6b) Test de sensibilité (dilutions au 10em).
+6c) Tester le temps et la température optimale (plusieurs
+temps/plusieurs températures)
+
 
 III- Résultats 
-Analyse des résultats par des tests statistiques (test du Khi2?)
+Analyse des résultats (seuil, moyennes, intervalles)
 
 IV- Discussion
 
@@ -463,7 +479,6 @@ Les souches G39 (des adventis) et G47 (de l'igname) ont été prises à
 partir des souches de Pauline.
 
 ***  [#A] mercredi 16 janvier 2019
-**** Repiquage des deux boîtes de la souche G39
-Présence d'une bactérie sur les deux boîtes G39. Celles-ci ont été
-repiquées 2 fois chacune.
-
+**** Repiquage des boîtes contaminées par la présence d'une bactérie
+Boîtes contaminées: G39, G47,51,79,247,250 255,258, 268,
+281. 
