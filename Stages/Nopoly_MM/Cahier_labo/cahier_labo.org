@@ -442,22 +442,23 @@ IIb - Méthodes :
 
 1) Alignement de 25 séquences sur le logiciel"Uniprot UGENE"
 2) Conception d'amorces sur le site "Primer Explorer" à partir d'une des
-  séquences (=séquence RaAa16). Nous avons 2 amorces externes, 2
-  amorces internes et une amorce loop LB.
+  séquences (=séquence RaAa16). Nous avons 2 amorces externes F3 et B3, 2
+  amorces internes FIB et BIP et une amorce loop LB.
 3) Repiquage sur milieu PDA (2fois par souche)/ culture des 24 souches sélectionnées
-4) Extraction d'ADN à partir d'un Kit d'extraction
-5) Méthode LAMP/ Méthode électrophorèse:
+( Extraction d'ADN à partir d'un Kit d'extraction)
+4) Méthode LAMP/ (et méthode électrophorèse):
  Tester les amorces susceptibles d'être associées à l'anthracnose de
   l'igname par ces tests moléculaires.
 (Si il y a amplification de l'ADN du champignon, cela voudra dire que
   les amorces sont spécifiques de Colletotrichum goleosporioides).
-6) Détection :
-6a) Test de spécificité 
+5) Détection :
+a) Test de spécificité 
 La coloration jaune-verte provoquée par la calcéine voudra dire que l'amplification a
 fonctionné et/ou La présence de bandes sur le gel électrophorétique en
-fonction du contrôle positif confirmera les résultats).
-6b) Test de sensibilité (dilutions au 10em).
-6c) Tester le temps et la température optimale (plusieurs
+fonction du contrôle positif confirmera les
+résultats/turbidimètre/jauge à flux latéral).
+b) Test de sensibilité (dilutions au 10em).
+c) Tester le temps et la température optimale (plusieurs
 temps/plusieurs températures)
 
 
@@ -481,7 +482,33 @@ Présence d'eau/buée détectée sur le couvercle de la moitié des boîtes
 de culture (PDA).
 
 ***  [#A] mercredi 16 janvier 2019
-**** Repiquage des boîtes contaminées par la présence de bactéries
+**** Repiquage de toutes les boîtes contaminées par la présence de bactéries
 Présence de bactéries sur près de la moitié des boîtes.
 Boîtes contaminées: G39, G47,51,79,247,250 255,258, 268,
-281. 
+281.
+Présence de buée/eau sur le couvercle des boîtes de culture (PDA). 
+Présence de fourmis près des milieux de culture.
+
+***  [#A] vendredi 18 janvier 2019 
+Présence de bactéries sur 13 boîtes (8a,51b, 71a, 79a, 79b,82b, 223b,
+282a, 223a, 255b, 271b, G47).
+Toutes les boîtes ont été enveloppées dans du parafilm afin de les
+protéger contre les fourmis.
+Une boîte témoin PDA (milieu seul sans repiquage) a été placée pour
+vérifier si le milieu et/ou la buée sont responsables de la
+contamination des boîtes.
+
+État des boîtes : 
+- Souches bien dévelppées :
+G39b (4), G39a, G47, 8b, 13a, 13b, 71a, 71b, 79a, 173a, 147a, 147b,
+149a, 149b, 165b, 245a, 250b, 253a, 253b, 254a, 256a, 258a, 2598a.
+
+- Souches en cours de développement :
+8a, 51a, 71b, 165a, 250a, 254b, 255a, 256b, 258b, 268b, 271a, 281b,
+284a.
+
+- Souches contaminées par une bactérie :
+G47, 8a, 51b, 71a, 79a, 79b, 82b, 223a, 223b, 255b, 271b, 282a, 282b.
+
+
+
