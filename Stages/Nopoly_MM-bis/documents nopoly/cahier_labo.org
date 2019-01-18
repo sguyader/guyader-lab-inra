@@ -453,13 +453,14 @@ IIb - Méthodes :
   les amorces sont spécifiques de Colletotrichum goleosporioides).
 5) Détection :
 a) Test de spécificité 
-Coloration rouge et/ou La présence de bandes sur le gel électrophorétique en
+La coloration jaune-verte provoquée par la calcéine voudra dire que l'amplification a
+fonctionné et/ou La présence de bandes sur le gel électrophorétique en
 fonction du contrôle positif confirmera les
-résultats.
+résultats/turbidimètre/jauge à flux latéral).
 b) Test de sensibilité (dilutions au 10em).
-Quantification des spores
 c) Tester le temps et la température optimale (plusieurs
 temps/plusieurs températures)
+
 
 III- Résultats 
 Analyse des résultats (seuil, moyennes, intervalles)
