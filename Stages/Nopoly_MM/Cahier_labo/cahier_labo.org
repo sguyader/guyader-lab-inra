@@ -498,16 +498,32 @@ vérifier si le milieu et/ou la buée sont responsables de la
 contamination des boîtes.
 
 État des boîtes : 
-- Souches bien dévelppées :
-G39b (4), G39a, G47, 8b, 13a, 13b, 71a, 71b, 79a, 173a, 147a, 147b,
-149a, 149b, 165b, 245a, 250b, 253a, 253b, 254a, 256a, 258a, 2598a.
+- Souches bien dévelppées (lot 1) :
+G39b (4), G39a, G47, 13a, 13b, 71a, 71b, 79a, 173a, 147a, 147b,
+149a, 149b, 245a, 250b, 253a, 253b, 254a, 256a, 258a, 2598a.
 
-- Souches en cours de développement :
-8a, 51a, 71b, 165a, 250a, 254b, 255a, 256b, 258b, 268b, 271a, 281b,
+- Souches en cours de développement (lot 2 ) :
+8a,8b, 51a, 71b, 140a, 140b, 250a, 254b, 255a, 256b, 258b, 268b, 271a, 281b,
 284a.
 
-- Souches contaminées par une bactérie :
-G47, 8a, 51b, 71a, 79a, 79b, 82b, 223a, 223b, 255b, 271b, 282a, 282b.
+- Souches contaminées par une bactérie (lot 3) :
+G47, 8a, 51b, 71a, 79a, 79b, 223a, 223b, 255b, 271b, 282a, 282b.
 
 
 
+***  [#A] lundi 21 janvier 2019
+
+- 24 boîtes présentent le champignon bien développé (= toutes les
+  souches du lot 1 +  71b, 256b, 268b du lot 2).
+- sur 9 boîtes la croissance du champignon a surplombé celle de la
+  bactérie (79a, 79b, 250a, 254b, 255a, 271a, 281b, 282a, 282b).
+- sur 12 boîtes on ne trouve que de la bactérie et/ou aucune croissance
+fongique (G47, 8a, 51a, 51b, 79a, 223a, 223b, 255b, 258a, 258b, 271b, 284a).
+
+**** Repiquage des souches contaminées :
+Repiquage des souches oû le champignon s'est développé plus vite que
+la bactérie (250a, 254b, 255a, 258a, 258b, 271a, 281b) et des souches
+oû il n'y a eu aucune croissance fongique (G47, 8a, 8b, 51a, 51b, 71a,
+79a, 140a, 140b, 223a, 223b, 255b, 271b, 284a).
+
+- la boîte témoin (PDA seul) ne présente aucune marque de contamination.
