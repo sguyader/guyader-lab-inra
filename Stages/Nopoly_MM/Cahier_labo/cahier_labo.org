@@ -1,4 +1,4 @@
-# -*- mode: org -*-
+j# -*- mode: org -*-
 # -*- coding: utf-8 -*-
 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
@@ -527,3 +527,7 @@ oû il n'y a eu aucune croissance fongique (G47, 8a, 8b, 51a, 51b, 71a,
 79a, 140a, 140b, 223a, 223b, 255b, 271b, 284a).
 
 - la boîte témoin (PDA seul) ne présente aucune marque de contamination.
+
+*** [#A] mardi 22 janvier 2019 
+ Présence de bactéries sur 7 souches repiquées la vielle:
+51a, 250a, 250b, 255a, 255b, 258a, 284a.
