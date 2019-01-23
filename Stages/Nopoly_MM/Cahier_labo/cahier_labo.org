@@ -469,7 +469,8 @@ IV- Discussion
 V- Conclusion 
 
 *** mardi 15 janvier 2019
-**** Repiquage (2 fois/souche) sur milieu PDA de 24 souches sélectionnées 
+**** Repiquage (2 fois/souche) sur milieu PDA de 24 souches sélectionnées :
+***** Les souches sélectionnées:
 Les souches sont les suivantes :
 8, 13, 51, 71, 79 (séquence en mauvais état), 147, 149, 165, 168, 223
 (séquence en mauvais état), 245, 250, 253, 255, 256, 258, 274
@@ -477,6 +478,7 @@ Les souches sont les suivantes :
 Nous avons rajouté les souches 73; 82 et 253.
 Les souches G39 (des adventis) et G47 (de l'igname) ont été prises à
 partir des souches de Pauline.
+
 Présence d'eau/buée détectée sur le couvercle de la moitié des boîtes
 de culture (PDA).
 
@@ -491,36 +493,43 @@ Présence de fourmis près des milieux de culture.
 ***  [#A] vendredi 18 janvier 2019 
 Présence de bactéries sur 13 boîtes (8a,51b, 71a, 79a, 79b,82b, 223b,
 282a, 223a, 255b, 271b, G47).
+
 Toutes les boîtes ont été enveloppées dans du parafilm afin de les
 protéger contre les fourmis.
 Une boîte témoin PDA (milieu seul sans repiquage) a été placée pour
 vérifier si le milieu et/ou la buée sont responsables de la
 contamination des boîtes.
 
-État des boîtes : 
+**** Etat des boîes:
+***** Souches bien développées:
 - Souches bien dévelppées (lot 1) :
 G39b (4), G39a, G47, 13a, 13b, 71a, 71b, 79a, 173a, 147a, 147b,
 149a, 149b, 245a, 250b, 253a, 253b, 254a, 256a, 258a, 2598a.
 
+***** Souches en cours de développement/en croissance:
 - Souches en cours de développement (lot 2 ) :
 8a,8b, 51a, 71b, 140a, 140b, 250a, 254b, 255a, 256b, 258b, 268b, 271a, 281b,
 284a.
 
+***** Souches en mauvais état:
 - Souches contaminées par une bactérie (lot 3) :
 G47, 8a, 51b, 71a, 79a, 79b, 223a, 223b, 255b, 271b, 282a, 282b.
 
 
 
 ***  [#A] lundi 21 janvier 2019
-
+**** Etat des boîtes après le week-end:
+***** Boîtes bien développées:
 - 24 boîtes présentent le champignon bien développé (= toutes les
   souches du lot 1 +  71b, 256b, 268b du lot 2).
+***** Boîtes champignon > bactérie :
 - sur 9 boîtes la croissance du champignon a surplombé celle de la
   bactérie (79a, 79b, 250a, 254b, 255a, 271a, 281b, 282a, 282b).
+***** Boîtes en mauvais état :
 - sur 12 boîtes on ne trouve que de la bactérie et/ou aucune croissance
 fongique (G47, 8a, 51a, 51b, 79a, 223a, 223b, 255b, 258a, 258b, 271b, 284a).
 
-**** Repiquage des souches contaminées :
+**** Repiquage des souches contaminées par une bactérie:
 Repiquage des souches oû le champignon s'est développé plus vite que
 la bactérie (250a, 254b, 255a, 258a, 258b, 271a, 281b) et des souches
 oû il n'y a eu aucune croissance fongique (G47, 8a, 8b, 51a, 51b, 71a,
@@ -529,5 +538,22 @@ oû il n'y a eu aucune croissance fongique (G47, 8a, 8b, 51a, 51b, 71a,
 - la boîte témoin (PDA seul) ne présente aucune marque de contamination.
 
 *** [#A] mardi 22 janvier 2019 
- Présence de bactéries sur 7 souches repiquées la vielle:
+**** Etat des souches repiquées lundi :
+ Présence de bactéries sur 7 souches repiquées lundi 21 janvier:
 51a, 250a, 250b, 255a, 255b, 258a, 284a.
+
+*** [#A] mercredi 22 janvier 2019 
+**** Repiquage de la souche G47
+Repiquage deux fois (souche de Pauline)
+**** Mise au frais de 19 souches bien développées en culture 
+Mise au frais des champignons bien développés:
+G39a, G39b (4boîtes), G47a, 13b, 71b, 73b, 79a, 147a, 147b, 149a,
+149b, 245a, 253a, 254b, 255a, 256a, 256b, 258a, 268a, 271a (2boîtes),
+281b, 282a, 282b, 286b.
+**** Etat des souches repiquées lundi :
+***** Les souches correctes : 
+79b, 250b, 253b, 254a, 254b, 258a, 258b.
+***** Les souches ayant une bactérie: 
+8a, 8b, 51a, 51b, 71a, 79a, 140a, 140b, 223a, 223b, 250a, 255 a,
+255b,255c, 271b, 284a.
+
