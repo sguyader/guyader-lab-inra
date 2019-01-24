@@ -450,3 +450,13 @@ Nanette (JBN), Thierry Bajazet (TB)
 Entered on [2019-01-14 Mon 10:36]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+*** 2019-01-24 Thursday
+**** *Réunion FB travail sur Pilier 1*
+- présenter questions scientifiques
+- ok pour viro/épidémio
+- écophysio/phénotypage : Régis
+**** *Réunion ching*                                         :meeting:ching:
+- présentation intro FB :
+  - présentation unité (enjeux+question chapeau) + organisation
+  - pilier 1 : penser aux collaborations, projets, 1 ou 2 résultats
+    marquants, besoins en compétences, 40 minutes
