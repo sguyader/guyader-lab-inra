@@ -62,7 +62,8 @@ title A Gantt Diagram
     another task      : 24d
 ")
 htmlwidgets::saveWidget(m, 'diagram.html', background="transparent")
-frameWidget("diagram.html", height=250)
+#frameWidget("diagram.html", height=250)
+m
 ```
 ]
 
