@@ -427,37 +427,32 @@ détection rapide du champignon "Colletotrichum goleosporioides" de
 l'igname en Guadeloupe?
 
 I- Introduction :
-- Présentation de la maladie anthracnose 
-- Présentation du champignon pathogène (taxonomie - mode d'inoculation
-  et de dispersion)
-- Présentation de la technique LAMP (axée sur le locus Apn2/MAP)
+-Présentation de l'hôte D. alata
+- Présentation des pathogènes (champignon- virus) (nomenclature - mode d'inoculation
+  et de propagation)
 
-IIa- Matériels :
+
+II Matériels et Méthodes :
 
 1) Déclaration d'éthique
-2) Matériel végétal - collections de colletotrichum gloeosporioides
-3) Réactifs utilisés
-
-IIb - Méthodes :
-
-1) Alignement de 25 séquences sur le logiciel"Uniprot UGENE"
-2) Conception d'amorces sur le site "Primer Explorer" à partir d'une des
+2) Alignement de 25 séquences sur le logiciel"Uniprot UGENE"
+3) Conception d'amorces sur le site "Primer Explorer" à partir d'une des
   séquences (=séquence RaAa16). Nous avons 2 amorces externes F3 et B3, 2
-  amorces internes FIB et BIP et une amorce loop LB.
-3) Repiquage sur milieu PDA (2fois par souche)/ culture des 24 souches sélectionnées
-( Extraction d'ADN à partir d'un Kit d'extraction)
-4) Méthode LAMP/ (et méthode électrophorèse):
- Tester les amorces susceptibles d'être associées à l'anthracnose de
-  l'igname par ces tests moléculaires.
+  amorces internes FIB et BIP et une amorce loop LB.)
+ Repiquage sur milieu PDA (2fois par souche)/ culture des 24 souches sélectionnées
+(Extraction d'ADN à partir d'un Kit d'extraction)
+4) Méthode LAMP(champignon) / Méthode PCR (virus):
+ Tester les amorces susceptibles d'être spécifique à la détection des
+   pathogènes par ces tests moléculaires.
 (Si il y a amplification de l'ADN du champignon, cela voudra dire que
   les amorces sont spécifiques de Colletotrichum goleosporioides).
 5) Détection :
 a) Test de spécificité 
-Coloration rouge et/ou La présence de bandes sur le gel électrophorétique en
+Coloration GelRed et/ou La présence de bandes sur le gel électrophorétique en
 fonction du contrôle positif confirmera les
-résultats.
+résultats (mycologie) / (virologie)...
 b) Test de sensibilité (dilutions au 10em).
-Quantification des spores
+Quantification des spores(mycologie)/ (virologie)....
 c) Tester le temps et la température optimale (plusieurs
 temps/plusieurs températures)
 
@@ -561,3 +556,64 @@ G39a, G39b (4boîtes), G47a, 13b, 71b, 73b, 79a, 147a, 147b, 149a,
 **** Etat des souches fongiques
 6 souches fongiques repiquées présentent  une croissance normale (sans
 présence de contaminants).
+*** [#C] vendredi 24 janvier 2019 
+**** Nouveau plan :
+
+Titre : Développement de deux outils d'amplification isothermale "LAMP
+et qPCR" pour la détection de Colletotrichum
+gloeosporioides et la recherche de nouveaux virus infectants les
+ignames (D.alata) en Guadeloupe
+
+Table des matières 
+
+I.	Introduction :
+
+1. L’hôte D. alata
+- Culture mondiale
+- Apport calorifique
+- Structure de la plante
+- Culture en Guadeloupe
+
+2. Les pathogènes :  Colletotrichum gloeosporioides / les  virus
+- Nomenclature
+- Inoculation- cycle
+- Maladie
+- Dispersion
+- Identification – Détection 
+
+II.	Matériels & Méthodes :
+1. Détection du champignon Colletotrichum gloeosporioides:
+- Alignement des séquences
+- Conception des amorces
+- Mise en  culture des souches fongiques
+- Extraction d'ADN 
+- Technique LAMP/PCR
+- Tests de spécificité et de sensibilité
+   
+2. Recherche de nouveaux virus :
+- récolte 
+- criblage et PCR
+- Clonage 
+- Séquençage
+- Création d'amorces
+- tester qPCR
+
+III.	Résultats
+
+IV.	Discussion
+
+V. 	Conclusion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
