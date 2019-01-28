@@ -6,7 +6,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/rtf-full.css"/>
 #+STARTUP: overview indent inlineimages logdrawerhh
 
-#+TITLE:       Journal
+#+TITLE:       Journal de bord
 #+AUTHOR:      Sébastien Guyader
 #+LANGUAGE:    fr
 #+TAGS: export(e) noexport(n) 
@@ -460,3 +460,53 @@ Entered on [2019-01-14 Mon 10:36]
   - présentation unité (enjeux+question chapeau) + organisation
   - pilier 1 : penser aux collaborations, projets, 1 ou 2 résultats
     marquants, besoins en compétences, 40 minutes
+*** 2019-01-28 Monday
+**** *Rencontre CD/Astro 28/29 janvier 2019*
+1. Présentation générale de l'unité et introduction des 2 piliers
+   - commentaires CL : pilier 1 clairement igname+tomate, pilier 2 moins clair
+     comment l'interface se fait entre les piliers 1 et 2 ?
+   - SAE2 : piliers bien définis, fonctionnels
+     y a-t-il tension entre "astro" et plateformes CRB/PolEauSol ?
+     Sont-elles bien valorisées ?
+   - CL : question sur départ de Gladys Loranger
+     attente bien exprimée de la population à laquelle on cherche à
+     répondre ?
+   - SPE : quels exemples d'observation du changement climatique
+     localement ?
+2. Présentation Pilier 2
+   - CL : la dégradation des sols tropicaux est-elle prégnente en
+     Guadeloupe ?
+   - SPE : a-t-on constaté une dégradation physique des sols ?
+   - SAE2 : surpris par l'intitulé du profil CR demandé ; vis-à-vis du
+     projet d'unité où peu de personnes SAE2, y a-t-il des cmpétences à l'UA pour complémenter
+     les besoins de RH ? Sur quelles cultures aller en Guadeloupe vers
+     l'avenir (pour se démarquer des autres)
+   - CL : quels supports (cultures) ?
+     y a-t-il une tension entre "sols" et autres composantes (par
+     exemple plante/épidémio)
+     sommes nous un lieu attractif pour collègues d'autres unités ?
+   - SAE2 : c'est assez clair (présentation peut être améliorée),
+     parmi questions de recherche il faut bien expliquer ce qui est
+     plus convaincant et à faire resortir (quels verrous à lever en
+     priorité)
+     quelle transférabilité du modèle Mosaïca ?
+   - SAE2 : est-ce qu'on dose aussi métabolites issus des pesticides ?
+   - SPE : y a-t-il un risque d'évolution de la pollution avec le
+     changement climatique ?
+   - CL : quelle position officielle du CIRAD sur l'observatoire ?
+3. Présentation Pilier 1
+4. Evolution projet d'unité et besoins en compétences
+   - CL : quels profils déjà remontés aux départements ?
+   - SAE2 : définir 1 objectif d'unité, et dire qu'on a besoin de 2
+     piliers et pourquoi
+   - CL : questions sur fermes pilote, comment elles favorisent les
+     interactions
+     il faut de la transversalité entre les 2 piliers, les supports
+     microferme et observatoire pollutions permettent de la
+     transversalité
+5. Animation Scientifique
+   - 
+
+Entered on [2019-01-28 Mon 08:53]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
