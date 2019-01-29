@@ -567,19 +567,17 @@ ignames (D.alata) en Guadeloupe
 Table des matières 
 
 I.	Introduction :
-
-1. L’hôte D. alata
+I.1. L’hôte D. alata
 - Culture mondiale
 - Apport calorifique
 - Structure de la plante
 - Culture en Guadeloupe
 
-2. Les pathogènes :  Colletotrichum gloeosporioides / les  virus
+I.2. Les pathogènes :  Colletotrichum gloeosporioides / les  virus
 - Nomenclature
 - Inoculation- cycle
 - Maladie
 - Dispersion
-- Identification – Détection 
 
 II.	Matériels & Méthodes :
 1. Détection du champignon Colletotrichum gloeosporioides:
@@ -605,7 +603,8 @@ IV.	Discussion
 V. 	Conclusion
 
 
-
+*** Mardi 29 janvier 2019
+Mise au frais des souches G47a, G47b, 223b, 255a et 255b.
 
 
 
