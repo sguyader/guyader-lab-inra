@@ -510,3 +510,62 @@ Entered on [2019-01-14 Mon 10:36]
 Entered on [2019-01-28 Mon 08:53]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+*** 2019-01-29 Tuesday
+**** *Rencontre CD/Astro 28/29 janvier 2019 - jour2*
+1. Points divers
+   - retroplanning HCERES
+     commencer rapport éval début 2020, dépôt août/septembre 2020
+     éval prévue entre novembre 2020 et février 2021
+     2020
+     visite CD BAP et EA à prévoir dans les 6 mois avant, peut-être
+     SPE pour l'éval
+   - Conseil Scientifique : à nous de décider si on en a encore besoin
+     ; on peut changer sa configuration
+2. Retour à chaud 
+   SAE2 :
+   - satisfait des présentations
+   - contenu scientifique clair, effort de structuration piliers clair
+   - articulation intéressante avec URZ
+   - positif début animation sur recherches participatives (à
+     poursuivre même sur autres sujets)
+   - richesse partenariats (Cuba, LISAH)
+   - partenariat montre dynamisme
+   - sur présentation du projet, bien montrer problématique de
+     l'unité, et comment les 2 piliers sont nécessaires (question de
+     présentation)
+   - s'en servir pour justifier les demandes de postes
+   - montrer comment on y arrive avec beaucoup de disciplines mais peu
+     de chercheurs par discipline
+   - changement d'échelle peut être une interface de réflexion au sein de l'unité
+   - ne plus faire ressortir les recherhces via les contrats, montrer
+     que les contrats ne sont que des moyens financierspour faire aboutir
+   - site internet : ça ne va pas du tout -> soigner notre communication
+   JP Rossi :
+   - présentation claire des piliers
+   - animation interne bien mise en valeur, à cultiver
+   - mettre en avant le reste (autre que l'animation)
+   - muliples activités mais en face d'un effectif faible
+   - pour clarifier, montrer comment on met en face des ETP
+   - bien mettre en avant questions scientifiques, complémentarité
+     entre piliers, moins les projets
+   C Lannou :
+   - bien mis en valeur les infrastructures (opale, microferme) mais peu le CRB
+   - il faut les faire vivre, et les rendre attractives
+   - projet original
+   - unité pluridisciplinaire, c'est une chance et un risque à la fois
+   - attention à ne pas se laisser aller par les "forces centrifuges"
+   - voir comment on se présente en termes d'équipes (1, 2 oou
+     plus.... pour HCERES)
+   - qu'est-ce qui est réel et vraiment structurant ?
+   - identifier les grands enjeux structurants : ex. sols dégradés,
+     agriculture climato-intelligente, pilier 1 (donc CL voit 3 enjeux
+     structurants)
+   - pilier 1 : bcp de choses dedans, essayer de présenter de manière
+     plus structurée
+   - importance des collaborations : essayer d'attirer vers nous
+     encore plus
+   - profiter de l'animation 70 ans du Centre pour gagner en visibilté
+   - 
+Entered on [2019-01-29 Tue 08:20]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
