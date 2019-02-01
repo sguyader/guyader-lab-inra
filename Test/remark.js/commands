@@ -1,3 +1,6 @@
+Modifier le format du texte :
+-----------------------------
+
 .Large[...]
 .large[...]
 .small[...]
@@ -6,16 +9,7 @@
 .tiny[...]
 .bold[...] .bolder[...]
 
-.left[...] (right, center)
-
-.blue-block[...] (green, red)
-
-.pull-left[...] .pull-right[...]  (50/50)
-.left-column[...] .right-column[...]  (25/75)
-.footnote[...]
-??? (notes de dipao en dessous)
-<!--- comment --->
-
+Couleurs :
 .black[...]
 .red[...]
 .blue[...]
@@ -25,13 +19,33 @@
 .purple[...], 
 .gray[...] .grey[...]
 
+Formatage sur la diapo :
+------------------------
+
+.left[...]
+.right[...]
+.center[...]
+.blue-block[...] (green, red)
+.pull-left[...] .pull-right[...]  (2 colonnes 50/50)
+.left-column[...] .right-column[...]  (2 colonnes ~25/75)
+.footnote[...]
+??? (écrire notes de dipao en dessous)
+<!--- comment --->
+
 .content-box-blue (or gray/grey, army, green, purple, red, or yellow)
 .full-width[.content-box-red[...]]
+
+Images / figures :
+------------------
 
 ```{r echo=FALSE, out.width="80%"}
 knitr::include_graphics("https://www.......jpg")
 ```
+
 ![image](http://......jpg)
+
+Modifier apparence des images:
+------------------------------
 
 .polaroid[...]
 .rotate-right[...]
@@ -41,11 +55,20 @@ knitr::include_graphics("https://www.......jpg")
 .grayscale[...]
 .shadow[...]
 
-slide option:
-name: diapo-xxx
-	lien : aller vers [la diapo xxx](#diapo-xxx)
-background-image: url(xxx.jpg)
-count: false
-layout: true (diapo sans contenu, sert de masque aux suivantes)
-exclude: true (la diapo ne sera pas affichée)
-> texte (citation)
+options de diapos :
+-------------------
+
+- nom de diapo :
+	name: diapo-xxx
+- créer un lien vers une diapo :
+	[la diapo xxx](#diapo-xxx)
+- image de fond :
+	background-image: url(xxx.jpg)
+- supprimer numérotation des diapos :
+	count: false
+- créer une diapo (sans contenu) pour servir de masque aux diapos suivantes :
+	layout: true
+- désactiver une diapo (la diapo ne sera pas affichée) :
+	exclude: true
+- créer un bloc "citation"
+	> texte

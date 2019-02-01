@@ -1,12 +1,12 @@
 ---
-title: "Maladies cryptogamiques"
-subtitle: "Pathogénèse et réponses de l'hôte"
-author: "Sébastien GUYADER `r Sys.Date()`)"
+title: "Mon titre"
+subtitle: "Mon sous-titre"
+author: "Auteur `r Sys.Date()`)"
 date: 
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["tweak.css", "xaringan-themer.css", "footer-header.css", "animate.css", default]
+    css: ["style/tweak.css", "style/xaringan-themer.css", "style/footer-header.css", "style/animate.css", default]
     nature:
       highlightStyle: github
       highlightLines: true
@@ -26,15 +26,15 @@ mono_light(base_color = "#23395b")
 
 class: title-slide, animated, fadeIn
 
-# Maladies cryptogamiques : pathogénèse et réponses de l'hôte
-### Sébastien GUYADER
-#### INRA - UR Astro - Petit-Bourg
+# Titre : sous-titre
+### Auteur
+#### INRA - UR xxxx - Ville
 
 ---
 
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div> 
+<div class="my-footer"><span>Auteur &nbsp; - &nbsp; Titre : sous-titre</span></div> 
 
 ---
 
@@ -80,7 +80,7 @@ plot(cars)
 
 layout: false
 class: section-slide, inverse, center, middle, animated, fadeIn
-<div class="my-footer"><span style="color:white">S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
+<div class="my-footer"><span style="color:white">Auteur &nbsp; - &nbsp; Titre : sous-titre</span></div>
 
 # Nouvelle section
 
@@ -88,7 +88,7 @@ class: section-slide, inverse, center, middle, animated, fadeIn
 
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
+<div class="my-footer"><span>Auteur &nbsp; - &nbsp; Titre : sous-titre</span></div>
 
 ---
 
@@ -137,8 +137,7 @@ A whole sentence
 
 #Last slide
 
-> To see how it works <br/>
-> quote and `inline code`
+> Petit test "quote"
 
 .blue-block[
 exemple de bloc 

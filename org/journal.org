@@ -6,7 +6,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/rtf-full.css"/>
 #+STARTUP: overview indent inlineimages logdrawerhh
 
-#+TITLE:       Journal
+#+TITLE:       Journal de bord
 #+AUTHOR:      Sébastien Guyader
 #+LANGUAGE:    fr
 #+TAGS: export(e) noexport(n) 
@@ -448,5 +448,124 @@ Nanette (JBN), Thierry Bajazet (TB)
 - utiliser C-u C-c C-l
 - exemple : voici un lien vers mon "readme"
 Entered on [2019-01-14 Mon 10:36]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+*** 2019-01-24 Thursday
+**** *Réunion FB travail sur Pilier 1*
+- présenter questions scientifiques
+- ok pour viro/épidémio
+- écophysio/phénotypage : Régis
+**** *Réunion ching*                                         :meeting:ching:
+- présentation intro FB :
+  - présentation unité (enjeux+question chapeau) + organisation
+  - pilier 1 : penser aux collaborations, projets, 1 ou 2 résultats
+    marquants, besoins en compétences, 40 minutes
+*** 2019-01-28 Monday
+**** *Rencontre CD/Astro 28/29 janvier 2019*
+1. Présentation générale de l'unité et introduction des 2 piliers
+   - commentaires CL : pilier 1 clairement igname+tomate, pilier 2 moins clair
+     comment l'interface se fait entre les piliers 1 et 2 ?
+   - SAE2 : piliers bien définis, fonctionnels
+     y a-t-il tension entre "astro" et plateformes CRB/PolEauSol ?
+     Sont-elles bien valorisées ?
+   - CL : question sur départ de Gladys Loranger
+     attente bien exprimée de la population à laquelle on cherche à
+     répondre ?
+   - SPE : quels exemples d'observation du changement climatique
+     localement ?
+2. Présentation Pilier 2
+   - CL : la dégradation des sols tropicaux est-elle prégnente en
+     Guadeloupe ?
+   - SPE : a-t-on constaté une dégradation physique des sols ?
+   - SAE2 : surpris par l'intitulé du profil CR demandé ; vis-à-vis du
+     projet d'unité où peu de personnes SAE2, y a-t-il des cmpétences à l'UA pour complémenter
+     les besoins de RH ? Sur quelles cultures aller en Guadeloupe vers
+     l'avenir (pour se démarquer des autres)
+   - CL : quels supports (cultures) ?
+     y a-t-il une tension entre "sols" et autres composantes (par
+     exemple plante/épidémio)
+     sommes nous un lieu attractif pour collègues d'autres unités ?
+   - SAE2 : c'est assez clair (présentation peut être améliorée),
+     parmi questions de recherche il faut bien expliquer ce qui est
+     plus convaincant et à faire resortir (quels verrous à lever en
+     priorité)
+     quelle transférabilité du modèle Mosaïca ?
+   - SAE2 : est-ce qu'on dose aussi métabolites issus des pesticides ?
+   - SPE : y a-t-il un risque d'évolution de la pollution avec le
+     changement climatique ?
+   - CL : quelle position officielle du CIRAD sur l'observatoire ?
+3. Présentation Pilier 1
+4. Evolution projet d'unité et besoins en compétences
+   - CL : quels profils déjà remontés aux départements ?
+   - SAE2 : définir 1 objectif d'unité, et dire qu'on a besoin de 2
+     piliers et pourquoi
+   - CL : questions sur fermes pilote, comment elles favorisent les
+     interactions
+     il faut de la transversalité entre les 2 piliers, les supports
+     microferme et observatoire pollutions permettent de la
+     transversalité
+5. Animation Scientifique
+   - 
+
+Entered on [2019-01-28 Mon 08:53]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+*** 2019-01-29 Tuesday
+**** *Rencontre CD/Astro 28/29 janvier 2019 - jour2*
+1. Points divers
+   - retroplanning HCERES
+     commencer rapport éval début 2020, dépôt août/septembre 2020
+     éval prévue entre novembre 2020 et février 2021
+     2020
+     visite CD BAP et EA à prévoir dans les 6 mois avant, peut-être
+     SPE pour l'éval
+   - Conseil Scientifique : à nous de décider si on en a encore besoin
+     ; on peut changer sa configuration
+2. Retour à chaud 
+   SAE2 :
+   - satisfait des présentations
+   - contenu scientifique clair, effort de structuration piliers clair
+   - articulation intéressante avec URZ
+   - positif début animation sur recherches participatives (à
+     poursuivre même sur autres sujets)
+   - richesse partenariats (Cuba, LISAH)
+   - partenariat montre dynamisme
+   - sur présentation du projet, bien montrer problématique de
+     l'unité, et comment les 2 piliers sont nécessaires (question de
+     présentation)
+   - s'en servir pour justifier les demandes de postes
+   - montrer comment on y arrive avec beaucoup de disciplines mais peu
+     de chercheurs par discipline
+   - changement d'échelle peut être une interface de réflexion au sein de l'unité
+   - ne plus faire ressortir les recherhces via les contrats, montrer
+     que les contrats ne sont que des moyens financierspour faire aboutir
+   - site internet : ça ne va pas du tout -> soigner notre communication
+   JP Rossi :
+   - présentation claire des piliers
+   - animation interne bien mise en valeur, à cultiver
+   - mettre en avant le reste (autre que l'animation)
+   - muliples activités mais en face d'un effectif faible
+   - pour clarifier, montrer comment on met en face des ETP
+   - bien mettre en avant questions scientifiques, complémentarité
+     entre piliers, moins les projets
+   C Lannou :
+   - bien mis en valeur les infrastructures (opale, microferme) mais peu le CRB
+   - il faut les faire vivre, et les rendre attractives
+   - projet original
+   - unité pluridisciplinaire, c'est une chance et un risque à la fois
+   - attention à ne pas se laisser aller par les "forces centrifuges"
+   - voir comment on se présente en termes d'équipes (1, 2 oou
+     plus.... pour HCERES)
+   - qu'est-ce qui est réel et vraiment structurant ?
+   - identifier les grands enjeux structurants : ex. sols dégradés,
+     agriculture climato-intelligente, pilier 1 (donc CL voit 3 enjeux
+     structurants)
+   - pilier 1 : bcp de choses dedans, essayer de présenter de manière
+     plus structurée
+   - importance des collaborations : essayer d'attirer vers nous
+     encore plus
+   - profiter de l'animation 70 ans du Centre pour gagner en visibilté
+   - 
+Entered on [2019-01-29 Tue 08:20]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
