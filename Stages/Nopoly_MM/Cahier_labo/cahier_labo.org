@@ -561,17 +561,15 @@ présence de contaminants).
 
 Titre : Développement de deux outils d'amplification isothermale "LAMP
 et qPCR" pour la détection de Colletotrichum
-gloeosporioides et la recherche de nouveaux virus infectants les
+gloeosporioides et la recherche de virus infectants les
 ignames (D.alata) en Guadeloupe
 
 Table des matières 
 
 I.	Introduction :
 I.1. L’hôte D. alata
-- Culture mondiale
-- Apport calorifique
+- Culture mondiale et en Guadeloupe
 - Structure de la plante
-- Culture en Guadeloupe
 
 I.2. Les pathogènes :  Colletotrichum gloeosporioides / les  virus
 - Nomenclature
@@ -585,7 +583,7 @@ II.	Matériels & Méthodes :
 - Conception des amorces
 - Mise en  culture des souches fongiques
 - Extraction d'ADN 
-- Technique LAMP/PCR
+- Technique LAMP
 - Tests de spécificité et de sensibilité
    
 2. Recherche de nouveaux virus :
@@ -594,7 +592,8 @@ II.	Matériels & Méthodes :
 - Clonage 
 - Séquençage
 - Création d'amorces
-- tester qPCR
+- Technique qPCR
+- Tests de spécificités
 
 III.	Résultats
 
@@ -605,6 +604,56 @@ V. 	Conclusion
 
 *** Mardi 29 janvier 2019
 Mise au frais des souches G47a, G47b, 223b, 255a et 255b.
+
+*** Vendredi 1 Février 2019
+**** Introduction I.
+
+I.1 L’hôte :
+	Dioscorea alata, ou communément appelée l'igname ailée, la grande igname, la cambarre ou encore l’igname d’eau, est une espèce de plantes du genre Dioscorea et de la famille des Dioscoreaceae. 
+	Dioscorea alata est l’espèce d’igname la plus cultivée, elle est  lianescente et posséde un tubercule comestible à chair blanche ou jaune-crème.
+L’igname Dioscorea alata, Dioscoreaceae, constitue la base de l’alimentation de beaucoup de pays tropicaux et subtropicaux et est cultivée de façon traditionnelle principalement en Inde, en Asie du Sud-Est, à Madagascar et à l'île de la Réunion.
+C’est la quatrième plante à tubercule la plus cultivée dans le monde après la pomme-de-terre, le manioc et la patate douce. Près de 6000 t/an sont cultivées en Guadeloupe par 25% des agriculteurs, ce qui en fait un enjeu majeur en terme d'autosuffisance alimentaire. En Guadeloupe, elle se place au troisième rang des plantes les plus cultivées après la canne à sucre et la banane. Par ailleurs, c'est la première culture vivrière de Guadeloupe.
+	Les ignames D.alata représentent alors une grande importance économique et alimentaire dans les régions tropicales des pays en développement.  Mais cette espèce peut être affectée par des virus, ou encore par le champignon Colletotrichum gloeosporioides, pouvant causer des pertes de rendement de 50% à 90% (Fournet et al., 1974 ; Mignucci et al., 1988).
+
+I.2 Les pathogènes :
+	Colletotrichum gloeosporioides :
+- Nomenclaure :
+Le nom Colletotrichum gloeosporioides a été proposé pour la première fois à Penzig (1882) à partir de Vermicularia gloeosporioides, dont le spécimen type a été collecté à Citrus en Italie (Weir, Johnston, et Damm 2012). 
+C. gloeosporioides est un complexe d’espèces occupant le huitième rang mondial des agents phytopathogènes fongiques les plus destructeurs, provoquant des maladies chez une grande variété de plantes ligneuses et herbacées. 
+L' analyse phylogénétique du genre  Colletotrichum gloeosporioides révèle qu ' il comprend neuf clades majeurs, (Weir et al . ( 2012)) et une espèce distincte, nouvellement décrite ici sous le nom de Colletotrichum alatae. L’espèce C. alatae, retrouvé en Inde, Nigéria, Barbade et Guadeloupe, correspond au groupe SGG (croissance lente) que les auteurs  Abang et al. ( 2002 ) ont jugé le plus pathogène pour l'igname que les autres groupes de C. gloeosporioides .
+
+- La maladie anthracnose :
+ L'anthracnose est une maladie polycyclique qui se caractérise par des nécroses foliaires, coalescentes, ainsi que par des lésions nécrotiques au niveau des pétioles, des tiges, voire des tubercules. (Abang MM, Winter S, Green KR, Hoffmann P, Mignouna HD, et al. (2002)
+Les pertes de rendement sont expliquées essentiellement par une diminution du poids moyen des tubercules due à la réduction de la surface photosynthétiquement active des feuilles.
+Une apparition tardive des symptômes de la maladie peut entraîner des pertes importantes après la récolte, les cultures apparemment saines dégénérant au stockage.
+Comme beaucoup d'autres agents pathogènes fongiques, la forme asexuée de Colletotrichum gloeosporioides est le plus souvent associée aux symptômes de la maladie, la forme sexuelle ayant tendance à se développer sur des tissus hôtes moribonds ou morts.
+
+- Le cycle de reproduction : ( à revoir)
+C. gloeosporioides est un champignon hémibiotrophique et possède une voie nécrotrophe et une voie biotrophe. La phase nécrotrophe entraîne une mort importante des cellules végétales et l'apparition de lésions pathogènes (Prusky et Plumbey, 1992), alors que les stratégies de vie biotrophe  (1 à 3 jours ?; O'Connell et al., 2000 ) adoptées par Colletotrichum font de lui un champignon endophyte asymptomatique de tissus de plantes vivantes.
+	L'inoculum primaire initie l'épidémie et peut être constitué de spores asexuées ou sexuées.
+La forme asexuée dite aussi forme imparfaite ou anamorphe assure la propagation par les conidies/ conidisopores et se déroule au début et en fin d’épidémie. Elle peut également se dérouler par fusion (anastomose) de filaments mycéliens qui assurent le brassage génétique. 
+Le champignon Colletotrichum gloeosporiodes pénètre dans la paroi cellulaire/cuticule des plantes hôtes grâce à une cellule mélanisée appelée appressorium, issue de la turgescence d’une spore en germination (Mori et al. 2001).
+La forme sexuée téléomorphe (Glomerulla cingulata) a pour fonction de maintenir l’espèce et apparaît souvent en fin de saison. Elle se manifeste par des ascospores non infectieuses au niveau des tissus sénescents, cependant, lorsqu’une ascospore germe elle produit rapidement des conidies infectieuses.  
+	Après une latence de 3-5 jours, des acervules (contenant les conidies secondaires) apparaissent au niveau des nécroses naissantes à la surface des feuilles, (Green, 1994 ; Sweetmore, 1994).
+La possibilité de survie des pathogènes est de quelques mois sur les débris végétaux à la surface du sol.
+L’optimum de température pour le champignon se situe entre 25°C et 30°C. L'interruption de l'humectation stoppe les processus de développement du champignon, mais les spores restant viables, peuvent retrouver leurs capacités infectieuses après réhumectation (Cannon et al. 2012).
+
+- La dissémination :
+ L'agent pathogène se déplace des semis souches infectées aux semis adjacentes dans les serres de transplantation.
+De nombreuses espèces peuvent être transmises par les semences et peuvent bien survivre dans le sol en poussant de manière saprobique sur des fragments de plantes mortes. Elles peuvent également se propager par dispersion des conidies par éclaboussure dans l'eau et par transmission aérienne des ascospores à partir de leur forme sexuelle.
+Un certain nombre de plantes réservoires, cultivées ou non, peuvent aussi être à l'origine de la dissémination de l'inoculum primaire (Mori et al. 2001).
+
+III. Contexte de l’étude:
+La détection et l'identification des agents pathogènes jouent un rôle important dans la lutte contre les maladies des plantes et doivent être accessibles dans toutes les régions pour garantir une production végétale durable et la sécurité des aliments. 
+Le développement de techniques plus rapides, plus sensibles, plus précises, ou encore plus économiques est primordial, et pourront être utilisées pour le diagnostic précoce ou encore le test in situ d’agents pathogènes en culture.
+L’identification du champignon C.alatae appartenant au complexe d’espèces Colletotrichum gloeosporioides et l’identification des virus infectants l’igname D.alata est essentielle, car  joue un rôle crucial dans les questions de quarantaine végétale liées à l'exportation et à l'importation de produits agricoles,(Rossman & Palm-Hernández 2008).
+Le développement d’outils de détection moléculaire isothermale permettrait une meilleure évaluation des virus et du développement fongique au sein de l’igname D.alata, même dans les premières phases de l’infection avant que les symptômes macroscopiques ne soient évidents ou que la sporulation ne se produise.
+
+Problématique : Comment développer deux tests moléculaires à amplification isothermale "LAMP et qPCR" pour la
+détection rapide du champignon Colletotrichum goleosporioides et la recherche de virus sur
+l'igname (D.alata) en Guadeloupe?
+
+
 
 
 
