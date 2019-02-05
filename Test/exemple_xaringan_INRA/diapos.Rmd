@@ -6,7 +6,7 @@ date:
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["style/tweak.css", "style/xaringan-themer.css", "style/footer-header.css", "style/animate.css", default]
+    css: [default, "xaringan-themer.css"]
     nature:
       highlightStyle: github
       highlightLines: true

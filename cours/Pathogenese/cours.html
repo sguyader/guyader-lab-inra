@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maladies cryptogamiques</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Sébastien GUYADER 2019-02-05)" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/font-awesome-animation/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="libs/fontawesome/js/fontawesome-all.min.js"></script>
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link rel="stylesheet" href="tweak.css" type="text/css" />
+    <link rel="stylesheet" href="bootstrap_table.css" type="text/css" />
+    <link rel="stylesheet" href="footer-header.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide, animated, fadeIn
+
+# Maladies cryptogamiques : pathogénèse et réponses de l'hôte
+### Sébastien GUYADER
+#### INRA - UR Astro - Petit-Bourg
+
+---
+
+layout: true
+class: main-slide, animated, fadeIn
+&lt;div class="my-footer"&gt;&lt;span&gt;S. Guyader &amp;nbsp; - &amp;nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte&lt;/span&gt;&lt;/div&gt; 
+
+---
+name: plan
+
+.left-column[
+# Plan
+]
+
+.right-column[
+&lt;br&gt;
+###1. Introduction
+  1.1. L'état normal de la plante&lt;br&gt;
+  1.2. Interactions plantes/microbes&lt;br&gt;
+  1.3. Relations trophiques plantes / champignons pathogènes&lt;br&gt;
+  1.4. Conséquences des interactions&lt;br&gt;
+  {{content}}
+]
+--
+###2. Immunité, résistance et sensibilité
+  2.1. Mécanismes de reconnaissance de l'agression&lt;br&gt;
+  2.2. Contre-attaque du pathogène&lt;br&gt;
+  2.3. Différences entre types d'interactions (biotrophes/nécrotrophes)&lt;br&gt;
+{{content}}
+--
+###3. Perturbations physiologiques et symptômes
+  3.1. Différents types de symptômes&lt;br&gt;
+  3.2. Effets des perturbations&lt;br&gt;
+{{content}}
+&lt;br&gt;
+---
+
+layout: false
+class: section-slide, inverse, center, middle, animated, fadeIn
+&lt;div class="my-footer"&gt;&lt;span style="color:white"&gt;S. Guyader &amp;nbsp; - &amp;nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte&lt;/span&gt;&lt;/div&gt;
+
+# 1. Introduction
+
+---
+
+layout: true
+class: main-slide, animated, fadeIn
+&lt;div class="my-footer"&gt;&lt;span&gt;S. Guyader &amp;nbsp; - &amp;nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte&lt;/span&gt;&lt;/div&gt;
+
+---
+
+## 1.1. L'état normal de la plante
+
+.center[
+![growing-soybeans-crop](./images/growing-soybeans-crop.png)
+]
+
+--
+&lt;br&gt;
+.center[
+.content-box-brown[
+.large[
+<span>&lt;i class="fas  fa-hand-point-right faa-flash animated faa-slow "&gt;&lt;/i&gt;</span> Une attaque par des pathogènes conduit à une .bold[modification] de cet état
+]
+]
+]
+
+---
+
+## 1.2. Interactions plantes/microbes
+
+### <i class="fas  fa-caret-right "></i> Deux grands types d'interaction plante/microbe :
+.pull-left[
+- .Large[Interaction compatible :] maladie
+ - progression de l'infection
+ - dommages sur la plante
+]
+.pull-right[
+- .Large[Interaction incompatible :] immunité
+ - immunité basale .strong["MTI"]
+ - immunité indirecte .strong["ETI"]
+]
+
+--
+.center[
+&lt;img src="./images/schema-general.jpg" width="75%" /&gt;
+]
+
+---
+
+## 1.3. Relations trophiques plantes / Champignons phytopathogènes
+
+### <i class="fas  fa-caret-right "></i> Types de relations trophiques / modes de vie des champignons :
+&lt;br&gt;&lt;br&gt;
+
+&lt;table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Types &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Définition &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 15em; font-weight: bold;"&gt; Saprotrophes &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Survivent uniquement sur des débris, tissus en décomposition &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 15em; font-weight: bold;"&gt; Nécrotrophes &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Opportunistes, envahissent des tissus en produisant des facteurs cytolytiques pour utiliser les tissus dégradés &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 15em; font-weight: bold;"&gt; Biotrophes &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Dépendent des tissus vivants de leur hôte pour leur croissance &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+--
+&lt;table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;"&gt;
+ 
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 15em; font-weight: bold;"&gt; Hémibiotrophes &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Cycle en 2 phases : d'abord biotrophes, puis nécrotrophes &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## 1.3. Relations trophiques plantes / Champignons phytopathogènes
+
+### <i class="fas  fa-caret-right "></i> Types de relations trophiques / modes de vie des champignons :
+&lt;br&gt;
+&lt;table class="table table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Biotrophes &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Nécrotrophes &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr grouplength="4"&gt;&lt;td colspan="2" style="font-style: italic; border-bottom: 1px solid;"&gt;Morphologiques et biochimiques&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Cellules hôtes tuées lentement &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Cellules hôtes tuées rapidement &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Pas ou peu de toxines produites &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Production de toxines et enzymes cytolytiques &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Formation de structure parasitaire (haustorium) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Pas de formation de structure parasitaire spéciale &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Pénétration via blessures, ouvertures naturelles &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Pénétration directe ou via ouvertures naturelles &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr grouplength="3"&gt;&lt;td colspan="2" style="font-style: italic; border-bottom: 1px solid;"&gt;Ecologiques&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Faible gamme d’hôtes &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Importante gamme d’hôtes &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Incapables de se développer en saprophyte &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Capables de se développer en saprophyte &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Attaquent les tissus sains &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Attaquent tous les types de tissus (jeunes, matures, sénescents) &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## 1.3. Relations trophiques plantes / Champignons phytopathogènes
+
+### <i class="fas  fa-caret-right "></i> Types de relations trophiques / modes de vie des champignons :
+&lt;br&gt;
+.center[
+&lt;img src="./images/trophic.gif" width="50%" /&gt;
+]
+
+---
+
+## 1.4. Conséquences des interactions
+
+### <i class="fas  fa-caret-right "></i> Suite à une attaque, le fonctionnement de la plante est modifié à plusieurs niveaux :
+&lt;br&gt;
+
+- .Large[Moléculaire :]
+ - reconnaissance de l'attaque <i class="fas  fa-long-arrow-alt-right "></i> signalisation moléculaire
+ - niveau local (défense sur le site) et systémique (prémunition)
+&lt;br&gt;&lt;br&gt;
+--
+
+- .Large[Physiologique :]
+ - dus à la mise en place de mécanismes de défense
+ - dus à l'expression du pathogène
+&lt;br&gt;&lt;br&gt;
+--
+
+- .Large[Organes, plante :]
+ - dus à l'expression du pathogène
+ - dégâts, symptômes visibles
+ 
+---
+
+layout: false
+class: section-slide, inverse, center, middle, animated, fadeIn
+&lt;div class="my-footer"&gt;&lt;span style="color:white"&gt;S. Guyader &amp;nbsp; - &amp;nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte&lt;/span&gt;&lt;/div&gt;
+
+# 2. Immunité, résistance et sensibilité
+
+---
+
+layout: true
+class: main-slide, animated, fadeIn
+&lt;div class="my-footer"&gt;&lt;span&gt;S. Guyader &amp;nbsp; - &amp;nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte&lt;/span&gt;&lt;/div&gt;
+
+---
+
+## 2.1. Mécanismes de reconnaissance de l'agression
+
+### 2.1.1 Réponse immunitaire basale : PTI (PAMP-triggered immunity)
+
+.Large[PAMP : "pathogen-associated molecular pattern"]
+&lt;br&gt;
+.indent[](MAMP : microbe-associated molecular pattern <i class="fas  fa-long-arrow-alt-right "></i> induisent la .bold[MTI]) &lt;br&gt;
+.indent[]Ce sont des molécules constituantes des microbes (chitine, LPS...), dont certains motifs sont reconnus par des .bold[PRR] &lt;br&gt;
+&lt;br&gt;
+.Large[PRR : "Pattern recognition receptor", récepteurs transmembranaires de l'hôte]
+&lt;br&gt;
+--
+.left-column2[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.bold[domaine extracellulaire :] interaction récepteur/ligand, souvent via un domaine LRR ("leucine rich repeat")
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.bold[domaine intracellulaire :] interaction avec kinases, cascade de phosphorylations&lt;br&gt;
+<i class="fas  fa-long-arrow-alt-right "></i> signal
+]
+.right-column2[
+&lt;img src="./images/PRR.png" width="90%" /&gt;
+]
+
+---
+
+## 2.1. Mécanismes de reconnaissance de l'agression
+
+### 2.1.1. Réponse immunitaire basale : PTI (PAMP-triggered immunity)
+
+.pull-left[
+&lt;img src="./images/pti.jpg" width="100%" /&gt;
+]
+--
+&lt;br&gt;
+.pull-right[
+1. fixation .strong[PAMP/PRR]
+{{content}}
+]
+--
+2. activation des &lt;b&gt;kinases&lt;/b&gt;
+{{content}}
+--
+3. influx de &lt;b&gt;Ca&lt;sup&gt;2+&lt;/sup&gt;&lt;/b&gt;
+{{content}}
+--
+4. burst &lt;b&gt;oxydatif&lt;/b&gt; (activité antimicrobienne et signal d'activation)
+{{content}}
+--
+5. augmentation synthèse &lt;b&gt;SA&lt;/b&gt; (=salicilic acid) dans les cas des biotrophes, ou &lt;b&gt;JA/ET&lt;/b&gt; (=jasmonic acid et ethylene) dans le cas des nécrotrophes ou de blessures
+{{content}}
+--
+6. induction expression des gènes impliqués dans la &lt;b&gt;défense&lt;/b&gt; (protéines PR = "Pathogenesis related")
+{{content}}
+--
+7. transmission &lt;b&gt;systémique&lt;/b&gt; du signal par SA et JA/ET
+{{content}}
+--
+&lt;br&gt;&lt;br&gt;
+&gt; <i class="fas  fa-long-arrow-alt-right "></i> défense au niveau local et prémunition à l'échelle de la plante : &lt;b&gt;SAR&lt;/b&gt;="systemic acquired resistance"
+
+---
+
+## 2.1. Mécanismes de reconnaissance de l'agression
+
+### 2.1.2. Réponse immunitaire indirecte : ETI (effector-triggered immunity)
+- .large[Les pathogènes peuvent "injecter" certaines molécules pour faciliter l'infection : ce sont des &lt;b&gt;éliciteurs&lt;/b&gt;]
+--
+&lt;br&gt;
+- .large[Les plantes ont développé la capacité de &lt;b&gt;détecter&lt;/b&gt; certaines de ces molécules spécifiques à l'infection]
+--
+&lt;br&gt;
+- .large[Comme dans le cas de la PTI, il y a une &lt;b&gt;reconnaissance éliciteur/récepteur&lt;/b&gt;, qui induit une réponse de la plante (parfois reconnaissance indirecte d'un changement induit au niveau de protéines de l'hôte)]
+--
+&lt;br&gt;
+- .large[Souvent les récepteurs sont de type &lt;b&gt;NB-LRR&lt;/b&gt; (nucleotide binding - leucine rich repeat)]
+--
+&lt;br&gt;
+- .large[A la différence des PRR qui sont transmembranaires, les protéines R sont &lt;b&gt;cytosoliques&lt;/b&gt;]
+--
+&lt;br&gt;
+- .large[On parle de protéines &lt;b&gt;R&lt;/b&gt; ("résistance") pour le récepteur, et de facteur &lt;b&gt;avr&lt;/b&gt; ("avirulence") pour l'éliciteur]
+--
+&lt;br&gt;
+- .large[La réponse ETI est en général &lt;b&gt;+ rapide et + intense&lt;/b&gt; que la PTI]
+--
+&lt;br&gt;
+- .large[En plus du burst oxydatif et de l'activation des voies de défense, une spécificité est la &lt;b&gt;réaction hypersensible&lt;/b&gt; (HR) : mort cellulaire programmée pour endiguer l'infection (biotrophes)]
+--
+&lt;br&gt;
+- .large[Toutefois, ETI et PTI partagent largement les mêmes voies de signalisation et d'activation]
+
+---
+
+## 2.1. Mécanismes de reconnaissance de l'agression
+
+### 2.1.2. Réponse immunitaire indirecte : ETI (effector-triggered immunity)
+
+.center[
+&lt;img src="./images/pti+eti.png" width="50%" /&gt;
+]
+
+---
+
+## 2.1. Mécanismes de reconnaissance de l'agression
+
+### 2.1.2. Réponse immunitaire indirecte : ETI (effector-triggered immunity)
+
+.pull-left[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.large[Modèle "direct" gène-pour-gène :]
+&lt;br&gt;&lt;br&gt;
+&lt;img src="./images/direct-model.png" width="70%" /&gt;
+]
+
+--
+
+.pull-left[
+.large[Modèle "gardien" :]
+&lt;img src="./images/guard-model.png" width="88%" /&gt;
+.large[Modèle "leurre" :]
+&lt;img src="./images/decoy-model.png" width="88%" /&gt;
+]
+
+---
+
+## 2.2. Contre-attaque du pathogène
+
+### <i class="fas  fa-caret-right "></i> Rôle des éliciteurs
+
+.pull-left[
+- Certains éliciteurs produits par les pathogènes sont des .strong[suppresseurs de PTI] :
+ - en interférant avec la cascade de phosphorylation
+ - en interférant avec la signalisation hormonale (SA/JA/ET)
+ - une suppression efficace amène à l'.strong[ETS] (effector-triggered susceptibility)
+
+&lt;br&gt;
+- Les éliciteurs .strong[avr] reconnus par les gènes .strong[R] sont soumis à une sélection :
+ - pour échapper à le reconnaissance des récepteurs de l'hôte
+ - pour supprimer activement l'ETI
+
+&lt;br&gt;
+- Il y a coévolution entre les gènes codant pour les éliciteurs .strong[avr] et pour protéines .strong[R] correspondantes
+]
+
+.pull-right[
+&lt;img src="./images/coevolution.jpg" width="90%" /&gt;
+]
+
+---
+
+## 2.2. Contre-attaque du pathogène
+
+### <i class="fas  fa-caret-right "></i> Schéma synthétique en "zigzag"
+
+.center[
+&lt;img src="./images/zig-zag.jpg" width="60%" /&gt;
+]
+
+---
+
+## 2.3. Différences entre types d'interactions (biotrophes/nécrotrophes)
+&lt;br&gt;&lt;br&gt;
+
+- .Large[Biotrophes :]
+ - induction quasi-systématique de la .strong[voie SA], conduisant à la mort cellulaire
+ - si la voie JA/ET est induite, elle est efficace
+&lt;br&gt;&lt;br&gt;
+- .Large[Nécrotrophes :]
+ - la mort cellulaire est inefficace
+ - la PTI est déclenchée par des PAMPs ou des éliciteurs (toxines)
+ - très peu de gènes R connus pour conférer la résistance
+ - au contraire, des récepteurs type NB-LRR sont cette fois la cible de toxines et confèrent la sensibilité (ETS)
+ - induction de la .strong[voie JA/ET] en général, et production de molécules de défense type "phytoalexines"
+ &lt;br&gt;&lt;br&gt;
+- .Large[Les voies SA et JA/ET sont .strong[antagonistes] :] l'induction d'une des voies inhibe l'autre
+
+---
+
+## 2.3. Différences entre types d'interactions (biotrophes/nécrotrophes)
+&lt;br&gt;&lt;br&gt;
+.center[
+&lt;img src="./images/bio-necro-compar.gif" width="70%" /&gt;
+]
+
+---
+
+## 2.3. Différences entre types d'interactions (biotrophes/nécrotrophes)
+&lt;br&gt;&lt;br&gt;
+
+.pull-left[
+.Large[Biotrophe]
+&lt;img src="./images/biotrophe-spore.jpg" width="100%" /&gt;
+]
+.pull-right[
+.Large[Hémibiotrophe]
+&lt;img src="./images/hemibiotrophe-spore.jpg" width="100%" /&gt;
+]
+
+---
+
+layout: false
+class: section-slide, inverse, center, middle, animated, fadeIn
+&lt;div class="my-footer"&gt;&lt;span style="color:white"&gt;S. Guyader &amp;nbsp; - &amp;nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte&lt;/span&gt;&lt;/div&gt;
+
+# 3. Perturbations physiologiques et symptômes
+
+---
+
+layout: true
+class: main-slide, animated, fadeIn
+&lt;div class="my-footer"&gt;&lt;span&gt;S. Guyader &amp;nbsp; - &amp;nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte&lt;/span&gt;&lt;/div&gt;
+
+---
+
+## 3.1. Différents types de symptômes
+### <i class="fas  fa-caret-right "></i> Définitions :
+- .Large[Symptôme :]
+ &gt;Modification du phénotype par rapport à un état normal
+--
+&lt;br&gt;
+- .Large[Dégât :]
+ &gt;Altération de la culture due à l’activité de l’agent responsable de la maladie ou du ravageur
+--
+&lt;br&gt;
+- .Large[Dommage :]
+ &gt;Perte du potentiel de la culture (réduction du rendement en quantité et/ou en qualité)
+--
+&lt;br&gt;
+- .Large[Perte :]
+ &gt;Perte économique liée à la présence d’un bioagresseur dans une culture, provenant d’une baisse de rendement et/ou d’un déficit de qualité de la production
+ 
+---
+
+## 3.1. Différents types de symptômes
+### <i class="fas  fa-caret-right "></i> Exemples de symptômes :
+
+.left-column2[
+
+- Modification de couleur :&lt;br&gt;
+*anthacyanose, chlorose, mélanose*
+
+- Altération des organes :&lt;br&gt;
+*nécrose, pourriture, flétrissement*
+
+- Modification des fleurs 
+
+- Anomalies de croissance :&lt;br&gt;
+*nanisme, déformation organes*
+
+- Anomalies internes :&lt;br&gt;
+*callose, thyllose, gomme,…*
+
+- Excroissances pathologiques :&lt;br&gt;
+*gales, galles, tumeurs*
+]
+
+.right-column2[
+.center[
+&lt;img src="./images/symptomes/anthocyanose.jpg" width="22%" /&gt;&lt;img src="./images/symptomes/necrose.jpg" width="22%" /&gt;&lt;img src="./images/symptomes/chlorose.jpg" width="22%" /&gt;&lt;img src="./images/symptomes/pourriture.png" width="22%" /&gt;&lt;img src="./images/symptomes/fleur.jpg" width="22%" /&gt;&lt;img src="./images/symptomes/greening.jpg" width="22%" /&gt;&lt;img src="./images/symptomes/thyllose.jpg" width="22%" /&gt;&lt;img src="./images/symptomes/galle.jpg" width="22%" /&gt;
+]
+]
+
+---
+
+## 3.2. Effets des perturbations
+
+### <i class="fas  fa-caret-right "></i> Effets sur la membrane plasmique :
+
+.left-column3[
+- L'émission de toxines et/ou d'enzymes (pectinases, phospholipases) modifie la .strong[perméabilité membranaire] :
+ * dégradation de la lignine, celullose, hémicellulose
+ * inhibition de la fonction de protéines de surface
+ * modification de l'activité ATPase et des canaux inoniques
+ * action aussi sur les membranes des organites (chloroplastes, mitochondries)
+ * accumulation de formes actives d'oxygène
+&lt;br&gt;&lt;br&gt;
+- Impact sur : 
+ * la régulation des .strong[échanges ioniques]
+ * le .strong[transfert des assimilats] (produits dela photsynthèse) par la cellule
+ * .strong[ouverture des stomates] (fuite accélérée de l'eau intercellulaire)
+ * la .strong[transduction du signal] d'activation des gènes de défense
+]
+
+.right-column3[
+&lt;img src="./images/perturbations/spore-cutinase.jpg" width="90%" /&gt;
+]
+
+---
+
+## 3.2. Effets des perturbations
+
+### <i class="fas  fa-caret-right "></i> Effets sur la respiration :
+
+.pull-left[
+&lt;br&gt;
+.large[Augmentation générale de la respiration]
+&lt;br&gt;&lt;br&gt;
+
+- .strong[Décomposition des tissus] (par les nécrotrophes) :&lt;br&gt;
+ augmentation liée à l’induction des mécanismes de défense, puis chute liée à la mort des tissus
+&lt;br&gt;&lt;br&gt;
+
+- .strong[Détournement du métabolisme] des cellules (par les biotrophes) :&lt;br&gt;
+ augmentation liée à la création d’un nouveau puits pour la plante
+&lt;br&gt;&lt;br&gt;
+
+- .strong[Activation] de certaines voies métaboliques
+]
+
+.pull-right[
+.center[
+&lt;img src="./images/perturbations/respiration.jpg" width="80%" /&gt;
+]
+]
+
+---
+
+## 3.2. Effets des perturbations
+
+### <i class="fas  fa-caret-right "></i> Effets sur la photosynthèse :
+
+.pull-left[
+&lt;br&gt;
+.large[Facteurs physiques]
+&lt;br&gt;&lt;br&gt;
+
+- modification de la .strong[géométrie des feuilles] (moindre interception du rayonnement)
+&lt;br&gt;&lt;br&gt;
+
+- perte de .strong[surface foliaire] efficace (nécrose, pourriture, chlorose...)
+&lt;br&gt;&lt;br&gt;
+&lt;img src="./images/perturbations/photosynthese.png" width="70%" /&gt;
+]
+
+.pull-right[
+.center[
+&lt;img src="./images/perturbations/leaf-curl.jpg" width="60%" /&gt;&lt;img src="./images/perturbations/bastiaans.jpg" width="60%" /&gt;
+]
+]
+
+---
+
+## 3.2. Effets des perturbations
+
+### <i class="fas  fa-caret-right "></i> Effets sur la photosynthèse :
+
+.pull-left[
+&lt;br&gt;
+.large[Facteurs biochimiques et métaboliques]
+&lt;br&gt;&lt;br&gt;
+
+- dégradation de la .strong[chlorophylle] : action d'enzymes et de toxines (nécrotrophes), effet rétro-actif inhibant la photosynthèse (biotrophes)
+&lt;br&gt;&lt;br&gt;
+
+- altération des .strong[chloroplastes] : mort des cellules (toxines), perméabilité membranaire, modification structurelle
+]
+
+.pull-right[
+.center[
+&lt;img src="./images/perturbations/chlorophylle.png" width="70%" /&gt;&lt;img src="./images/perturbations/chloroplastes.png" width="70%" /&gt;
+]
+]
+
+
+---
+
+## 3.2. Effets des perturbations
+
+### <i class="fas  fa-caret-right "></i> Effets sur le métabolisme :
+
+.pull-left[
+&lt;br&gt;
+- .large[Inhibition du .strong[transfert d'électrons] :]
+
+ * inhibition du mécanisme de couplage de la .strong[photophosphorylation]
+ * perte de composants de la chaîne de .strong[transfert des électrons]
+&lt;br&gt;&lt;br&gt;
+
+- .large[Blocage de la synthèse d'.strong[ATP] par séquestration du P&lt;sub&gt;i&lt;/sub&gt;]
+&lt;br&gt;&lt;br&gt;
+
+- .large[Réduction de l'activité des enzymes du .strong[cycle de Calvin] (RuBisCO, NADPH-GADPH, FBPase, 3PGK), stimulation de l'activité d'autres enzymes]
+&lt;br&gt;&lt;br&gt;
+]
+
+.pull-right[
+.center[
+&lt;img src="./images/perturbations/rubisco.png" width="58%" /&gt;&lt;img src="./images/perturbations/invertase.jpg" width="58%" /&gt;
+]
+]
+
+---
+
+## 3.2. Effets des perturbations
+
+### <i class="fas  fa-caret-right "></i> Effets sur le transfert des ressources :
+
+.pull-left[
+&lt;br&gt;
+- .large[Alimentation en eau :]
+ * .strong[obstruction] des vaisseaux (gommes, thyllose, pathogène)
+ * perturbation de la .strong[transpiration]
+ &lt;br&gt;&lt;br&gt;
+
+- .large[Translocation des photo-assimilats :]
+ * .strong[hydrolyse] enzymatique (nécrotrophes)
+ * .strong[détournement] des ressources carbonnées (biotrophes)
+&lt;br&gt;&lt;br&gt;
+
+- .large[Perturbation de la croissance de la plante :]
+ * nanisme, rabougrissement, déformations
+ * flétrissement
+ * ...
+]
+
+.pull-right[
+.center[
+&lt;img src="./images/perturbations/transpiration.jpg" width="58%" /&gt;&lt;img src="./images/perturbations/carbone.jpg" width="58%" /&gt;
+]
+]
+
+---
+&lt;br&gt;
+.center[
+&lt;img src="./images/schema-global-fin.jpg" width="65%" /&gt;
+]
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"navigation": {
+"click": true
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
