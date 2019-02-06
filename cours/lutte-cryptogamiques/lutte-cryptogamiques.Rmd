@@ -1,0 +1,80 @@
+---
+title: "Maladies cryptogamiques"
+subtitle: "Méthodes de lutte"
+author: "Sébastien GUYADER"
+date:
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, "style/tweak.css", "style/bootstrap_table.css", "style/footer-header.css", "hygge"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+      navigation:
+        click: true
+    seal: false
+    self_contained: false
+---
+
+```{r setup, include=FALSE, message=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitrBootstrap)
+library(anicon)
+library(icon)
+library(kableExtra)
+```
+
+class: title-slide, animated, fadeIn
+
+# Maladies cryptogamiques : méthodes de lutte
+### Sébastien GUYADER
+#### INRA - UR Astro - Petit-Bourg
+
+---
+
+layout: true
+class: main-slide, animated, fadeIn
+<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : méthodes de lutte</span></div> 
+
+---
+name: plan
+
+.left-column[
+# Plan
+]
+
+.right-column[
+<br>
+###1. Introduction
+  1.1. L'état normal de la plante<br>
+  {{content}}
+]
+--
+###2. Immunité, résistance et sensibilité
+  2.1. Mécanismes de reconnaissance de l'agression<br>
+{{content}}
+--
+###3. Perturbations physiologiques et symptômes
+  3.1. Différents types de symptômes<br>
+{{content}}
+<br>
+---
+
+layout: false
+class: section-slide, inverse, center, middle, animated, fadeIn
+<div class="my-footer"><span style="color:white">S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : méthodes de lutte</span></div>
+
+# 1. Introduction
+
+---
+
+layout: true
+class: main-slide, animated, fadeIn
+<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : méthodes de lutte</span></div>
+
+---
+
+## 1.1. L'état normal de la plante
+

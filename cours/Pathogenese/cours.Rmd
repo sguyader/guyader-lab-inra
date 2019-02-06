@@ -6,7 +6,7 @@ date:
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: [default, "tweak.css", "bootstrap_table.css", "footer-header.css", "hygge"]
+    css: [default, "style/tweak.css", "style/bootstrap_table.css", "style/footer-header.css", "hygge"]
     nature:
       highlightStyle: github
       highlightLines: true
@@ -246,7 +246,7 @@ class: main-slide, animated, fadeIn
 
 ## 2.1. Mécanismes de reconnaissance de l'agression
 
-### 2.1.1 Réponse immunitaire basale : PTI (PAMP-triggered immunity)
+### 2.1.1. Réponse immunitaire basale : PTI (PAMP-triggered immunity)
 
 .Large[PAMP : "pathogen-associated molecular pattern"]
 <br>

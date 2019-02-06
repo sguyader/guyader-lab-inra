@@ -65,7 +65,7 @@ a, a > code {
 .inverse {
   background-color: #23395b;
   color: #E9EBEE;
-  background-image: url("images/slide-bg-main.png");
+  background-image: url("../style/slide-bg-main.png");
   background-size: cover; 
 }
 
@@ -83,7 +83,7 @@ a, a > code {
 
 .title-slide {
   background-color: #23395b;
-  background-image: url("images/slide-bg-title2.png");
+  background-image: url("../style/slide-bg-title2.png");
   background-size: cover;
 }
 
@@ -115,7 +115,7 @@ a, a > code {
 }
 
 .main-slide {
-  background-image: url("images/slide-bg-main2.png");
+  background-image: url("../style/slide-bg-main2.png");
   background-size: cover;
 }
 
@@ -295,7 +295,7 @@ content: "";
     width: 120px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("images/slide-bg-main.png");
+    background-image: url("../style/slide-bg-main.png");
 }*/
 
 @page { margin: 0; }
