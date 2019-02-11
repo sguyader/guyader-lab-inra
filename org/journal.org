@@ -600,3 +600,22 @@ Retour sur la venue des CD
 Entered on [2019-01-31 Thu 13:37]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+** 2019-02 February
+*** 2019-02-06 Wednesday
+**** *Réunion UE Péyi - parcelles*
+1. Conversion en "bio"
+   - proposition UE : convertir la partie EST du domaine en bio
+   - la conversion en bio est une nécessité pour le projet de la microferme
+   - accord de tous les présents
+2. Tarification expérimentations
+   - l'expérimentateur doit établir un bon de commande suite à la
+     demande de devis
+   - en fin d'expé, l'UE doit fournir une facture ajustée
+   - base minimale 1000 m²
+   - 100€ par passage d'outil, épandage (fumure, engrais)
+   - tarif pour paillage canne (dépend du prix de la balle de paille)
+   - 
+
+Entered on [2019-02-06 Wed 13:36]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
