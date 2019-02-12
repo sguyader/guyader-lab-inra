@@ -537,8 +537,8 @@ Entered on [2019-01-28 Mon 08:53]
    - montrer comment on y arrive avec beaucoup de disciplines mais peu
      de chercheurs par discipline
    - changement d'échelle peut être une interface de réflexion au sein de l'unité
-   - ne plus faire ressortir les recherhces via les contrats, montrer
-     que les contrats ne sont que des moyens financierspour faire aboutir
+   - ne plus faire ressortir les recherches via les contrats, montrer
+     que les contrats ne sont que des moyens financiers pour faire aboutir
    - site internet : ça ne va pas du tout -> soigner notre communication
    JP Rossi :
    - présentation claire des piliers
@@ -554,7 +554,7 @@ Entered on [2019-01-28 Mon 08:53]
    - projet original
    - unité pluridisciplinaire, c'est une chance et un risque à la fois
    - attention à ne pas se laisser aller par les "forces centrifuges"
-   - voir comment on se présente en termes d'équipes (1, 2 oou
+   - voir comment on se présente en termes d'équipes (1, 2 ou
      plus.... pour HCERES)
    - qu'est-ce qui est réel et vraiment structurant ?
    - identifier les grands enjeux structurants : ex. sols dégradés,
@@ -565,7 +565,57 @@ Entered on [2019-01-28 Mon 08:53]
    - importance des collaborations : essayer d'attirer vers nous
      encore plus
    - profiter de l'animation 70 ans du Centre pour gagner en visibilté
-   - 
+    
 Entered on [2019-01-29 Tue 08:20]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+*** 2019-01-31 Thursday
+**** *Réunion CHING*                                         :ching:meeting:
+Retour sur la venue des CD
+- positif : 
+  - ont vu ce qu'ils étaient venus voir
+  - 2 piliers montrent l'intérêt des 2 structures (CRB et plateforme)
+  - essayer d'attirer d'autres équipes, point important pour
+    évaluation
+  - liens URZ
+  - richesse partenariat
+  - pour évaluation, choisir comment on se représente, mais montrer
+    que c'est pertinent
+- à travailler :
+  - beaucoup de disciplines, difficulté à gérer mais on doit montrer
+    comment on y arrive
+  - essayer de replacer l'unité dans les enjeux structurants et autres
+    de l'INRA et des départements
+  - montrer comment le projet d'unité s'appuie sur les piliers,
+    articulations fonctionnelles, que les contrats sont seulement des
+    moyens d'y arriver
+  - fonctionnement financier à clarifier
+  - mettre à jour site web
+  - montrer des indicateurs sur les modèles
+  - pilier 1 paraît trop fragmenté
+  - challenge : créer et maintenir animation scientifique intra- et inter-piliers
+  - quelles ETP de collaborations interviennent sur nos projets
+
+
+Entered on [2019-01-31 Thu 13:37]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+** 2019-02 February
+*** 2019-02-06 Wednesday
+**** *Réunion UE Péyi - parcelles*
+1. Conversion en "bio"
+   - proposition UE : convertir la partie EST du domaine en bio
+   - la conversion en bio est une nécessité pour le projet de la microferme
+   - accord de tous les présents
+2. Tarification expérimentations
+   - l'expérimentateur doit établir un bon de commande suite à la
+     demande de devis
+   - en fin d'expé, l'UE doit fournir une facture ajustée
+   - base minimale 1000 m²
+   - 100€ par passage d'outil, épandage (fumure, engrais)
+   - tarif pour paillage canne (dépend du prix de la balle de paille)
+   - 
+
+Entered on [2019-02-06 Wed 13:36]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
