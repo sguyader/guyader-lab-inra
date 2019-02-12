@@ -665,3 +665,55 @@ l'igname (D.alata) en Guadeloupe?
 
 
 
+*** [#A] Vendredi 8  Février 2019
+**** Extraction ADN 
+***** Souches utilisées :
+G39, G37, 13, 71, 73, 140, 147, 149, 223, 245, 250, 253, 254, 255,
+256, 258, 268, 271, 281, 282.
+***** Protocole :
+1. Nommer les tubes.
+2. Ajout de 500 microlitres de CLS-Y (Cell Lysis-Solution spécifique
+   à l'extraction du matériel génétique fongique.
+3.Ajouter le matériel fongique gratté sur les boîtes PDA.
+4. Fastprep à la vitesse 5.0 durant 20s, l'énergie produite par les
+   frottements augmente la température et inactive les nucléases.
+5. Centrifuger 5min à 14000T pour faire descendre les débris et la
+   matrice de lyse.
+6. Transférer le surnageant dans un tube vide de 1.5ml.
+5. Ajouter 500 microlitres de Bidding matrix pour resuspendre le culot
+   formé, puis centrifuger et jeter le supernageant.
+7. Ajouter 500 microlitres de SEW-S qui est un tampon de lavage. Centrifuger et
+   jeter le surnageant.
+8. Ajout de 100 microlitres de TE pH8 avec le culot. Centrifuger et
+   mettre les tubes au congélateur.
+*** Lundi 11 Février 2019
+**** Vérification de la quantité de l'ADN extrait 
+***** Création d'un gel électrophorétique
+****** Matériels utilisés:
+Gel agarose : 2g      dans un volume de 250ml de TBE (préparation TBE:
+108g de Tris, 55g d'acide borique, 40ml de EDTA, pH8.3).
+GelRed = 12.5microlitres (est un intercalant s'insérant entre les 2 brins
+d'ADN).
+Tampon de charge DNA : pour que l'échantillon reste au fond au cours de
+la migration et pour vérifier l'avancée de la migration (préparation :
+0.3g de SDS,4g de saccharose, 1 pincée de bromophenol blue et de xylène cyanol, 10
+ml d'eau filtrée).
+
+****** Gamme étalon
+Faite à partir de dilutions en cascade diluées au 1/2 (Volume total
+par tube = 10 Ul).
+tube 1) 200 ng
+tube2)100 ng
+tube 3) 50 ng
+tube 4) 25 ng
+
+
+
+***** Résultat du gel :
+Les puits 22 (souche 256),23 (souche 258),24 (souche 268),
+                                  32 ( souche 282) et 34 ( souche 271)présentent
+des bandes significatives sur le gel électrophorétique.
+Les autres bandes sont illisibles voir très estompées (causes
+                                  probables : trop peu d'ADN dans les tubes,
+                                  ADN dégradé/extraction mal réalisée)
+                           
