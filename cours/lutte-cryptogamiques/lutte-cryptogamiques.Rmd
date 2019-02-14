@@ -141,3 +141,5 @@ knitr::include_graphics("./images/phytophtora-feuilles.jpg")
 knitr::include_graphics("./images/phytophtora-tubercule.jpg")
 ```
 ]]
+
+---
