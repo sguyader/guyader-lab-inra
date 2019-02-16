@@ -198,5 +198,20 @@ knitr::include_graphics("./images/potato-famine.jpg")
 
 ## 2.1. Caractéristiques générales
 
-### Classification<br>
-.Large[La classification est complexe, et sujette à des évolutions]<br><br>
+### Classification : au sein du "Tree of Life"<br>
+.center[
+```{r echo=F, out.width="70%"}
+knitr::include_graphics("./images/tree-life.jpg")
+```
+]
+
+---
+
+## 2.1. Caractéristiques générales
+
+### Classification : au sein des "vrais champignons"<br>
+
+```{r, echo=FALSE, out.width="80%"}
+DiagrammeR::grViz("eumycetes.dot")
+
+```
