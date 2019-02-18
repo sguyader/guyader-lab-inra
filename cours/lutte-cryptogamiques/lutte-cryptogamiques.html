@@ -10,6 +10,7 @@
     <script src="libs/viz/viz.js"></script>
     <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
     <script src="libs/grViz-binding/grViz.js"></script>
+    <script src="libs/kePrint/kePrint.js"></script>
     <link rel="stylesheet" href="style/tweak.css" type="text/css" />
     <link rel="stylesheet" href="style/bootstrap_table.css" type="text/css" />
     <link rel="stylesheet" href="style/footer-header.css" type="text/css" />
@@ -126,10 +127,10 @@ class: main-slide, animated, fadeIn
 
 ### Maladie = interaction entre 3 éléments fondamentaux
 
-.center[
-<div id="htmlwidget-f4bb6e421583314905e1" style="width:100%;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f4bb6e421583314905e1">{"x":{"diagram":"graph {\n  graph [pad=\"0.212,0.055\" bgcolor=transparent, layout=\"neato\"]\n  node [style=filled,\n    fixedsize=true,\n    width=0.9,\n    height=0.3,\n    color=\"transparent\",\n    fontcolor=\"white\",\n    fontsize=12]\n\n  Plante [fillcolor=\"#3a7794\" pos=\"0,0!\"]\n  Pathogène [fillcolor=\"#94563a\" pos=\"2,0!\"]\n  Milieu [fillcolor=\"#4a943a\" pos=\"1,1.8!\"]\n  Homme [fillcolor=\"transparent\" fontcolor=\"#E9EBEE\" pos=\"2.1,0.9!\"]\n\n  Plante -- Pathogène\n  Plante -- Milieu\n  Pathogène -- Milieu\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-]
+.indent[.indent[.indent[.indent[.indent[.indent[
+<div id="htmlwidget-740b2520c800fdba92d5" style="width:70%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-740b2520c800fdba92d5">{"x":{"diagram":"graph {\n  graph [pad=\"0.212,0.055\" bgcolor=transparent, layout=\"neato\"]\n  node [style=filled,\n    fixedsize=true,\n    width=0.9,\n    height=0.3,\n    color=\"transparent\",\n    fontcolor=\"white\",\n    fontsize=12]\n\n  Plante [fillcolor=\"#3a7794\" pos=\"0,0!\"]\n  Pathogène [fillcolor=\"#94563a\" pos=\"2,0!\"]\n  Milieu [fillcolor=\"#4a943a\" pos=\"1,1.8!\"]\n  Homme [fillcolor=\"transparent\" fontcolor=\"#E9EBEE\" pos=\"2.1,0.9!\"]\n\n  Plante -- Pathogène\n  Plante -- Milieu\n  Pathogène -- Milieu\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+]]]]]]
 
 ---
 
@@ -137,10 +138,10 @@ class: main-slide, animated, fadeIn
 
 ### Maladie = interaction entre 3 éléments fondamentaux
 
-.center[
-<div id="htmlwidget-1b6fbee48aecb312b865" style="width:100%;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1b6fbee48aecb312b865">{"x":{"diagram":"graph {\n  graph [pad=\"0.212,0.055\" bgcolor=transparent, layout=\"neato\"]\n  node [style=filled,\n    fixedsize=true,\n    width=0.9,\n    height=0.3,\n    color=\"transparent\",\n    fontcolor=\"white\",\n    fontsize=12]\n\n  Plante [fillcolor=\"#3a7794\" pos=\"0,0!\"]\n  Pathogène [fillcolor=\"#94563a\" pos=\"2,0!\"]\n  Milieu [fillcolor=\"#4a943a\" pos=\"1,1.8!\"]\n  Homme [fillcolor=\"#833a94\" pos=\"2.1,0.9!\"]\n\n  Plante -- Pathogène\n  Plante -- Milieu\n  Pathogène -- Milieu\n\n  subgraph hom {\n    edge  [style=dashed]\n    Plante -- Homme\n    Milieu -- Homme\n    Pathogène -- Homme\n  }\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-]
+.indent[.indent[.indent[.indent[.indent[.indent[
+<div id="htmlwidget-6b7a0453cd615a9f6140" style="width:70%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6b7a0453cd615a9f6140">{"x":{"diagram":"graph {\n  graph [pad=\"0.212,0.055\" bgcolor=transparent, layout=\"neato\"]\n  node [style=filled,\n    fixedsize=true,\n    width=0.9,\n    height=0.3,\n    color=\"transparent\",\n    fontcolor=\"white\",\n    fontsize=12]\n\n  Plante [fillcolor=\"#3a7794\" pos=\"0,0!\"]\n  Pathogène [fillcolor=\"#94563a\" pos=\"2,0!\"]\n  Milieu [fillcolor=\"#4a943a\" pos=\"1,1.8!\"]\n  Homme [fillcolor=\"#833a94\" pos=\"2.1,0.9!\"]\n\n  Plante -- Pathogène\n  Plante -- Milieu\n  Pathogène -- Milieu\n\n  subgraph hom {\n    edge  [style=dashed]\n    Plante -- Homme\n    Milieu -- Homme\n    Pathogène -- Homme\n  }\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+]]]]]]
 
 ---
 
@@ -169,7 +170,7 @@ class: main-slide, animated, fadeIn
 - .Large[Grand potentiel d'adaptation aux milieux]
 ]
 .pull-right[
-&lt;img src="./images/potato-famine.jpg" width="45%" /&gt;
+&lt;img src="./images/fungi-diversity.jpg" width="70%" /&gt;
 ]
 ---
 
@@ -184,10 +185,721 @@ class: main-slide, animated, fadeIn
 
 ## 2.1. Caractéristiques générales
 
-### Classification : au sein des "vrais champignons"&lt;br&gt;
+### Classification : au sein des "vrais champignons"
 
-<div id="htmlwidget-3a9b27979358825ff8a7" style="width:80%;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3a9b27979358825ff8a7">{"x":{"diagram":"digraph {\n  graph [pad=\"0.212,0.055\" bgcolor=transparent, rankdir=TB, splines=ortho, nodesep=1.2]\n  node [fixedsize=true,\n    shape=box,\n    width=1.4,\n    height=0.3,\n    color=\"transparent\",\n    fontsize=12,\n    fontname=\"Arial\"]\n\n  Eumycota [style=filled, fillcolor=\"#833a94\", fontcolor=white]\n  Chytridiomycota\n  Chytridiomycètes\n  invisible1 [label=\"\", fixedsize=\"false\", width=0, height=0, shape=none]\n  invisible2 [label=\"\", fixedsize=\"false\", width=0, height=0, shape=none]\n  Mucoromycètes\n  Symbiomycota\n  Gloméromycètes\n  Dikarya [style=filled, fillcolor=\"#94563a\", fontcolor=white]\n  Entorrhizomycètes\n  Basidiomycètes [style=filled, fillcolor=\"#3a7794\", fontcolor=white]\n  Ascomycètes [style=filled, fillcolor=\"#4a943a\", fontcolor=white]\n\n  Eumycota -> Chytridiomycota\n  Eumycota -> invisible1 [style=dashed]\n  Chytridiomycota -> Chytridiomycètes [style=dashed]\n  invisible1 -> {Mucoromycètes, Symbiomycota}\n  Symbiomycota -> Gloméromycètes [style=dashed]\n  Symbiomycota -> invisible2 [arrowhead=none]\n  invisible2 -> Dikarya\n  Dikarya -> {Entorrhizomycètes, Basidiomycètes, Ascomycètes}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+.indent[
+<div id="htmlwidget-6386dd93fd92da546a15" style="width:90%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6386dd93fd92da546a15">{"x":{"diagram":"digraph {\n  graph [pad=\"0.212,0.055\", bgcolor=transparent, layout=\"neato\", splines=\"poluline\", sep=1]\n  node [fixedsize=true,\n    shape=box,\n    width=1.8,\n    height=0.3,\n    color=\"transparent\",\n    fontsize=16,\n    fontname=\"Arial\"]\n\n  EUMYCOTA [style=filled, fillcolor=\"#833a94\", fontcolor=white, pos=\"0,0!\"]\n  Chytridiomycota [pos=\"-2,-1!\"]\n  Chytridiomycètes [label=<<b>Chytridiomycètes<\/b>>, pos=\"-4,-2!\"]\n  invisible1 [label=\"\", fixedsize=\"false\", width=0, height=0, shape=none, pos=\"2,-1!\"]\n  Mucoromycètes [label=<<b>Mucoromycètes<\/b>>, pos=\"3.5,-2!\"]\n  Symbiomycota [pos=\"0.5,-2!\"]\n  Gloméromycètes [label=<<b>Gloméromycètes<\/b>>, pos=\"2,-3!\"]\n  Dikarya [style=filled, fillcolor=\"#94563a\", fontcolor=white, pos=\"-1,-3!\"]\n  Entorrhizomycètes [pos=\"-3,-4!\"]\n  Basidiomycètes [label=<<b>Basidiomycètes<\/b>>, style=filled, fillcolor=\"#3a7794\", fontcolor=white, pos=\"-1,-4!\"]\n  Ascomycètes [label=<<b>Ascomycètes<\/b>>, style=filled, fillcolor=\"#4a943a\", fontcolor=white, pos=\"1,-4!\"]\n\n  EUMYCOTA -> Chytridiomycota\n  EUMYCOTA -> invisible1 [style=dashed]\n  Chytridiomycota -> Chytridiomycètes [style=dashed]\n  invisible1 -> {Mucoromycètes, Symbiomycota}\n  Symbiomycota -> Gloméromycètes [style=dashed]\n  Symbiomycota -> Dikarya\n  Dikarya -> {Entorrhizomycètes, Basidiomycètes, Ascomycètes}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+]
+
+---
+
+## 2.1. Caractéristiques générales
+
+### Caractéristiques morphologiques&lt;br&gt;
+
+- .Large[Thalle filamenteux = mycélium (ou unicellulaires comme la levure)]&lt;br&gt;&lt;br&gt;
+- .Large[Filaments = hyphes, se nourissent des nutriments par absorption]&lt;br&gt;&lt;br&gt;
+- .Large[Paroi cellulaire faite de chitine + glucanes]&lt;br&gt;&lt;br&gt;
+- .Large[Les hyphes peuvent être septés, ou non (coenocytiques)]&lt;br&gt;&lt;br&gt;
+- .Large[Certains ont un mode de vie essentiellement sous forme haploïde (ascomycètes), d'autres ont une phase dikaryotique longue (basidiomycètes)]
+
+---
+
+## 2.1. Caractéristiques générales
+
+### Reproduction : asexuée et sexuée&lt;br&gt;
+
+- .Large[Reproduction asexuée (phase anamorphe) :]&lt;br&gt;&lt;br&gt;
+  * .large[se réalise pendant tout le cycle de développement du champignon]
+  * .large[assure la propagation et la multiplication de la population à courte distance]
+  * .large[se réalise soit par fragmentation du thalle, soit par sporulation]
+--
+&lt;br&gt;&lt;br&gt;
+- .Large[Reproduction sexuée (phase téléomorphe ou forme parfaite) :]
+  * .large[se réalise en général en fin de cycle de développement du champignon]
+  * .large[assure la survie et la conservation, mais aussi le maintien de la diversité génétique du champignon]
+  * .large[se réalise par fusion de gamètes mâles et femelles]
+
+---
+
+## 2.1. Caractéristiques générales
+
+### Cycle général&lt;br&gt;
+
+.center[
+&lt;img src="./images/cycle-general.jpg" width="60%" /&gt;
+]
+
+---
+
+## 2.1. Caractéristiques générales
+
+### Cycle des ascomycètes&lt;br&gt;
+
+.center[
+&lt;img src="./images/cycle-ascomycetes.jpg" width="50%" /&gt;
+]
+
+---
+
+## 2.1. Caractéristiques générales
+
+### Cycle des basidiomycètes&lt;br&gt;
+
+.center[
+&lt;img src="./images/cycle-basidiomycetes.jpg" width="53%" /&gt;
+]
+
+---
+
+## 2.1. Caractéristiques générales
+
+### Cycle des oomycètes&lt;br&gt;
+
+.center[
+&lt;img src="./images/cycle-oomycetes.jpg" width="60%" /&gt;
+]
+
+---
+
+## 2.1. Caractéristiques générales
+
+### Dispersion&lt;br&gt;
+
+.left-column2[
+.Large[1\. Libération :]
+  * .large[**active :** l'organe sporifère fournit lui-même l'énergie nécessaire pour la libération des spores]
+  * .large[**passive :** pas de contribution active de l'organe sporifère]
+
+.Large[2\. Transport naturel des spores :]
+  * .large[par le **vent**]
+  * .large[par la **pluie**]
+
+.Large[3\. Dépôt des spores]
+]
+
+.right-column2[
+&lt;img src="./images/spores-air.jpg" width="45%" /&gt;&lt;img src="./images/spores-eau.jpg" width="45%" /&gt;
+]
+
+---
+
+## 2.1. Caractéristiques générales
+
+### Conservation&lt;br&gt;
+.pull-left[
+.Large[
+- Sous la forme de structures de résistances (sclérotes, chlamydospores, oospores)
+- Sur les débris végétaux
+- Dans le sol
+- Sur les repousses
+- Sur des plantes réservoirs (hôtes alternatifs)
+]]
+.pull-right[
+&lt;img src="./images/sclerotes.jpg" width="90%" /&gt;
+]
+
+---
+
+## 2.1. Caractéristiques générales
+
+.left-column2[
+### Exemples :
+
+.Large[
+Cercosporiose noire du bananier&lt;br&gt;
+(*Mycosphaerella fijiensis*)
+&lt;br&gt;&lt;br&gt;
+\- _ascomycète_ -
+&lt;br&gt;&lt;br&gt;
+&lt;img src="./images/black-sigatoka-symptomes.jpg" width="85%" /&gt;
+]
+]
+.right-column2[
+&lt;img src="./images/black-sigatoka.jpg" width="100%" /&gt;
+]
+
+---
+
+## 2.1. Caractéristiques générales
+
+.left-column2[
+### Exemples :
+
+.Large[
+Mildiou des cucurbitacées&lt;br&gt;
+(*Pseudoperonospora cubensis*)
+&lt;br&gt;&lt;br&gt;
+\- _oomycète_ -
+&lt;br&gt;&lt;br&gt;
+&lt;img src="./images/mildiou-cucurbitacees-symptomes.jpg" width="100%" /&gt;
+]
+]
+.right-column2[
+&lt;img src="./images/mildiou-cucurbitacees.jpg" width="90%" /&gt;
+]
+
+---
+
+## 2.1. Caractéristiques générales
+
+.left-column2[
+### Exemples :
+
+.Large[
+Rouille du caféier&lt;br&gt;
+(*Hemileia vastatrix*)
+&lt;br&gt;&lt;br&gt;
+\- _basidiomycète_ -
+&lt;br&gt;&lt;br&gt;
+&lt;img src="./images/coffee-leaf-rust-symptomes.jpg" width="100%" /&gt;
+]
+]
+.right-column2[
+&lt;img src="./images/coffee-leaf-rust.jpg" width="100%" /&gt;
+]
+
+---
+
+## 2.2. Notions d'épidémiologie
+
+.blue-block[
+.Large[
+**Epidémie** = **Apparition et propagation** d'une maladie **infectieuse contagieuse** qui frappe en même temps et en un même endroit un **grand nombre** de personnes, d'animaux (épizootie) ou **de plantes** (épiphytie).]]
+
+.Large[
+- **Trois composantes importantes dans une épidémie :**
+ * l'infection primaire
+ * la multiplication (augmentation du nombre d'individus)
+ * la dispersion à de nouveau hôtes
+&lt;br&gt;
+
+- **Les objectifs de l'épidémiologie :**
+ * mesurer
+ * comprendre
+ * identifier les pistes de lutte
+]
+
+---
+
+## 2.2. Notions d'épidémiologie
+
+### Diagnostic
+
+.Large[
+- Se base sur des connaissances, l'état de l'art
+
+- Débute souvent par une reconnaissance visuelle
+
+- Peut être complété par des techniques plus formelles :
+	* prélèvements → observation → mise en culture
+	* diagnostic sérologique, moléculaire (plutôt pour quarantaine)
+
+- Permet de trouver la cause d’une maladie (étiologie)
+	* abiotique / biotique
+	* quel pathogène
+
+- Permet de guider vers un choix de protection adapté
+]
+
+---
+
+## 2.2. Notions d'épidémiologie
+
+### Diagnostic visuel
+
+&lt;img src="./images/perithece.jpg" width="32%" /&gt;&lt;img src="./images/thoma.jpg" width="32%" /&gt;&lt;img src="./images/colleto-visu.jpg" width="32%" /&gt;
+
+---
+
+## 2.2. Notions d'épidémiologie
+
+### Diagnostic sérologique
+
+.pull-left[
+&lt;img src="./images/elisa.jpg" width="78%" /&gt;
+]
+
+.pull-right[
+&lt;img src="./images/immunostrip.jpg" width="80%" /&gt;
+]
+
+---
+
+## 2.2. Notions d'épidémiologie
+
+### Diagnostic moléculaire
+
+.pull-left[
+&lt;img src="./images/pcr.jpg" width="80%" /&gt;
+]
+
+.pull-right[
+&lt;img src="./images/lamp.jpg" width="100%" /&gt;
+]
+
+---
+
+## 2.2. Notions d'épidémiologie
+
+### Comment mesurer la maladie
+
+.pull-left[
+.Large[
+- Estimation **directe** : suivi visuel et attribution d’une valeur de sévérité (0-100%) basée sur la perception du niveau de maladie
+
+- Utilisation d’une **échelle de notation**&amp;nbsp;: découpage des valeurs continues en classes discrètes, attribution éventuelle de notes
+
+- Estimation directe avec l’**utilisation d’un diagramme** : suivi visuel par l’expérimentateur et attribution d’une valeur de sévérité à l’aide d’une échelle de notation
+]
+]
+
+.pull-right[
+&lt;img src="./images/scale-table.jpg" width="100%" /&gt;&lt;img src="./images/scale-diagram.jpg" width="100%" /&gt;
+]
+
+---
+
+## 2.2. Notions d'épidémiologie
+
+### Comment mesurer le développement d'une maladie
+
+.Large[
+- Pour suivre le développement de la maladie, nécessité de **définir toutes les catégories d’organes** à prendre en compte (feuille, tige, racine, fruits)
+&lt;br&gt;
+
+- Suivi réalisable soit par **mesure visuelle** (le plus utilisé), soit par des **mesures biochimiques, immunologiques ou moléculaires** (ELISA, PCR, PCR-Q, LAMP...)
+&lt;br&gt;
+
+- **Comptage des lésions difficile à réaliser** : difficulté de compter l’ensemble des lésions, mesures difficiles à réaliser sur le système racinaire
+&lt;br&gt;
+
+- **Une alternative** : compter le nombre de spores présentes dans l’air ambiant, à la surface des organes, dans le sol
+]
+
+---
+
+## 2.2. Notions d'épidémiologie
+
+### Comparaison maladies telluriques / aériennes
+&lt;br&gt;
+.large[
+&lt;table class="table table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Initiation / Contaminations primaires &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Développement / Contaminations secondaires &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr grouplength="2"&gt;&lt;td colspan="2" style="font-style: italic; border-bottom: 1px solid;"&gt;Telluriques&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Inoculum primaire endogène, présent avant semis &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Dispersion des spores infectieuses à courte distance &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Contact inoculum/racine &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Contact racine-racine ou inoculum/racine &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr grouplength="3"&gt;&lt;td colspan="2" style="font-style: italic; border-bottom: 1px solid;"&gt;Aériennes&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Inoculum primaire majoritairement exogène &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Dispersion propagules infectieuses courte/longue distance &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Absent avant semis (mais pas toujours) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Disponibilité inoculum/ sensibilité organe &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+## 2.2. Notions d'épidémiologie
+
+### Deux types d'épidémies
+
+.Large[
+- Monocyclique
+ Développement de la maladie correspondant à un **seul cycle de développement** du parasite pendant _un cycle cultural_
+.center[
+&lt;img src="./images/monocyclique.jpg" width="40%" /&gt;
+]
+- Polycyclique
+ Développement de la maladie correspondant à une juxtaposition de **multiples monocycles** pendant _un cycle cultural_
+]
+
+---
+
+## 2.2. Notions d'épidémiologie
+
+### Deux types d'épidémies
+
+.center[
+&lt;img src="./images/courbes-progression.jpg" width="70%" /&gt;
+]
+.Large[**Facteurs influançant le niveau maximal de maladie atteint en fin de culture :**
+ * quantité d'inoculum primaire disponible
+ * quantité de tisus ou de plantes sensibles
+ * environnement (climat, microclimat)
+]
+
+---
+
+## 2.2. Notions d'épidémiologie
+
+### Deux types d'épidémies
+
+.Large[Subdivision du cycle de base en 2 périodes principales :]
+
+.large[
+- Période d'incubation : temps entre la pénétration et l'apparition des symptômes
+- Période de latence &lt;b&gt;*L*&lt;/b&gt; : temps entre la pénétration et la production de nouvelles spores (colonisation de l’hôte)
+- Période infectieuse &lt;b&gt;*I*&lt;/b&gt; : durée pendant laquelle une lésion est capable de produire des spores
+]
+
+.center[
+&lt;img src="./images/courbes-progression2.jpg" width="70%" /&gt;
+]
+
+---
+
+layout: false
+class: section-slide, inverse, center, middle, animated, fadeIn
+&lt;div class="my-footer"&gt;&lt;span style="color:white"&gt;S. Guyader &amp;nbsp; - &amp;nbsp; Maladies cryptogamiques : méthodes de lutte&lt;/span&gt;&lt;/div&gt;
+
+# 3. Méthodes de lutte
+
+---
+
+layout: true
+class: main-slide, animated, fadeIn
+&lt;div class="my-footer"&gt;&lt;span&gt;S. Guyader &amp;nbsp; - &amp;nbsp; Maladies cryptogamiques : méthodes de lutte&lt;/span&gt;&lt;/div&gt;
+
+---
+
+## Généralités
+
+.Large[
+- Finalité : préserver le **potentiel de production** des culture
+&lt;br&gt;&lt;br&gt;
+- C'est un objectif propre à **tous les types d'agriculture**
+&lt;br&gt;&lt;br&gt;
+- Grande **diversité des méthodes**, en fonction :
+ * de la **zone de production**
+ * des **objectifs de production**
+ * du **système de culture** choisi
+&lt;br&gt;&lt;br&gt;
+- Du **préventif** au **curatif**
+]
+
+---
+
+## Généralités
+
+### Cinq grands groupes de méthodes :
+
+.Large[
+&lt;br&gt;
+- Chimiques&lt;br&gt;&lt;br&gt;
+- Génétiques&lt;br&gt;&lt;br&gt;
+- Biologiques&lt;br&gt;&lt;br&gt;
+- Prophylactiques&lt;br&gt;&lt;br&gt;
+- Intégrées
+]
+
+---
+
+## 3.1. Méthodes chimiques
+
+.Large[
+.blue-block[
+Méthode de lutte basée sur l'utilisation de produits phytopharmaceutiques issus de la
+chimie de synthèse.
+]
+]
+
+### Biocides et produits désinfectants/stérilisants
+.Large[
+- ex. : bouillie bordelaise, fumigation et désifection des sols
+- peu sélectifs
+- moins couramment utilisés
+]
+
+### Fongicides
+.Large[
+- plus largement utilisés
+- différentes cibles d'action sur le pathogène
+- différents modes d'utilisation
+]
+
+---
+
+## 3.1. Méthodes chimiques
+
+.Large[
+- Nombreuses familles de fongicides (de nouvelles sont créées encore aujourd'hui)
+
+.center[
+&lt;img src="./images/fongicides1.jpg" width="60%" /&gt;
+]
+
+- Trois grandes catégories d'utilisation : contact, translaminaires/localement systémiques, systémiques
+- Essentillement utilsés à titre préventif, rarement curatif
+]
+
+---
+
+## 3.1. Méthodes chimiques
+
+.center[
+&lt;img src="./images/fongicides2.jpg" width="50%" /&gt;
+]
+
+---
+
+## 3.1. Méthodes chimiques
+
+.Large[
+- Problèmes liés à la méthode chimique :
+ * efficacité liée aux conditions
+ * apparition de souches résistantes
+ * toxicité pour les personnes faisant l’application
+ * toxicité pour l’environnement (manque de sélectivité)
+ * coût
+	
+- Nombre de traitements annuels pour quelques cultures :
+ * blé : 6.6
+ * maïs : 3.7
+ * colza : 6.7
+ * pommier : 17.6
+ * vigne : 20
+]
+
+---
+
+## 3.1. Méthodes chimiques
+
+.center[
+&lt;img src="./images/fongicides3.jpg" width="90%" /&gt;
+]
+
+---
+
+## 3.2. Méthodes génétiques
+
+.Large[
+.blue-block[
+Utilisation de variétés résistantes (naturellement, ou par modification) &amp;nbsp;
+]
+
+- Un ou plusieurs gènes :&lt;br&gt;
+ résistances mono-, oligo- ou polygéniques
+&lt;br&gt;&lt;br&gt;
+- Résistances **totales** :&lt;br&gt;
+ en général monogéniques, à effet très fort, mais on peut introgresser 2 ou plusieurs gènes dans une même variété (pyramidage)
+&lt;br&gt;&lt;br&gt;
+- Résistances **partielles** ou **quantitatives** :&lt;br&gt;
+ souvent oligo- ou polygéniques, avec un effet moins fort
+]
+
+---
+
+## 3.2. Méthodes génétiques
+
+.Large[Résistance **monogénique** : gène de type **R**, effet _qualitatif_ fort]
+&lt;br&gt;&lt;br&gt;
+.center[
+&lt;img src="./images/gene-R.jpg" width="60%" /&gt;
+]
+
+---
+
+## 3.2. Méthodes génétiques
+
+.Large[Résistance **polygénique** partielle : effet _quantitatif_]
+&lt;br&gt;&lt;br&gt;
+.center[
+&lt;img src="./images/genes-quantitatifs.jpg" width="80%" /&gt;
+]
+
+---
+
+## 3.2. Méthodes génétiques
+
+.Large[Problème des résistances "simples" : elles sont plus facilement **contournées**]
+&lt;br&gt;&lt;br&gt;
+.center[
+&lt;img src="./images/boom-bust.jpg" width="65%" /&gt;
+]
+
+---
+
+## 3.3. Méthodes biologiques
+
+.blue-block[
+.Large[Réduction de l’inoculum ou de l’activité d’un bioagresseur par au moins un **organisme non-humain** (_lutte biologique_) ou par des **produits issus du vivant** (_biocontrôle_)
+]
+]
+&lt;br&gt;
+
+.Large[
+- Utilisation de sols suppressifs : favorisent le maintien et l’**activité d’organismes antagonistes** (bactéries *Pseudomonas fluorescens*…, champignons *Trichoderma* spp. …)
+&lt;br&gt;&lt;br&gt;
+- Application directe d’antagonistes (unique ou répétée) :
+ * protection croisée (**stimulation des défenses** naturelles de la plante)
+ * pré-colonisation des sites (**compétition** interspécifique)
+ * mycoparasitisme (champignons parasités par d'autres microbes)
+ * prédation (organismes consommant les champignons pathogènes)
+ * production de métabolites antifongiques
+]
+
+---
+
+## 3.3. Méthodes biologiques
+
+.center[
+&lt;img src="./images/biocontrole1.jpg" width="50%" /&gt;
+]
+
+---
+
+## 3.4. Méthodes prophylactiques / préventives
+
+.blue-block[
+.Large[Ensemble des **techniques culturales** visant à **éviter ou réduire les risques** d’infection (efficaces particulièrement pour les maladies à faible dispersion)
+]
+]
+
+.Large[Possibilités variées, en focntion des pathosystèmes :]
+.large[
+* éviter un sol infecté (rotation)
+* utilisation d’une plante assainissante en interculture (piège, allélopathie)
+* désinfecter le sol (solarisation) 
+* partir de matériel sain pour plantation (semences certifiées…)
+* éliminer hôtes alternatifs à proximité
+* planter loin d’une culture infectée la saison précédente
+* éliminer les résidus infectieux
+* jouer sur les conditions méso/microclimatiques
+* décaler la culture dans le temps pour désynchroniser stades sensibles / conditions favorables à la maladie
+* détruire les tissus/plantes infectés en cours de culture
+* éviter dispersion d’inoculum par les intervenants
+* ...
+]
+
+---
+
+## 3.5. Protection intégrée
+
+&lt;br&gt;
+.blue-block[
+.Large[
+Prise en considération attentive de **toutes les méthodes** de protection des plantes
+disponibles et, par conséquent, intégration des mesures appropriées qui découragent
+le développement des populations d’organismes nuisibles et maintiennent le recours
+aux produits phytopharmaceutiques et à d’autres types d’interventions **à des niveaux
+justifiés** des points de vue économique et environnemental, et **réduisent ou limitent
+au maximum les risques** pour la santé humaine et l’environnement.
+]
+]
+
+---
+
+## 3.5. Protection intégrée
+
+&lt;br&gt;
+.large[
+&lt;table class="table table-hover table-condensed" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Lutte intégrée &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Protection intégrée &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Contre un pathogène, au moins 2 méthodes de lutte complémentaires &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Se raisonne au niveau de la (des) culture(s) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Risque de les réfléchir et concevoir bioagresseur par bioagresseur &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Consiste à créer les conditions des cultures les moins favorables aux bioagresseurs, y-compris par des moyens directs de lutte &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Risque de se trouver face à des incompatibilités ou conflits entre méthodes &lt;/td&gt;
+   &lt;td style="text-align:left;width: 20em; "&gt; Développée à partir de profils de bioagresseurs majeurs &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+
+## 3.5. Protection intégrée
+
+.center[
+&lt;img src="./images/protection-integree-decisions.jpg" width="80%" /&gt;
+]
+
+---
+
+## 3.5. Protection intégrée
+
+### Protéger une culture, c‘est (mais pas uniquement) :
+
+.Large[
+- réduire la quantité d'ennemis des cultures qui l'attaquent
+- réduire la vitesse d'une épidémie causée par un bioagresseur donné 
+- réduire, cycle après cycle, la taille des populations d'un groupe de bioagresseurs, 
+(ce n’est pas annihiler l'ensemble des bioagresseurs qui affectent une culture)
+]
+
+### Objectif ultime : réduire les pertes de récoltes (nuisibilité)
+
+.Large[
+- comment qualifier une perte de récolte, s'agit-il uniquement de pertes en biomasse récoltée ?
+- jusqu'à quel niveau cette perte est-elle tolérable ?
+]
+
+---
+
+## 3.5. Protection intégrée
+
+### Importance de définir des seuils
+
+.Large[
+- **Seuil de nuisibilité "biologique" :**&lt;br&gt;
+ Niveau d’intensité de la maladie à partir de laquelle une diminution des potentialités de la plante cultivée est observée
+
+- **Seuil de nuisibilité économique :**&lt;br&gt;
+Niveau d’intensité de maladie justifiant la mise en œuvre de moyens de lutte, lorsque la perte économique est supérieure au coût de contrôle pouvant l’éviter]
+&lt;br&gt;
+.Large[
+Dépend de la balance coûts de la lutte / revenus de la culture
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&amp;rarr; Utilisation de modèles de nuisibilité et d’économie
+]
+
+---
+
+## 3.5. Protection intégrée
+
+.center[
+&lt;img src="./images/pertes-nuisibilite.jpg" width="75%" /&gt;
+]
+
+
+.Large[
+.indent[.indent[**SPE** = seuil de pertes économiques]]
+&lt;br&gt;
+.indent[.indent[**SA** = seuil d'action]]
+]
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({

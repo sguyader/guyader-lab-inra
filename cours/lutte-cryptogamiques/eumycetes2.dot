@@ -1,0 +1,30 @@
+digraph {
+  graph [pad="0.212,0.055", bgcolor=transparent, layout="neato", splines="poluline", sep=1]
+  node [fixedsize=true,
+    shape=box,
+    width=1.8,
+    height=0.3,
+    color="transparent",
+    fontsize=16,
+    fontname="Arial"]
+
+  EUMYCOTA [style=filled, fillcolor="#833a94", fontcolor=white, pos="0,0!"]
+  Chytridiomycota [pos="-2,-1!"]
+  Chytridiomycètes [label=<<b>Chytridiomycètes</b>>, pos="-4,-2!"]
+  invisible1 [label="", fixedsize="false", width=0, height=0, shape=none, pos="2,-1!"]
+  Mucoromycètes [label=<<b>Mucoromycètes</b>>, pos="3.5,-2!"]
+  Symbiomycota [pos="0.5,-2!"]
+  Gloméromycètes [label=<<b>Gloméromycètes</b>>, pos="2,-3!"]
+  Dikarya [style=filled, fillcolor="#94563a", fontcolor=white, pos="-1,-3!"]
+  Entorrhizomycètes [pos="-3,-4!"]
+  Basidiomycètes [label=<<b>Basidiomycètes</b>>, style=filled, fillcolor="#3a7794", fontcolor=white, pos="-1,-4!"]
+  Ascomycètes [label=<<b>Ascomycètes</b>>, style=filled, fillcolor="#4a943a", fontcolor=white, pos="1,-4!"]
+
+  EUMYCOTA -> Chytridiomycota
+  EUMYCOTA -> invisible1 [style=dashed]
+  Chytridiomycota -> Chytridiomycètes [style=dashed]
+  invisible1 -> {Mucoromycètes, Symbiomycota}
+  Symbiomycota -> Gloméromycètes [style=dashed]
+  Symbiomycota -> Dikarya
+  Dikarya -> {Entorrhizomycètes, Basidiomycètes, Ascomycètes}
+}

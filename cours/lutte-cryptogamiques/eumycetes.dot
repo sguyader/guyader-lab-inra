@@ -8,7 +8,7 @@ digraph {
     fontsize=12,
     fontname="Arial"]
 
-  Eumycota [style=filled, fillcolor="#833a94", fontcolor=white]
+  EUMYCOTA [style=filled, fillcolor="#833a94", fontcolor=white]
   Chytridiomycota
   Chytridiomycètes
   invisible1 [label="", fixedsize="false", width=0, height=0, shape=none]
@@ -21,8 +21,8 @@ digraph {
   Basidiomycètes [style=filled, fillcolor="#3a7794", fontcolor=white]
   Ascomycètes [style=filled, fillcolor="#4a943a", fontcolor=white]
 
-  Eumycota -> Chytridiomycota
-  Eumycota -> invisible1 [style=dashed]
+  EUMYCOTA -> Chytridiomycota
+  EUMYCOTA -> invisible1 [style=dashed]
   Chytridiomycota -> Chytridiomycètes [style=dashed]
   invisible1 -> {Mucoromycètes, Symbiomycota}
   Symbiomycota -> Gloméromycètes [style=dashed]

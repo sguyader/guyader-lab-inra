@@ -249,7 +249,8 @@ th {
 }
 
 blockquote {
-  border-left: solid 5px #23395b80;
+  background: #c8d5ea;
+  border-left: solid 15px #23395b80;
   padding-left: 1em;
 }
 
