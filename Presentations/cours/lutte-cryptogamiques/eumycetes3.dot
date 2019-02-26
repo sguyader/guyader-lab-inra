@@ -1,5 +1,5 @@
 graph {
-  graph [rankdir=TB, pad="0.212,0.055", bgcolor=transparent, layout="dot", splines="line", sep=1]
+  graph [rankdir=TB, pad="0.212,0.055", bgcolor=transparent, layout="dot", splines="line", nodesep=0.5]
   node [fixedsize=true,
     shape=box,
     width=2,
@@ -10,9 +10,9 @@ graph {
 
   EUMYCOTA [style=filled, fillcolor="#833a94", fontcolor=white, color="black"]
   Chytridiomycota [color="black"]
-  Chytridiomycètes [label=<<b>Chytridiomycètes</b>>]
+  Chytridiomycètes
   invisible1 [style=invisible, width=0, height=0]
-  Mucoromycètes [label=<<b>Mucoromycètes</b>>]
+  Mucoromycètes
   Symbiomycota [color="black"]
   Gloméromycètes [label=<<i>Gloméromycètes</i>>]
   Dikarya [label=<<b>Dikarya</b>>, color="black"]
