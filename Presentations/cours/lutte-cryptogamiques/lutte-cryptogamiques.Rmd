@@ -32,6 +32,8 @@ class: title-slide, animated, fadeIn
 # Maladies cryptogamiques : méthodes de lutte
 ### Sébastien GUYADER
 #### INRA - UR Astro - Petit-Bourg - _sebastien.guyader@inra.fr_
+<br><br><br>
+.right[!<img src="./images/cc-by-nc-sa.png" alt="license" width="120"/>]
 
 ---
 
@@ -202,19 +204,6 @@ knitr::include_graphics("./images/fungi-diversity.jpg")
 .center[
 ```{r echo=F, out.width="70%"}
 knitr::include_graphics("./images/tree-life.jpg")
-```
-]
-
----
-
-## 2.1. Caractéristiques générales
-
-### Classification : au sein des "vrais champignons"
-
-.center[
-```{r, echo=FALSE, out.width="80%"}
-#DiagrammeR::grViz("eumycetes2.dot")
-knitr::include_graphics("./images/eumycota.png")
 ```
 ]
 
