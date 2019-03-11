@@ -620,3 +620,216 @@ Entered on [2019-02-06 Wed 13:36]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 *** 2019-02-14 Thursday
+*** 2019-02-28 Thursday
+**** *CODIR*                                                       :meeting:
+- point hébergement stagiaires 2019 : logement+bureaux
+- animation scientifique :
+  * Jorge propose une animation sur le changement d'échelles et les
+    ponts piliers 1 et 2
+  *
+** 2019-03 March
+*** 2019-03-11 Monday
+**** *MOOC "Analyse de données multidimensionnelles"*
+
+*ACP*
+1. Données - Problématique
+   - type de données pour ACP : tableaux rectangulaires avec *individus*
+     en lignes, et *variables quantitatives* en colonnes
+   - étude des individus :
+     + quand dit-on que 2 individus se ressemblent
+       du point de vue de l'ensemble des variables ?
+     + si beaucoup d'individus, peut-on faire un bilan des
+       ressemblances ?
+     + construction de groupes d'invididus
+   - étude des variables :
+     + recherche de ressemblance entre variables : on parle plutôt de liaisons
+     + souvent liaisons linéaires -> coeff. de corrélation
+     + visualisation de la matrice des corrélations
+     + recherche d'un petit nombre d'indicateurs synthétiques pour
+       résumer bcp de variables
+   - objectifs de l'ACP :
+     + descriptif / exploratoire : visualistaion de données
+       par graphiques simples
+     + synthèse / résumé de grands tableaux individus x variables
+
+2. Etude des individus
+   - on cherche à étudier les distances entre individus au sein du nuage
+   - on étudie la forme du nuage réduit à 2 dimensions
+   - centrage - réduction des données : prétraitement
+     + toujours centrer le nuage ne change pas sa forme
+     + réduire les données (=standardiser =normer) est nécessaire si
+       les variables sont exprimées dans des unités différentes
+     + la réduction permet de donner la même importance à chaque
+       variable : plus la variance d'une variable est grande, plus
+       cette variable aura d'importance
+   - l'ACP cherche un sous-espace qui résume au mieux les données
+       (i.e. la forme originale du nuage)
+   - pour ajuster le nuage, on cherche l'image qui maximise la
+     distance entre individus (qui éclate le plus le nuage), donc la
+     variabilité sur plusieurs dimensions = l'*inertie*
+     + trouver le meilleur axe (facteur) qui déforme le moins le nuage :
+       maximiser la somme des carrés coordonnées projetées sur l'axe
+       (on veut maximiser l'*inertie* \(\sum_{i}(OH_i)²\) avec O=centre gravité du nuage, H=coordonnée du point /i/
+       sur l'axe)
+     + ensuite trouver le meilleur plan qui contient le meilleur axe,
+       avec le second axe orthogonal au premier, et maximisant
+       toujours l'inertie \(\sum_{i}(OH_i)²\)
+     + on peut chercher d'autres axes ensuite, sachant qu'il faut
+       toujours que le nouvel axe soit orthogonal à tous les autres et
+       maximise l'inertie
+   - interprétation du graphe des individus grâce aux variables :
+     + on va considérer les coordonnées des individus sur les 2
+       premiers axes, donnant 2 nouveaux vecteurs \(F_.1\) et \(F_.2\) avec /I/ valeurs
+       rassemblant les coordoonées des /I/ individus
+     + on calcule la corrélation entre chaque variable \(x_.k\) et
+       \(F_.1\) et \(F_.2\) : le cercle des corrélations
+
+3. Etude des variables
+   - on représente les variables par des flèches partant de l'origine
+   - quand les variables sont centrées, le cosinus de l'angle entre 2
+     variables /k/ et /l/ correspond à la correlation entre celles-ci :
+     \(cos(\theta_kl)=r(x_.k, x_.l)\)
+   - si les variables sont réduites, les extrémités des flèches des
+     variables se situent sur une hypersphère de rayon 1
+   - comme pour les individus, on cherche les axes orthogonaux qui
+     maximisent la somme des carrés des corrélations entre l'axe et chacune des variables
+   - *attention* : seules les variables bien projetées (avec une flèche
+     proche su cercle des corrélations) peuvent être interprétées
+     quant à leur corrélation
+
+4. Aides à l'interprétation
+   - Pourcentage d'inertie (d'information) expliqué par chaque dimension
+   - Information supplémentaire : variables quanti ou quali supplémentaires
+     + on peut directement superposer les variables quantitatives
+     + on va projeter chaque modalité des variables qualitatives au barycentre des
+       individus qui prennent cette modalité
+   - Qualité de représentation : les éléments bien projetés sont interprétables
+     + d'une variable : cos² entre une variable et sa projection
+     + d'un individu : cos² entre /Oi/ et /OH_i/
+     + on additionne les cos² calculés sur les 2 premiers axes pour
+       avoir la qualité de la projection sur le premier plan
+   - Contribution à la construction d'un axe :
+     + d'une variable : carré de la corrélation entre la variable et
+       l'axe par rapport à la somme des carrés des corrélations de
+       toutes les variables avec l'axe (exprimé en pourcentage)
+     + d'un individu : carré de sa coordonnée sur l'axe par rapport à
+       la somme des carrés des coordonnées de tous les individus
+       (exprimé en pourcentage)
+     + la contribution permet de savoir si un axe a été construit
+       surtout à cause d'une certaine variable ou d'un certain
+       individu
+     + si un individu contribue très fortement, on peut chercher à
+       expliquer pourquoi, et à refaire l'analyse en retirant cet
+       individu très particulier
+   - Description des dimensions :
+     + par les variables quantitatives :
+       * calcul des corrélations entre chaque variable et la dimension /s/
+       * tri des coefficients de corrélation significatifs
+     + par les variables qualitatives :
+       * analyse de variance des coordonnées des individus sur l'axe /s/
+         expliqués par la variable qualitative
+       * 1 test /F/ par variable pour voir si la liaison est
+         significative entre les coordonnées des individus sur l'axe
+         et la variable
+       * 1 test /t/ de Student par modalité pour comparer le moyenne de
+         la modalité avec la moyenne générale des modalités
+
+5. Gestion des données manquantes
+   - package =missMDA=
+   - ne pas faire :
+     + supprimer les NA (on élimine de l'information)
+     + imputation par la moyenne des données présentes (entraîne une
+       distortion des liaisons entre variables)
+   - ACP itérative
+     + si 2 individus /x/ et /y/ se ressemblent sur l'ensemble des variables, on
+       peut imputer une donnée manquante pour une variable de
+       l'individu /x/ par la valeur prise par l'individu /y/ pour cette
+       même variable
+     + pour l'ACP itérative, on impute la valeur manquante par la
+       moyenne prise par tous les individus pour la variable, puis on
+       fait une 1ère ACP sur ce tableau complété, on met à jour la
+       valeur manquante par la coordonnée de sa projection sur la
+       droite d'ACP, et on réitère le processus jusqu'à convergence
+     + faiblesse de la méthode : surajustement possible si on a une
+       trop grande croyance dans la liaison entre les variables
+     + on utilise alors l'*ACP itérative régularisée*
+     + conséquences :
+       * on renforce les liaisons entre variables, donc on
+         *surestime les % d'inertie* associés aux premières dimensions
+         de l'ACP
+   - Imputation multiple :
+     + on impute plusieurs fois le tableau en générant chaque fois une
+       valeur plausible mais différente de chaque valeur manquante
+     + cela va ajouter une incertitude sur l'imputation
+     + se visualiser par une ellipse autour des individus et des
+       variables pour lesquels on a des données manquantes qui ont été
+       imputées
+     + fonction *=MIPCA=* dans =missMDA=
+
+*AFC*
+1. Données
+   - tableau de contingence ou tableau croisé : /n/ individus représentés par 2 variables
+     qualitatives  V_1 et V_2 dont les modalités sont réprésentées en
+     colonnes pour l'une et lignes pour l'autre. A l'intersection de
+     la ligne /i/ et de la colonne /j/, on trouve le nombre d'invidus
+     concernés par à la fois la modalité /i/ de V_1 et la modalité /j/ de V_2
+   - le tableau de contigence est transformé en tableau de
+     probabilités : \(f_ij=\frac{x_ij}{n}\)
+   - ainsi pour couple de madalités (/i,j/) on la probablité d'obtention
+     de ce couple
+   - les probabilités marginales s'obtiennent par la somme en ligne ou
+     colonne des probabilités
+   - la liaison entre V_1 et V_2 est l'écart entre les données et le
+     *modèle d'indépendance*
+
+2. Modèle d'indépendance
+   - rappel : 2 événements indépendants : \( P(A et B) = P(A) x P(B) \)
+   - si V_1 et V_2 sont indépendantes, alors \( f_ij = f_{i.} x f_{.j} \) : la
+     probabilité conjointe est le produit des probilités marginales
+   - autrement dit \( frac{f_ij}{f_{i.}} = f_{.j} \) et \( frac{f_ij}{f_{.j}} =
+     f_{i.} \) : la probabilité conditionnelle = probabilité marginale
+   - on fait un test du \chi²
+   - \chi² = n\phi² : intensité de la liaison = écart entre probabiliotés
+     théoriques et observées
+   - on a une information sur la nature de la liaison (association
+     entre modalités), mais pas sur la significativité
+   - l'AFC va par exemple comparer les "profils lignes" de chaque
+     madalité /i/ (= distribution conditionnelle de la variable V_2
+     sachant que l'on possède la modalité /i/ de V_1) avec le "profil
+     ligne moyen" (= distribution marginale V_2, profil de l'ensemble
+     des individus étudiés)
+
+
+1. Les nuages et leur ajustement
+   - nuage des profils lignes : /I/ points de coordonnées f_ij/f_{i.} sur
+     l'axe /j/ dans un espace à /J/ dimensions
+   - nuage des profils colonnes : J points de coordonnées f_ij/f_{.j} sur
+     l'axe /i/ dans un espace à /I/ dimensions
+   - si indépendance entre les lignes : pour tout /i/ on a f_ij/f_{i.}=f_{.j}
+     => les profils lignes sont confondus avec le profil moyen, le
+     nuage /N_I/ se réduit au point /G_I (centre de gravité, origine)/
+     => l'inertie du nuage est nulle
+   - ainsi, plus les données s'écartent de l'indépendance, plus les
+     profils s'écartent de l'origine
+   - l'inertie du nuage /N_I/ par rapport à son centre de gravité /G_I/
+     est calculé par le \phi² (=\chi²/n), qui est donc bien une
+     mesure de l'intensité de la liaison
+   - idem pour le nuage /N_J/
+   - On a une dualité importante : \( Inertie(N_J/G_j) = Inertie(N_I/G_I)
+     \)
+     c'est-à-dire que les lignes et les colonnes jouent des rôles symétriques
+   - 
+
+2. Pourcentages d'inertie et inertie en AFC
+   - 
+
+3. Représentation simultanée des lignes et des colonnes
+   - 
+
+4. Aides à l'interprétation
+   - 
+
+
+Entered on [2019-03-11 Mon 07:08]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
