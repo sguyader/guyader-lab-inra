@@ -775,7 +775,7 @@ Entered on [2019-02-06 Wed 13:36]
      concernés par à la fois la modalité /i/ de V_1 et la modalité /j/ de V_2
    - le tableau de contigence est transformé en tableau de
      probabilités : \(f_ij=\frac{x_ij}{n}\)
-   - ainsi pour couple de madalités (/i,j/) on la probablité d'obtention
+   - ainsi pour couple de modalités (/i,j/) on la probablité d'obtention
      de ce couple
    - les probabilités marginales s'obtiennent par la somme en ligne ou
      colonne des probabilités
@@ -789,7 +789,7 @@ Entered on [2019-02-06 Wed 13:36]
    - autrement dit \( frac{f_ij}{f_{i.}} = f_{.j} \) et \( frac{f_ij}{f_{.j}} =
      f_{i.} \) : la probabilité conditionnelle = probabilité marginale
    - on fait un test du \chi²
-   - \chi² = n\phi² : intensité de la liaison = écart entre probabiliotés
+   - \chi² = n\phi² : intensité de la liaison = écart entre probabilités
      théoriques et observées
    - on a une information sur la nature de la liaison (association
      entre modalités), mais pas sur la significativité
@@ -818,16 +818,70 @@ Entered on [2019-02-06 Wed 13:36]
    - On a une dualité importante : \( Inertie(N_J/G_j) = Inertie(N_I/G_I)
      \)
      c'est-à-dire que les lignes et les colonnes jouent des rôles symétriques
-   - 
+   - l'AFC cherche à décomposer l'inertie du nuage /N_I/ par analyse
+     factorielle : elle fait une projection du nuage sur une série
+     d'axes orthogonaux d'inertie maximum
+   - visualisation sur un graphe des 2 premières dimensions :
+     + un point au centre du graphe (intersection des axes) est
+       une ligne/colonne dont le profil est proche du profil ligne/colonne moyen
+     + l'interprétation de la projection des lignes et des colonnes se
+       fait de la même manière sur les axes, en vertu de la dualité
 
 2. Pourcentages d'inertie et inertie en AFC
-   - 
+   - qualité de représentation de /N_I/ par un axe : inertie projetée
+     sur cet axe / inertie totale
+   - en général exprimée en % = valeur propre
+   - les % d'inertie mesurent l'écart à l'indépendance
+   - les % d'inertie projetées s'additionnent, la somme totale =
+     inertie totale de /N_I/ = \phi²
+   - n\phi²=\chi² => comparer au \chi² théorique pour trouver la probabilité critique
+   - on peut faire un histogramme des valeurs propres et observer la décroissance en fonction du
+     rang de l'axe, ce qui permet de savoir combien d'axes conserver
+   - si une valeur propre = 1, on a parfaite opposition, 2 catégories
+     mutuellement exclusives
+   - en AFC, il faut d'abord regarder les valeurs propres
+   - quand une valeur propre d'un axe est très inférieure à 1, on est loin
+     d'une association exclusive entre une ligne et une colonne
+   - quand \phi² est très inférieur au nombre d'axes (qui est le maximum
+     de la somme des inerties des axes si chacune valait 1), on est loin d'une
+     liaison parfaite (i.e. loin d'une association exclusive) entre
+     les modalités des 2 variables
 
 3. Représentation simultanée des lignes et des colonnes
-   - 
+   - relation de transition = propriétés barycentriques
+   - une ligne est du côté des colonnes auxquelles elle s'associe le plus
+   - une colonne est du côté des lignes auxquelles elle s'associe le plus
+   - attention : on peut comparer les distances des points lignes
+     entre eux ou des points colonnes entre eux, mais pas entre points
+     lignes et points colonnes (seule la direction est interprétable)
 
 4. Aides à l'interprétation
-   - 
+   - *qualité de représentation* d'un point (ou du nuage) : inertie
+     projetée sur l'axe / inertie totale = cos²
+   - pour démarrer l'interprétation d'une AFC, on commence par les
+     points remarquables : éloignés du centre du centre le long d'un
+     axe, avec une bonne qualité de représentation sur cet axe
+   - *contribution* d'un point : inertie projetée du point sur l'axe (brute, ou en
+     % de l'inertie totale de l'axe)
+   - on peut additionner les les contributions de plusieurs point sur
+     un axe pour savoir à quel point cet axe est déterminé par ces points
+   - pour de grands tableaux, on peut sélectionner un sous-ensemble
+     d'éléments à interpréter s'ils ont une forte contribution
+     (conjointement à leur qualité)
+   - important : si dans le tableau on a des effectifs marginaux très
+     différents d'une ligne (ou colonne) à une autre, il faudra
+     impérativement examiner les contributions (les points extrêmes ne
+     sont pas forcément les plus contributifs)
+   - on peut visualiser des lignes ou colonnes supplémentaires
+   - propriété intéressante de l'AFC, l'*équivalence
+     distributionnelle* : si plusieurs lignes (ou colonnes) ayant le même profil sont
+     regroupées en une seule, les résultats de l'AFC sont strictement équivalents
+   - on peut utiliser cette propriété et regrouper sous un terme
+     unique 2 termes strictement équivalents
+   - nb maximum d'axes d'inertie non nulle est égal au minimum de
+     (/I/-1, /J/-1) ; de même \phi² inférieur ou égal à min(I/-1, /J/-1)
+   - V de Cramer = \phi² / min(I/-1, /J/-1) (compris entre 0 et 1),
+     indicateur borné de la liaison entre les 2 variables
 
 
 Entered on [2019-03-11 Mon 07:08]
