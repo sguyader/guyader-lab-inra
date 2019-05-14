@@ -1225,7 +1225,7 @@ Entered on [2019-02-06 Wed 13:36]
      + on garde les variables ayant une probabilité critique < 5%, et
        trier ces variables en fonction de leur probabilité critique
      + exemple des données villes/températures mensuelles : la
-       variable "octrobre" est celle qui caractérise le mieux les
+       variable "octobre" est celle qui caractérise le mieux les
        classes avec /P/ = 1.93e-05
      + mais attention : comme ces variables sont actives et ont donc
        participé à la construction des classes, il faut interpéter ces
@@ -1338,7 +1338,7 @@ Entered on [2019-02-06 Wed 13:36]
        (/j/ = 1 ... /J/)
      + réaliser l'ACP globale sur le tableau pondéré où chaque valeur
        est divisée par la racine carrée de la valeur propre
-   - on donné un même poids à toutes les variables d'un même groupe,
+   - on donne un même poids à toutes les variables d'un même groupe,
      on préserve ainsi la structure (i.e. l'équilibre des variables) du groupe
    - pour chaque groupe, la variance de la principale dimension (1ère
      valeur propre) est égale à 1
@@ -1448,7 +1448,51 @@ Entered on [2019-02-06 Wed 13:36]
        * calcul de la corrélation entre chaque variable et la composante principale
        * tri des coefficients de corrélation pour ne conserver que les significatifs
      + par des variables qualitatives :
-       * construire une analyse de varaince avec les coordonnées des
+       * construire une analyse de variance avec les coordonnées des
          individus expliqués par la variable qualitative puis faire un
          test /F/ par variable
-       * pour chaque catégorie, on rélaise un test de Student
+       * pour chaque catégorie, on réalise un test de Student
+       * on trie en fonction de la probailité critique et du signe du coefficient
+   - synthèse :
+     + y a-t-il une structure en groupes ? Si oui, comment
+     + définir groupes actifs/supplémentaires
+     + réduire ou non les variables ? (sachant que la pondération ACM
+       donne le même poids à chaque groupe de variables)
+     + réaliser l'AFM
+     + choisir le nombre d'axes à interpréter
+     + interpréter simultanément le graphe des individus et des variables
+     + utiliser les outils spécifiques de l'ACM pour étudier les groupes
+     + analyses partielles (voir quelles dimensions de chaque groupe
+       sont liées aux dimensions de l'AFM)
+     + utiliser les indicateurs (contribution, qualité de
+       représentation, /L_g/ ou /RV/)
+
+5. Démarche en analyse des données
+   - y a-t-il des groupes de variables ?
+     + oui -> AFM
+   - quel type d'information ?
+     + 1 (ou plusieurs) TDC -> AFC (ou AFMTC)
+     + tableau individus x variables...
+        quantitatives -> ACP
+        qualitatives -> ACM
+        mixtes -> AFDM
+        structurées en groupe -> AFM
+   - quels éléments actifs ?
+     + quel éléments participent à la construction des axes factoriels
+   - nature des variables actives ?
+     + quantitative -> ACP
+     + qualitative -> AFC si 2 variables arrangées en tableau croisé
+                   -> ACM si plus de 2 avriables qualitatives
+     + mixtes -> AFDM
+     + groupes de variables -> AFM
+   - doit-on réduire les variables quantitatives ?
+     + si unités différentes, OUI -> ACP réduite
+     + si unités identiques, on a le choix : la réduction donné la
+       même importance à chaque variable, sinon les variables à plus
+       grande variance prennent plus de poids
+   - y a-t-il des données manquantes ?
+     + si oui -> missMDA pour compléter le jeu de données
+     + puis analyses classique sur le tableau imputé
+   - après une analyse factorielle, on peut décider de faire une
+     classification des individus
+   - 
