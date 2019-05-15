@@ -1452,3 +1452,29 @@ Entered on [2019-02-06 Wed 13:36]
          individus expliqués par la variable qualitative puis faire un
          test /F/ par variable
        * pour chaque catégorie, on rélaise un test de Student
+** 2019-05 May
+*** 2019-05-15 Wednesday
+**** Application nouvelle Politique Qualité : projet Astro
+***** Présentation EureQUA :
+- méthode d'identification des facteurs de succès
+- aide à la décision en appui au pilotage des activités de recherche
+  et d'expérimentation
+- trois étapes :
+  1. positionner les activités sur la trame proposée
+  2. déterminer ce qui impacte les activités (feuille excel)
+     regroupant 13 familles d'éléments, par phase de déroulement,
+     selon risques et opportunités
+  3. prioriser les actions
+- améliorer le fonctionnement de l'organisation et contribuer à la
+  maîtrise des risques
+***** Projet scientifique et managérial d'Astro
+- 2 objectifs : 1/ définir les axes de recherche, 2/ répondre à la
+  demande HCERES
+- ...
+- comment identifier les facteurs impactants : risques et opportunités
+- comment déterminer les plus impactants, et prioriser : 2 matrices
+  (risques / opportunités)
+
+Entered on [2019-05-15 Wed 09:05]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
