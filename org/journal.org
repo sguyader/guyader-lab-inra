@@ -1478,3 +1478,58 @@ Entered on [2019-02-06 Wed 13:36]
 Entered on [2019-05-15 Wed 09:05]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+*** 2019-05-20 Monday
+**** Formation/sensibilisation Validation des méthodes quantitatives et métrologie
+- métrologie : fonction qui s'applique à des grandeurs physiques mesurables directement par un instrument
+- l'objectif quant à l'utilisation des mesures est important
+- on cherche à avoir confiance dans les mesures produites et les
+  méthodes (avec la répétabilité) -> AQR
+- l'écart d'une moyenne à la valeur réelle -> justesse, biais
+- l'écart-type -> dispersion, fidélité
+- VIM : vocabulaire international de métrologie
+  + répétabilité : réaliser les mesures dans les mêmes conditions
+  + fidélité intermédiaire : 1 ou qqs paramètrres peuvent varier
+    (temps, opérateur, ...)
+  + reproductibilité : inter-laboratoire
+- Profil d'exactitude :
+  + définir la quantité mesurée :
+    * fondamentaux :
+      - à partir du mode opératoire rédigé de la méthode
+      - préciser la formule de calcul du résultat final
+      - (Q_mesurée)_validation = (Q_mesurée)_routine avec même ombre de répétitions
+  + définir les objectifs de la validation (par rapport à la demande scientifique)
+    * définir le domaine de validation (choisir le domaine
+      d'application : gamme de concentrations, 1 ou plusieurs types de matrices, ...)
+    * choisir les limites d'acceptabilité (+/- \lambda), d'après :
+      - une exigence scientifique
+      - un document réglementaire
+      - une pratique de la profession
+      (en général \lambda est exprimé en % sur tout le domaine)
+  + sélectionner des échantillons de validation
+    * choix des matrices
+    * attribution d'une valeur de référence à chaque échantillon de validation
+      - fondamental pour estimer la justesse
+      - valeur de référence = valeur établie avec incertitude connue
+      - plusieurs approches possibles : matériaux de référence
+        certifiés, externes ou internes, ajouts dosés, ...
+  + planifier les essais d'étalonnage (méthodes indirectes)
+    * pour estimer les coefficients du modèle mathématique
+    * choisir :
+      - le nombre de séries, identique au nombre de séries de validation
+      - le nombre de répétitions
+      - le nombre des niveaux d'étalonnage (selon la fonction de réponse)
+  + planifier les essais de validation
+    * avec les échantillons de validation
+    * choisir le nombre de séries I, de répétitions J, de niveaux de
+      concentration K : au moins I=3, J=2, K=3, soit 18 essais au total au minimum
+  + réaliser les essais :
+    * appliquer la méthode telle qu'elle sera appliquée en routine
+  + calculer les concentrations prédites inverses :
+    * déterminer le modèle d'étalonnage
+      - regression par les moindres carrés
+  + déterminer les critères de performance par niveau de la méthode
+    (tableur existant)
+
+Entered on [2019-05-20 Mon 09:11]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
