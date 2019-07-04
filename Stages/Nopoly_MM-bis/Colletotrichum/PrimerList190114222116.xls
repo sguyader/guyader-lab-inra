@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-type" content="application/vnd.ms-excel; charset=UTF-8">
+<title>Primer Set List</TITLE>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<basefont face="Courier New">
+<table width="100%" cellpadding="0">
+<tr bgcolor="ccffcc">
+<td colspan="3" align="left">PrimerSet List</td>
+</tr>
+</table>
+<b>Primer set</b>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td colspan="2"></td>
+<td></td>
+<td>&nbsp;&nbsp;&nbsp;<span class="dnaString" style="color:#00FF00;">TCCCGAC</span></td>
+<td><span class="dnaString" style="color:#00FF00;">TACCGTTACA</span></td>
+<td><span class="dnaString" style="color:#00FF00;">CC</span>&nbsp;&nbsp;<span class="dnaString" style="color:#0000FF;">ACGCAA</span></td>
+<td><span class="dnaString" style="color:#0000FF;">GCCGTCTGAG</span></td>
+<td><span class="dnaString" style="color:#0000FF;">AA</span></td>
+<td></td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;<span class="dnaString" style="color:#000000;">gtttcg</span></td>
+<td><span class="dnaString" style="color:#000000;">ttcttccggt</span></td>
+<td><span class="dnaString" style="color:#000000;">cgaatcg</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>&nbsp;&nbsp;&nbsp;<span class="dnaString" style="color:#000000;">CATCAGC</span></td>
+<td><span class="dnaString" style="color:#000000;">GCGCCGACTT</span></td>
+<td><span class="dnaString" style="color:#000000;">GTC</span></td>
+<td></td>
+<td>&nbsp;&nbsp;<span class="dnaString" style="color:#0000FF;">actcaata</span></td>
+<td><span class="dnaString" style="color:#0000FF;">tggatggctg</span></td>
+<td><span class="dnaString" style="color:#0000FF;">acgc</span><span class="dnaString" style="color:#00FF00;">tgctca</span></td>
+<td><span class="dnaString" style="color:#00FF00;">gcgacatcgt</span></td>
+<td><span class="dnaString" style="color:#00FF00;">aga</span></td>
+</tr>
+<tr>
+<td colspan="2"><b>Target DNA</b></td>
+<td><font color="#000000">TCTTGATGAT</font></td>
+<td><font color="#000000">GTATCCCGAC</font></td>
+<td><font color="#000000">TACCGTTACA</font></td>
+<td><font color="#000000">CCCCACGCAA</font></td>
+<td><font color="#000000">GCCGTCTGAG</font></td>
+<td><font color="#000000">AAGCGCCATC</font></td>
+<td><font color="#000000">GAAAGCCTAG</font></td>
+<td><font color="#000000">TGGCCAAAGC</font></td>
+<td><font color="#000000">AAGAAGGCCA</font></td>
+<td><font color="#000000">GCTTAGCGGC</font></td>
+<td><font color="#000000">GTCAATGAGG</font></td>
+<td><font color="#000000">TAGAGGCCGC</font></td>
+<td><font color="#000000">CTTCTACCCG</font></td>
+<td><font color="#000000">AGAGCGACAA</font></td>
+<td><font color="#000000">CACCATCAGC</font></td>
+<td><font color="#000000">GCGCCGACTT</font></td>
+<td><font color="#000000">GTCGGCTCCA</font></td>
+<td><font color="#000000">GACGGAGGAG</font></td>
+<td><font color="#000000">TATGAGTTAT</font></td>
+<td><font color="#000000">ACCTACCGAC</font></td>
+<td><font color="#000000">TGCGACGAGT</font></td>
+<td><font color="#000000">CGCTGTAGCA</font></td>
+<td><font color="#000000">TCTGCCACGA</font></td>
+<td><font color="#000000">AACGGAACTG</font></td>
+</tr>
+<tr>
+<td colspan="2"><b>(Complement)</b></td>
+<td><font color="#000000">agaactacta</font></td>
+<td><font color="#000000">catagggctg</font></td>
+<td><font color="#000000">atggcaatgt</font></td>
+<td><font color="#000000">ggggtgcgtt</font></td>
+<td><font color="#000000">cggcagactc</font></td>
+<td><font color="#000000">ttcgcggtag</font></td>
+<td><font color="#000000">ctttcggatc</font></td>
+<td><font color="#000000">accggtttcg</font></td>
+<td><font color="#000000">ttcttccggt</font></td>
+<td><font color="#000000">cgaatcgccg</font></td>
+<td><font color="#000000">cagttactcc</font></td>
+<td><font color="#000000">atctccggcg</font></td>
+<td><font color="#000000">gaagatgggc</font></td>
+<td><font color="#000000">tctcgctgtt</font></td>
+<td><font color="#000000">gtggtagtcg</font></td>
+<td><font color="#000000">cgcggctgaa</font></td>
+<td><font color="#000000">cagccgaggt</font></td>
+<td><font color="#000000">ctgcctcctc</font></td>
+<td><font color="#000000">atactcaata</font></td>
+<td><font color="#000000">tggatggctg</font></td>
+<td><font color="#000000">acgctgctca</font></td>
+<td><font color="#000000">gcgacatcgt</font></td>
+<td><font color="#000000">agacggtgct</font></td>
+<td><font color="#000000">ttgccttgac</font></td>
+</tr>
+<tr>
+<td colspan="2"><b>CONSENSUS(*)</b></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+<td><font color="#000000">**********</font></td>
+</tr>
+<tr>
+<td nowrap>Primer ID</td>
+<td nowrap>dG<font size="-1">(dimer)</font></td>
+<td align="left">11</td>
+<td align="left">21</td>
+<td align="left">31</td>
+<td align="left">41</td>
+<td align="left">51</td>
+<td align="left">61</td>
+<td align="left">71</td>
+<td align="left">81</td>
+<td align="left">91</td>
+<td align="left">101</td>
+<td align="left">111</td>
+<td align="left">121</td>
+<td align="left">131</td>
+<td align="left">141</td>
+<td align="left">151</td>
+<td align="left">161</td>
+<td align="left">171</td>
+<td align="left">181</td>
+<td align="left">191</td>
+<td align="left">201</td>
+<td align="left">211</td>
+<td align="left">221</td>
+<td align="left">231</td>
+<td align="left">241</td>
+</tr>
+<tr>
+<td>[1]</td>
+<td align="left">-2.20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="dnaString">[1]</span></td>
+<td>&nbsp;&nbsp;&nbsp;<span class="dnaString" style="color:#000000;">GGCTCCA</span></td>
+<td><span class="dnaString" style="color:#000000;">GACGGAGGAG</span></td>
+<td><span class="dnaString" style="color:#000000;">TA</span></td>
+<td><span class="dnaString">[1]</span></td></tr>
+</table>
+<hr>
+[outputs: 1 sets]&nbsp;&nbsp;
+Displayed 1 - 1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<EM>DesignId 190114222116</EM>
+</body>
+</html>
