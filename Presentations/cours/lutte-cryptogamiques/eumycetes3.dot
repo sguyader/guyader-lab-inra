@@ -1,0 +1,32 @@
+graph {
+  graph [rankdir=TB, pad="0.212,0.055", bgcolor=transparent, layout="dot", splines="line", nodesep=0.5]
+  node [fixedsize=true,
+    shape=box,
+    width=2,
+    height=0.4,
+    color="transparent",
+    fontsize=16,
+    fontname="Arial"]
+
+  EUMYCOTA [style=filled, fillcolor="#833a94", fontcolor=white, color="black"]
+  Chytridiomycota [color="black"]
+  Chytridiomycètes
+  invisible1 [style=invisible, width=0, height=0]
+  Mucoromycètes
+  Symbiomycota [color="black"]
+  Gloméromycètes [label=<<i>Gloméromycètes</i>>]
+  Dikarya [label=<<b>Dikarya</b>>, color="black"]
+  Entorrhizomycètes []
+  Basidiomycètes [label=<<b>Basidiomycètes</b>>]
+  Ascomycètes [label=<<b>Ascomycètes</b>>]
+
+  EUMYCOTA -- Chytridiomycota
+  EUMYCOTA -- invisible1 [style=dashed]
+  Chytridiomycota -- Chytridiomycètes [style=dashed]
+  invisible1 -- {Mucoromycètes, Symbiomycota}
+  Symbiomycota -- Gloméromycètes [style=dashed]
+  Symbiomycota -- Dikarya
+  Dikarya -- {Entorrhizomycètes, Basidiomycètes, Ascomycètes}
+  
+  { rank=same; Chytridiomycètes, Mucoromycètes, Gloméromycètes, Entorrhizomycètes, Basidiomycètes, Ascomycètes }
+}

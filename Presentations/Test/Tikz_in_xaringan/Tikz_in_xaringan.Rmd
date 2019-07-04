@@ -1,0 +1,56 @@
+---
+title: 
+subtitle: 
+author: "Sébastien GUYADER"
+date:
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, "hygge", "style/tweak.css", "style/bootstrap_table.css", "style/footer-header.css"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+      navigation:
+        click: true
+    seal: false
+    self_contained: false
+
+---
+
+```{r setup, include=FALSE, message=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitrBootstrap)
+library(anicon)
+library(icon)
+library(kableExtra)
+library(DiagrammeR)
+library(Cairo)
+```
+
+```{r tikz-ex, engine="tikz", engine.opts=list(convert="convert", convert.opts="-density 300"), fig.ext='png', out.width="40%", echo=F}
+\usetikzlibrary{trees}
+\begin{tikzpicture}[
+  font=\sffamily,
+  man/.style={rectangle,draw,fill=blue!20},
+  woman/.style={rectangle,draw,fill=red!20,rounded corners=.8ex},
+  grandchild/.style={grow=down,xshift=1em,anchor=west,
+    edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}},
+  first/.style={level distance=6ex},
+  second/.style={level distance=12ex},
+  third/.style={level distance=18ex},
+  level 1/.style={sibling distance=5em}]
+    % Parents
+    \coordinate
+      child[grow=left] {node[anchor=east]{Jim}}
+      child[grow=right] {node[anchor=west]{Jane}}
+      child[grow=down,level distance=0ex]
+    [edge from parent fork down]
+    % Children and grandchildren
+    child{node[man] {Alfred}
+      child[grandchild,first] {node[man]{Joe}}
+      child[grandchild,second] {node[woman]{Heather}}};
+\end{tikzpicture}
+```
+
