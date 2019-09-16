@@ -1,0 +1,29 @@
+---
+title: "Replace with Main Title"
+author: "Your Name"
+date: "2019-04-24 10:16:36"
+---
+
+
+```{r echo=FALSE, message=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE)
+library(Rcmdr)
+library(car)
+library(RcmdrMisc)
+```
+
+
+```{r echo=FALSE}
+# include this code chunk as-is to enable 3D graphs
+library(rgl)
+knitr::knit_hooks$set(webgl = hook_webgl)
+```
+
+```{r}
+index2 <- 
+  readXL("/home/guest/Desktop/FormationR/Indexation Bétaflexiviridae-SERIE6.xlsx",
+   rownames=FALSE, header=TRUE, na="", sheet="indexation série n°2", 
+  stringsAsFactors=TRUE)
+
+
