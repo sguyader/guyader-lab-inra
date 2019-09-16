@@ -1575,3 +1575,195 @@ Entered on [2019-05-20 Mon 09:11]
 **** Réunion Malin 2 - WP1 : outils de détection
 - Retard sur pas mal de points (sauf pour IPG)
 - RFID : pour végétaux (virus, autres ?)
+*** 2019-09-16 Monday
+**** AG Centre                                                    :export:
+
+1. Nouveaux arrivants
+
+   - remplaçante Agent Comptable : Christiane ...
+   - Juliette Kermarrec : adjointe au DSA
+   - Sandrine Etapin : service gestion personnel
+   
+2. Actualités
+
+   - RH :
+     + Fusion INRA-IRSTEA :
+       * télétravail : 2 jours max par semaine, avec conditions
+       * cycle de travail : 36h (30j congés) ou 38h40 (30j congés + 15
+         RTT) ; journée solidarité intégrée à raision de 10 minutes /
+         semaine
+       * changement régime indemnitaire
+       * promotions : nombre inchangé ; instances maintenues pour le
+         moment, CPAN renouvelées en 2022
+     + CET : dès 15 jours cumulés, paiement possible ; augmentation de l'indemnité
+     + 14-16 octobre : visite de X au sujet de la retraite, entretiens
+       individuels possibles
+     + C. Anaïs reste en attente de remontée du formulaire de formations
+     + Formations à venir : gestion ouverte des données ; écriture
+       professionnelle (dossiers, CV, etc...)
+
+   - Plan d'urgence interne (PUI) du Centre :
+     mise à jour en continu
+     exercice réalisé le 20/06/2019 à PTEA
+
+   - CLDD :
+     + financement obtenu pour mener quelques actions, notamment
+       autour espace restauration / réunion, et composteur +
+       méthaniseur pour déchets de cuisine
+
+   - immobilier (Labbé)
+     + rappel objectifs :
+       * recentrer dispositif recherche et rapprochant les unités
+       * conforter et prolonger vie de certains bâtiments
+       * abandonner d'autres
+     + rappel phasage et financements
+       * Phase 1. 2017-2019 : URZ : CPER CRB-PSA
+       * Phase 2. 2019-2020 : UR Astro : CPER CRB-PT (500 k€ dont 150 INRA) + complément
+          INRA (500 k€)
+       * Phase 3. 2020-2021 : USDAR : Feder Batex (680k€ dont 140 INRA) + complément INRA
+          (370 k€)
+     + où en est-on :
+       * URZ : en cours d'achèvement
+       * Astro : scénarisation en cours avec maîtrise d'oeuvre,
+         engager les travaux en 2020, identifier besoins non staisfait
+         pour instruire éventuel projet complémentaire (regroupement
+         de toutes les équipes ?)
+       * USDAR : financements acquis (marché maîtrise d'oeuvre fin 2019)
+
+   - INRAE
+     + le "e" est polysémique
+     + Sciences :
+       proposer des changements systémiques urgents, mais pas de
+       modèle unique
+     + international : 3e rang mondial sur 10 doamines de recherche ;
+       horizon Europe (opportunits majeures)
+
+   - 70 ans du Centre :
+     + manifestations scientifiques et techniques :  portes ouvertes à
+       Godet, journées techniques manguiers, présentation projets
+       européens
+     + à venir :  4 actions sont prévues pour la fête de la Science, avec un Village des
+       Sciences sur le Centre + présence au Village de Pointe-à-Pitre
+     + Séminaire atelier : juin "souveraineté alimentaire" avec
+       "Nouvel Vwa" / filière fruit à pain
+     + Manifestation de clôture en présence du PDG et de sa
+       délégation : 4 jours en décembre 
+
+3. Démarche évaluation RPS et QVT
+
+   1) RPS : de quoi s'agit-il ?
+      - fait partie de la prévention des risques du travail
+      - vise à réduire les risque d'accidents du travail et de
+        maladies professionnelles
+      - prise de conscience de l'aspect psychologique : la souffrance
+        au travail, sous l'effet des mutations du monde du travail
+      - définition des RPS par M. Gollac 2011 la plus consuelle
+      - prévenir RPS implique :
+        + prévention primaire : identifier les facteurs de risque
+        + prévention secondaire : accompagner les situations à risque
+          en "adaptant l'homme à son travail" (formation,
+          accompagnement, ...)
+        + prévention tertiaire : gérer des situations de crise quand
+          elles surviennent
+      - accord-cadre 22/10/2013 fixant obligations légales des
+        instituts pour prise en charge des RPS
+
+   2) Prévention des RPS à l'INRA
+      - l'INRA rappelle ses obligations légales
+      - essaye d'aller au-delà des obligations légales
+      - évaluation-conseil : interaction avec les agents au niveau des unités
+      - association avec le CHSCT
+      - formations spécifiques des encadrants, CHSCT et agents
+        impliqués dans la prévention
+      - intégration des plans d'actions dans le document unique
+        (DUERP)
+      - 1er plan d'action RPS 2014-2017 : objectif d'évaluation de 2
+        unités / an au minimum
+      - 2ème plan d'action RPS 2018-2021 : soutien méthodologique de
+        l'ANACT, 3 actions :
+        A. Sensibilisation des acteurs prévention RPS (piloté
+        par la DG)
+        B. Sensibilisation à la prévention RPS (piloté par les PC) /
+        C. Accueil
+        des nouveaux arrivants (piloté par les PC)
+        D. Evolution et diffusion nouvelle plaquette
+        E. Création et diffusion du support d'affichage de
+        sensibilisation à la QVT
+        ...
+      - dispositifs nationaux :
+        * CASSID
+        * prestations AXIS MUNDI
+        * dispositif d'accompagnement des collectifs de la DRH
+        * MRPUIE (pour Unités Expérimentales)
+        * ...
+
+   3) Rôle du psy du travail de la MCP
+
+      - appui à mise en oeuvre du plan d'action
+      - agit dans le cadre du plan de prévention 2018-2021
+      - conseil sur situations d'urgence
+      - conseil/avis sur situations délicates/problématiques
+      - accompagnement possible de collectifs en difficulté
+      - accompagnements individuels "au fil de l'eau"
+
+   4) QVT et articulation RPS/QVT
+
+      - classification des risques par l'ANACT 2007 : 
+        stress au travail | souffrance au travail | violences au
+        travail | harcèlements | conduites addictives | épuisement professionnel
+      - ambition des partenaires sociaux
+      - 6 dimensions à la QVT :
+        Relations au travail et climat social | Contenu du travail | Santé au travail |
+        Compétences parcours professionnel | Egalité professionnelle
+        pour tous | Management participatif et engagement
+      - la QVT est une vision positive des RPS, avec une approche plus globale
+
+   5) Baromètre QVT : qqs résultats généraux nationaux
+
+      - près de 50% de répondants au niveau national
+      - QVT plutôt bonne
+      - plusieurs atouts à l'INRA (rapports sociaux, exigences au
+        travail, éthiques et valeurs, égalité et non discrimination, ...)
+      - à améliorer, attentes fortes des agents (changement et orientation,
+        management et organisation, rapports sociaux externes, avec
+        hiérarchie, action ressources humaines...)
+      - facteurs en lien aec stress (rythme de travail, pics
+        d'activité, organisation au travail, ne pas être interrompu ou
+        dérangé, quantité de travail, ...)
+      - facteurs en lien avec la QVT (relation de travail avec
+        l'institut, organistion du travail, sentiment de sécurité au
+        travail, fier de travailler à l'INRA, travail de qualité,
+        travail reconnu à sa juste valeur, ...)
+      - les discriminations sont faiblement ressenties, facteurs
+        identifiés (genre, handicap, état de santé, activité
+        syndicales ou mutualistes, âge, capacité à s'exprimer dans une
+        autre langue que le français, ...)
+      - égalité de traitement à surveiller (avancement, recrutement, ...)
+      - les résultats par centres viendront fin septembre
+      - suivi de l'évolution : questionnaire intermédiaire fin
+        septembre 2019 pour centres impactés par fusion INRA-IRSTEA, questionnaire
+        complet début 2020 (post fusion)
+      - élaboration des actions QVT de l'institut courant 2020
+
+   6) Partenariat INRA/ANACT
+    
+      - évaluation rétrospective de l'évaluation-conseil RPS sur une
+        unité (Occitanie Montpellier, ARA, Val de Loire)
+      - formation-action QVT (centres...)
+      - co-intervention exprimentale ANACT-INRA dans le cadre de
+        l'évaluation-conseil RPS d'une unité cible (Bourgogne FC, NA
+        Poitiers, CRAG SDAR)
+
+   7) ARACT Guadeloupe et accompagnements des SDAR
+
+      - évaluation de la démarche de prévention des RPS à l'INRA et
+        expérimentation chemin-faisant (rencontres préalables ; séances
+        collectives ; entretiens inividuels ou collectifs ; groupe
+        d'évaluation ; élaboration des axes ; suivi et mise en oeuvre
+        d'un plan d'action)
+
+
+
+Entered on [2019-09-16 Mon 10:03]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
