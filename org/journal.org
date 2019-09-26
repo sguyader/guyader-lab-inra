@@ -1767,3 +1767,13 @@ Entered on [2019-05-20 Mon 09:11]
 Entered on [2019-09-16 Mon 10:03]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+**** Rencontre psychologue MCP / Astro
+- Présents : D. Lange, T. Bajazet et S. Guyader
+- comment l'évaluation-conseil a été perçue, si ça a
+  donné des suites ?
+- quels sont les ressentis des agents de l'unité globalement ?
+- impression du psychologue : décalage entre ce qui ressort de
+  l'évaluation-conseil, et l'impression de non intégration des
+  différentes composantes de l'unité (fusion pas vraiment aboutie)
+
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
