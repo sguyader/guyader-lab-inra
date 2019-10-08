@@ -1576,7 +1576,7 @@ Entered on [2019-05-20 Mon 09:11]
 - Retard sur pas mal de points (sauf pour IPG)
 - RFID : pour végétaux (virus, autres ?)
 *** 2019-09-16 Monday
-**** AG Centre                                                    :export:
+**** AG Centre
 
 1. Nouveaux arrivants
 
@@ -1766,7 +1766,7 @@ Entered on [2019-05-20 Mon 09:11]
 
 Entered on [2019-09-16 Mon 10:03]
   
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.o
 **** Rencontre psychologue MCP / Astro
 - Présents : D. Lange, T. Bajazet et S. Guyader
 - comment l'évaluation-conseil a été perçue, si ça a
@@ -1776,4 +1776,68 @@ Entered on [2019-09-16 Mon 10:03]
   l'évaluation-conseil, et l'impression de non intégration des
   différentes composantes de l'unité (fusion pas vraiment aboutie)
 
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+*** 2019-09-26 Thursday
+**** CODIR Astro 26 septembre 2019
+Présents : FB, AR, SG, MU, RT, JMB
+Excusés : LP (MC et JS "démissionnaires")
+
+- Construction et participation au PPR interdom "APIDOM"
+
+  + terme "agroforesterie" trop restrictif
+  + systèmes plurispécifiques
+  + intégrer les amendements type biostimulants/biochar pour la santé des plantes
+  + intégrer les arbres de service
+
+- Perspectives projets début 2020
+
+  + 3 stages + 1 CDD à préfinancer pour les FEDER
+  + contrat de prestation de service pour Romain Rochette sur Explorer
+
+- Faits marquants bilan Centre 2017-2018
+
+  + patho 2017 
+
+- Questions diverses
+
+  + 1 candidate pour le poste BAMI gestionnaire de l'unité
+  + proposition pour être formateurs pour VIVEA (exploitants agricoles)
+
+Entered on [2019-09-26 Thu 13:28]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+** 2019-10 October
+*** 2019-10-08 Tuesday
+**** Réunion projets post-MALIN (CIRAD Neufchâteau)
+
+- Diaporama PYT
+  * rapport évaluation "Insular"
+    + faiblesses :
+      - absence d'hypothèses claires
+      - nombre insuffisant de répétitions par site et par île
+      - ne montre pas la portée générique à d'autres îles
+      - pas fourni instruments et documents politiques pertinents
+      - plan de communciation sur seule population locale
+      - pas de discussion sur portées concrètes
+    + possibilités de financement alternatif à l'étude avec V. Weck :
+      - par FEDER pour partenaires Gpe et Belgique
+      - discussion avec Région Réunion pour financement partenaire Réunion
+      - revoir le projet pour répondre aux faiblesses (surtout
+        dispositif expérimental/répétitions)
+      - objectif démarrage 1er trimestre 2020
+  * Horizon Europe
+    + programmation 2021-2027
+    + soutien de la Région pour projet européen sur thématique santé et environnement
+    + est-ce que le consortium Malin veut s'engager dans la
+      construction d'un projet HE ?
+    + projet FP8 ou Outil Partnership ?
+    + réunion à prévoir avec V. Weck et qqs personnes autour de la programmation
+  * Accord de consortium
+    + nouvelle circulation avec objectif de signature avant fin 2019
+  * Manifestations/formations
+    + cycle de 3 formations : One Health, SIG
+    + Village des Sciences
+
+Entered  on [2019-10-08 Tue 09:03]
+  
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
