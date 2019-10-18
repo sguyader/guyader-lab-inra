@@ -324,7 +324,8 @@ Entered on [2018-12-04 Tue 09:17]
   - Maladies cryptogamique : pathogénèse et réponses de l’hôte (2h)
   - Méthodes de lutte contre les maladies cryptogamiques des plantes :
     diagnostic, éradication, résistance variétale, lutte chimique (3h)
-***** TODO : donner les dates et heures de disponibilité
+***** DONE : donner les dates et heures de disponibilité
+- State "DONE"       from "TODO"       [2019-10-18 Fri 11:04]
 **** *remark.js*
 - installer les paquets =xaringan= et =xaringan-themer=:
   #+BEGIN_SRC r
@@ -1841,3 +1842,116 @@ Entered on [2019-09-26 Thu 13:28]
 Entered  on [2019-10-08 Tue 09:03]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+*** 2019-10-10 Thursday
+**** Réunion début thèse Boukar                                  :meeting:épidémiologie:thèse:
+[Boukar, PYT, MU, Eric Francius, SG]
+- objet : définir modalités de prospections
+- utiliser le réseau RITA (4 parcelles dont 1 à Marie-Galante, issues
+  des mêmes semences) +
+  autres producteurs déjà approchés et possiblement intéressés
+- on peut tabler sur ~20 parcelles
+- Kabusah et Goana sont bien présentes
+- 2 variétés * 20 échantillons * 20 parcelles + autres variétés
+
+Entered on [2019-10-10 Thu 10:07]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org::*2019-10-10%20Thursday][2019-10-10 Thursday]]
+*** 2019-10-17 Thursday
+**** Réunion Ching du 17/10/2019
+Présents : AR, FC, DR, MFZ, TB, JBN, SG, FB, JMB, MU, DP, MC (Visio)
+
+***** Tour de table
+- MC :
+  * Projet Interlude obtenu (EcoPhyto) : leviers territoriaux pour réduction des
+    pesticides en cultures légumières
+  * Chantal Flérault a suivi une formation à Sophia Antipolis
+    (pré-mycorrhization pour protection contre les nématodes)
+  * MC a été experte pour Conseil Scientifique de mise en place d'une
+    startup de production de mycorrhizes
+  * Philippe Julianus passé TREx
+
+- AR :
+  * projet Immerge doit bientôt passer en CRUP (FEDER sur tranche 2) :
+    effet des retombées atmo sur santé et sols
+  * projet Rivage passé en CRUP
+  * ANR Pyrosar : transformer les sargasses en charbons pour piéger les pesticides
+  * dernière expé transferts pesticides remise en place (anticipation Rivage 2)
+  * réponse à problématique de 4pour1000 (sollicitation Jorge et
+    Harry)
+  * projet OPALE : AR met la pression pour avoir un interlocuteur du
+    CIRAD, sinon continue sans eux
+  * visite de préfigurateurs en Guadeloupe sur plusieurs dispositifs
+    de recherche, mais visite du dispositif Opale annulée (rien sur
+    les dispositifs sur le végétal)
+  * sollicitation par l'IREPS -> problématique Chlordécone / JAFA
+  * interview par Gpe la 1ère avec RT sur Chlordécone et transferts
+    vers plantes
+  * mobilisé pour les CAPN en novembre
+  * participation au séminaire Eau et Agriculture (INRA+IRSTEA)
+  * stage 1ère année BTS à démarrer pour 3 semaines
+  * AR est le nouveau correspond TransFaire de l'unité
+  * colloque Sargasses la semaine prochaine
+
+- JMB :
+  * séminaire ADEME à Paris où a présenté Explorer
+  * formé pour être référent SAE2 pour montage de projets Européens
+  * avec Harry Archimède, chargé de réfléchir sur un projet PIA3 pour un
+    dispositif industriel
+  * invité à un séminaire GOSS sur la chlordécone et les SHS à Paris le 6 novembre
+
+- JBN :
+  * poursuite activités, prélèvements, et mise en place des dispositifs
+  * a le sentiment que trop de temps est passé sur la route poute aller
+    faire de simples prélèvements à cause de l'absence de partenaires
+    dans le consortium
+  
+- DR :
+  * dans le cadre de du budget 2020, dépôt d'une AIC (SEPIA) sur
+    brunissement après cuisson : influence cuisson sur phénols,
+    mécanismes d'oxydation (collaboration ave Rennes) 20k€ / an sur 2 ans
+  * délégation qualiticiens CIRAD pour mise en place d'un dispositif
+    d'analyses sensorielles sur banane à cuire (plantain et autres) :
+    formation pour goûter, avec l'idée d'appliquer cela à l'igname par
+    la suite
+
+- FC :
+  * recrutement d'un apprenti sur la microferme, à partir du 28/10, sera présent 1
+    semaine sur 2 (bac pro conduite et gestion exploitation agricole)
+    ; FC est officiellement reconnu formateur d'apprentis
+  * projet Nutwind sur comportements alimentaires des habitants de Mqe
+    et Gpe
+
+- TB :
+  * activités sur Rivage et Opale
+  * s'intéresse aux capteurs connectés, internet des objets ; certains
+    équipements sont acquis via Explorer ; cherche à voir comment on
+    pourrait connecter certains équipements existants
+
+- MFZ :
+  * passe beaucoup de temps sur formations IST et montage séminaire
+    OpenScience fin Novembre
+  * grand séminaire IST INRA et IRSTEA à Bordeaux en Novemebre
+  * va initier P Trafond pour dépôt sur Prodinra
+
+- DP :
+  * prend contact avec la commission BAP "Sélection Participative"
+
+- SG :
+  * année creuse pour l'anthracnose (multiplication d'un variété
+    sensible pour futurs essais)
+  * 
+
+- MC :
+  * arrivée de Mame Boucar Diouf en thèse ; prospections commencées
+  * stagiaire de césure Prodimad pourle suivi en serre de cousse-couches
+    supposées saines ou assainies : évaluer production et recontamination
+  * CRB : journées nationales des CRB (plutôt orienté systèmes
+    d'information et gestion, mais aussi présentation du CRB-PT)
+  * audit de suivi du CRB du 19 au 23 novembre
+
+- FB :
+  * réunion DUs Centre
+  * avis avorable émis pour mobilité sur poste gestionnaire d'Unité
+tered on [2019-10-17 Thu 13:24]
+  
+[[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]

@@ -1,4 +1,0 @@
-* Tasks
-** TODO donner préférences jours/heure à PYT
-  
-   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org::**Pr%C3%A9paration%20cours%20M1%20Biologie-Sant%C3%A9%20UEP83.1*][*Préparation cours M1 Biologie-Santé UEP83.1*]]
