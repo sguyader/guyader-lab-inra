@@ -1,2 +1,2 @@
 # guyader-lab-inra
-Sebastien Guyader's research stuff from INRA
+Sebastien Guyader's stuff from the lab at INRA
