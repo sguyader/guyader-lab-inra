@@ -1,0 +1,31 @@
+Exponentiel
+-----------
+
+m.lin1 <- lm(ln.sporedensity~distance, data=disper2.g)
+
+m.lin2 <- lme(fixed=ln.sporedensity~1, random=~1|run, data=disper2.g, method="ML") # unconditional means model
+
+VarCorr(m.lin2)
+# run = pdLogChol(1) 
+#             Variance  StdDev   
+# (Intercept) 8.513285e-09 9.226747e-05   # (intercept) = variance inter-run
+# Residual    3.967689e+00 1.991906e+00   # Residual = variance intra-run
+# Ce résultat montre que la variance inter-run est bien inférieure à la variance intra-run, il n'est donc pas nécessaire de procéder à un modèle effets mélangés
+tau.sq <- as.numeric(VarCorr(m.lin2)[1,1])
+sigma.sq <- as.numeric(VarCorr(m.lin2)[2,1])
+tau.sq/(tau.sq+sigma.sq)
+# [1] 2.145653e-09      # la corrélation entre observations d'un même run est nulle
+
+m.lin3 <- lme(fixed=ln.sporedensity~1+distance, random=~1|run, data=disper2.g, method="ML") # random intercept model
+(as.numeric(VarCorr(m.lin2)[2,1]) - as.numeric(VarCorr(m.lin3)[2,1]))/ as.numeric(VarCorr(m.lin2)[2,1]) # Pseudo-R2 pour influence de distance sur niveau 1
+# [1] 0.8387502 = Pseudo R2
+
+# Calcul de la d50
+params <- fixef(m.lin3)
+params
+# (Intercept)    distance 
+# 8.0020788  -0.1564117 
+d50 <- log(0.5)/params[2]
+d50
+# distance 
+# 4.431556   # Signifie que la densité de spores décroit de 50% tous les 4.4 cm

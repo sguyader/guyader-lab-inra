@@ -1,0 +1,312 @@
+---
+title: "Release and dispersal of Colletotrichum gloeosporioides conidia infecting Dioscorea alata yam leaves under simulated rain drops"
+author: "Sébastien Guyader"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+mainfont: Carlito
+fontsize: 18pt
+---
+
+```{r, echo=FALSE}
+library(knitr)
+opts_chunk$set(dev.args=list(pointsize=12), echo=TRUE, warning=FALSE, message=FALSE)
+```
+# Intro / argumentaire :
+* Connaître les échelles de dispersion des spores (temps et espace) est une étape clé pour la modélisation.
+* De nombreux travaux sur la dispersion ont été réalisés pour de multiples pathosystèmes.
+* Quelques travaux ont été menés sur *Colletotrichum gloeosporioides* mais sur d’autres hôtes, rien sur l’anthracnose de l’igname.
+
+# Matériels et méthodes :
+Deux types de manips ont été effectuées à partir de feuilles inoculées (variété Kabusah ou Plimbite, même sensibilité aux souches utilisées) :
+
+## Cinétique d’épuisement de la source :
+* Inoculation par goutte de suspension de spores, obtention de nécroses focalisées après incubation
+* Les nécroses sont découpées à l’aide d’un emporte pièce
+* Les nécroses sont placées sous un générateur de gouttes (mélange eau + bleu coton), les gouttes tombant de 7m de haut avec faible vélocité initiale, essentiellement sous l'influence de la gravité
+* Les gouttelettes splashées sont récupérées sur des lames situées de part et d’autre de la nécrose, couvrant une zone entre 2.5 et 10cm (longueur de lame = 7.5 cm)
+* Dans un premier temps, on fait tomber les gouttes une à une et on récupère les lames après chaque goutte pour estimer le nombre minimum de gouttes incidentes nécessaires pour mobiliser les premières spores 
+* Dans un second temps, on fait tomber des séries de 10 gouttes et on récupère les lames ayant reçu le splashing cumulé de 10 gouttes, pour estimer la quantité de spores splashées par chaque lot de 10 gouttes, jusqu’à 100 gouttes
+* On réalise 5 runs avec une nouvelle source à chaque fois
+* Pour ce dernier cas, afin de comparer les runs entre eux, on calcul la proportion suivante pour chaque run :
+ *nombre de spores comptées dans la série de 10 gouttes / nombre total de spores comptées à la fin du run*
+* On analyse les données « proportion(nb de spores) » = f(nombre de gouttes incidentes) par ajustement de courbes, avec les modèles de Fréchet et Weibull
+* S'agissant d'une proportion, on utilise la fonction *gnls* pour modéliser la variance en fonction de la valeur prise par variable dépendante (Cf Wedderburn 1974)
+
+## Dipersion horizontale :
+* Inoculation de feuilles entières par aspersion d’une suspension de spores
+* Les feuilles sont découpées en petits morceaux puis placées dans une boîte de Pétri de petit diamètre (6 cm)
+* Juste avant passage sous simulateur de pluie, on ajoute X mL de mélange eau+bleu coton réparti uniformément ; on obtient une concentration finale en spores de 2 à 6.56x106 spores/mL
+* On place la boîte de pétri sous le simulateur de pluie placé à 4 m de haut (à vérifier)
+* Autour de la boîte, on place des lames de microscope à 10, 20, 30 et 40 cm de la source (lames perpendiculaires) en deux séries de lames perpendiculaires (direction nord-sud, et direction est-ouest)
+* On protège les lames des gouttes incidentes directes à l’aide d’un dispositif type « tente »
+* On soumet la source de spores à une pluie simulée de 30 secondes (calculer l’équivalent en mm), en réalisant 10 runs (avec chaque fois une nouvelle source)
+* On récupère les lames, et on compte la densité de spores (nombre de spores / cm² sur l’intégralité de chaque lame
+* On ajuste les données « densité de spores » = f(distance) au modèle « Power » ou « Négative exponential »
+
+Les données sont analysées avec R 3.3.0
+
+# Résultats
+
+## Epuisement de la source
+
+```{r}
+spores <- read.table("./dispersion-cinetique/spores.txt",
+                     header=T,sep="\t",
+                     col.names=c("cat","rep","spores","total","ratio"))
+spores <- transform(spores, cumul = ave(ratio, rep, FUN = cumsum))
+spores$log.ratio <- log(spores$ratio)
+```
+
+### Analyse sur données ln(ratio), avec *ratio=(nb spores observées dans une série de 10 gouttes) / (nb total de spores comptées sur l'ensemble des séries)*
+
+```{r, fig.width=6, fig.height=5}
+require(fitdistrplus)
+plotdist(spores$log.ratio, histo=T, demp=T)
+descdist(spores$log.ratio, boot=1001)
+mle.fit <- fitdist(spores$log.ratio, "norm", method="mle")
+summary(mle.fit)
+plot(mle.fit)
+```
+
+L'analyse montre que la transformation ln(ratio) normalise les données.
+
+### Analyse sur donnée ratio brutes
+
+Modèle Weibull :
+
+```{r, fig.width=5, fig.height=5}
+require(nlme)
+weib.pdf <- function(cat,a,b,e) {
+  a*(-0.5*((log(cat)-log(abs(e)))/b)^2)
+}
+
+# Nonlinear model, no variance modeling
+weib <- gnls(ratio~weib.pdf(cat,a,b,e), data=spores,
+            start=c(a=0.23, b=-0.78, e=12))
+summary(weib)
+
+# Nonlinear model, with variance modeling
+weib2 <- gnls(ratio~weib.pdf(cat,a,b,e), data=spores,
+            start=c(a=0.23, e=12, b=-0.78), weights=varFixed(~ratio*(1-ratio)))
+summary(weib2)
+
+# Residuals vs Fitted
+weib.fit.obs <- as.data.frame(cbind(fitted(weib2), resid(weib2, type="n")), col.names=c("residuals","fitted")) %>% ggplot(
+  aes(x=V1, y=V2)) +
+  geom_point() +
+  geom_hline(yintercept=0) +
+  xlab("Fitted values") + ylab("Standardized residuals") +
+  my_ggplot_theme()
+
+# QQPlot
+weib.qqplot <- my_qqplot(weib2)
+
+plot_grid(weib.fit.obs, weib.qqplot, ncol=1, labels="AUTO")
+```
+
+
+Modèle Fréchet (paramétrage wikipedia) :
+
+```{r, fig.width=5, fig.height=5}
+frech.pdf <- function(cat,A,alpha,beta,m){
+  A*(alpha/beta)*(((cat-4)/beta)^(-1-alpha))*exp(-((cat-4)/beta)^-alpha)
+}
+
+# Nonlinear model, no variance modeling
+frech <- gnls(ratio~frech.pdf(cat, A, alpha, beta), data=spores,
+             start=c(A=9, alpha=1, beta=8.8))
+summary(frech)
+
+# Nonlinear model, with variance modeling
+frech2 <- gnls(ratio~frech.pdf(cat, A, alpha, beta), data=spores,
+             start=c(A=9, alpha=1, beta=8.8), weights=varFixed(~ratio*(1-ratio)))
+summary(frech2)
+
+# Fitted vs Observed
+frech.fit.obs <- as.data.frame(cbind(fitted(frech2), resid(frech2, type="n")), col.names=c("residuals","fitted")) %>% ggplot(
+  aes(x=V1, y=V2)) +
+  geom_point() +
+  geom_hline(yintercept=0) +
+  xlab("Fitted values") + ylab("Standardized residuals") +
+  my_ggplot_theme()
+
+# QQPlot PDF
+frech.qqplot <- my_qqplot(frech2)
+
+plot_grid(frech.fit.obs, frech.qqplot, ncol=1, labels="AUTO")
+```
+
+Comparaison des deux modèles par critère d'information Bayésien :
+
+```{r}
+BIC(weib, frech)
+```
+
+Graphique données individuelles + courbes Weibull (trait plein) et Fréchet (pointillé) :
+
+```{r, fig.width=5, fig.height=5}
+weibfun <- function(x) {
+  0.4*exp(-0.5*((log(x)-log(coef(weib2)[2]))/(coef(weib2)[3]))^2)
+  }
+frechfun <- function(x) {
+  coef(frech2)[1]*(coef(frech2)[2]/coef(frech2)[3])*
+    (((x-4)/coef(frech2)[3])^(-1-coef(frech2)[2]))*
+    exp(-((x-4)/coef(frech2)[3])^-coef(frech2)[2])
+  }
+
+ggplot(data=spores, aes(x=cat, y=ratio)) + 
+  geom_point() +
+  stat_function(fun=weibfun, xlim=c(1,100)) +
+  stat_function(fun=frechfun, linetype="dashed", xlim=c(1,100)) +
+  xlab("Number of impacting drops") + ylab("Ratio of released spores") +
+  guides(alpha=FALSE) +
+  my_ggplot_theme()
+```
+
+
+Table des moyennes :
+
+```{r}
+moy.ratio <- spores %>% group_by(cat) %>% na.omit() %>% summarise(
+  N=n(),
+  mean=mean(ratio),
+  sd=sd(ratio),
+  se=sd/sqrt(N),
+  ci.student=qt(0.975,df=N-1)*se
+)
+```
+
+
+
+
+Regression tree :
+
+```{r, fig.width=5, fig.height=4.5}
+library(partykit)
+party.fit <- ctree(log(ratio)~cat, data=spores)
+plot(party.fit, main="Conditional Inference Tree for log(ratio)")
+print(party.fit)
+```
+
+
+Intégration des prédictions du modèle *party* dans la table de données :
+
+```{r}
+spores$log.ratio.party.predict <- predict(party.fit)
+spores$ratio.party.predict <- exp(spores$log.ratio.party.predict)
+```
+
+
+Graphe données moyennes +/- SE  + courbes :
+
+```{r, fig.width=5, fig.height=4}
+ggplot(data=spores, aes(x=cat, y=ratio)) + 
+  geom_bar(aes(group=cat)) +
+  geom_point() +
+  #stat_function(fun=weibfun, xlim=c(1,100), aes(linetype="Weibull")) +
+  #stat_function(fun=frechfun, xlim=c(1,100), aes(linetype="Frechet")) +
+  geom_line(data=spores, aes(x=cat, y=ratio.party.predict, linetype="Tree partition")) +
+  #geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.1) +
+  xlab("Number of impacting drops") + ylab("Ratio of released spores") +
+  scale_color_manual("", values=c("Data             "="black"),
+                     guide=guide_legend(order=1, title.position="right")) +
+  scale_linetype_manual("", values = c("Tree partition"="dashed"), breaks=c("Tree partition"),
+                        guide=guide_legend(title.position="right")) +
+  my_ggplot_theme() +
+  theme(legend.position=c(0.8, 0.8))
+```
+
+On constate qu’il faut au minimum 3 à 5 gouttes avant d’observer les premières spores splashées.
+Les 20 gouttes suffisent pour expulser plus de 50% du contenu de la nécrose.
+Entre 50 et 100 gouttes, le nombre de spores expulsées se stabilise.
+Il reste donc des spores encore mobilisables au sein de la nécrose au-delà de 100 gouttes.
+L’équation de Fréchet (trait plein) semble s’ajuster mieux à ces données que l’équation de Weibull (trait pointillé)
+
+## Gradient de dispersion
+
+```{r}
+require(drc)
+# Brain-Cousens
+bc.drc <- drm(log.ratio~cat, data=spores, fct=BC.5())
+
+bc.b=bc.drc$coefficients[1]; bc.c=bc.drc$coefficients[2]; bc.d=bc.drc$coefficients[3]; bc.e=bc.drc$coefficients[4]; bc.f=bc.drc$coefficients[5]
+
+bc.fun.exp <- function(x) {
+  exp(bc.c+(bc.d-bc.c + bc.f*x)/(1+exp(bc.b*(log(x)-log(bc.e)))))
+  }
+
+# Cedergeen-Ritz-Streibig
+crs.drc <- drm(log.ratio~cat, data=spores, fct=CRS.5b())
+
+crs.b=crs.drc$coefficients[1]; crs.c=crs.drc$coefficients[2]; crs.d=crs.drc$coefficients[3]; crs.e=crs.drc$coefficients[4]; crs.f=crs.drc$coefficients[5]
+
+crs.fun.exp <- function(x) {
+  exp(crs.c + (crs.d-crs.c + crs.f*exp(-1/x^0.5))/(1+exp(crs.b*(log(x)-log(crs.e)))))
+  }
+
+
+ggplot(data=moy.ratio, aes(x=cat, y=mean)) + 
+  geom_point(aes(colour="Data             ")) +
+  stat_function(fun=bc.fun.exp, xlim=c(1,100), aes(linetype="Brain-Cousens")) +
+  stat_function(fun=frechfun, xlim=c(1,100), aes(linetype="Fréchet")) +
+  stat_function(fun=crs.fun.exp, xlim=c(1,100), aes(linetype="Cedergreen")) +
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.1) +
+  xlab("Number of impacting drops") + ylab("Ratio of released spores") +
+  scale_color_manual("", values=c("Data             "="black"), 
+                     guide=guide_legend(order=1, title.position="right")) +
+  scale_linetype_manual("", values = c("Brain-Cousens"="solid", "Cedergreen"="dotted", "Fréchet"="dashed"), breaks=c("Brain-Cousens", "Cedergreen", "Fréchet"),
+                        guide=guide_legend(title.position="right")) +
+  my_ggplot_theme() +
+  theme(legend.position=c(0.8, 0.8))
+```
+
+```{r}
+spores <- read.table("./dispersion-cinetique/spores.txt",
+                     header=T,sep="\t",
+                     col.names=c("cat","rep","spores","total","ratio"))
+spores <- transform(spores, cumul = ave(ratio, rep, FUN = cumsum))
+
+require(fitdistrplus)
+plotdist(log(spores$ratio), histo=T, demp=T)
+descdist(log(spores$ratio), boot=1001)
+mle.fit <- fitdist(log(spores$ratio), "norm", method="mle")
+summary(mle.fit)
+plot(mle.fit)
+
+library(partykit)
+party.fit <- ctree(log(ratio)~cat, data=spores)
+plot(party.fit, main="Conditional Inference Tree for log(ratio)")
+print(party.fit)
+
+spores$log.ratio.party.predict <- predict(party.fit)
+spores$ratio.party.predict <- exp(spores$log.ratio.party.predict)
+
+moy.ratio <- spores %>% group_by(cat) %>% na.omit() %>% summarise(
+  N=n(),
+  mean.ratio=mean(ratio),
+  sd=sd(ratio),
+  se=sd/sqrt(N),
+  ci.student=qt(0.975,df=N-1)*se
+)
+
+moy.party <- spores %>% group_by(cat) %>% na.omit() %>% summarise(
+  mean.party=mean(ratio.party.predict)
+  )
+
+moy.ratio$mean.party <- moy.party$mean.party
+
+ggplot(moy.ratio, aes(x=factor(cat), y=mean.ratio)) +
+  geom_bar(stat="identity", colour="black", fill=c("grey20", "grey20", "grey50", "grey50", "grey80", "grey80", "grey80", "grey80", "grey80", "grey80")) +
+  geom_errorbar(aes(ymin=mean.ratio-se, ymax=mean.ratio+se), width=0.1) +
+  scale_fill_manual("", values = c("grey20", "grey50", "grey80")) +
+  xlab("Number of impacting drops") + ylab("Ratio of released spores") +
+  #scale_x_continuous(breaks=seq(10, 100, 10), expand=c(0.05, 0)) +
+  #geom_line(aes(x=cat, y=mean.party, linetype="Tree partition")) +
+  #scale_linetype_manual("", values = c("Tree partition"="dashed"), breaks=c("Tree partition"), guide=guide_legend(title.position="right")) +
+  my_ggplot_theme() +
+  theme(legend.position=c(0.8, 0.8))
+
+```
+

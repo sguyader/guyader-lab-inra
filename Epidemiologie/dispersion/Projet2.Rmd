@@ -1,0 +1,332 @@
+---
+title: "Release and dispersal of Colletotrichum gloeosporioides conidia infecting Dioscorea alata yam leaves under simulated rain drops"
+author: "Sébastien Guyader"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+mainfont: Carlito
+fontsize: 18pt
+---
+
+```{r, echo=FALSE}
+library(knitr)
+library(tidyverse)
+library(fitdistrplus)
+opts_chunk$set(dev="pdf", dev.args=list(pointsize=12), echo=TRUE, warning=FALSE, message=FALSE)
+```
+# Intro / argumentaire :
+* Connaître les échelles de dispersion des spores (temps et espace) est une étape clé pour la modélisation.
+* De nombreux travaux sur la dispersion ont été réalisés pour de multiples pathosystèmes.
+* Quelques travaux ont été menés sur *Colletotrichum gloeosporioides* sur d’autres hôtes, rien sur l’anthracnose de l’igname.
+
+# Matériels et méthodes :
+Deux types de manips ont été effectuées à partir de feuilles inoculées (variété Kabusah ou Plimbite, même sensibilité aux souches utilisées) :
+
+## Cinétique d’épuisement de la source :
+* Inoculation par goutte de suspension de spores, obtention de nécroses focalisées après incubation
+* Les nécroses sont découpées à l’aide d’un emporte pièce
+* Les nécroses sont placées sous un générateur de gouttes (mélange eau + bleu coton), les gouttes tombant de 7m de haut avec faible vélocité initiale, essentiellement sous l'influence de la gravité
+* Les gouttelettes splashées sont récupérées sur des lames situées de part et d’autre de la nécrose, couvrant une zone entre 2.5 et 10cm (longueur de lame = 7.5 cm)
+* Dans un premier temps, on fait tomber les gouttes une à une et on récupère les lames après chaque goutte pour estimer le nombre minimum de gouttes incidentes nécessaires pour mobiliser les premières spores 
+* Dans un second temps, on fait tomber des séries de 10 gouttes et on récupère les lames ayant reçu le splashing cumulé de 10 gouttes, pour estimer la quantité de spores splashées par chaque lot de 10 gouttes, jusqu’à 100 gouttes
+* On réalise 5 runs avec une nouvelle source à chaque fois
+* Pour ce dernier cas, afin de comparer les runs entre eux, on calcul la proportion suivante pour chaque run :
+ *nombre de spores comptées dans la série de 10 gouttes / nombre total de spores comptées à la fin du run*
+* On analyse les données « proportion(nb de spores) » = f(nombre de gouttes incidentes) par ajustement de courbes, avec les modèles de Fréchet et Weibull
+* S'agissant d'une proportion, on utilise la fonction *gnls* pour modéliser la variance en fonction de la valeur prise par variable dépendante (Cf Wedderburn 1974)
+
+## Dipersion horizontale :
+* Inoculation de feuilles entières par aspersion d’une suspension de spores
+* Les feuilles sont découpées en petits morceaux puis placées dans une boîte de Pétri de petit diamètre (6 cm)
+* Juste avant passage sous simulateur de pluie, on ajoute X mL de mélange eau+bleu coton réparti uniformément ; on obtient une concentration finale en spores de 2 à 6.56x10⁶ spores/mL
+* On place la boîte de pétri sous le simulateur de pluie placé à 4 m de haut (à vérifier)
+* Autour de la boîte, on place des lames de microscope à 10, 20, 30 et 40 cm de la source (lames perpendiculaires) en deux séries de lames perpendiculaires (direction nord-sud, et direction est-ouest)
+* On protège les lames des gouttes incidentes directes à l’aide d’un dispositif type « tente »
+* On soumet la source de spores à une pluie simulée de 30 secondes (calculer l’équivalent en mm), en réalisant 7 runs (avec chaque fois une nouvelle source)
+* On récupère les lames, et on compte la densité de spores (nombre de spores / cm² sur l’intégralité de chaque lame
+* On ajuste les données « densité de spores » = f(distance) au modèle « Power » ou « Négative exponential »
+
+# Résultats
+
+## Epuisement de la source
+
+```{r}
+spores <- read.table("./dispersion-cinetique/spores.txt",
+                     header=T,sep="\t",
+                     col.names=c("drops","rep","spores","total","ratio"))
+spores <- transform(spores, cumul = ave(ratio, rep, FUN = cumsum))
+```
+
+### Analyse sur données ln(ratio), avec *ratio=(nb spores observées dans une série de 10 gouttes) / (nb total de spores comptées sur 
+
+```{r, fig.width=6, fig.height=3}
+library(fitdistrplus)
+plotdist(log(spores$ratio), histo=T, demp=T)
+```
+```{r, fig.width=6, fig.height=5}
+descdist(log(spores$ratio), boot=1001)
+```
+```{r, fig.width=6, fig.height=6}
+mle.fit <- fitdist(log(spores$ratio), "norm", method="mle")
+summary(mle.fit)
+plot(mle.fit)
+```
+```{r, fig.width=6, fig.height=4}
+ggplot(spores, aes(x=factor(drops), y=ratio)) +
+  geom_point(shape=1) +
+  xlab("Number of impacting drops") + ylab("Proportion of released spores") +
+  theme_bw() +
+  theme(legend.position=c(0.85, 0.8))
+```
+
+```{r, fig.width=6, fig.height=5}
+library(partykit)
+party.fit <- ctree(log(ratio)~drops, data=spores)
+plot(party.fit, main="Conditional Inference Tree for log(ratio)")
+print(party.fit)
+```
+
+```{r, fig.width=6, fig.height=4}
+spores$log.ratio.party.predict <- predict(party.fit)
+spores$ratio.party.predict <- exp(spores$log.ratio.party.predict)
+
+
+moy.ratio <- spores %>% group_by(drops) %>% na.omit() %>% summarise(
+  N=n(),
+  mean.ratio=mean(ratio),
+  sd=sd(ratio),
+  se=sd/sqrt(N),
+  ci.student=qt(0.975,df=N-1)*se
+)
+
+moy.party <- spores %>% group_by(drops) %>% na.omit() %>% summarise(
+  mean.party=mean(ratio.party.predict)
+  )
+
+moy.ratio$mean.party <- moy.party$mean.party
+moy.ratio$group <- factor(c(rep("Node 2",2), rep("Node 4",2), rep("Node 5",6)))
+
+ggplot(moy.ratio, aes(x=factor(drops), y=mean.ratio)) +
+  geom_bar(stat="identity", colour="black", aes(fill=group)) +
+  geom_errorbar(aes(ymin=mean.ratio-se, ymax=mean.ratio+se), width=0.1) +
+  scale_fill_manual("", values = c("grey30", "grey60", "grey90")) +
+  xlab("Number of impacting drops") + ylab("Proportion of released spores") +
+  theme_bw() +
+  theme(legend.position=c(0.85, 0.8))
+
+
+```
+
+# Ajustement nonlinéaire avec hormesis
+
+```{r, fig.width=6, fig.height=4}
+library(drc)
+
+# Modèle Brain-Cousens
+bc5 <- drm(log(ratio)~drops, data=spores, fct=BC.5(fixed=c(NA,NA,NA,NA,NA)))
+bc5.boxcox <- boxcox(bc5, method="anova", bcAdd=6)
+summary(bc5.boxcox) # donne un lambda=1.56
+
+#my_qqplot_drc(bc5.boxcox)
+
+# # Modèle Cedergreen-Ritz-Streibig
+# crs4b <- drm(ratio~drops, data=spores, fct=CRS.4b())
+# crs4b.boxcox <- boxcox(crs4b, method="anova")
+# summary(crs4b.boxcox) # donne un lambda=0.222
+# 
+# my_qqplot_drc(crs4b.boxcox)
+# 
+# mselect(bc5, list(CRS.4a(), CRS.4b(), CRS.4c())) # BC5 est préféré
+# 
+# # comparaison des deux modèles
+# 
+# coef(bc5.boxcox)
+
+newdat <- data.frame(drops=seq(0,100,0.5), predicted=predict(bc5, newdata = data.frame(drops=seq(0,100,0.5))))
+
+ggplot(spores, aes(x=drops, y=ratio)) +
+ # stat_function(fun=function(x) { c + (d-c+f*x)/(1+exp(b*(log(x)-log(e)))) }) +
+  geom_boxplot(aes(group=drops), width=1.5) +
+  geom_line(data=newdat, aes(x=drops, y=exp(predicted)), color="grey50") +
+  #geom_point(shape=1) +
+  xlab("Number of impacting drops") + ylab("Proportion of released spores") +
+  theme_bw() +
+  theme(legend.position=c(0.85, 0.8))
+
+```
+
+## Dipersion horizontale
+
+disper2 <- read.table("disper2.txt", head=T,sep="\t")
+disper2$sporedensity <- disper2$spores/(2.5*5.5)  # densité par cm2
+disper2 <- dplyr::filter(disper2, run > 1, run < 8)
+disper2 <- groupedData(sporedensity~distance|run, data=disper2)
+plot(disper2)
+disper2 <- groupedData(sporedensity~distance|run, data=disper2)
+
+
+### Modèles linéarisés
+
+exponentiel : intégrée : y = a*exp(-b*distance) ; linéarisée : log(y) = log(a) - b*distance
+power :                  y = a*distance^(-b)                   log(y) = log(a) - b*(log(distance))
+
+
+#### Modèle Power
+```{r}
+pow.gls <- gls(log(sporedensity)~log(distance), data=disper2, weights=varPower())
+my_qqplot(pow.gls)
+
+# Graphe linéaire
+ggplot(data=disper2, aes(x=log(distance), y=log(sporedensity))) +
+  geom_point() +
+  geom_abline(slope=(coef(pow.gls)[2]), intercept=(coef(pow.gls)[1])) +
+  my_ggplot_theme()
+```
+
+## Modèle exponentiel
+exp.gls <- gls(log(sporedensity)~distance*axis, data=disper2, weights=varPower())
+my_qqplot(exp.gls)
+
+# Graphe linéaire
+ggplot(data=disper2, aes(x=distance, y=log(sporedensity))) +
+  geom_point() +
+  geom_abline(slope=(coef(exp.gls)[2]), intercept=(coef(exp.gls)[1])) +
+  my_ggplot_theme()
+
+## Graphe en coordonnées d'origine
+ggplot(data=disper2, aes(x=distance, y=sporedensity)) +
+  geom_jitter(width=1) +
+  stat_function(fun=function(x){exp(coef(exp.gls)[1])*exp(coef(exp.gls)[2]*x)}, aes(linetype="Neg. exponential")) +
+  stat_function(fun=function(x){exp(coef(pow.gls)[1])*x^((coef(pow.gls)[2]))}, aes(linetype="Inverse power")) +
+  scale_linetype_manual("", values = c("Neg. exponential"="solid", "Inverse power"="dashed"), breaks=c("Neg. exponential","Inverse power")) +
+  my_ggplot_theme() +
+  theme(legend.position=c(0.8, 0.8))
+
+## Tableau synthétique
+tab.moy.spod <- disper2 %>% group_by(distance) %>% summarize(
+  N=n(),
+  mean=mean(sporedensity),
+  sd=sd(sporedensity),
+  se=sd/sqrt(N),
+  ci.student=qt(0.975,df=N-1)*se
+)
+
+ggplot(data=tab.moy.spod, aes(x=distance, y=mean)) +
+  geom_point() +
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.1) +
+  stat_function(fun=function(x){exp(coef(exp.gls)[1])*exp(coef(exp.gls)[2]*x)}) +
+  stat_function(fun=function(x){exp(coef(pow.gls)[1])*x^((coef(pow.gls)[2]))}, linetype="dashed") +
+  xlab("Distance from source (cm)") + ylab("Density (spores per cm²)") +
+  my_ggplot_theme()
+
+### Using gnls
+
+exp.fun <- function(a,b,distance) { a*exp(-b*distance) }
+pow.fun <- function(a,b,distance) { a*distance^(-b) }
+
+exp.gnls <- gnls(sporedensity~exp.fun(a,b,distance), data=disper2, start=c(a=2.852e3, b=0.145), weights=varPower()) #, weights=varFixed(~sporedensity*(1-sporedensity)))
+pow.gnls <- gnls(sporedensity~pow.fun(a,b,distance), data=disper2, start=c(a=1.1e7, b=4.44), weights=varPower())
+
+BIC(exp.gnls,pow.gnls) # le modèle exponentiel est préféré
+
+ggplot(data=tab.moy.spod, aes(x=distance, y=mean)) +
+  geom_point() +
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.1) +
+  stat_function(fun=function(x){coef(exp.gnls)[1]*exp(-coef(exp.gnls)[2]*x)}, aes(linetype="Neg. exponential")) +
+  stat_function(fun=function(x){coef(pow.gnls)[1]*x^(-coef(pow.gnls)[2])}, aes(linetype="Inverse power")) +
+  scale_linetype_manual("", values = c("Neg. exponential"="solid", "Inverse power"="dashed"), breaks=c("Neg. exponential","Inverse power")) +
+  xlab("Distance from source (cm)") + ylab("Density (spores per cm²)") +
+  my_ggplot_theme() +
+  theme(legend.position=c(0.8, 0.85))
+
+grad.table <- signif(BIC(exp.gnls,pow.gnls), digits=4)
+
+ggplot(data=disper2, aes(x=distance, y=sporedensity)) +
+  geom_jitter(width=0.8) +
+  stat_function(fun=function(x){coef(exp.gnls)[1]*exp(-coef(exp.gnls)[2]*x)}, aes(linetype="Neg. exponential")) +
+  stat_function(fun=function(x){coef(pow.gnls)[1]*x^(-coef(pow.gnls)[2])}, aes(linetype="Inverse power")) +
+  scale_linetype_manual("", values = c("Neg. exponential"="solid", "Inverse power"="dashed"), breaks=c("Neg. exponential","Inverse power")) +
+  xlab("Distance from source (cm)") + ylab("Density (spores per cm²)") +
+  annotation_custom(tableGrob(grad.table, theme=ttheme_minimal(base_size = 10)),
+                    xmin=30, ymin=0) +
+  my_ggplot_theme() +
+  theme(legend.position=c(0.8, 0.85))
+
+## calcul d50 :
+coef(exp.gnls)
+d50 <- log(0.5)/(-coef(exp.gnls)[2])
+d50 # 4.86 cm
+
+
+
+
+### Using DRC
+
+# modèle exponentiel
+exp2.drc <- drm(sporedensity~distance, data=disper2, fct=EXD.2())
+plot(exp2.drc, log="", type="all")
+summary(exp2.drc)  ## donne a=2304 b=1/e=0.130
+
+# transformation boxcox pour normaliser les données
+exp2.drc.bc <- boxcox(exp2.drc) # donne un lambda=0.25
+plot(exp2.drc.bc, log="", type="all")
+summary(exp2.drc.bc)  # donne a=2356 b=1/e=0.138
+
+# modèle power
+# définir une fonction perso
+
+powfct <- function(x, parm){ parm[, 1]*x^((parm[, 2])) }
+powfctSS <- function(cust.data) {
+  lmfit <- lm(log(cust.data[,2])~log(cust.data[,1]))
+  a <- exp(coef(lmfit)[1])
+  b <- coef(lmfit)[2]
+  return(c(a, b))
+}
+powNames <- c("a", "b")
+
+pow.drc <- drm(sporedensity~distance, data=disper2, fct=list(powfct, powfctSS, powNames))
+plot(pow.drc, log="", type="all")
+summary(pow.drc) # donne a=74201 b=-2.07
+
+# transformation boxcox pour normaliser les données
+pow.drc.bc <- boxcox(pow.drc) #donne un lambda=0.25
+plot(pow.drc.bc, log="", type="all")
+summary(pow.drc.bc)  ## donne a=2.77e5 b=-2.635
+
+# graphe avec Exponentiel + Power
+ggplot(data=disper2, aes(x=distance, y=sporedensity)) +
+  #geom_boxplot(aes(group=distance), width=1.5) +
+  geom_jitter(width=0.4) +
+  #geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.1) +
+  stat_function(fun=function(x){coef(exp2.drc.bc)[1]*exp(-1/coef(exp2.drc.bc)[2]*x)}) +
+  #stat_function(fun=function(x){coef(pow.drc.bc)[1]*x^(coef(pow.drc.bc)[2])}, linetype="dashed") +
+  #stat_function(fun=function(x){exp(coef(exp.gls)[1])*exp(coef(exp.gls)[2]*x)}, colour="red") +
+  stat_function(fun=function(x){coef(exp.gnls)[1]*exp(-coef(exp.gnls)[2]*x)}, colour="red", linetype="dashed") +
+  my_ggplot_theme()
+
+# graphe du meilleur modèle (exponentiel)
+newdata <- data.frame(distance=10:40)
+exp2.drc.bc.pred <- predict(exp2.drc.bc, newdata=newdata, interval="confidence")
+newdata$drcp <- exp2.drc.bc.pred[,1]
+newdata$drcmin <- exp2.drc.bc.pred[,2]
+newdata$drcmax <- exp2.drc.bc.pred[,3]
+
+newdata$glnspred <- exp(predict(exp.gnls, newdata=data.frame(distance=10:40), level=0))
+
+
+ggplot(data=tab.moy.spod, aes(x=distance, y=mean)) +
+  geom_jitter(width=0.4) +
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.1) +
+  #geom_ribbon(data=newdata, aes(x=distance, y=p, ymin=pmin, ymax=pmax), alpha=0.2) +
+  stat_function(fun=function(x){coef(exp2.drc.bc)[1]*exp(-1/coef(exp2.drc.bc)[2]*x)}) +
+  my_ggplot_theme()
+
+########
+
+plotdist(log(disper2$sporedensity), histo=T, demp=T)
+descdist(log(disper2$sporedensity), boot=1001)
+spo.fit <- fitdist(((disper2$sporedensity)^0.25-1)/0.25, "norm", method="mle")
+summary(spo.fit)
+plot(spo.fit)
+inan

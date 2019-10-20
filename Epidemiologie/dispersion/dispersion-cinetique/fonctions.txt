@@ -1,0 +1,10 @@
+Brain-Cousens 5 : y = c+ (0-c+f*x)/(1+exp(b*(log(x)-log(e)))
+Cedergreen-Ritz-Streibig : y = c + d - (d-c+f*exp(-1/x^0.5))/(1+exp(b*(log(x)-log(e))))
+
+
+
+Weibull1 :  y = c + (d-c) * exp(-exp(b*(log(x)-log(e))))
+Weibull2 :  y = c + (d-c) * (1-exp(-exp(b*(log(x)-log(e)))))
+
+
+
