@@ -12,7 +12,9 @@ fontsize: 18pt
 ```{r, echo=FALSE}
 library(knitr)
 library(tidyverse)
+library(dplyr)
 library(fitdistrplus)
+library(nlme)
 opts_chunk$set(dev="pdf", dev.args=list(pointsize=12), echo=TRUE, warning=FALSE, message=FALSE)
 ```
 # Intro / argumentaire :
@@ -118,7 +120,7 @@ ggplot(moy.ratio, aes(x=factor(drops), y=mean.ratio)) +
 
 ```
 
-# Ajustement nonlinéaire avec hormesis
+### Ajustement nonlinéaire avec hormesis
 
 ```{r, fig.width=6, fig.height=4}
 library(drc)
@@ -158,13 +160,14 @@ ggplot(spores, aes(x=drops, y=ratio)) +
 
 ## Dipersion horizontale
 
-disper2 <- read.table("disper2.txt", head=T,sep="\t")
+```{r}
+disper2 <- read.table("dispersion-distance/disper2.txt", head=T,sep="\t")
 disper2$sporedensity <- disper2$spores/(2.5*5.5)  # densité par cm2
 disper2 <- dplyr::filter(disper2, run > 1, run < 8)
 disper2 <- groupedData(sporedensity~distance|run, data=disper2)
 plot(disper2)
 disper2 <- groupedData(sporedensity~distance|run, data=disper2)
-
+```
 
 ### Modèles linéarisés
 
@@ -175,35 +178,43 @@ power :                  y = a*distance^(-b)                   log(y) = log(a) -
 #### Modèle Power
 ```{r}
 pow.gls <- gls(log(sporedensity)~log(distance), data=disper2, weights=varPower())
-my_qqplot(pow.gls)
+#my_qqplot(pow.gls)
 
 # Graphe linéaire
 ggplot(data=disper2, aes(x=log(distance), y=log(sporedensity))) +
   geom_point() +
   geom_abline(slope=(coef(pow.gls)[2]), intercept=(coef(pow.gls)[1])) +
-  my_ggplot_theme()
+  theme_bw()
 ```
 
-## Modèle exponentiel
+#### Modèle exponentiel
+
+```{r}
 exp.gls <- gls(log(sporedensity)~distance*axis, data=disper2, weights=varPower())
-my_qqplot(exp.gls)
+#my_qqplot(exp.gls)
 
 # Graphe linéaire
 ggplot(data=disper2, aes(x=distance, y=log(sporedensity))) +
   geom_point() +
   geom_abline(slope=(coef(exp.gls)[2]), intercept=(coef(exp.gls)[1])) +
-  my_ggplot_theme()
+  theme_bw()
+```
 
-## Graphe en coordonnées d'origine
+#### Graphe en coordonnées d'origine
+
+```{r}
 ggplot(data=disper2, aes(x=distance, y=sporedensity)) +
-  geom_jitter(width=1) +
+  geom_jitter(width=0.2) +
   stat_function(fun=function(x){exp(coef(exp.gls)[1])*exp(coef(exp.gls)[2]*x)}, aes(linetype="Neg. exponential")) +
   stat_function(fun=function(x){exp(coef(pow.gls)[1])*x^((coef(pow.gls)[2]))}, aes(linetype="Inverse power")) +
   scale_linetype_manual("", values = c("Neg. exponential"="solid", "Inverse power"="dashed"), breaks=c("Neg. exponential","Inverse power")) +
-  my_ggplot_theme() +
+  theme_bw() +
   theme(legend.position=c(0.8, 0.8))
+```
 
-## Tableau synthétique
+#### Tableau synthétique
+
+```{r}
 tab.moy.spod <- disper2 %>% group_by(distance) %>% summarize(
   N=n(),
   mean=mean(sporedensity),
@@ -211,17 +222,21 @@ tab.moy.spod <- disper2 %>% group_by(distance) %>% summarize(
   se=sd/sqrt(N),
   ci.student=qt(0.975,df=N-1)*se
 )
+```
 
+```{r}
 ggplot(data=tab.moy.spod, aes(x=distance, y=mean)) +
   geom_point() +
   geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.1) +
   stat_function(fun=function(x){exp(coef(exp.gls)[1])*exp(coef(exp.gls)[2]*x)}) +
   stat_function(fun=function(x){exp(coef(pow.gls)[1])*x^((coef(pow.gls)[2]))}, linetype="dashed") +
   xlab("Distance from source (cm)") + ylab("Density (spores per cm²)") +
-  my_ggplot_theme()
+  theme_bw()
+```
 
 ### Using gnls
 
+```{r}
 exp.fun <- function(a,b,distance) { a*exp(-b*distance) }
 pow.fun <- function(a,b,distance) { a*distance^(-b) }
 
@@ -237,32 +252,33 @@ ggplot(data=tab.moy.spod, aes(x=distance, y=mean)) +
   stat_function(fun=function(x){coef(pow.gnls)[1]*x^(-coef(pow.gnls)[2])}, aes(linetype="Inverse power")) +
   scale_linetype_manual("", values = c("Neg. exponential"="solid", "Inverse power"="dashed"), breaks=c("Neg. exponential","Inverse power")) +
   xlab("Distance from source (cm)") + ylab("Density (spores per cm²)") +
-  my_ggplot_theme() +
+  theme_bw() +
   theme(legend.position=c(0.8, 0.85))
 
 grad.table <- signif(BIC(exp.gnls,pow.gnls), digits=4)
 
+library(gridExtra)
+
 ggplot(data=disper2, aes(x=distance, y=sporedensity)) +
-  geom_jitter(width=0.8) +
+  geom_jitter(width=0.2) +
   stat_function(fun=function(x){coef(exp.gnls)[1]*exp(-coef(exp.gnls)[2]*x)}, aes(linetype="Neg. exponential")) +
   stat_function(fun=function(x){coef(pow.gnls)[1]*x^(-coef(pow.gnls)[2])}, aes(linetype="Inverse power")) +
   scale_linetype_manual("", values = c("Neg. exponential"="solid", "Inverse power"="dashed"), breaks=c("Neg. exponential","Inverse power")) +
   xlab("Distance from source (cm)") + ylab("Density (spores per cm²)") +
   annotation_custom(tableGrob(grad.table, theme=ttheme_minimal(base_size = 10)),
                     xmin=30, ymin=0) +
-  my_ggplot_theme() +
+  theme_bw() +
   theme(legend.position=c(0.8, 0.85))
 
 ## calcul d50 :
 coef(exp.gnls)
 d50 <- log(0.5)/(-coef(exp.gnls)[2])
 d50 # 4.86 cm
-
-
-
+```
 
 ### Using DRC
 
+```{r}
 # modèle exponentiel
 exp2.drc <- drm(sporedensity~distance, data=disper2, fct=EXD.2())
 plot(exp2.drc, log="", type="all")
@@ -303,7 +319,7 @@ ggplot(data=disper2, aes(x=distance, y=sporedensity)) +
   #stat_function(fun=function(x){coef(pow.drc.bc)[1]*x^(coef(pow.drc.bc)[2])}, linetype="dashed") +
   #stat_function(fun=function(x){exp(coef(exp.gls)[1])*exp(coef(exp.gls)[2]*x)}, colour="red") +
   stat_function(fun=function(x){coef(exp.gnls)[1]*exp(-coef(exp.gnls)[2]*x)}, colour="red", linetype="dashed") +
-  my_ggplot_theme()
+  theme_bw()
 
 # graphe du meilleur modèle (exponentiel)
 newdata <- data.frame(distance=10:40)
@@ -320,7 +336,8 @@ ggplot(data=tab.moy.spod, aes(x=distance, y=mean)) +
   geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.1) +
   #geom_ribbon(data=newdata, aes(x=distance, y=p, ymin=pmin, ymax=pmax), alpha=0.2) +
   stat_function(fun=function(x){coef(exp2.drc.bc)[1]*exp(-1/coef(exp2.drc.bc)[2]*x)}) +
-  my_ggplot_theme()
+  theme_bw()
+```
 
 ########
 
