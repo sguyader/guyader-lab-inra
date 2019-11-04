@@ -2203,3 +2203,42 @@ spatio-temporelle d'une population (Verena Trenkel, Ifremer)
 Entered on [2019-10-22 mar. 09:09]
   
   [[file:~/Documents/GitHub/guyader-lab-inra/org/journal.org]]
+** 2019-11 November
+*** 2019-11-04 Monday
+**** Réunion avec Vanessa Weck - Objet : projet Insular et suites au projet MALIN
+1. Insular
+   - critique des experts concernant le nombre de réplicats
+   - réduire le nombre de biotopes pour augmenter le nombre de
+     réplicats (privilégier les biotopoes parallèles avec la Réunion,
+     donc probablement supprimer la mangrove car il n'y en a pas à la Réunion)
+   - enveloppe dégagée : en attente des projets sargasse ; réponse
+     espérée le 5 novembre
+   - le Région va faire au mieux pour être sûr que la Réunion reste
+     dans le projet pour garder la cohérence du projet (intérêt stratégique)
+   - le partenaire Belge peut rentrer sur notre budget
+   - projet faisable sur 3 ans (limite au 31 décembre 2023)
+   - réunion semaine du 18 nov. pour étudier possibilité d'ouverture
+     de lignes budgétaires pour projets déposés et faisant l'objet
+     d'une évaluation scientifique
+   - démarrage idéal eau 1er janvier 2020 (si dépôt début décembre)
+
+2. Suite de Malin
+   - il faudrait une stratégie coordonnée pour faire remonter des
+     topics Horizon Europe, à nous de faire une proposition
+   - PYT voudrait qu'on continue à s'intégrer au niveau du
+     consortium pour être plus visibles
+   - idée de faire un pôle pluri-institutionnel en santé, regroupé sur
+     un même site
+   - pour programmation 2021-2027, les thèses seront éligibles sur le FEDER
+   - proposer grands thèmes et leurs contributions aux enjeux
+   - souhait de la région que les équipes des RUP soient mieux
+     représentées auprès de la Commission
+   - s'assurer que les mot clés soient présents au niveau des
+     partnerships
+   - la Commission souhaite que pour la prochaine programmation il n'y
+     ait plus de décalages
+
+
+Entered on [2019-11-04 Mon 10:15]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
