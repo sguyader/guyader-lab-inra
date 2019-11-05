@@ -462,7 +462,7 @@ Entered on [2019-01-14 Mon 10:36]
   - pilier 1 : penser aux collaborations, projets, 1 ou 2 résultats
     marquants, besoins en compétences, 40 minutes
 *** 2019-01-28 Monday
-**** *Rencontre CD/Astro 28/29 janvier 2019*
+**** *Rencontre CD/Astro 28/29 janvier 2019* :meeting:
 1. Présentation générale de l'unité et introduction des 2 piliers
    - commentaires CL : pilier 1 clairement igname+tomate, pilier 2 moins clair
      comment l'interface se fait entre les piliers 1 et 2 ?
@@ -512,7 +512,7 @@ Entered on [2019-01-28 Mon 08:53]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 *** 2019-01-29 Tuesday
-**** *Rencontre CD/Astro 28/29 janvier 2019 - jour2*
+**** *Rencontre CD/Astro 28/29 janvier 2019 - jour2* :meeting:
 1. Points divers
    - retroplanning HCERES
      commencer rapport éval début 2020, dépôt août/septembre 2020
@@ -603,7 +603,7 @@ Entered on [2019-01-31 Thu 13:37]
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 ** 2019-02 February
 *** 2019-02-06 Wednesday
-**** *Réunion UE Péyi - parcelles*
+**** *Réunion UE Péyi - parcelles* :meeting:
 1. Conversion en "bio"
    - proposition UE : convertir la partie EST du domaine en bio
    - la conversion en bio est une nécessité pour le projet de la microferme
@@ -618,19 +618,18 @@ Entered on [2019-01-31 Thu 13:37]
    - 
 
 Entered on [2019-02-06 Wed 13:36]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
-*** 2019-02-14 Thursday
+
+[[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 *** 2019-02-28 Thursday
-**** *CODIR*                                                       :meeting:
+**** *CODIR*                                                       :meeting:codir:
 - point hébergement stagiaires 2019 : logement+bureaux
 - animation scientifique :
   * Jorge propose une animation sur le changement d'échelles et les
     ponts piliers 1 et 2
-  *
+
 ** 2019-03 March
 *** 2019-03-11 Monday
-**** *MOOC "Analyse de données multidimensionnelles"*
+**** *MOOC "Analyse de données multidimensionnelles"* :mooc:r:
 
 *ACP*
 1. Données - Problématique
@@ -1455,7 +1454,7 @@ Entered on [2019-02-06 Wed 13:36]
        * pour chaque catégorie, on rélaise un test de Student
 ** 2019-05 May
 *** 2019-05-15 Wednesday
-**** Application nouvelle Politique Qualité : projet Astro
+**** Application nouvelle Politique Qualité : projet Astro :meeting:qualité:
 ***** Présentation EureQUA :
 - méthode d'identification des facteurs de succès
 - aide à la décision en appui au pilotage des activités de recherche
@@ -1468,7 +1467,7 @@ Entered on [2019-02-06 Wed 13:36]
   3. prioriser les actions
 - améliorer le fonctionnement de l'organisation et contribuer à la
   maîtrise des risques
-***** Projet scientifique et managérial d'Astro
+***** Projet scientifique et managérial d'Astro :meeting:
 - 2 objectifs : 1/ définir les axes de recherche, 2/ répondre à la
   demande HCERES
 - ...
@@ -1480,7 +1479,7 @@ Entered on [2019-05-15 Wed 09:05]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 *** 2019-05-20 Monday
-**** Formation/sensibilisation Validation des méthodes quantitatives et métrologie
+**** Formation/sensibilisation Validation des méthodes quantitatives et métrologie :meeting:qualité:
 - métrologie : fonction qui s'applique à des grandeurs physiques mesurables directement par un instrument
 - l'objectif quant à l'utilisation des mesures est important
 - on cherche à avoir confiance dans les mesures produites et les
@@ -1536,7 +1535,7 @@ Entered on [2019-05-20 Mon 09:11]
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 ** 2019-06 June
 *** 2019-06-24 Monday
-**** Réunion Projet Immobilier Astro Ouest
+**** Réunion Projet Immobilier Astro Ouest :meeting:immobilier:
 - Rencontre avec M. Théophile, architecte
 - Présentation du diagnostic (photos du bâtiment et abords)
 - Présentation du diagramme fonctionnel
@@ -1573,11 +1572,11 @@ Entered on [2019-05-20 Mon 09:11]
   + comme le 5, avec extension supplémentaire labo 82 m²
 ** 2019-09 September
 *** 2019-09-13 Friday
-**** Réunion Malin 2 - WP1 : outils de détection
+**** Réunion Malin 2 - WP1 : outils de détection :meeting:malin:
 - Retard sur pas mal de points (sauf pour IPG)
 - RFID : pour végétaux (virus, autres ?)
 *** 2019-09-16 Monday
-**** AG Centre
+**** AG Centre :meeting:crag:
 
 1. Nouveaux arrivants
 
@@ -1763,12 +1762,9 @@ Entered on [2019-05-20 Mon 09:11]
         d'évaluation ; élaboration des axes ; suivi et mise en oeuvre
         d'un plan d'action)
 
-
-
 Entered on [2019-09-16 Mon 10:03]
   
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.o
-**** Rencontre psychologue MCP / Astro
+**** Rencontre psychologue MCP / Astro :meeting:
 - Présents : D. Lange, T. Bajazet et S. Guyader
 - comment l'évaluation-conseil a été perçue, si ça a
   donné des suites ?
@@ -1779,7 +1775,7 @@ Entered on [2019-09-16 Mon 10:03]
 
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 *** 2019-09-26 Thursday
-**** CODIR Astro 26 septembre 2019
+**** CODIR Astro 26 septembre 2019 :meeting:codir:
 Présents : FB, AR, SG, MU, RT, JMB
 Excusés : LP (MC et JS "démissionnaires")
 
@@ -1809,7 +1805,7 @@ Entered on [2019-09-26 Thu 13:28]
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 ** 2019-10 October
 *** 2019-10-08 Tuesday
-**** Réunion projets post-MALIN (CIRAD Neufchâteau)
+**** Réunion projets post-MALIN (CIRAD Neufchâteau) :meeting:malin:
 
 - Diaporama PYT
   * rapport évaluation "Insular"
@@ -1841,7 +1837,7 @@ Entered on [2019-09-26 Thu 13:28]
 
 Entered  on [2019-10-08 Tue 09:03]
   
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]
 *** 2019-10-10 Thursday
 **** Réunion début thèse Boukar                                  :meeting:épidémiologie:thèse:
 [Boukar, PYT, MU, Eric Francius, SG]
@@ -1854,10 +1850,9 @@ Entered  on [2019-10-08 Tue 09:03]
 - 2 variétés * 20 échantillons * 20 parcelles + autres variétés
 
 Entered on [2019-10-10 Thu 10:07]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org::*2019-10-10%20Thursday][2019-10-10 Thursday]]
+
 *** 2019-10-17 Thursday
-**** Réunion Ching du 17/10/2019
+**** Réunion Ching du 17/10/2019 :meeting:ching:
 Présents : AR, FC, DR, MFZ, TB, JBN, SG, FB, JMB, MU, DP, MC (Visio)
 
 ***** Tour de table
@@ -1955,8 +1950,8 @@ Présents : AR, FC, DR, MFZ, TB, JBN, SG, FB, JMB, MU, DP, MC (Visio)
 tered on [2019-10-17 Thu 13:24]
   
 [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
-*** 2019-10-22 mardi
-**** JIEM 2019 - Ifremer - Nantes - 22 et 23 octobre 2019
+*** 2019-10-22 Tuesday
+**** JIEM 2019 - Ifremer - Nantes - 22 et 23 octobre 2019 :séminaire:modélisation:statistiques:
 
 ***** Introduction : Réseaux
 - GDR EcoStat (S. Dray)
@@ -2205,7 +2200,7 @@ Entered on [2019-10-22 mar. 09:09]
   [[file:~/Documents/GitHub/guyader-lab-inra/org/journal.org]]
 ** 2019-11 November
 *** 2019-11-04 Monday
-**** Réunion avec Vanessa Weck - Objet : projet Insular et suites au projet MALIN
+**** Réunion avec Vanessa Weck - Objet : projet Insular et suites au projet MALIN :meeting:malin:insular:région:
 1. Insular
    - critique des experts concernant le nombre de réplicats
    - réduire le nombre de biotopes pour augmenter le nombre de
