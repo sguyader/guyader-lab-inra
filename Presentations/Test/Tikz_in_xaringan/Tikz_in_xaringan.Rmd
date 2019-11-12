@@ -6,7 +6,7 @@ date:
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: [default, "hygge", "style/tweak.css", "style/bootstrap_table.css", "style/footer-header.css"]
+    css: [default, "hygge", "../style/tweak.css", "../style/bootstrap_table.css", "../style/footer-header.css"]
     nature:
       highlightStyle: github
       highlightLines: true
@@ -29,7 +29,7 @@ library(DiagrammeR)
 library(Cairo)
 ```
 
-```{r tikz-ex, engine="tikz", engine.opts=list(convert="convert", convert.opts="-density 300"), fig.ext='png', out.width="40%", echo=F}
+```{tikz, tikz-ex, fig.cap = "Funky tikz", fig.ext = 'png', out.width="40%", echo=F}
 \usetikzlibrary{trees}
 \begin{tikzpicture}[
   font=\sffamily,

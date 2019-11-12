@@ -82,7 +82,7 @@ layout: false
 class: section-slide, inverse, center, middle, animated, fadeIn
 <div class="my-footer"><span style="color:white">Auteur &nbsp; - &nbsp; Titre : sous-titre</span></div>
 
-# Nouvelle section
+## Nouvelle section
 
 ---
 
@@ -92,7 +92,7 @@ class: main-slide, animated, fadeIn
 
 ---
 
-# Hello World
+## Hello World
 
 Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
 
@@ -103,7 +103,7 @@ devtools::install_github("yihui/xaringan")
 ---
 
 .left-column[
-# Left column title
+## Left column title
 ]
 .right-column[
 A whole sentence
@@ -135,7 +135,7 @@ A whole sentence
 
 ---
 
-#Last slide
+## Last slide
 
 > Petit test "quote"
 

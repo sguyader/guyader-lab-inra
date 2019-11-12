@@ -26,7 +26,7 @@
 #+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
 
 * informations were gathered and first demonstrated in my [[https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org][First webinar on reproducible research: litterate programming]]. :noexport:
-***** Emacs shortcuts
+***** Emacs shortcuts :noexport:
 Here are a few convenient emacs shortcuts for those that have never
 used emacs. In all of the emacs shortcuts, =C=Ctrl=, =M=Alt/Esc= and
 =S=Shift=.  Note that you may want to use two hours to follow the emacs
@@ -51,7 +51,7 @@ shortcuts. This can be changed from the Options menu.
     is a nice git interface for Emacs.
   There are a bunch of cheatsheets also available out there (e.g.,
   [[http://www.shortcutworld.com/en/linux/Emacs_23.2.1.html][this one for emacs]] and [[http://orgmode.org/orgcard.txt][this one for org-mode]] or this [[http://sachachua.com/blog/wp-content/uploads/2013/05/How-to-Learn-Emacs-v2-Large.png][graphical one]]).
-***** Org-mode
+***** Org-mode shortcuts :noexport:
   Many emacs shortcuts start by =C-x=. Org-mode's shortcuts generaly
   start with =C-c=.
   - =Tab= fold/unfold
@@ -105,7 +105,6 @@ shortcuts. This can be changed from the Options menu.
     give a try to =<r=, =<R=, =<RR=, =<g=, =<p=, =<P=, =<m= ...
   - Some of these templates are not specific to babel: e.g., =<h=, =<l=,
     =<L=, =<c=, =<e=, ...
-turday
 
 * 2018
 ** 2018-11 November
@@ -149,6 +148,7 @@ turday
   - Xournal 0.4.8
   - TexMaker 5.0.3
   - emacs 26.1 -- version modifiée pour Windows, obtenue [[https://vigou3.gitlab.io/emacs-modified-windows/][à partir de cette source]]
+  
 **** *Travail sur un script pour convertir un tableau (aide à F. Causeret pour Cavalbio)* :R:
 
 *** 2018-11-20 Tuesday
@@ -195,12 +195,16 @@ turday
 	
   - Brûlure
     - thermique ou électrique : arroser par ruissellement
-    - inhalat
+    - inhalation
+    
 *** 2018-11-21 mercredi
+
 **** *Test de modification du journal sur mini-PC perso*         :OrgMode:
 
 **** *Améliorations au journal / OrgMode*                        :OrgMode:
+
 *** 2018-11-22 Thursday
+
 **** *Configuration autour de la recherche reproductible*        :RechRepro:
 - lu pas mal de références sur rmarkdown, emacs-OrgMode,
   bookdown... pour trouver la solution idéale pour la prise de notes
@@ -221,11 +225,15 @@ turday
   - cela va créer un squelette de livre à éditer
 
 *** 2018-11-23 Friday
+
 **** *Customisation des templates OrgMode*                         :OrgMode:
+
 **** *Envoi de la version finale de l'exercice 3 du module 3 pour le MOOC RR* :RechRepro:
+
 **** *Aide à Laurent Penet sur un script R pour sortie graphique ACP*    :R:
 
 *** 2018-11-26 Monday
+
 **** *Setup sur emacs :*
 - installation des paquets :
   - magit : gestion du dépôt git depuis emacs
@@ -233,7 +241,9 @@ turday
   - ox-pandoc : options multiples d'export
 
 **** *Fin de configuration d'emacs OrgMode sur minipc perso*
+
 *** 2018-11-29 Thursday
+
 **** *Réunion ching*                                                 :CODIR:
 1. Retour des départements sur les piliers scientifiques d'ASTRO
    - doc temporaire envoyé par Alban Thomas
@@ -268,8 +278,11 @@ turday
    - AAP ANSES : peut intéresser Astro
      - possibilité de projets exploratoires (50k€ sur 2 ans), ou projet
      - moins risqué (200k€ sur 3 ans)
+     
 ** 2018-12 December
+
 *** 2018-12-04 Tuesday
+
 **** *Réunion préparation MALIN tranche 2*
 - tâches dans lesquelles j'interviens :
   - WP1 : facteurs d'émergence
@@ -300,8 +313,8 @@ turday
   - devis : mettre le nom du demandeur et le numéro, copie
     informatique+papier à archiver
 
-Entered on [2018-12-04 Tue 09:17]
 *** 2018-12-10 Monday
+
 **** *Paquet R "prettydoc"*
 - permet de faire un rendu simple, joli et léger d'un document HTML à
   partir de rmarkdown
@@ -317,6 +330,7 @@ Entered on [2018-12-04 Tue 09:17]
       highlight: github
   ---
   #+END_SRC
+  
 **** *Préparation cours M1 Biologie-Santé UEP83.1*
 - les cours débutent le 14 janvier pour le module Surveillance
   Sanitaire
@@ -324,8 +338,10 @@ Entered on [2018-12-04 Tue 09:17]
   - Maladies cryptogamique : pathogénèse et réponses de l’hôte (2h)
   - Méthodes de lutte contre les maladies cryptogamiques des plantes :
     diagnostic, éradication, résistance variétale, lutte chimique (3h)
+    
 ***** DONE : donner les dates et heures de disponibilité
 - State "DONE"       from "TODO"       [2019-10-18 Fri 11:04]
+
 **** *remark.js*
 - installer les paquets =xaringan= et =xaringan-themer=:
   #+BEGIN_SRC r
@@ -342,11 +358,15 @@ Entered on [2018-12-04 Tue 09:17]
           </div>
         </div>
     #+END_SRC
+    
 *** 2018-12-11 Tuesday
+
 **** *Importer des diaporamas PPTX :*
 - installer le paquet =slidex=
 - importer avec la commande =convert_pptx()=
+
 *** 2018-12-14 vendredi
+
 **** *Rapprochement GENEPI-BETWEEN - Deuxième réunion (cadres)*
 - 3 projets en cours 2020-2021 (feder, et feader avec JL Diman)
   1. fondation de france : thèse Coraline et prolongation avec 3ème
@@ -368,7 +388,9 @@ Entered on [2018-12-04 Tue 09:17]
 - voir avec Chantal si elle pourrait se former en mycologie
 - faire un échange sur les projets de chacun pour préparer la fusion
 - inclure Marie Umber
+
 *** 2018-12-20 jeudi
+
 **** Réunion Ching
 Présents: Yoana Faure (YF), Régis Tournebize (RT), Antoine Richard
 (AR), Jorge Sierra (JS), François Bussière (FB), François Causeret
@@ -442,26 +464,32 @@ Nanette (JBN), Thierry Bajazet (TB)
    - ...
 4. Point stages
 5. Mise à jour de l'organigramme de l'unité
+
 * 2019
+
 ** 2019-01 January
+
 *** 2019-01-14 Monday
+
 **** Test de la fonction de lien vers un document:
 - utiliser C-u C-c C-l
 - exemple : voici un lien vers mon "readme"
-Entered on [2019-01-14 Mon 10:36]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+
 *** 2019-01-24 Thursday
+
 **** *Réunion FB travail sur Pilier 1*
 - présenter questions scientifiques
 - ok pour viro/épidémio
 - écophysio/phénotypage : Régis
+
 **** *Réunion ching*                                         :meeting:ching:
 - présentation intro FB :
   - présentation unité (enjeux+question chapeau) + organisation
   - pilier 1 : penser aux collaborations, projets, 1 ou 2 résultats
     marquants, besoins en compétences, 40 minutes
+    
 *** 2019-01-28 Monday
+
 **** *Rencontre CD/Astro 28/29 janvier 2019* :meeting:
 1. Présentation générale de l'unité et introduction des 2 piliers
    - commentaires CL : pilier 1 clairement igname+tomate, pilier 2 moins clair
@@ -506,12 +534,9 @@ Entered on [2019-01-14 Mon 10:36]
      microferme et observatoire pollutions permettent de la
      transversalité
 5. Animation Scientifique
-   - 
 
-Entered on [2019-01-28 Mon 08:53]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 *** 2019-01-29 Tuesday
+
 **** *Rencontre CD/Astro 28/29 janvier 2019 - jour2* :meeting:
 1. Points divers
    - retroplanning HCERES
@@ -566,11 +591,9 @@ Entered on [2019-01-28 Mon 08:53]
    - importance des collaborations : essayer d'attirer vers nous
      encore plus
    - profiter de l'animation 70 ans du Centre pour gagner en visibilté
-    
-Entered on [2019-01-29 Tue 08:20]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+
 *** 2019-01-31 Thursday
+
 **** *Réunion CHING*                                         :ching:meeting:
 Retour sur la venue des CD
 - positif : 
@@ -597,12 +620,10 @@ Retour sur la venue des CD
   - challenge : créer et maintenir animation scientifique intra- et inter-piliers
   - quelles ETP de collaborations interviennent sur nos projets
 
-
-Entered on [2019-01-31 Thu 13:37]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 ** 2019-02 February
+
 *** 2019-02-06 Wednesday
+
 **** *Réunion UE Péyi - parcelles* :meeting:
 1. Conversion en "bio"
    - proposition UE : convertir la partie EST du domaine en bio
@@ -617,10 +638,8 @@ Entered on [2019-01-31 Thu 13:37]
    - tarif pour paillage canne (dépend du prix de la balle de paille)
    - 
 
-Entered on [2019-02-06 Wed 13:36]
-
-[[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 *** 2019-02-28 Thursday
+
 **** *CODIR*                                                       :meeting:codir:
 - point hébergement stagiaires 2019 : logement+bureaux
 - animation scientifique :
@@ -628,7 +647,9 @@ Entered on [2019-02-06 Wed 13:36]
     ponts piliers 1 et 2
 
 ** 2019-03 March
+
 *** 2019-03-11 Monday
+
 **** *MOOC "Analyse de données multidimensionnelles"* :mooc:r:
 
 *ACP*
@@ -798,7 +819,6 @@ Entered on [2019-02-06 Wed 13:36]
      sachant que l'on possède la modalité /i/ de V_1) avec le "profil
      ligne moyen" (= distribution marginale V_2, profil de l'ensemble
      des individus étudiés)
-
 
 3. Les nuages et leur ajustement
    - nuage des profils lignes : /I/ points de coordonnées f_ij/f_{i.} sur
@@ -1452,9 +1472,13 @@ Entered on [2019-02-06 Wed 13:36]
          individus expliqués par la variable qualitative puis faire un
          test /F/ par variable
        * pour chaque catégorie, on rélaise un test de Student
+       
 ** 2019-05 May
+
 *** 2019-05-15 Wednesday
+
 **** Application nouvelle Politique Qualité : projet Astro :meeting:qualité:
+
 ***** Présentation EureQUA :
 - méthode d'identification des facteurs de succès
 - aide à la décision en appui au pilotage des activités de recherche
@@ -1467,6 +1491,7 @@ Entered on [2019-02-06 Wed 13:36]
   3. prioriser les actions
 - améliorer le fonctionnement de l'organisation et contribuer à la
   maîtrise des risques
+  
 ***** Projet scientifique et managérial d'Astro :meeting:
 - 2 objectifs : 1/ définir les axes de recherche, 2/ répondre à la
   demande HCERES
@@ -1475,10 +1500,8 @@ Entered on [2019-02-06 Wed 13:36]
 - comment déterminer les plus impactants, et prioriser : 2 matrices
   (risques / opportunités)
 
-Entered on [2019-05-15 Wed 09:05]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 *** 2019-05-20 Monday
+
 **** Formation/sensibilisation Validation des méthodes quantitatives et métrologie :meeting:qualité:
 - métrologie : fonction qui s'applique à des grandeurs physiques mesurables directement par un instrument
 - l'objectif quant à l'utilisation des mesures est important
@@ -1530,11 +1553,10 @@ Entered on [2019-05-15 Wed 09:05]
   + déterminer les critères de performance par niveau de la méthode
     (tableur existant)
 
-Entered on [2019-05-20 Mon 09:11]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 ** 2019-06 June
+
 *** 2019-06-24 Monday
+
 **** Réunion Projet Immobilier Astro Ouest :meeting:immobilier:
 - Rencontre avec M. Théophile, architecte
 - Présentation du diagnostic (photos du bâtiment et abords)
@@ -1570,12 +1592,17 @@ Entered on [2019-05-20 Mon 09:11]
 
 - Scénario 6 :
   + comme le 5, avec extension supplémentaire labo 82 m²
+  
 ** 2019-09 September
+
 *** 2019-09-13 Friday
+
 **** Réunion Malin 2 - WP1 : outils de détection :meeting:malin:
 - Retard sur pas mal de points (sauf pour IPG)
 - RFID : pour végétaux (virus, autres ?)
+
 *** 2019-09-16 Monday
+
 **** AG Centre :meeting:crag:
 
 1. Nouveaux arrivants
@@ -1762,8 +1789,6 @@ Entered on [2019-05-20 Mon 09:11]
         d'évaluation ; élaboration des axes ; suivi et mise en oeuvre
         d'un plan d'action)
 
-Entered on [2019-09-16 Mon 10:03]
-  
 **** Rencontre psychologue MCP / Astro :meeting:
 - Présents : D. Lange, T. Bajazet et S. Guyader
 - comment l'évaluation-conseil a été perçue, si ça a
@@ -1773,8 +1798,8 @@ Entered on [2019-09-16 Mon 10:03]
   l'évaluation-conseil, et l'impression de non intégration des
   différentes composantes de l'unité (fusion pas vraiment aboutie)
 
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 *** 2019-09-26 Thursday
+
 **** CODIR Astro 26 septembre 2019 :meeting:codir:
 Présents : FB, AR, SG, MU, RT, JMB
 Excusés : LP (MC et JS "démissionnaires")
@@ -1800,13 +1825,11 @@ Excusés : LP (MC et JS "démissionnaires")
   + 1 candidate pour le poste BAMI gestionnaire de l'unité
   + proposition pour être formateurs pour VIVEA (exploitants agricoles)
 
-Entered on [2019-09-26 Thu 13:28]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
 ** 2019-10 October
-*** 2019-10-08 Tuesday
-**** Réunion projets post-MALIN (CIRAD Neufchâteau) :meeting:malin:
 
+*** 2019-10-08 Tuesday
+
+**** Réunion projets post-MALIN (CIRAD Neufchâteau) :meeting:malin:
 - Diaporama PYT
   * rapport évaluation "Insular"
     + faiblesses :
@@ -1834,11 +1857,9 @@ Entered on [2019-09-26 Thu 13:28]
   * Manifestations/formations
     + cycle de 3 formations : One Health, SIG
     + Village des Sciences
-
-Entered  on [2019-10-08 Tue 09:03]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]
+    
 *** 2019-10-10 Thursday
+
 **** Réunion début thèse Boukar                                  :meeting:épidémiologie:thèse:
 [Boukar, PYT, MU, Eric Francius, SG]
 - objet : définir modalités de prospections
@@ -1849,12 +1870,10 @@ Entered  on [2019-10-08 Tue 09:03]
 - Kabusah et Goana sont bien présentes
 - 2 variétés * 20 échantillons * 20 parcelles + autres variétés
 
-Entered on [2019-10-10 Thu 10:07]
-
 *** 2019-10-17 Thursday
+
 **** Réunion Ching du 17/10/2019 :meeting:ching:
 Présents : AR, FC, DR, MFZ, TB, JBN, SG, FB, JMB, MU, DP, MC (Visio)
-
 ***** Tour de table
 - MC :
   * Projet Interlude obtenu (EcoPhyto) : leviers territoriaux pour réduction des
@@ -1947,10 +1966,9 @@ Présents : AR, FC, DR, MFZ, TB, JBN, SG, FB, JMB, MU, DP, MC (Visio)
 - FB :
   * réunion DUs Centre
   * avis avorable émis pour mobilité sur poste gestionnaire d'Unité
-tered on [2019-10-17 Thu 13:24]
-  
-[[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+
 *** 2019-10-22 Tuesday
+
 **** JIEM 2019 - Ifremer - Nantes - 22 et 23 octobre 2019 :séminaire:modélisation:statistiques:
 
 ***** Introduction : Réseaux
@@ -2194,12 +2212,10 @@ spatio-temporelle d'une population (Verena Trenkel, Ifremer)
   apparentés génétiquement
 - package R "kinference"
 
-
-Entered on [2019-10-22 mar. 09:09]
-  
-  [[file:~/Documents/GitHub/guyader-lab-inra/org/journal.org]]
 ** 2019-11 November
+
 *** 2019-11-04 Monday
+
 **** Réunion avec Vanessa Weck - Objet : projet Insular et suites au projet MALIN :meeting:malin:insular:région:
 1. Insular
    - critique des experts concernant le nombre de réplicats
@@ -2232,8 +2248,3 @@ Entered on [2019-10-22 mar. 09:09]
      partnerships
    - la Commission souhaite que pour la prochaine programmation il n'y
      ait plus de décalages
-
-
-Entered on [2019-11-04 Mon 10:15]
-  
-  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]

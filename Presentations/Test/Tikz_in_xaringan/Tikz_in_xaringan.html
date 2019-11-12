@@ -1,34 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>Mon titre</title>
+    <title>Tikz_in_xaringan.utf8.md</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Auteur 2019-11-07)" />
+    <meta name="author" content="Sébastien GUYADER" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
-    <script src="libs/pymjs/pym.v1.js"></script>
-    <script src="libs/widgetframe-binding/widgetframe.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous">
-    </script>
-    
-    <script>
-    $(document).ready(function() {
-      var h2 = $( ":not(.toc) > h2" );
-      var items = h2.map(
-        function(){return $(this).text()}
-        ).get()
-      items.shift(); // Remove first item (title)
-      items.pop();   // Remove last item (spurious???)
-      var item_list = items.join("</li><li>");
-      var toc = "<ul><li>" + item_list + "</li></ul>";
-      $(".toc > h2").after(toc);
-      
-    });
-    </script>
-    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style/tweak.css" type="text/css" />
+    <link rel="stylesheet" href="../style/bootstrap_table.css" type="text/css" />
+    <link rel="stylesheet" href="../style/footer-header.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -36,123 +16,10 @@
 
 
 
-class: title-slide, animated, fadeIn
-
-# Titre : sous-titre
-### Auteur
-#### INRA - UR xxxx - Ville
-
----
-
-layout: true
-class: main-slide, animated, fadeIn
-&lt;div class="my-footer"&gt;&lt;span&gt;Auteur &amp;nbsp; - &amp;nbsp; Titre : sous-titre&lt;/span&gt;&lt;/div&gt; 
-
----
-
-class:toc
-# Table of Contents
-
----
-
-class: middle
-&lt;style type="text/css"&gt;
-.bg-transparent { background-color: blue; }
-&lt;/style&gt;
-.pull-left[
-* text 1
-* text 2
-* text 1
-* text 2
-
-<div id="htmlwidget-d8ddcb2946c902a84095" style="width:100%;height:250px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d8ddcb2946c902a84095">{"x":{"url":"diapos_files/figure-html//widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
-]
-
-.pull-right[
-![](diapos_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
-]
----
-
-layout: false
-class: section-slide, inverse, center, middle, animated, fadeIn
-&lt;div class="my-footer"&gt;&lt;span style="color:white"&gt;Auteur &amp;nbsp; - &amp;nbsp; Titre : sous-titre&lt;/span&gt;&lt;/div&gt;
-
-## Nouvelle section
-
----
-
-layout: true
-class: main-slide, animated, fadeIn
-&lt;div class="my-footer"&gt;&lt;span&gt;Auteur &amp;nbsp; - &amp;nbsp; Titre : sous-titre&lt;/span&gt;&lt;/div&gt;
-
----
-
-## Hello World
-
-Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
-
-
-```r
-devtools::install_github("yihui/xaringan")
-```
-
----
-
-.left-column[
-## Left column title
-]
-.right-column[
-A whole sentence
-  + one `Markdown` bullet point
-{{content}}
-]
-
---
-
-  + a second bullet point
-{{content}}
-
---
-
-  + a third bullet point
-{{content}}
-
---
-
-    + a sub level
-{{content}}
-
---
-    + a second sub level
-{{content}}
-
---
-    + a third sublevel
-
----
-
-## Last slide
-
-&gt; Petit test "quote"
-
-.blue-block[
-exemple de bloc 
-]
-
---
-&lt;br/&gt;
-.green-block[
-exemple de bloc 
-]
-
---
-&lt;br/&gt;
-.red-block[
-exemple de bloc 
-]
-
-.footnote[.red.bold[*] Important footnote]
+&lt;div class="figure"&gt;
+&lt;img src="Tikz_in_xaringan_files/figure-html/tikz-ex-1.png" alt="Funky tikz" width="40%" /&gt;
+&lt;p class="caption"&gt;Funky tikz&lt;/p&gt;
+&lt;/div&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
