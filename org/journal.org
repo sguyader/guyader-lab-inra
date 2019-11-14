@@ -2220,18 +2220,18 @@ spatio-temporelle d'une population (Verena Trenkel, Ifremer)
 1. Insular
    - critique des experts concernant le nombre de réplicats
    - réduire le nombre de biotopes pour augmenter le nombre de
-     réplicats (privilégier les biotopoes parallèles avec la Réunion,
+     réplicats (privilégier les biotopes parallèles avec la Réunion,
      donc probablement supprimer la mangrove car il n'y en a pas à la Réunion)
    - enveloppe dégagée : en attente des projets sargasse ; réponse
      espérée le 5 novembre
-   - le Région va faire au mieux pour être sûr que la Réunion reste
+   - le Région va faire au mieux pour être sûrs que la Réunion reste
      dans le projet pour garder la cohérence du projet (intérêt stratégique)
    - le partenaire Belge peut rentrer sur notre budget
    - projet faisable sur 3 ans (limite au 31 décembre 2023)
    - réunion semaine du 18 nov. pour étudier possibilité d'ouverture
      de lignes budgétaires pour projets déposés et faisant l'objet
      d'une évaluation scientifique
-   - démarrage idéal eau 1er janvier 2020 (si dépôt début décembre)
+   - démarrage idéal au 1er janvier 2020 (si dépôt début décembre)
 
 2. Suite de Malin
    - il faudrait une stratégie coordonnée pour faire remonter des
@@ -2248,3 +2248,43 @@ spatio-temporelle d'une population (Verena Trenkel, Ifremer)
      partnerships
    - la Commission souhaite que pour la prochaine programmation il n'y
      ait plus de décalages
+*** 2019-11-14 Thursday
+**** *Réunion Ching* :meeting:ching:
+- infos du DU :
+  + AG Astro à venir le 29/11/2019
+  + BAP :
+    * le poste BAP TR en BAMI sur lequel on n'a pas eu de candidat est maintenu pour l'arbitrage
+    * Carole Caranta arrête direction du dpt BAP au 1er janvier 2020, sera adjointe DG scientifique INRA : recherche fondamentale à l'INRA, et interdisciplinarité
+    * métaprogrammes BAP : 3 lancés en 2020, 6 nouveaux en réflexion
+  + évaluation HCERES : remise du rapport scientifique septembre 2020
+  + visite des CDs d'Astro :
+    * viendront dès janvier 2020, avec les CDs de l'URZ : du 20 au 22
+      janvier
+    * déroulé :
+      - 20 am : bilan
+      - 20 pm et 21 am : ateliers en groupes
+      - 21 pm : discussion sur synthèse des ateliers
+      - 22 : discussion avec l'URZ et bioéconomie
+      - thèmes transversaux que nous avions identifiés : changements d'échelle, comment passer des pratiques culturales aux systèmes de culture, comment cultiver sur sols pollués
+      - thèmes proposés par CDs : quels partenariats métropole et caraïbes ? quels systèmes agricoles dans le contexte des petites Antilles ? quelles interactions entre piliers ?
+    * C. Lannou a prévu de venir les 26 et 27 janvier avec sa chargée d'innovation au sujet du biocontrôle (atelier Astro, UE Péyi, partenaires professionnels : mycorrhizes, auxiliaires locaux, fourmi manioc, co-conception d'agrosystèmes multiespèces)
+- tour de table :
+  + MC :
+    * stagiaires prévus (extraction ADN mycorrhizes, mise en place parcelles, interactions en pot plants de tomates mycorhizées / nématodes)
+  + LD :
+    * venue d'une chercheuse d'Avignon en mission pour RTBFoods : clarifier positionnement de l'INRA sur le projet (aptitudes à la transformation des produits et attentes des consommateurs)
+    * va partir en mission (chimiométrie)
+  + LG :
+    * modélisation Explorer : données agroéco de la microferme intégrées pour simulations dans Mosaica
+  + AR :
+    * missions : projet sargasse, CAPN, séminaire fusion INRAe
+  + LP :
+    * enseignements à l'UA
+  + IF :
+    * audit CRB à venir fin novembre
+    * participé à réunion des CRB avec MU
+    * a signalé de gros problèmes de salles de culture
+
+Entered on [2019-11-14 Thu 13:24]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
