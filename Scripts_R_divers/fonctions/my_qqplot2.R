@@ -1,4 +1,4 @@
-my_qqplot2 <- function(m){
+my_qqplot <- function(m){
   require(envelope)
   resid <- sort(residuals(m,type="pearson"))
   resid <- resid[!is.na(resid[])]
@@ -16,5 +16,5 @@ my_qqplot2 <- function(m){
     stat_smooth(method = "lm", se = F, color = "black", size=0.5)+
     scale_x_continuous(name="Theoretical quantiles")+
     scale_y_continuous(name="Studentized residuals")+
-    my_ggplot_theme()
+    theme_bw()
 }
