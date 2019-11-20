@@ -1,20 +1,19 @@
 ---
 title: Analyse de données multidimensionnelles
 output:
-  pdf_document:
-    toc: true
-    toc_depth: 2
-    df_print: kable
-    latex_engine: xelatex
   html_document:
     theme: flatly
     toc: true
     toc_depth: 2
     toc_float: true
     df_print: kable
-mainfont: Calibri
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    df_print: kable
+    latex_engine: xelatex
+mainfont: Avenir Next LT Pro
 fontsize: 18pt
-
 ---
 # ACP
 
@@ -412,7 +411,7 @@ fontsize: 18pt
   - objectifs :
     + étudier les ressemblances entre individus du point de vue de l'ensemble des variables **et** les relations entre variables
     + étudier globalement les ressemblances/différences entre groupes de variables
-    + étudier les individus pour voir s'ils sont décrits de la manière par différents groupes de variables (ex : un vin est-il décrit de la manière par plusieurs catégories de juges)
+    + étudier les individus pour voir s'ils sont décrits de la même manière par différents groupes de variables (ex : un vin est-il décrit de la même manière par plusieurs catégories de juges)
     + comparer les typologies issues des analyses séparées
   - **important** : il faut veiller au bon équilibre d'influence de chaque groupe de variable dans l'analyse
 
