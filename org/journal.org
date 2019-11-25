@@ -2288,3 +2288,12 @@ spatio-temporelle d'une population (Verena Trenkel, Ifremer)
 Entered on [2019-11-14 Thu 13:24]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+*** 2019-11-21 Thursday
+**** *Réunion CODIR* :meeting:codir:
+- Visite des départements 20-22 janvier 2020 :
+  + 4 dates bloquées pour ateliers de préparation
+  + réflexion sur un projet commun d'avenir autour du PIA Astro/URZ
+
+Entered on [2019-11-21 Thu 14:07]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
