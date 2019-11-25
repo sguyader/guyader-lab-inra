@@ -38,7 +38,7 @@ class: title-slide, animated, fadeIn
 
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : méthodes de lutte</span></div> 
+<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Formation Open Science - Retour d'expérience</span></div> 
 
 ---
 
@@ -70,7 +70,9 @@ class: main-slide, animated, fadeIn
   * Outils d'indexation
   * Entrepôts "**Git**" pour le suivi de version et le travail collaboratif
   * Notebooks (Jupyter, **RStudio** ou **Org-Mode**) : documents computationnels
-  <br><br>
+]
+--
+.Large[
 - test de dépôt de données :
   * dataset "test" contenant : 2 fichiers texte (données de 2 expés), 1 fichier comptuationel (Rmd), 1 fichier PDF
   * essais avec 2 plateformes : **data.inra.fr** (INRA) et **zenodo** (CERN)
