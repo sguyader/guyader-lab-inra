@@ -1,96 +1,247 @@
 ---
-title: "Formation Open Science"
-author: "Sébastien GUYADER"
-date:
+title: Formation Open Science - 25-27 Novembre 2019
+author: "Sébastien Guyader (email: sebastien.guyader@inra.fr)"
+date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
-  xaringan::moon_reader:
-    lib_dir: libs
-    css: [default, "hygge", "./style/tweak.css", "./style/bootstrap_table.css", "./style/footer-header.css"]
-    nature:
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
-      ratio: 16:9
-      navigation:
-        click: true
-    seal: false
-    self_contained: false
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float:
+      toc_collapsed: false
+    toc_depth: 3
+  pdf_document:
+    latex_engine: xelatex
+mainfont: Carlito
+fontsize: 18pt
 ---
 
-```{r setup, include=FALSE, message=FALSE}
-options(htmltools.dir.version = FALSE)
-library(knitrBootstrap)
-library(anicon)
-library(icon)
-library(kableExtra)
-library(DiagrammeR)
+```{r, include=FALSE}
+requiredPackages = c("knitr","tidyverse","fitdistrplus","magrittr","drc","partykit","nlme","gridExtra")
+for(p in requiredPackages){
+  if(!require(p,character.only = TRUE)) install.packages(p)
+  library(p,character.only = TRUE)
+}
+opts_chunk$set(dev="pdf", dev.args=list(pointsize=12), echo=TRUE, warning=FALSE, message=FALSE)
 ```
 
-class: title-slide, animated, fadeIn
+# Contexte et enjeux du partage des données
 
-# Formation Open Science - Retour d'expérience
-### Sébastien GUYADER
-#### INRA - UR Astro - Petit-Bourg - _sebastien.guyader@inra.fr_
-<br><br><br>
-.right[<img src="./images/cc-by-nc-sa.png" alt="CC BY-NC-SA" width="120"/>]
+## 1. Contexte
 
----
+- Open Science, c'est quoi ?
+  + transition vers une nouvelle façon, ouverte, participative, de mener, publier et évaluer la recherche
+  + coopération, transparence
+  + robustesse, efficacité, pour tous
+  
+- le contexte est très favorable :
+  + politiques et démarches européennes
+  + politique française : plan national pour la science ouverte
+  + exigences des des agences de financement : CE, ANR
+  + règles de l'édition scientifique
+  + exigences et tendances scientifiques : plus de transparence, gagner en reproductibilité
+  + politique institutionnelle
+  
+- Open Access
+  + accès ouvert et gratuit
+  + grâce au web
+  
+- Open Data
+  + données de la recherche : enregistrements factuels (chiffres, texte, son, images...) utilisés comme sources principales pour la recherche... (défintion OCDE, 2007)
+  + *open* : mise à disposition libre, gratuite, sans aucune restriction ni copyright
+  
+- Priorités pour les différents acteurs de la recherche :
+  + chercheur : meilleure gestion des données, sécurisation et préservation, reconnaissance pour le travail fait sur les données
+  + instituts : mieux gérer les ressources, respect des mandats, éthique et reproductibilité, collaborations
+  
+- Politique CE :
+  + ERA : European Research Area
+  + à partir de 2020, ouverture des données avec effort sur respect des principes FAIR (Horizon Europe), allant plus loin que principes dictés par H2020
+  + Open Data :
+    * bénéficiaires des financements doivent déposer dans un entrepôt
+    * priorité sur données qui soutendent à des publications
+    * PGD obligatoire
+    * coûts associés à l'ouverture et au partage sont éligibles
+    * pilote ORD (Open Research Data) : article 29.3 du modèle de convention de subvention
 
-layout: true
-class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Formation Open Science - Retour d'expérience</span></div> 
+- Politique ANR :
+  + depuis fin 2018, projets devraient se conformer à l'ouverture des données
+  + obligation de rédiger un PGD
+  + dépôt des publications dans des archives ouvertes
 
----
+- Politique des éditeurs
+  + adoptent une "data policy"
+  + selon nature des données, parfois des entrepôts sont recommandés ou obligés
+  + TOP : Transparency Openness Promotion
+    * définition d'un certain nombre de standards sur citations, transparence des données, méthodes d'analyse
+    * 4 niveaux d'exigence (level 0 -> 3)
 
-## Contexte
+- Contexte scientifique :
+  + risque des pertes de données (ex : un article dans *Current Biology* 2014 montre qu'en écologie, souvent au bout de 20 ans on ne peut plus retrouver les données)
+  + problème de reproductibilité
+  + lien science ouverte et intégrité scientifique
+  
+- Politique nationale : 
+  + PNSO depuis juillet 2018
+    1. faire en sorte que les données produites soient en conformité avec principes FAIR
+    2. PGD
+    3. développement data papers/articles
+    
+- Politique INRA :
+  + 2011-2012 : rapport au Conseil Scientifique
+  + 2012 : note de cadrage
+  + 2012-2013 : chantier "data partage"
+  + depuis 2015, offre de services
+  + site web "data partage" ouvert en internet, point d'entrée vers services et outils
+  + data.inra.fr depuis mars 2018
+  + chartes : déontologie, ...
+  + DOCDOR : document d'orientation
+  + nouvelle direction **DIPSO** au 1er janvier 2020 : feuille de route open science
 
-### Historique
-.Large[
-- intérêt de longue date pour le **libre**, **open source**
-- idée de partage, de participation, et pollinisation croisée des idées...
-- partager les fruits de la recherche semble naturel
-- plus concrètement : passage au système d'exploitation Linux, aux logiciels FOSS :
+## 2. Concrètement pour le chercheur
+
+- Questions juridiques :
+  + identifier les données à produire, qui en est propriétaire (financement public/privé)
+  + les données sont-elles communiquables ?
+
+- Questions pratiques :
+  + comment améliorer la gestion des données ?
+  + comment implémenter les principes FAIR : métadonnées, DOI, license, choix de l'entrepôt...
+  + comment citer les jeux de données
+  
+- Questions scientifiques :
+  + comment répondre aux exigences d'un financeur ou éditeur
+  + quelles données seront partagées
+  + quel devenir aux données (garder, éliminer, partager, conserver à long terme ?)
+  + quelle stratégie sur le partage ou la publication des données
+  + quel choix de revue pour publier
+
+- PGD (DMP) :
+  + document décrivant comment les données sont obtenues, documentées, transformées, organisées, stockées, sécurisées au cours et à l'issue d'un projet
+  + aide à la mise en place de bonnes pratiques de gestion à toutes les étapes du cycle de vie des données
+  + décrit l'ensemble des données
+  + évolue en fonction de l'évancement du projet
+  
+- Entrepôts de données
+  + services en ligne
+  + répertoires d'entrepôts : re3data.org, fairsharing.org
+  + comment choisir un entrepôt : https://doranum.fr/depot-entrepots/
+    * selon recommandations
+    * critères multiples de choix
+  + sur le portail data inra, on peut demander à obtenir un DOI pour différents types de ressources (articles, rapports, sites web...)
+
+## 3. Offre de services
+
+- informations :
+  + sur le site portail www.inra.fr/datapartage (ou datapartage.inra.fr)
+  + pages Questions/Réponses du site IST
+  + cadre juridique (: informations sur https://doranum.fr/aspects-juridiques-ethiques/)
+- objectifs de l'offre de services :
+  + maîtriser la diffusion des données
+  + accroître la lisibilité et la visibilité des données
+  + être en cohérence avec la politique de l'établissement et la loi pour une République numérique
+  + formater pour l'évolution des pratiques
+  + infrastructures collectives : du poste de travail au cloud
+  + développer l'usage d'outils pour une recherche reproductible
+- stockage des données :
+  + pendant le projet : stockage DSI, stockage plateformes, Agrodataring, Data Inra
+  + à la fin du projet : Data Inra, entrepôts thématiques nationaux ou internationaux
+  + il y a des outils d'acquisition en cours de connexion avec ces outils de stockage (Sharepoint, SI gestion, Prodinra, Hal, revues, ...)
+- planification : templates PGD et DMP'Opidor
+- les acteurs et la gouvernance :
+  + principes : équilibre ouverture/fermeture des données, FAIR, respect des valeurs de la science, innovation et création de valeur pour la société
+  + rôle et responsabilités : producteurs de données (responsable projet, chercheur, ingénieur, ...), cellule de gouvernance
+  + DIPSO :
+    * Direction Pour la Science Ouverte
+    * 4 pôles : capitalisation et diffusion des connaissances, numérique pour la recherche, analyse de l'information, sciences en société
+
+## 4. Poduire des données FAIR
+
+- **F**indable :
+  - associer les données à des métadonnées et un DOI (universel, unique, pérenne)
+  - les métadonnées doivent être riches
+  - elles doivent inclure clairement et explicitement l'identifiant des données
+  - enregistrer ou indexer dans un système permettant les retrouver
+- **A**ccessible :
+  - les données doievent être claires et interprétables (homme et machine)
+  - protocoles de communication standards et ouverts, prévoyant un protocole d'authentification et d'autorisation
+  - les métadonnées doivent survivre aux données
+- **I**nteroperable :
+  - les métadonnées peuvent être échangées et combinées
+  - formats ouverts, ontologies, vocabulaires contrôlés
+  - incluent des liens "qualifiés" vers d'autres métadonnées
+- **R**eusable :
+  - license
 <br><br>
-<img src="./images/R_logo.svg.png" alt="license" height="50"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="./images/RStudio_Logo.png" alt="license" height="50"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="./images/LibreOffice_logo.svg.png" alt="license" height="50"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-**...**
-]
 
----
+- mouvement initié en 2014, principes publiés en 2016 dans *Scientific data*
+- principes applicables à tous les objets de la recherche
+- processus continu (+/- FAIR)
+- certains outils permettent de tester l'adéquation au FAIR :
+  http://oznome.csiro.au/5star, air self-assessment tool : http://www.ands-nectar-rds.org.au
+- Cf Cahier des techniques 2018 (Esther Dzalé Yeumo)
 
-## Contexte
+## 5. Atelier Plan de Gestion de Données
 
-### Mise en pratique
-.Large[
-- participation à un MOOC "Recherche Reproductible : principes méthodologiques pour une science transparente" :
-  * **Markdown** pour la prise de notes structurées
-  * Outils d'indexation
-  * Entrepôts "**Git**" pour le suivi de version et le travail collaboratif
-  * Notebooks (Jupyter, **RStudio** ou **Org-Mode**) : documents computationnels
-]
---
-.Large[
-- test de dépôt de données :
-  * dataset "test" contenant : 2 fichiers texte (données de 2 expés), 1 fichier comptuationel (Rmd), 1 fichier PDF
-  * essais avec 2 plateformes : **data.inra.fr** (INRA) et **zenodo** (CERN)
-  * verdict sur data.inra.fr :
-    - **positif** : entrepôt "maison" (communauté)
-    - **négatif** : manque de souplesse (autorisations, timeout), lenteur d'affichage, infos dispatchées sur différentes pages, serveur parfois injoignable
-]
+- Introduction : questions à se poser sur...
+  + le projet / la structure
+  + la collecte des données
+  + la documentation des données
+  + la sauvegarde des données
+  + l'éthique
+  + la propriété intellectuelle
+  + l'accès et partage
+  + l'archivage et préservation
+  + les ressources
+- le PGD est obligatoire pour les projets dans le cadre du pilote ORD
+- on peut sortir du pilote ORD dans certaines conditions, de manière partielle ou totale
+- si partiel, le PGD reste obligatoire, mais expliciter les modifications dans le PGD si la démarche a lieu en cours de projet
+- coûts de l'open data éligibles au financement :
+  + coûts additionnels nécessaires à l'ouverture des données
+  + estimation à 5% du budget du projet
+  + il existe des guides pour cette estimation
+- le document évolue en cours de projet
+- l'INRA a son propre modèle, il est possible de le garder même pour un projet ANR
+- pour la rédaction du PDG, il faut s'appuyer sur des documents, et un réseau de compétences (du juriste au chercheur)
+- 3 modèles de PGD : INRA, H2020, ANR
+- modèle INRA : 9 chapitres, 53 questions
+- démonstration de l'outil DMP OPIDoR (www.opidor.fr) :
+  + permet de rédiger un PDG à partir d'un modèle
+  + possibilité de travailler en collaboratif
+  + après inscription, permet de s'authentifier avec le LDAP Inra
+  + on peut choisir un modèle INRA, ou autre selon le besoin
+  * attention, pas de versionnement sur OPIDoR
+- exemple du PGD de Strcture de l'UMR EcoFog
 
----
+## 6. Préparation et gestion des données
 
-## Benchmarking
-<br>
+- anticiper dès la conception du projet
+  + prévoir quelles données seront produites : type ? volume ? format ?
+  + qui va les utiliser ? comment y accéder ?
+  + que faut-il conserver ou archiver ?
+  + où les conserver ? quelle protection ?
+  + quelle langue utilisée ?
+  + remplir un PGD, en restant raisonnables (on ne peut pas faire tout parfaitement)
+- organiser les fichiers :
+  + disque local, espace partagé localement ou en ligne
+  + définir les droits d'accès et de modification
+  + Cf. http://doranum.fr/le-stockage-des-donnees/
+  + choisir une méthode d'organisation
+    * par étiquettes et mots-clés (en utilisant un thésaurus partagé par tous)
+    * par hiérarchie (catégories, éviter redondance des fichiers, trouver un équilibre largeur/profondeur)
+  + établir une convention dans le nommage des fichiers
+  + définir le versionnement
+  + ...
+  
+## 7. Métadonnées
 
-
-.pull-left[
-[![Inra Dataverse](./images/DataInra-500x500.jpg)](https://data-preproduction.inra.fr/dataset.xhtml?persistentId=doi:10.70112/HZLEYQ)
-]
-
-.pull-right[
-[![Zenodo](./images/zenodo1.png)](https://sandbox.zenodo.org/record/421328)
-]
+- définition : données sur des données
+- 3 dimensions :
+  + description (quoi, où, comment...), en général non disciplinaires
+  + structuration (finesse et complexité dépendent des objectifs visés)
+  + sémantique (utilisation de vocabulaires)
+- permettent de :
+  + faciliter la découverte, l'accès et l'intelligibilité
+  + favoriser la réutilisation
+  + faciliter l'interopérabilité
+- les collecter le plus tôt possible, dès l'acquisition
+- aller voir https://lovinra.inra.fr/ par exemple
