@@ -245,3 +245,29 @@ opts_chunk$set(dev="pdf", dev.args=list(pointsize=12), echo=TRUE, warning=FALSE,
   + faciliter l'interopérabilité
 - les collecter le plus tôt possible, dès l'acquisition
 - aller voir https://lovinra.inra.fr/ par exemple
+
+## 8. Atelier Data Inra
+
+- 7 jeux de métadonnées disponibles :
+  + common metadata (5 sont obligatoires)
+  + geospatial
+  + SHS
+  + Life sciences
+  + derived text
+  + semantic source
+- conformes aux stadard (Dublin Core, DataCite, ...)
+- peuvent utiliser des vocabulaires contrôlés
+- présaisie possible de valeurs pas défaut *via* des templates
+- export des metadonnées
+- support : datainra@inra.fr
+
+## 9. Publier un data paper pour valoriser ses données
+
+- Research Data Alliance (RDA) : diffusion des données + métadonnées + doc d'accompagnment et code logiciel
+- diffusion des données via entrepôts et/ou revues spécialisées
+- données partagées vs. publiées :
+  + "publier" = disponibilité au public (entrepo ouvert) + citables (DOI) **+ validées (perr reviex)**
+  + sans validation, il s'agit juste de partage
+- un data paper, c'est un document de métadonnées qui décrit un dataset, avec éléments contextuels dans une revue avec peer review
+- choisir sa revue :
+  + 
