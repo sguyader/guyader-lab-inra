@@ -2297,3 +2297,32 @@ Entered on [2019-11-14 Thu 13:24]
 Entered on [2019-11-21 Thu 14:07]
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
+** 2019-12 December
+*** 2019-12-04 Wednesday
+**** Visite PDG INRA Philippe MAUGUIN
+- Présentation du 3SC
+  + spécificités du Centre en zone tropicale : hotspot de
+    biodiversité, immersion dans les bassins caribéen et amazonien,
+    espaces fortement impactés par les changements globaux
+  + enjeux : #INRA 2025 "sécurité alimentaire et nutritionnelle",
+    Régional (S3, Sresri et Srdeii)
+  + 2 identifiants :
+    * Transition agroécologique et bioéconomie en milieu tropical
+      - cibles : toutes les agricultures
+      - orientations des recherches : alternatives écologiques,
+        bioéconomie, résilience, organisation
+      - susciter l'innovation dans la valorisation des techniques et
+        des agrobioressources
+    * Ecologie intégrative et valorisation des forêts tropicales
+      - caractériser, protéger et valoriser
+      - susciter l'innovation dans la valorisation
+  + Stratégie de site et de partenariat
+    * 3 ambitions
+      - Actions à forte pertinence
+      - Intégration caribéenne
+      - ...
+
+
+Entered on [2019-12-04 Wed 09:04]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/org/journal.org]]
