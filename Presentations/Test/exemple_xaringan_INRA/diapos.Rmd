@@ -65,8 +65,9 @@ m <- mermaid("gantt
         Future task in critical line        :crit, 5d
         Create tests for renderer           :2d
         Add to mermaid                      :1d")
-#htmlwidgets::saveWidget(m, 'diagram.html', background="transparent")
-widgetframe::frameWidget(m, height=250)
+
+m %>% frameableWidget()
+
 
 ```
 ]
