@@ -1,0 +1,42 @@
+
+    model{
+        ## system of ODEs resolution
+        solution[1:ntimes,1:Nesp] <- ode(VALinits[1:Nesp], 
+                                   tgrid[1:ntimes], 
+                                   D(C[1:Nesp], s1), 
+                                   origin, 
+                                   tol) 
+        ## abundance model
+
+        D(C[1], s1) <- alpha*C[1] - beta*C[1]*C[2]
+        D(C[2], s1) <- -gamma*C[2] + delta*C[1]*C[2]
+
+        ## observation
+        Lynxinit ~ dpois(VALinits[2])
+        Lievreinit ~ dpois(VALinits[1])
+        for (t in 1:Nyear){
+             Lynx[t] ~ dpois(solution[t,2])
+             Lynxrep[t] ~ dpois(solution[t,2])
+             Lievre[t] ~ dpois(solution[t,1])
+             Lievrerep[t] ~ dpois(solution[t,1])
+             evalLynx[t] <- solution[t,2]
+             ELynx[t] <- pow(Lynx[t]-evalLynx[t],2)/(evalLynx[t]+0.5)
+             ELynxrep[t] <- pow(Lynxrep[t]-evalLynx[t],2)/(evalLynx[t]+0.5)
+             evalLievre[t] <- solution[t,1]
+             ELievre[t] <- pow(Lievre[t]-evalLievre[t],2)/(evalLievre[t]+0.5)
+             ELievrerep[t] <- pow(Lievrerep[t]-evalLievre[t],2)/(evalLievre[t]+0.5)
+        }
+
+        fitLynx <- sum(ELynx[])
+        fitLynxrep <- sum(ELynxrep[])
+        fitLievre <- sum(ELievre[])
+        fitLievrerep <- sum(ELievrerep[])
+        
+        ## a priori
+        VALinits[1] ~ dunif(0,100)
+        VALinits[2] ~ dunif(0,100)
+        alpha ~ dunif(0,1)
+        beta ~ dunif(0,1)
+        gamma ~ dunif(0,1)
+        delta ~ dunif(0,1)
+    }

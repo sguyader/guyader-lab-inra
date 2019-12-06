@@ -1,0 +1,148 @@
+---
+title: "Analyse de l'incidence de la varicelle"
+author: "Sébastien Guyader"
+date: "29 octobre 2018"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Préparation des données
+
+Les données de l'incidence de la varicelle sont disponibles du site Web du [Réseau Sentinelles](http://www.sentiweb.fr/). Nous les récupérons en format CSV dont chaque ligne correspond à une semaine de la période demandée. Les dates de départ et de fin sont codées dans l'URL: "wstart=198501" pour semaine 1 de l'année 1985 et "wend=201730" pour semaine 30 de l'année 2017. L'URL complet est:
+```{r}
+data_url = "https://www.sentiweb.fr/datasets/incidence-PAY-7.csv"
+```
+
+### Chargement du fichier de données "data.csv", ou téléchargement des données si le fichier n'existe pas et création sur le disque du fichier "data.csv"
+```{r}
+data_file = "varicelle.csv"	
+if (!file.exists(data_file)) {	
+    download.file(data_url, data_file, method="auto")	
+}
+data = read.csv(data_file, skip=1)
+```
+
+Regardons ce que nous avons obtenu:
+```{r}
+head(data)
+tail(data)
+```
+
+Y a-t-il des points manquants dans nos données ?
+```{r}
+na_records = apply(data, 1, function (x) any(is.na(x)))
+data[na_records,]
+```
+
+Les deux colonnes qui nous intéressent sont `week` et `inc`. Vérifions leurs classes:
+```{r}
+class(data$week)
+class(data$inc)
+```
+
+### Conversion des numéros de semaine
+
+La gestion des dates est toujours un sujet délicat. Il y a un grand nombre de conventions différentes qu'il ne faut pas confondre. Notre jeux de données utilise un format que peu de logiciels savent traiter: les semaines en format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601). En `R`, il est géré par la bibliothèque [parsedate](https://cran.r-project.org/package=parsedate):
+
+```{r}
+library(parsedate)
+```
+
+Pour faciliter le traitement suivant, nous remplaçons ces semaines par les dates qui correspondent aux lundis. Voici une petite fonction qui fait la conversion pour une seule valeur:
+
+```{r}
+convert_week = function(w) {
+	ws = paste(w)
+	iso = paste0(substring(ws, 1, 4), "-W", substring(ws, 5, 6))
+	as.character(parse_iso_8601(iso))
+}
+```
+
+Nous appliquons cette fonction à tous les points, créant une nouvelle colonne `date` dans notre jeu de données:
+```{r}
+data$date = as.Date(sapply(data$week, convert_week))
+```
+
+Vérifions qu'elle est de classe `Date`:
+```{r}
+class(data$date)
+```
+
+Les points sont dans l'ordre chronologique inverse, il est donc utile de les trier:
+```{r}
+data = data[order(data$date),]
+```
+
+C'est l'occasion pour faire une vérification: nos dates doivent être séparées d'exactement sept jours:
+```{r}
+all(diff(data$date) == 7)
+```
+
+### Inspection
+
+Regardons enfin à quoi ressemblent nos données !
+```{r}
+plot(data$date, data$inc, type="l", xlab="Date", ylab="Incidence hebdomadaire")
+```
+
+Un zoom sur les dernières années montre mieux la localisation des pics en hiver. Le creux des incidences se trouve en été.
+```{r}
+with(tail(data, 200), plot(date, inc, type="l", xlab="Date", ylab="Incidence hebdomadaire"))
+```
+
+## L'incidence annuelle
+
+### Calcul
+
+Étant donné que le pic de l'épidémie se situe de l'automne au printemps, à cheval entre deux années civiles, nous définissons la période de référence entre deux minima de l'incidence, du 1er septembre de l'année $N$ au 1er septembre de l'année $N+1$. Nous mettons l'année $N+1$ comme étiquette sur cette année décalée, car le pic de l'épidémie est toujours au début de l'année $N+1$. Comme l'incidence de syndrome grippal est très faible en été, cette modification ne risque pas de fausser nos conclusions. 
+L'argument `na.rm=True` dans la sommation précise qu'il faut supprimer les points manquants. Ce choix est raisonnable car il n'y a qu'un seul point manquant, dont l'impact ne peut pas être très fort.
+```{r}
+pic_annuel = function(annee) {
+      debut = paste0(annee-1,"-09-01")
+      fin = paste0(annee,"-09-01")
+      semaines = data$date > debut & data$date <= fin
+      sum(data$inc[semaines], na.rm=TRUE)
+      }
+```
+
+Nous devons aussi faire attention aux premières et dernières années de notre jeux de données. Les données commencent en janvier 1985, ce qui ne permet pas de quantifier complètement le pic attribué à cette année. Nous l'enlevons donc de notre analyse. Par contre, les données se terminent en été 2017, peu avant le 1er août, ce qui nous permet d'inclure cette année.
+```{r}
+annees = 1991:2018
+```
+
+Nous créons un nouveau jeu de données pour l'incidence annuelle, en applicant la fonction `pic_annuel` à chaque année:
+```{r}
+inc_annuelle = data.frame(annee = annees,
+                          incidence = sapply(annees, pic_annuel))
+head(inc_annuelle)
+```
+
+### Inspection
+
+Voici les incidences annuelles en graphique:
+```{r}
+plot(inc_annuelle, type="l", xlab="Année", ylab="Incidence annuelle")
+```
+
+### Identification des épidémies les plus fortes
+
+Une liste triée par ordre décroissant d'incidence annuelle permet de plus facilement repérer les valeurs les plus élevées:
+```{r}
+head(inc_annuelle[order(-inc_annuelle$incidence),])
+```
+
+### Identification des épidémies les plus faibles
+
+Une liste triée par ordre décroissant d'incidence annuelle permet de plus facilement repérer les valeurs les plus élevées:
+```{r}
+head(inc_annuelle[order(inc_annuelle$incidence),])
+```
+
+Enfin, un histogramme montre bien que les épidémies fortes, qui touchent environ 10% de la population française, sont assez rares: il y en eu trois au cours des 35 dernières années.
+```{r}
+hist(inc_annuelle$incidence, breaks=10, xlab="Incidence annuelle", ylab="Nb d'observations", main="")
+```

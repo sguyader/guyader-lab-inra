@@ -1,0 +1,34 @@
+---
+title: "Votre titre"
+author: "Votre nom"
+date: "La date du jour"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Quelques explications
+
+Ceci est un document R markdown que vous pouvez aisément exporter au format HTML, PDF, et MS Word. Pour plus de détails sur R Markdown consultez <http://rmarkdown.rstudio.com>.
+
+Lorsque vous cliquerez sur le bouton **Knit** ce document sera compilé afin de ré-exécuter le code R et d'inclure les résultats dans un document final. Comme nous vous l'avons montré dans la vidéo, on inclue du code R de la façon suivante:
+
+```{r cars}
+summary(cars)
+```
+
+Et on peut aussi aisément inclure des figures. Par exemple:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Vous remarquerez le paramètre `echo = FALSE` qui indique que le code ne doit pas apparaître dans la version finale du document. Nous vous recommandons dans le cadre de ce MOOC de ne pas utiliser ce paramètre car l'objectif est que vos analyses de données soient parfaitement transparentes pour être reproductibles. 
+
+Comme les résultats ne sont pas stockés dans les fichiers Rmd, pour faciliter la relecture de vos analyses par d'autres personnes, vous aurez donc intérêt à générer un HTML ou un PDF et à le commiter.
+Enfin, pour les prochains exercices, nous ne vous fournirons pas forcément de fichier de départ, ça sera à vous de le créer à partir de Rstudio et de le commiter vers gitlab.
+
+Maintenant, à vous de jouer! Vous pouvez effacer toutes ces informations pour essayer de reproduire le document sur le calcul de $\pi$.

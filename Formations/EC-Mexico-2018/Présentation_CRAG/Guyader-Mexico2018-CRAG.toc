@@ -1,0 +1,7 @@
+\babel@toc {french}{}
+\beamer@sectionintoc {1}{MEXICO}{2}{0}{1}
+\beamer@sectionintoc {2}{Sensibilit\IeC {\'e} / Incertitude}{5}{0}{2}
+\beamer@sectionintoc {3}{Plans d'exp\IeC {\'e}rience}{19}{0}{3}
+\beamer@sectionintoc {4}{Calibration / optimisation}{26}{0}{4}
+\beamer@sectionintoc {5}{Synth\IeC {\`e}se}{50}{0}{5}
+\beamer@sectionintoc {6}{Mod\IeC {\`e}le anthracnose}{53}{0}{6}

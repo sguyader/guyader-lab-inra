@@ -1,0 +1,86 @@
+#+TITLE:  Votre titre
+#+AUTHOR: Votre nom
+#+DATE:   La date du jour
+#+LANGUAGE: fr
+# #+PROPERTY: header-args :eval never-export
+# #### :session  :exports both
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+
+* Quelques explications
+
+Ceci est un document org-mode avec quelques exemples de code
+R. Une fois ouvert dans emacs, ce document peut aisément être
+exporté au format HTML, PDF, et Office. Pour plus de détails sur
+org-mode vous pouvez consulter https://orgmode.org/guide/.
+
+Lorsque vous utiliserez le raccourci =C-c C-e h o=, ce document sera
+compilé en html. Tout le code contenu sera ré-exécuté, les résultats
+récupérés et inclus dans un document final. Si vous ne souhaitez pas
+ré-exécuter tout le code à chaque fois, il vous suffit de supprimer
+le # et l'espace qui sont devant le ~#+PROPERTY:~ au début de ce
+document.
+
+Comme nous vous l'avons montré dans la vidéo, on inclut du code
+R de la façon suivante (et on l'exécute en faisant ~C-c C-c~):
+
+#+begin_src R :results output :exports both
+print("Hello world!")
+#+end_src
+
+#+RESULTS:
+: [1] "Hello world!"
+
+Voici la même chose, mais avec une session python (c'est le cas le
+plus courant, R étant vraiment un langage interactif), donc une
+persistance d'un bloc à l'autre (et on l'exécute toujours en faisant
+~C-c C-c~).
+
+#+begin_src R :results output :session *R* :exports both
+summary(cars)
+#+end_src
+
+#+RESULTS:
+:      speed           dist       
+:  Min.   : 4.0   Min.   :  2.00  
+:  1st Qu.:12.0   1st Qu.: 26.00  
+:  Median :15.0   Median : 36.00  
+:  Mean   :15.4   Mean   : 42.98  
+:  3rd Qu.:19.0   3rd Qu.: 56.00  
+:  Max.   :25.0   Max.   :120.00
+
+Et enfin, voici un exemple de sortie graphique:
+#+begin_src R :results output graphics :file "./cars.png" :exports results :width 600 :height 400 :session *R* 
+plot(cars)
+#+end_src
+
+#+RESULTS:
+[[file:./cars.png]]
+
+Vous remarquerez le paramètre ~:exports results~ qui indique que le code
+ne doit pas apparaître dans la version finale du document. Nous vous
+recommandons dans le cadre de ce MOOC de ne pas changer ce paramètre
+(indiquer ~both~) car l'objectif est que vos analyses de données soient
+parfaitement transparentes pour être reproductibles.
+
+Attention, la figure ainsi générée n'est pas stockée dans le document
+org. C'est un fichier ordinaire, ici nommé ~cars.png~. N'oubliez pas
+de le committer si vous voulez que votre analyse soit lisible et
+compréhensible sur GitLab.
+
+Enfin, pour les prochains exercices, nous ne vous fournirons pas
+forcément de fichier de départ, ça sera à vous de le créer, par
+exemple en repartant de ce document et de le commiter vers
+gitlab. N'oubliez pas que nous vous fournissons dans les ressources de
+ce MOOC une configuration avec un certain nombre de raccourcis
+claviers permettant de créer rapidement les blocs de code python (en
+faisant ~<r~ ou ~<R~ suivi de ~Tab~).
+
+Maintenant, à vous de jouer! Vous pouvez effacer toutes ces
+informations pour essayer de reproduire le document sur le calcul de
+$\pi$.

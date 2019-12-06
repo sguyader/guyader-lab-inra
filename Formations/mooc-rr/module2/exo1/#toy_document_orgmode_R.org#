@@ -1,0 +1,68 @@
+#+TITLE:  À propos du calcul de pi
+#+AUTHOR: Sébastien Guyader
+#+DATE:   24 octobre 2018
+#+LANGUAGE: fr
+# #+PROPERTY: header-args :eval never-export
+# #### :session  :exports both
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+
+* En demandant à la lib maths
+Mon ordinateur m'indique que \pi vaut /approximativement/
+
+#+begin_src R :results output :exports both
+pi
+#+end_src
+
+#+RESULTS:
+: [1] 3.141593
+
+* En utilisant la méthode des aiguilles de Buffon
+
+Mais calculé avec la *méthode* des [[https://fr.wikipedia.org/wiki/Aiguille_de_Buffon][aiguilles de Buffon]], on obtiendrait comme *approximation* :
+
+#+begin_src R :results output :session *R* :exports both
+set.seed(42)
+N = 100000
+x = runif(N)
+theta = pi/2*runif(N)
+2/(mean(x+sin(theta)>1))
+#+end_src
+
+#+RESULTS:
+: 
+: [1] 3.14327
+
+* Avec un argument "fréquentiel" de surface
+
+Sinon, une méthode plus simple à comprendre et ne faisant pas
+intervenir d'appel à la fonction sinus se base sur le fait que si \(X \sim
+U(0,1)\) et \(Y \sim U(0,1)\) alors \(P[X^2+Y^2 \le1]=\pi/4\) (voir [[https://fr.wikipedia.org/wiki/M%25C3%25A9thode_de_Monte-Carlo#D%25C3%25A9termination_de_la_valeur_de_%25CF%2580][méthode de
+Monte Carlo sur Wikipedia]]). Le code suivant illustre ce fait:
+
+#+begin_src R :results output graphics :file "./figure.png" :exports both :width 600 :height 400 :session *R* 
+set.seed(42)
+N = 1000
+df = data.frame(X = runif(N), Y = runif(N))
+df$Accept = (df$X**2 + df$Y**2 <=1)
+library(ggplot2)
+ggplot(df, aes(x=X,y=Y,color=Accept)) + geom_point(alpha=.2) + coord_fixed() + theme_bw()
+#+end_src
+
+#+RESULTS:
+[[file:./figure.png]]
+
+Il est alors aisé d'obtenir une approximation (pas terrible) de \pi en
+comptant combien de fois, en moyenne, \(X²+Y²\) est inférieur à 1:
+
+#+begin_src R :results output :session *R* :exports both
+4*mean(df$Accept)
+#+end_src
+
+#+RESULTS:
+: [1] 3.156

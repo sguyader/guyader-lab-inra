@@ -1,0 +1,207 @@
+#+TITLE: Incidence du syndrôme grippal
+#+LANGUAGE: fr
+#+OPTIONS: *:nil num:1 toc:t
+
+# #+HTML_HEAD: <link rel="stylesheet" title="Standard" href="http://orgmode.org/worg/style/worg.css" type="text/css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+
+#+PROPERTY: header-args  :session  :exports both
+
+* Préface
+
+Pour exécuter le code de cette analyse, il faut disposer des logiciels suivants:
+
+** Emacs 25 ou 26
+Une version plus ancienne d'Emacs devrait suffire, mais en ce cas il est prudent d'installer une version récente (9.x) d'org-mode.
+** Python 3.6
+Nous utilisons le traitement de dates en format ISO 8601, qui a été implémenté en Python seulement avec la version 3.6.
+
+#+BEGIN_SRC python :results output
+import sys
+if sys.version_info.major < 3 or sys.version_info.minor < 6:
+    print("Veuillez utiliser Python 3.6 (ou plus) !")
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :results output
+(unless (featurep 'ob-python)
+  (print "Veuillez activer python dans org-babel (org-babel-do-languages) !"))
+#+END_SRC
+
+** R 3.4
+Nous n'utilisons que des fonctionnalités de base du langage R, une version antérieure devrait suffire.
+
+#+BEGIN_SRC emacs-lisp :results output
+(unless (featurep 'ob-R)
+  (print "Veuillez activer R dans org-babel (org-babel-do-languages) !"))
+#+END_SRC
+
+* Préparation des données
+
+Les données de l'incidence du syndrome grippal sont disponibles du site Web du [[http://www.sentiweb.fr/][Réseau Sentinelles]]. Nous les récupérons en format CSV dont chaque ligne correspond à une semaine de la période demandée. Les dates de départ et de fin sont codées dans l'URL: "wstart=198501" pour semaine 1 de l'année 1985 et "wend=201730" pour semaine 30 de l'année 2017. L'URL complet est:
+#+NAME: data-url
+http://websenti.u707.jussieu.fr/sentiweb/api/data/rest/getIncidenceFlat?indicator=3&wstart=198501&wend=201730&geo=PAY1&$format=csv
+
+Voici l'explication des colonnes donnée sur le site d'origine:
+
+| Nom de colonne | Libellé de colonne                                                                                                                |
+|----------------+-----------------------------------------------------------------------------------------------------------------------------------|
+| ~week~       | Semaine calendaire (ISO 8601)                                                                                                     |
+| ~indicator~  | Code de l'indicateur de surveillance                                                                                              |
+| ~inc~        | Estimation de l'incidence de consultations en nombre de cas                                                                       |
+| ~inc_low~    | Estimation de la borne inférieure de l'IC95% du nombre de cas de consultation                                                     |
+| ~inc_up~     | Estimation de la borne supérieure de l'IC95% du nombre de cas de consultation                                                     |
+| ~inc100~     | Estimation du taux d'incidence du nombre de cas de consultation (en cas pour 100,000 habitants)                                   |
+| ~inc100_low~ | Estimation de la borne inférieure de l'IC95% du taux d'incidence du nombre de cas de consultation (en cas pour 100,000 habitants) |
+| ~inc100_up~  | Estimation de la borne supérieure de l'IC95% du taux d'incidence du nombre de cas de consultation (en cas pour 100,000 habitants) |
+| ~geo_insee~  | Code de la zone géographique concernée (Code INSEE) http://www.insee.fr/fr/methodes/nomenclatures/cog/                            |
+| ~geo_name~   | Libellé de la zone géographique (ce libellé peut être modifié sans préavis)                                                       |
+
+L'indication d'une semaine calendaire en format [[https://en.wikipedia.org/wiki/ISO_8601][ISO-8601]] est populaire en Europe, mais peu utilisée aux Etats-Unis. Ceci explique peut-être que peu de logiciels savent gérer ce format. Le langage Python le fait depuis la version 3.6. Nous utilisons donc ce langage pour la préparation de nos données.
+
+** Téléchargement
+Après avoir téléchargé les données, nous commençons par l'extraction des données qui nous intéressent. D'abord nous découpons le contenu du fichier en lignes, dont nous jetons la première qui ne contient qu'un commentaire. Les autres lignes sont découpées en colonnes.
+
+#+BEGIN_SRC python :results silent :var data_url=data-url
+from urllib.request import urlopen
+
+data = urlopen(data_url).read()
+lines = data.decode('ascii').strip().split('\n')
+data_lines = lines[1:]
+table = [line.split(',') for line in data_lines]
+#+END_SRC
+
+Regardons ce que nous avons obtenu:
+#+BEGIN_SRC python :results value
+table[:5]
+#+END_SRC
+
+** Extraction des colonnes utilisées
+Il y a deux colonnes qui nous intéressent: la première (~"week"~) et la troisième (~"inc"~). Nous vérifions leurs noms dans l'en-tête, que nous effaçons par la suite. Enfin, nous créons un tableau avec les deux colonnes pour le traitement suivant.
+#+BEGIN_SRC python :results silent
+week = [row[0] for row in table]
+assert week[0] == 'week'
+del week[0]
+inc = [row[2] for row in table]
+assert inc[0] == 'inc
+del inc[0]
+raw_data = list(zip(week, inc))
+#+END_SRC
+
+Regardons les premières et les dernières lignes. Nous insérons ~None~ pour indiquer à org-mode la séparation entre les trois sections du tableau: en-tête, début des données, fin des données.
+#+BEGIN_SRC python :results value
+[('week', 'inc'), None] + raw_data[:5] + [None] + raw_data[-5:]
+#+END_SRC
+
+** Vérification
+Il est toujours prudent de vérifier si les données semblent crédibles. Nous savons que les semaines sont données par six chiffres (quatre pour l'année et deux pour la semaine), et que les incidences sont des nombres entiers positifs.
+#+BEGIN_SRC python :results output
+for week, inc in raw_data:
+    if len(week) != 6 or not week.isdigit():
+        print("Valeur suspecte dans la colonne 'week': ", (week, inc))
+    if not inc.isdigit():
+        print("Valeur suspecte dans la colonne 'inc': ", (week, inc))
+#+END_SRC
+
+La vérification a mis en évidence un point manquant dans le jeux de données. Nous l'éliminons, ce qui n'a pas d'impact fort sur notre analyse qui est assez simple.
+#+BEGIN_SRC python :results silent
+valid_data = [record for record in raw_data if record[1] != '-']
+#+END_SRC
+
+** Conversions
+Pour faciliter les traitements suivants, nous remplaçons les numéros de semaine ISO par les dates qui correspondent aux lundis. A cette occasion, nous trions aussi les données par la date, et nous transformons les incidences en nombres entiers.
+
+#+BEGIN_SRC python :results silent
+import datetime
+data = [(datetime.datetime.strptime(year_and_week + ":1" , '%G%V:%u').date(),
+         int(inc))
+        for year_and_week, inc in valid_data]
+data.sort(key = lambda record: record[0])
+#+END_SRC
+
+Regardons de nouveau les premières et les dernières lignes:
+#+BEGIN_SRC python :results value
+str_data = [(str(date), str(inc)) for date, inc in data]
+[('date', 'inc'), None] + str_data[:5] + [None] + str_data[-5:]
+#+END_SRC
+
+** Vérification des dates
+Nous faisons encore une vérification: nos dates doivent être séparées d'exactement une semaine, sauf autour du point manquant.
+#+BEGIN_SRC python :results output
+dates = [date for date, _ in data]
+for date1, date2 in zip(dates[:-1], dates[1:]):
+    if date2-date1 != datetime.timedelta(weeks=1):
+        print(f"Il y a {date2-date1} entre {date1} et {date2}")
+#+END_SRC
+
+** Passage Python -> R
+Nous passons au langage R pour inspecter nos données. Nous utilisons le mécanisme d'échange de données proposé par org-mode, ce qui nécessite un peu de code Python pour transformer les données dans le bon format.
+
+#+NAME: data-for-R
+#+BEGIN_SRC python :results silent
+[('date', 'inc'), None] + [(str(date), inc) for date, inc in data]
+#+END_SRC
+
+En R, les données arrivent sous forme d'un data frame, mais il faut encore convertir les dates, qui arrivent comme chaînes de caractères.
+#+BEGIN_SRC R :results output :var data=data-for-R
+data$date <- as.Date(data$date)
+summary(data)
+#+END_SRC
+
+** Inspection
+Regardons enfin à quoi ressemblent nos données !
+#+BEGIN_SRC R :results output graphics :file inc-plot.png
+plot(data, type="l", xlab="Date", ylab="Incidence hebdomadaire")
+#+END_SRC
+
+Un zoom sur les dernières années montre mieux la situation des pics en hiver. Le creux des incidences se trouve en été.
+#+BEGIN_SRC R :results output graphics :file inc-plot-zoom.png
+plot(tail(data, 200), type="l", xlab="Date", ylab="Incidence hebdomadaire")
+#+END_SRC
+
+* Étude de l'incidence annuelle
+
+** Calcul de l'incidence annuelle
+Étant donné que le pic de l'épidémie se situe en hiver, à cheval entre deux années civiles, nous définissons la période de référence entre deux minima de l'incidence, du 1er août de l'année /N/ au 1er août de l'année /N+1/. Nous mettons l'année /N+1/ comme étiquette sur cette année décalée, car le pic de l'épidémie est toujours au début de l'année /N+1/. Comme l'incidence du syndrome grippal est très faible en été, cette modification ne risque pas de fausser nos conclusions.
+
+Voici une fonction qui calcule l'incidence annuelle en appliquant ces conventions.
+#+BEGIN_SRC R :results silent
+pic_annuel = function(annee) {
+      debut = paste0(annee-1,"-08-01")
+      fin = paste0(annee,"-08-01")
+      semaines = data$date > debut & data$date <= fin
+      sum(data$inc[semaines], na.rm=TRUE)
+      }
+#+END_SRC
+
+Nous devons aussi faire attention aux premières et dernières années de notre jeux de données. Les données commencent en janvier 1985, ce qui ne permet pas de quantifier complètement le pic attribué à cette année. Nous le supprimons donc de notre analyse. Par contre, les données se terminent en été 2017, peu avant le 1er août, ce qui nous permet d'inclure cette année dans l'analyse.
+#+BEGIN_SRC R :results silent
+annees <- 1986:2017
+#+END_SRC
+
+#+BEGIN_SRC R :results value
+inc_annuelle = data.frame(annee = annees,
+                          incidence = sapply(annees, pic_annuel))
+head(inc_annuelle)
+#+END_SRC
+
+** Inspection
+Voici les incidences annuelles en graphique.
+#+BEGIN_SRC R :results output graphics :file annual-inc-plot.png
+plot(inc_annuelle, type="p", xlab="Année", ylab="Incidence annuelle")
+#+END_SRC
+
+** Identification des épidémies les plus fortes
+Une liste triée par ordre décroissant d'incidence annuelle permet de plus facilement repérer les valeurs les plus élevées:
+#+BEGIN_SRC R :results output
+head(inc_annuelle[order(-inc_annuelle$incidence),])
+#+END_SRC
+
+Enfin, un histogramme montre bien que les épidémies fortes, qui touchent environ 10% de la population française, sont assez rares: il y en eu trois au cours des 35 dernières années.
+#+BEGIN_SRC R :results output graphics :file annual-inc-hist.png
+hist(inc_annuelle$incidence, breaks=10, xlab="Incidence annuelle", ylab="Nb d'observations", main="")
+#+END_SRC

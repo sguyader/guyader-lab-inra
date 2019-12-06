@@ -1,0 +1,51 @@
+---
+title: "À propos du calcul de pi"
+author: "Sébastien Guyader"
+date: "24 octobre 2018"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## En demandant à la lib maths
+
+Mon ordinateur m'indique que $\pi$ vaut *approximativement*
+
+```{r lib_maths}
+pi
+```
+
+## En utilisant la méthode des aiguilles de Buffon
+
+Mais calculé avec la **méthode** des [aiguilles de Buffon](https://fr.wikipedia.org/wiki/Aiguille_de_Buffon), on on obtiendrait comme **approximation** :
+
+```{r aiguilles_buffon}
+set.seed(42)
+N = 100000
+x = runif(N)
+theta = pi/2*runif(N)
+2/(mean(x+sin(theta)>1))
+```
+
+## Avec un argument “fréquentiel” de surface
+
+Sinon, une méthode plus simple à comprendre et ne faisant pas intervenir d’appel à la fonction sinus se base sur le fait que si $X \sim U(0,1)$ et $Y \sim U(0,1)$ alors $P[X^2+Y^2 \le 1]=\pi /4 (voir [méthode de Monte Carlo sur Wikipedia](https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Monte-Carlo#D%C3%A9termination_de_la_valeur_de_%CF%80)). Le code suivant illustre ce fait:
+
+```{r somme_carrés_XY}
+set.seed(42)
+N = 1000
+df = data.frame(X = runif(N), Y = runif(N))
+df$Accept = (df$X**2 + df$Y**2 <=1)
+library(ggplot2)
+ggplot(df, aes(x=X,y=Y,color=Accept)) + geom_point(alpha=.2) + coord_fixed() + theme_bw()
+```
+
+Il est alors aisé d’obtenir une approximation (pas terrible) de $\pi$ en comptant combien de fois, en moyenne, $X^2+Y^2$ est inférieur à 1:
+
+```{r approx_pi}
+4*mean(df$Accept)
+```
+

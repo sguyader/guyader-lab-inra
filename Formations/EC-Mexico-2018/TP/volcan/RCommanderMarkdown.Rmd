@@ -1,0 +1,271 @@
+<!-- R Commander Markdown Template -->
+
+Replace with Main Title
+=======================
+
+### Your Name
+
+### `r as.character(Sys.Date())`
+
+```{r echo=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE, out.width=750, fig.height=8, fig.width=8)
+library(Rcmdr)
+library(car)
+library(RcmdrMisc)
+```
+
+
+```{r echo=FALSE}
+# include this code chunk as-is to enable 3D graphs
+library(rgl)
+knitr::knit_hooks$set(webgl = hook_webgl)
+```
+
+
+```{r}
+source("mainScript_DatascienceClass.R")
+```
+
+
+```{r}
+valfac = lapply(n2i,function(ll) seq(xmin[ll],xmax[ll],length.out=5))
+```
+
+
+```{r}
+planX = expand.grid(valfac)
+```
+
+
+```{r}
+summary(planX)
+```
+
+
+```{r}
+Y = apply(planX,1,compute_wls)
+```
+
+
+```{r}
+XY = cbind(planX,Y)
+```
+
+
+```{r}
+plot(as.data.frame(XY))
+```
+
+
+```{r}
+#install.packages("scatterplot3d")
+```
+
+
+```{r}
+library(scatterplot3d)
+```
+
+
+```{r}
+planT = expand.grid(valfac[c("xs","a","p")])
+```
+
+
+```{r}
+toto= scatterplot3d(planX[1:125,], type="p")
+```
+
+
+```{r}
+toto$points3d
+```
+
+
+```{r}
+for(i in 2:4) toto$points3d (rep(valfac$xs[1],5), valfac$ys, rep(valfac$zs[i],5),type="l", lty=2, col="grey")
+```
+
+
+```{r}
+for(i in 2:4) toto$points3d (rep(valfac$xs[5],5), valfac$ys, rep(valfac$zs[i],5),type="l", lty=2, col="grey")
+```
+
+
+```{r}
+for(j in 2:4) { for(i in 2:5) toto$points3d (rep(valfac$xs[j],5), valfac$ys, rep(valfac$zs[i],5),type="l", lty=2, 
+  col="grey")}
+```
+
+
+```{r}
+for(i in 2:4) toto$points3d (valfac$xs, rep(valfac$ys[1],5), rep(valfac$zs[i],5),type="l", lty=2, col="grey")
+```
+
+
+```{r}
+for(i in 2:4) toto$points3d (valfac$xs, rep(valfac$ys[5],5), rep(valfac$zs[i],5),type="l", lty=2, col="grey")
+```
+
+
+```{r}
+for(j in 2:4) { for(i in 2:5) toto$points3d (valfac$xs, rep(valfac$ys[j],5),rep(valfac$zs[i],5),type="l", lty=2, 
+  col="grey")}
+```
+
+
+```{r}
+for(i in 2:4) toto$points3d (rep(valfac$xs[i],5), rep(valfac$ys[1],5), valfac$zs,type="l", lty=2, col="grey")
+```
+
+
+```{r}
+for(i in 2:4) toto$points3d (rep(valfac$xs[i],5), rep(valfac$ys[5],5), valfac$zs,type="l", lty=2, col="grey")
+```
+
+
+```{r}
+for(j in 2:4) { for(i in 1:5) toto$points3d (rep(valfac$xs[i],5), rep(valfac$ys[j],5),valfac$zs,type="l", lty=2, 
+  col="grey")}
+```
+
+
+```{r}
+planZ = as.data.frame(planX)
+```
+
+
+```{r}
+planZ = apply(planZ, 2, as.factor)
+```
+
+
+```{r}
+ZY = cbind(planZ,Y)
+```
+
+
+```{r}
+summary(ZY)
+```
+
+
+```{r}
+ZY = cbind.data.frame(planZ,Y)
+```
+
+
+```{r}
+summary(ZY)
+```
+
+
+```{r}
+summary(aov(Y~xs*p*a, data=ZY))
+```
+
+
+```{r}
+res.aov = aov(Y~xs*p*a, data=ZY)
+```
+
+
+```{r}
+summary(res.aov)
+```
+
+```{r}
+uu = summary(res.aov)
+```
+
+
+```{r}
+uu[[1]][,2]/ sum(uu[[1]][,2]) * 100
+```
+
+
+```{r}
+resComplet.aov = aov(Y~xs*ys*zs*p*a, data=XY)
+```
+
+
+```{r}
+summary(resComplet.aov)
+```
+
+
+```{r}
+resComplet.aov = aov(Y~xs*ys*zs*p*a, data=ZY)
+```
+
+
+```{r}
+summary(resComplet.aov)
+```
+
+
+```{r}
+summary(aov(Y~xs*ys*a, data=ZY))
+```
+
+
+```{r}
+res.aov = aov(Y~xs*p*a, data=ZY)
+```
+
+
+```{r}
+summary(res.aov)
+```
+
+
+```{r}
+uu = summary(res.aov)
+```
+
+
+```{r}
+uu[[1]][,2]/ sum(uu[[1]][,2]) * 100
+```
+
+
+```{r}
+summary(resComplet.aov)
+```
+
+```{r}
+uuC = summary(resComplet.aov)
+```
+
+
+```{r}
+uuC[[1]][,2]/ sum(uuC[[1]][,2]) * 100
+```
+
+
+```{r}
+summary(res.aov)
+```
+
+
+```{r}
+res.aov = aov(Y~xs*ys*a, data=ZY)
+```
+
+
+```{r}
+summary(res.aov)
+```
+
+
+```{r}
+uu = summary(res.aov)
+```
+
+
+```{r}
+uu[[1]][,2]/ sum(uu[[1]][,2]) * 100
+```
+
+

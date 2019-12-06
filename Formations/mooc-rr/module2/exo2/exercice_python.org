@@ -1,0 +1,98 @@
+#+TITLE:  Votre titre
+#+AUTHOR: Votre nom
+#+DATE:   La date du jour
+#+LANGUAGE: fr
+# #+PROPERTY: header-args :eval never-export
+# #### :session  :exports both
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+
+* Quelques explications
+
+Ceci est un document org-mode avec quelques exemples de code
+python. Une fois ouvert dans emacs, ce document peut aisément être
+exporté au format HTML, PDF, et Office. Pour plus de détails sur
+org-mode vous pouvez consulter https://orgmode.org/guide/.
+
+Lorsque vous utiliserez le raccourci =C-c C-e h o=, ce document sera
+compilé en html. Tout le code contenu sera ré-exécuté, les résultats
+récupérés et inclus dans un document final. Si vous ne souhaitez pas
+ré-exécuter tout le code à chaque fois, il vous suffit de supprimer
+le # et l'espace qui sont devant le ~#+PROPERTY:~ au début de ce
+document.
+
+Comme nous vous l'avons montré dans la vidéo, on inclue du code
+python de la façon suivante (et on l'exécute en faisant ~C-c C-c~):
+
+#+begin_src python :results output :exports both
+print("Hello world!")
+#+end_src
+
+#+RESULTS:
+: Hello world!
+
+Voici la même chose, mais avec une session python, donc une
+persistance d'un bloc à l'autre (et on l'exécute toujours en faisant
+~C-c C-c~).
+#+begin_src python :results output :session :exports both
+import numpy
+x=numpy.linspace(-15,15)
+print(x)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[-15.         -14.3877551  -13.7755102  -13.16326531 -12.55102041
+ -11.93877551 -11.32653061 -10.71428571 -10.10204082  -9.48979592
+  -8.87755102  -8.26530612  -7.65306122  -7.04081633  -6.42857143
+  -5.81632653  -5.20408163  -4.59183673  -3.97959184  -3.36734694
+  -2.75510204  -2.14285714  -1.53061224  -0.91836735  -0.30612245
+   0.30612245   0.91836735   1.53061224   2.14285714   2.75510204
+   3.36734694   3.97959184   4.59183673   5.20408163   5.81632653
+   6.42857143   7.04081633   7.65306122   8.26530612   8.87755102
+   9.48979592  10.10204082  10.71428571  11.32653061  11.93877551
+  12.55102041  13.16326531  13.7755102   14.3877551   15.        ]
+#+end_example
+
+Et enfin, voici un exemple de sortie graphique:
+#+begin_src python :results output file :session :var matplot_lib_filename="./cosxsx.png" :exports results
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10,5))
+plt.plot(x,numpy.cos(x)/x)
+plt.tight_layout()
+
+plt.savefig(matplot_lib_filename)
+print(matplot_lib_filename)
+#+end_src
+
+#+RESULTS:
+[[file:./cosxsx.png]]
+
+Vous remarquerez le paramètre ~:exports results~ qui indique que le code
+ne doit pas apparaître dans la version finale du document. Nous vous
+recommandons dans le cadre de ce MOOC de ne pas changer ce paramètre
+(indiquer ~both~) car l'objectif est que vos analyses de données soient
+parfaitement transparentes pour être reproductibles.
+
+Attention, la figure ainsi générée n'est pas stockée dans le document
+org. C'est un fichier ordinaire, ici nommé ~cosxsx.png~. N'oubliez pas
+de le committer si vous voulez que votre analyse soit lisible et
+compréhensible sur GitLab.
+
+Enfin, pour les prochains exercices, nous ne vous fournirons pas
+forcément de fichier de départ, ça sera à vous de le créer, par
+exemple en repartant de ce document et de le commiter vers
+gitlab. N'oubliez pas que nous vous fournissons dans les ressources de
+ce MOOC une configuration avec un certain nombre de raccourcis
+claviers permettant de créer rapidement les blocs de code python (en
+faisant ~<p~, ~<P~ ou ~<PP~ suivi de ~Tab~).
+
+Maintenant, à vous de jouer! Vous pouvez effacer toutes ces
+informations pour essayer de reproduire le document sur le calcul de
+$\pi$.

@@ -1,0 +1,168 @@
+---
+title: "Analyse du risque de défaillance des joints toriques de la navette Challenger"
+author: "Arnaud Legrand"
+date: "28 juin 2018"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+Le 27 Janvier 1986, veille du décollage de la navette /Challenger/, eu
+lieu une télé-conférence de trois heures entre les ingénieurs de la
+Morton Thiokol (constructeur d'un des moteurs) et de la NASA. La
+discussion portait principalement sur les conséquences de la
+température prévue au moment du décollage de 31°F (juste en dessous de
+0°C) sur le succès du vol et en particulier sur la performance des
+joints toriques utilisés dans les moteurs. En effet, aucun test
+n'avait été effectué à cette température.
+
+L'étude qui suit reprend donc une partie des analyses effectuées cette
+nuit là et dont l'objectif était d'évaluer l'influence potentielle de
+la température et de la pression à laquelle sont soumis les joints
+toriques sur leur probabilité de dysfonctionnement. Pour cela, nous
+disposons des résultats des expériences réalisées par les ingénieurs
+de la NASA durant les 6 années précédant le lancement de la navette
+Challenger.
+
+# Chargement des données
+Nous commençons donc par charger ces données:
+
+```{r}
+data = read.csv("shuttle.csv",header=T)
+data
+```
+
+Le jeu de données nous indique la date de l'essai, le nombre de joints
+toriques mesurés (il y en a 6 sur le lançeur principal), la
+température (en Farenheit) et la pression (en psi), et enfin le
+nombre de dysfonctionnements relevés. 
+
+# Inspection graphique des données
+Les vols où aucun incident n'est relevé n'apportant aucun information
+sur l'influence de la température ou de la pression sur les
+dysfonctionnements, nous nous concentrons sur les expériences où au
+moins un joint a été défectueux.
+
+```{r}
+data = data[data$Malfunction>0,]
+data
+```
+
+Très bien, nous avons une variabilité de température importante mais
+la pression est quasiment toujours égale à 200, ce qui devrait
+simplifier l'analyse.
+
+Comment la fréquence d'échecs varie-t-elle avec la température ?
+```{r}
+plot(data=data, Malfunction/Count ~ Temperature, ylim=c(0,1))
+```
+
+À première vue, ce n'est pas flagrant mais bon, essayons quand même
+d'estimer l'impact de la température $t$ sur la probabilité de
+dysfonctionnements d'un joint. 
+
+# Estimation de l'influence de la température
+
+Supposons que chacun des 6 joints toriques est endommagé avec la même
+probabilité et indépendamment des autres et que cette probabilité ne
+dépend que de la température. Si on note $p(t)$ cette probabilité, le
+nombre de joints $D$ dysfonctionnant lorsque l'on effectue le vol à
+température $t$ suit une loi binomiale de paramètre $n=6$ et
+$p=p(t)$. Pour relier $p(t)$ à $t$, on va donc effectuer une
+régression logistique.
+
+```{r}
+logistic_reg = glm(data=data, Malfunction/Count ~ Temperature, weights=Count, 
+                   family=binomial(link='logit'))
+summary(logistic_reg)
+```
+
+L'estimateur le plus probable du paramètre de température est 0.001416
+et l'erreur standard de cet estimateur est de 0.049, autrement dit on
+ne peut pas distinguer d'impact particulier et il faut prendre nos
+estimations avec des pincettes.
+
+# Estimation de la probabilité de dysfonctionnant des joints toriques
+La température prévue le jour du décollage est de 31°F. Essayons
+d'estimer la probabilité de dysfonctionnement des joints toriques à
+cette température à partir du modèle que nous venons de construire:
+
+```{r}
+# shuttle=shuttle[shuttle$r!=0,] 
+tempv = seq(from=30, to=90, by = .5)
+rmv <- predict(logistic_reg,list(Temperature=tempv),type="response")
+plot(tempv,rmv,type="l",ylim=c(0,1))
+points(data=data, Malfunction/Count ~ Temperature)
+```
+
+La probabilité d'échec des joints toriques est donc d'environ 0.2
+(comme dans les essais précédents) et comme on pouvait s'attendre au
+vu des données initiales, la température n'a pas d'impact notable. La
+probabilité que tous les joints toriques dysfonctionnent est de
+$0.2^6 \approx 6.4\times10^{-5}$. Tout est sous contrôle, le décollage
+peut donc avoir lieu demain comme prévu.
+
+Seulement, le lendemain, la navette Challenger explosera et emportera
+avec elle ses sept membres d'équipages. L'opinion publique est
+fortement touchée et lors de l'enquête qui suivra, la fiabilité des
+joints toriques sera directement mise en cause. Au delà des problèmes
+de communication interne à la NASA qui sont pour beaucoup dans ce
+fiasco, l'analyse précédente comporte (au moins) un petit
+problème... Saurez-vous le trouver ? Vous êtes libre de modifier cette
+analyse et de regarder ce jeu de données sous tous les angles afin
+d'expliquer ce qui ne va pas.
+
+# Ajout d'un terme quadratique
+Comme on le voit sur le graphique, et comme on peut s'y attendre, la réponse n'est pas monotone par rapport à la température : on ne s'attend pas à une simple augmentation du taux de dysfonctionnement avec la température. La courbe ressmblerait plus à un un "U" : le taux de dysfonctionnement pourrait être plus élevé aux basses températures ainsi qu'aux fortes températures. La regression logistique simple impose un terme linéaire, et comme on le voit sur le graphique le modèle prévoit une augmentation faible et monotone du taux de dysfonctionnement avec la température, ce qui implique aussi que le taux de dysfonctionnement tend vers 0 avec les températures décroissantes.
+En ajoutant un terme quadratique au modèle de regression, on permet au modèle de s'ajuster à une réponse non monotone :
+
+```{r}
+logistic_reg_quad = glm(data=data, Malfunction/Count ~ poly(Temperature,2), weights=Count, 
+                   family=binomial(link='logit'))
+summary(logistic_reg_quad)
+```
+
+L'estimateur du terme quadratique passe à 1.07933, et même s'il n'est pas significatif (P=0.27) l'effet températeur est plus important dans ce modèle, et mérite donc de s'y attarder.
+
+Regardons la figure comparant les deux modèles (avec l'erreur de prédiction associée) :
+
+```{r}
+library(ggplot2)
+
+tempv = seq(from=30, to=90, by = .5)
+
+rmv <- as.data.frame(predict(logistic_reg,list(Temperature=tempv),type="response",se.fit=T))
+pred <- data.frame(rmv[1:2],tempv)
+pred$ymin <- pred$fit-pred$se.fit
+pred$ymax <- pred$fit+pred$se.fit
+
+rmv_quad <- as.data.frame(predict(logistic_reg_quad,list(Temperature=tempv),type="response",se.fit=T))
+pred_quad <- data.frame(rmv_quad[,1:2],tempv)
+pred_quad$ymin <- pred_quad$fit-pred_quad$se.fit
+pred_quad$ymax <- pred_quad$fit+pred_quad$se.fit
+
+ggplot(data=pred_quad, aes(x=tempv,y=fit)) +
+  coord_cartesian(xlim=c(30,90), ylim=c(0,1)) +
+  geom_line(colour="blue") +
+  geom_ribbon(aes(ymin=ymin, ymax=ymax), fill="blue", alpha=0.2) +
+  geom_line(data=pred, aes(x=tempv,y=fit)) +
+  geom_ribbon(data=pred, aes(ymin=ymin, ymax=ymax), alpha=0.1) +
+  geom_point(data=data, aes(x=Temperature, y=Malfunction/Count)) +
+  labs(x="Temperature", y="Malfunction/Count") +
+  theme_bw()
+```
+
+Le modèle avec terme quadratique (courbe bleue) semble se comporter de manière plus satisfaisante : la probabilité que tous joints dysfonctionnent à basse température semble très élevée, et proche de 1 à la température 31°F.
+
+Comparons les deux modèles avec un test Log-likelihood ratio :
+
+```{r}
+anova(logistic_reg,logistic_reg_quad, test="LRT")
+```
+Même si le test n'est pas significatif, le modèle avec terme quadratique améliore l'ajustement (rduction de la déviance résiduelle).
+
+Avec le peu de données expérimentales, les test ne sont pas significatifs, mais il est clair que les résultats du second modèle sont alarmants.
+
+On constate une amélioration significative
+
+P.S. : Visiter plus tard le tuto sur [les intervalles de prédiction](https://www.fromthebottomoftheheap.net/2017/05/01/glm-prediction-intervals-ii/)

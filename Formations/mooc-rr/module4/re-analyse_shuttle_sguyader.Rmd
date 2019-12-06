@@ -1,0 +1,123 @@
+---
+title: "Reanalyse des données Challenger"
+author: "Sébastien Guyader"
+date: "November 12, 2018"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Chargement des librairies utilisées dans cette analyse
+library(ggplot2)
+```
+
+## Informations sur l'environnement de calcul
+
+```{r}
+# Données sur le système
+Sys.info()
+
+# Données sur R et les librairies chargées
+sessionInfo()
+```
+
+## Import des données au format CSV
+
+Le fichier de données est téléchargé depuis [cet endroit](https://app-learninglab.inria.fr/gitlab/moocrr-session1/moocrr-reproducibility-study/raw/master/data/shuttle.csv).
+
+Commençons par charger ces données :
+
+```{r}
+data <- read.csv("data.csv")
+data
+```
+
+## Visualisation des données
+
+```{r}
+ggplot(data=data, aes(x=Temperature, y=Malfunction)) +
+  geom_point() +
+  xlim(c(30,90)) + ylim(c(0,6)) +
+  xlab("Temperature") + ylab("Number of incidents") +
+  theme_bw()
+```
+
+## Analyse par regression logistique (loi binomiale sur y=Malfunction/Count)
+
+
+Comme l'influence de la pression est négligeable, analysons l'effet de la température seule :
+
+```{r}
+logis_reg_binomial <- glm(data=data, Malfunction/Count ~ Temperature, weights=Count, 
+                   family=binomial(link="logit"))
+summary(logis_reg_binomial)
+```
+
+Les paramètres estimés sont $\hat{\alpha}=`r signif(logis_reg_binomial$coefficients[1], 4)` \pm `r signif(summary(logis_reg_binomial)$coefficients[1,2], 4)`$ pour l'intercept et $\hat{\beta}=`r signif(logis_reg_binomial$coefficients[2], 4)` \pm `r signif(summary(logis_reg_binomial)$coefficients[2,2], 4)`$ pour l'effet Température.
+
+La déviance résiduelle est $G^2=`r signif(logis_reg_binomial$deviance, 5)`$ avec $`r logis_reg_binomial$df.residual`$ degrés de liberté.
+
+## Probabilité d'incident à 31°F
+
+Visualiser la courbe de prédiction sur le graphique :
+
+```{r}
+# Calculer les valeurs prédites par le modèle sur la gamme allant de 30 à 90°F
+temp <- seq(30, 90)
+preds_resp <- data.frame(fit=predict(logis_reg_binomial, list(Temperature=temp),
+                                     type="response"))
+preds_resp$temp <- temp
+
+# La réponse étant sur l'échelle 0 à 1 (Malfunction/Count) on multiplie
+# la réponse par 6 (valeur de Count) pour retrouve l'échelle initiale
+ggplot(data=data, aes(x=Temperature, y=Malfunction)) +
+  geom_point() +
+  geom_line(data=preds_resp, aes(x=temp, y=fit*6)) +
+  xlim(c(30,90)) + ylim(c(0,6)) +
+  xlab("Temperature") + ylab("Number of incidents") +
+  theme_bw() +
+  theme(aspect.ratio=1)
+```
+
+Le graphique ressemble bien à la figure 4 de l'article.
+La probabilité de dysfonctionnement d'un joint à 31°F est de $`r signif(predict(logis_reg_binomial, newdata=data.frame(Temperature=31), type="response"), 4)`$.
+
+Maintenant essayons de calculer l'enveloppe de confiance autour des valeurs prédites.
+
+```{r}
+# Pour calculer la bonne enveloppe de confiance on utilise l'option "se.fit=TRUE",
+# mais il faut calculer les prédictions de l'erreur standard dans l'échelle linéaire
+# du lien logit en choisissant l'option type="link"
+preds_link <- predict(logis_reg_binomial, list(Temperature=temp),
+                      type = "link", se.fit = TRUE)
+preds_link$temp <- temp
+
+upr <- preds_link$fit + (1.96 * preds_link$se.fit)
+lwr <- preds_link$fit - (1.96 * preds_link$se.fit)
+fit <- preds_link$fit
+
+# Mainenant on utilise la fonction invers ("linkinv") pour convertir les valeurs
+# dans l'échelle non linéaire de la réponse
+upr2 <- logis_reg_binomial$family$linkinv(upr)
+lwr2 <- logis_reg_binomial$family$linkinv(lwr)
+# En utilisant la fonction inverse sur la prédiction de la réponse, on doit retrouver
+# la même chose que ce que nous avons obtenu plus haut avec type="response"
+fit2 <- logis_reg_binomial$family$linkinv(fit)
+
+preds_2 <- data.frame(upr2=upr2, lwr2=lwr2, fit2=fit2)
+
+ggplot(data=data, mapping=aes(x=Temperature, y=Malfunction)) + geom_point() +         
+  geom_line(data=preds_2, aes(x=temp, y=fit2*6)) +
+  geom_line(data=preds_2, aes(x=temp, y=upr2*6), linetype=2) + 
+  geom_line(data=preds_2, aes(x=temp, y=lwr2*6), linetype=2) +
+  xlim(c(30,90)) + ylim(c(0,6)) +
+  xlab("Temperature") + ylab("Number of incidents") +
+  theme_bw() +
+  theme(aspect.ratio=1)
+```
+
+Nous obtenons ainsi un graphique proche des estimations de l'intervalle de confiance de prédiction à 90% obtenues par boostrap par les auteurs de l'article (voir figure 5).
+Ainsi, pour 30°F l'intervalle de confiance à 95% est de $[`r signif(preds_2[1,2], 4)`, `r signif(preds_2[1,1], 4)`]$, en accord avec ce qui est attendu.

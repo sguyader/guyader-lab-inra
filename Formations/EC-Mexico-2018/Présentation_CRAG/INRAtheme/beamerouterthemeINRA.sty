@@ -1,0 +1,71 @@
+\ProvidesPackage{beamerouterthemeINRA}[2013/02/20]
+
+% Beamer theme by François Guillaume
+% based on the LaTeX-Beamer package :
+% Copyright 2003 by Till Tantau <tantau@users.sourceforge.net>
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\makeatletter
+
+
+% Customize the frame title
+\addtobeamertemplate{frametitle}{%
+	\hspace*{0.2cm}
+	\setbeamerfont{frametitle}{shape=\bfseries}
+	\setbeamerfont{framesubtitle}{size=\normalsize}
+}
+
+% Customize normal and alert blocks
+\setbeamercolor*{block body}{fg= black, bg= green!3}
+\setbeamercolor*{block body alerted}{fg= black, bg= red!3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Background 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamertemplate{background canvas}{%
+  \ifnum\c@framenumber=1%1ere slide
+  \includegraphics[width=\paperwidth,height=\paperheight]{bgINRA1}
+  \else%Autres slides
+  \includegraphics[width=\paperwidth,height=\paperheight]{bgINRA2}
+  \fi%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Footline
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtobeamertemplate{navigation symbols}{}{%
+	\usebeamerfont{footline}%
+	\usebeamercolor[fg]{footline}%
+	\hspace{1em}%
+	\insertframenumber/\inserttotalframenumber
+}
+
+\defbeamertemplate*{footline}{INRA theme}{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=10 pt,leftskip=2cm,dp=1.5ex]{structure.fg}%
+   \color{white}\insertauthor\qquad\color{INRA@linst}\insertsubtitle \hfill \color{white}Tuesday, July 18, 2017 \hspace{0.1cm}
+  \end{beamercolorbox}
+}
+\setbeamerfont{footline}{size=\fontsize{6}{9}\selectfont, series=\bfseries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Page de titre
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\defbeamertemplate*{title page}{INRATitle}{
+  \vspace{0.55 \paperheight}%
+  \leftskip=1cm
+  {\color{white}\Large\bf\textsc{\inserttitle}}
+%  \ifx\insertsubtitle\@empty\\[\baselineskip]
+%  \else{\\\color{INRA@linst}\insertsubtitle}\\[\baselineskip]
+%  \fi
+  \vfill
+ }
+
+\makeatother
