@@ -1,0 +1,26 @@
+---
+title: "Séminaires Astro - Préparation Evaluation"
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    df_print: kable
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    df_print: kable
+    latex_engine: xelatex
+mainfont: Avenir Next LT Pro
+fontsize: 18pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 2019-12-11
+
+## 
+
