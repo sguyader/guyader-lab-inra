@@ -1,0 +1,90 @@
+---
+title: "Séminaire MALIN - Bilan - 2019-01-14"
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    df_print: kable
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    df_print: kable
+    latex_engine: xelatex
+mainfont: Avenir Next LT Pro
+fontsize: 18pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# WP1 - Diagnostic, surveillance et facteurs d'émergence...
+
+Approche syndromique "une île / une région / une santé"...
+- 54 livrables (+ 2 nouveaux) 54% du total
+- 3 tâches :
+  * approche syndromique 12 livrables (+1)
+  * approche 1 santé 9 livrables (+1)
+  * facteurs d'émergence 33 livrables
+- livrables :
+  * 8 terminés en 2019
+  * 24 terminables en 2020
+  * 22 incertains
+  * 2 abandonnés
+- 
+
+## Tâche 1
+- D1.13 : diagnostic rapide RFID (nouveau)
+
+## Tâche 2
+- D2.6 : portail géographique / SIG -> proposer ça en One Health
+
+## Tâche 3
+- livrables anthracnose à reporter pour fin 2021 (génotypage + caractérisation flux spores)
+
+# WP2 - Lutte intégrée contre les agents infectieux d'intérêt pour le territoire
+
+- 25 livrables (25% du total)
+- 3 tâches
+
+## tâche 4 : mécanismes moléculaires depathogénicité pour l'élaboration de méthodes de lutte
+
+## tâche 5 : lutte anti-transmission vectorielle
+- 13 livrables
+
+## tâche 6 : résistance de l'hôte
+- pour l'enthracnose : livrables fin 2021
+
+# WP3 - Communication et formation
+
+- 15 livrables (15% du total)
+- 2 tâches
+
+## tâche 7 : communication
+- 11 livrables
+- penser à faire remonter les infos pour la newsletter
+
+## tâche 8 : formation
+- 4 livrables (+1 nouveau : maquette master Biologie Santé)
+
+# WP4 - Gestion et coordination
+- 1 tâche : gestion et coordination
+- 5 livrables
+
+# Communication du projet
+
+## Objectifs
+- principaux : faire connaître Malin en Gpe et au-delà, développer la dynamique, susciter l'intérêt pour le projet, fédérer durablement les acteurs
+- secondaires : dégager des ressources pour faire perdurer le projet, impulser de nouvelles façons de travailler, attirer de nouveaux partenaires, être un exemple pour projets à venir
+
+## Etat des lieux
+- notoriété faible
+- outils de comm faiblement utilisés ou peu efficacement
+- dynamique à renforcer
+
+## Nouvelles orientations
+- refonte de la newsletter
+- vidéos sur thématiques du projet, diffusion *via* réseaux sociaux et site web du projet
+- site web : nouvelle arborescence, publication de la newsletter en ligne avec possibilité de s'y abonner

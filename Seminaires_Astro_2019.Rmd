@@ -51,7 +51,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - RT : retirer le terme "agro" pour juste "écologie"
 - SG : cultiver c'est pas seulement planter, c'est aussi gérer/favoriser d'autres organismes ("adventices", microbes) ; penser aussi à comment transposer les résultats du type "quoi cultiver, où et quand" vers les acteurs : aide à la décision, politiques publiques
 
-**collaborations**
+**Collaborations**
 
 - Brésil (LP)
 - Côte d'Ivoire, BGPI/BFP INRAE/CIRAD, Suzane Seal NRI (MU)
@@ -99,4 +99,25 @@ knitr::opts_chunk$set(echo = TRUE)
   * intégrer les consommateurs via la publicité pour les inciter à se tourner vers lesproduits de ces microfermes
   * vigilence sur le fait de ne pas aller vers une agriculture trop élitiste
   * l'INRA peut jouer un rôle d'hôte pour la formation, et de formateur de formateurs
-  * 
+  
+### 3. "Agriculture et sols pollués"
+
+**Introduction A. Richard**
+
+- ce qui a été fait :
+  * travaux sur transferts pollutions sol vers plantes et animaux
+  * comportement de la chlordécone dans différents types de sols (modèle biophysique)
+  * cartographie zones à risques associée à préconisations de types de cultures
+  * observatoire pour suivre chlordécone et autres pesticides
+- ce qui est en cours :
+  * travaux Astro/Lysah *via* réseau Opale : compréhension mécanismes de transfert à l'échelle du bassin versant et échelles détail sur échelles inférieures (Lise) et composantes du sol (Antoine)
+  * sécurisation des productions sur sols pollués (limiter transferts sols/plantes)
+  * période de décontamination des animaux pour descendre en dessous des seuils
+  * va démarrer : usage de charbons actifs pour limiter les transferts
+- propositions points d'entrée :
+  *a.* gestion de la contamination
+  *b.* aller vers la dépollution ?
+  *c.* poursuite des travaux sur la compréhension des mécanismes de transferts
+  *d.* sciences humaines et sociales ?
+  *e.* lien avec autres axes de recherche
+  
