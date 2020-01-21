@@ -3,21 +3,22 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 
 body {
-  font-family: 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+  font-family: 'Avenir Next LT Pro';
   font-weight: normal;
-  color: #18273F;
+  font-stretch: condensed;
+  color: #000000;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Yanone Kaffeesatz';
+  font-family: 'Raleway';
   font-weight: normal;
-  color: #23395b;
+  color: #00A3A6;
 }
 
 .strong{font-weight: bold}
 
 .remark-slide-number {
-  color: #23395b;
+  color: #00A3A6;
   font-size: 0.9em;
   font-family: 'Yanone Kaffeesatz';
   position: absolute;
@@ -26,7 +27,7 @@ h1, h2, h3, h4 {
 }
 
 a, a > code {
-  color: #23395b;
+  color: #00A3A6;
   text-decoration: underline;
 }
 
@@ -48,33 +49,33 @@ a, a > code {
 }
 
 .remark-slide-content h1 {
-    font-size: 55px;
+    font-size: 36px;
 }
 .remark-slide-content h2 {
-    font-size: 45px;
-    margin-top: 5px;
+    font-size: 28px;
+    margin-top: 4px;
 }
 .remark-slide-content h3 {
-  font-size: 35px;
-    margin-bottom: 5px;
+  font-size: 22px;
+    margin-bottom: 4px;
 }
 .remark-slide-content h4 {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .inverse {
-  background-color: #23395b;
-  color: #E9EBEE;
-  background-image: url("../style/slide-bg-main.png");
+  /*background-color: #00A3A6;*/
+  color: #00A3A6;
+  background-image: url("INRAE-bg-main.png");
   background-size: cover; 
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
-  color: #E9EBEE;
+  color: #00A3A6;
 }
 
 .inverse .remark-slide-number {
-  color: #E9EBEE;
+  color: #00A3A6;
 }
 
 .title-slide .remark-slide-number {
@@ -83,8 +84,12 @@ a, a > code {
 
 .title-slide {
   background-color: #23395b;
-  background-image: url("../style/slide-bg-title2.png");
+  background-image: url("INRAE-bg-title.png");
   background-size: cover;
+}
+
+.section-slide {
+  background-image: url("INRAE-bg-main.png");
 }
 
 .title-slide .fadeIn {
@@ -94,28 +99,31 @@ a, a > code {
 
 .title-slide h1 {
   text-align: left;
-  padding-top: 280px;
-  color: #FFFFFF;
+  padding-top: 250px;
+  padding-left: 160px;
+  color: #000000;
 }
 .title-slide h2 {
   text-align: left;
   line-height: 50%;
-  color: #E9EBEE;
+  color: #00A3A6;
 }
 
 .title-slide h3 {
   text-align: left;
   line-height: 50%;
-  color: #F7F8FA;
-  font-size: 35px;
+  padding-left: 160px;
+  color: #00A3A6;
+  font-size: 30px;
 }
 
 .title-slide h4 {
-  color: #E9EBEE;
+  padding-left: 160px;
+  color: #00A3A6;
 }
 
 .main-slide {
-  background-image: url("../style/slide-bg-main2.png");
+  background-image: url("INRAE-bg-main.png");
   background-size: cover;
 }
 
@@ -126,7 +134,7 @@ a, a > code {
   float: left;
 }
 .left-column h2, .left-column h3 {
-  color: #23395b99;
+  color: #23395b;
 }
 .left-column h2:last-of-type, .left-column h3:last-child {
   color: #23395b;
@@ -249,7 +257,8 @@ th {
 }
 
 blockquote {
-  border-left: solid 5px #23395b80;
+  background: #c8d5ea;
+  border-left: solid 15px #23395b80;
   padding-left: 1em;
 }
 
@@ -295,7 +304,7 @@ content: "";
     width: 120px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../style/slide-bg-main.png");
+    background-image: url("slide-bg-main.png");
 }*/
 
 @page { margin: 0; }

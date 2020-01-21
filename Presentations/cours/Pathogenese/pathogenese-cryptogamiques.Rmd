@@ -29,16 +29,18 @@ library(kableExtra)
 class: title-slide, animated, fadeIn
 
 # Maladies cryptogamiques : pathogénèse et réponses de l'hôte
-### Sébastien GUYADER
-#### INRA - UR Astro - Petit-Bourg - _sebastien.guyader@inra.fr_
+### 27 janvier 2020 / Master 1 Biologie Santé 
+#### Sébastien GUYADER - INRAE - UR Astro - Petit-Bourg - _sebastien.guyader@inrae.fr_
 <br><br><br>
-.right[!<img src="./images/cc-by-nc-sa.png" alt="license" width="120"/>]
+.right[<img src="./images/cc-by-nc-sa.png" alt="license" width="120"/>]
 
 ---
 
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div> 
+<div class="my-footer">
+Maladies cryptogamiques : pathogénèse et réponses de l'hôte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 name: plan
@@ -49,7 +51,7 @@ name: plan
 
 .right-column[
 <br>
-###1. Introduction
+### **1. Introduction**
   1.1. L'état normal de la plante<br>
   1.2. Interactions plantes/microbes<br>
   1.3. Relations trophiques plantes / champignons pathogènes<br>
@@ -57,13 +59,13 @@ name: plan
   {{content}}
 ]
 --
-###2. Immunité, résistance et sensibilité
+### **2. Immunité, résistance et sensibilité**
   2.1. Mécanismes de reconnaissance de l'agression<br>
   2.2. Contre-attaque du pathogène<br>
   2.3. Différences entre types d'interactions (biotrophes/nécrotrophes)<br>
 {{content}}
 --
-###3. Perturbations physiologiques et symptômes
+### **3. Perturbations physiologiques et symptômes**
   3.1. Différents types de symptômes<br>
   3.2. Effets des perturbations<br>
 {{content}}
@@ -71,8 +73,10 @@ name: plan
 ---
 
 layout: false
-class: section-slide, inverse, center, middle, animated, fadeIn
-<div class="my-footer"><span style="color:white">S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
+class: main-slide, middle, animated, fadeIn
+<div class="my-footer">
+Maladies cryptogamiques : pathogénèse et réponses de l'hôte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 1. Introduction
 
@@ -80,7 +84,9 @@ class: section-slide, inverse, center, middle, animated, fadeIn
 
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
+<div class="my-footer">
+Maladies cryptogamiques : pathogénèse et réponses de l'hôte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
@@ -91,7 +97,6 @@ class: main-slide, animated, fadeIn
 ]
 
 --
-<br>
 .center[
 .content-box-brown[
 .large[
@@ -233,8 +238,10 @@ knitr::include_graphics("./images/trophic.gif")
 ---
 
 layout: false
-class: section-slide, inverse, center, middle, animated, fadeIn
-<div class="my-footer"><span style="color:white">S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
+class: main-slide, middle, animated, fadeIn
+<div class="my-footer">
+Maladies cryptogamiques : pathogénèse et réponses de l'hôte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 2. Immunité, résistance et sensibilité
 
@@ -242,7 +249,9 @@ class: section-slide, inverse, center, middle, animated, fadeIn
 
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
+<div class="my-footer">
+Maladies cryptogamiques : pathogénèse et réponses de l'hôte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
@@ -256,7 +265,7 @@ class: main-slide, animated, fadeIn
 .indent[]Ce sont des molécules constituantes des microbes (chitine, LPS...), dont certains motifs sont reconnus par des .bold[PRR] <br>
 <br>
 .Large[PRR : "Pattern recognition receptor", récepteurs transmembranaires de l'hôte]
-<br>
+
 --
 .left-column2[
 <br><br><br>
@@ -472,8 +481,10 @@ knitr::include_graphics("./images/hemibiotrophe-spore.jpg")
 ---
 
 layout: false
-class: section-slide, inverse, center, middle, animated, fadeIn
-<div class="my-footer"><span style="color:white">S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
+class: main-slide, middle, animated, fadeIn
+<div class="my-footer">
+Maladies cryptogamiques : pathogénèse et réponses de l'hôte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 3. Perturbations physiologiques et symptômes
 
@@ -481,7 +492,9 @@ class: section-slide, inverse, center, middle, animated, fadeIn
 
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : pathogénèse et réponses de l'hôte</span></div>
+<div class="my-footer">
+Maladies cryptogamiques : pathogénèse et réponses de l'hôte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
