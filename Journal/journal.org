@@ -2332,4 +2332,32 @@ Entered on [2019-12-04 Wed 09:04]
 **** Réunion présentation préprojet Démonstrateur Ecosystème de microfermes
      - projet sur 6 ans, 4 écosystèmes de 4 microfermes : NGT, NBT,
        SBT, M-G
-     - 
+     -
+*** 2020-01-20 Monday
+**** Visite CD Astro - Jour 1
+*0. Présentation bilan d'Astro* - F. Bussière
+*1. Bilan Pilier 1* - L. Penet
+*2. Bilan Pilier 2* - JM. Blazy
+*3. Perspectives et grandes lignes du projet d'unité* - F. Bussière
+*4. Discussions thématique 1 :* "Gestion de l’agrodiversité pour une
+ gestion durable du milieu et des bioagresseurs"
+ - quels travaux permettent de répondre/contribuer aux questions
+   soulevées ?
+ - en d'autres termes : quelles questions de recherche ?
+ - quelle est notre carte d'identité ?
+*5. Discussion thématique 2 :* "Agriculture sur sols pollués : quelle
+ place dans le projet d’unité ?"
+*6. Discussion thématique 3 :* "Changement climatique et vulnérabilités
+ de l’agriculture, quelles perspectives pour l’unité ?"
+ - se raccrocher à ACCAF 2 : adaptation + atténuation au CC
+
+
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2020-01-21 Tuesday
+**** Visite CD Astro - Jour 2
+*7. Discussions sur collaborations possibles Astro/URZ*
+ - en cours : karusmart et ferme pilote
+*8. Discussion thématique 4 :* "Ecosystèmes de microfermes"
+*9. Point visio avec représentants SPE*
+ - Q : quid du profil chercheur IRD ?
+ - au niveau SPE, montée des sujets sur les effets du changement climatique
