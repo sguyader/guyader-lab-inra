@@ -130,7 +130,7 @@ a, a > code {
 /* Two-column layout */
 .left-column {
   width: 20%;
-  height: 92%;
+  /*height: 92%;*/
   float: left;
 }
 .left-column h2, .left-column h3 {
@@ -147,7 +147,7 @@ a, a > code {
 
 .left-column2 {
   width: 35%;
-  height: 92%;
+  /*height: 90%;*/
   float: left;
 }
 .right-column2 {
@@ -157,7 +157,7 @@ a, a > code {
 }
 .left-column3 {
   width: 60%;
-  height: 92%;
+  /*height: 92%;*/
   float: left;
 }
 .right-column3 {

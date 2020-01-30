@@ -6,6 +6,7 @@ date:
 output:
   xaringan::moon_reader:
     lib_dir: libs
+    chakra: libs/remark-latest.min.js
     css: [default, "hygge", "style/tweak.css", "style/bootstrap_table.css", "style/footer-header.css"]
     nature:
       highlightStyle: github
@@ -30,16 +31,18 @@ library(DiagrammeR)
 class: title-slide, animated, fadeIn
 
 # Maladies cryptogamiques : méthodes de lutte
-### Sébastien GUYADER
-#### INRA - UR Astro - Petit-Bourg - _sebastien.guyader@inra.fr_
-<br><br><br>
-.right[!<img src="./images/cc-by-nc-sa.png" alt="license" width="120"/>]
+### 27 janvier 2020 / Master 1 Biologie Santé 
+#### Sébastien GUYADER - INRAE - UR Astro - Petit-Bourg - _sebastien.guyader@inrae.fr_
+<br><br><br><br><br><br>
+.right[<img src="./images/cc-by-nc-sa.png" alt="license" width="120"/>]
 
 ---
 
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : méthodes de lutte</span></div> 
+<div class="my-footer">
+Maladies cryptogamiques : méthodes de lutte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 name: plan
@@ -49,18 +52,19 @@ name: plan
 ]
 
 .right-column[
-###1. Introduction sur les maladies cryptogamiques
+<br>
+### **1. Introduction sur les maladies cryptogamiques**
   1.1. Repères historiques<br>
   1.2. Le "triangle de la maladie"<br>
   {{content}}
 ]
 --
-###2. Biologie et épidémiologie des champignons phytopathogènes
+### **2. Biologie et épidémiologie des champignons phytopathogènes**
   2.1. Caractéristiques générales<br>
   2.2. Eléments d'épidémiologie<br>
 {{content}}
 --
-###3. Méthodes de lutte
+### **3. Méthodes de lutte**
   3.1. Chimique<br>
   3.2. Génétique<br>
   3.3. Biologique<br>
@@ -71,8 +75,10 @@ name: plan
 ---
 
 layout: false
-class: section-slide, inverse, center, middle, animated, fadeIn
-<div class="my-footer"><span style="color:white">S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : méthodes de lutte</span></div>
+class: main-slide, middle, animated, fadeIn
+<div class="my-footer">
+Maladies cryptogamiques : méthodes de lutte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 1. Introduction
 
@@ -80,7 +86,9 @@ class: section-slide, inverse, center, middle, animated, fadeIn
 
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : méthodes de lutte</span></div>
+<div class="my-footer">
+Maladies cryptogamiques : méthodes de lutte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
@@ -168,8 +176,10 @@ DiagrammeR::grViz("tetraedre.dot")
 ---
 
 layout: false
-class: section-slide, inverse, center, middle, animated, fadeIn
-<div class="my-footer"><span style="color:white">S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : méthodes de lutte</span></div>
+class: main-slide, middle, animated, fadeIn
+<div class="my-footer">
+Maladies cryptogamiques : méthodes de lutte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 2. Biologie et épidémiologie des champignons phytopathogènes
 
@@ -177,7 +187,9 @@ class: section-slide, inverse, center, middle, animated, fadeIn
 
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : méthodes de lutte</span></div>
+<div class="my-footer">
+Maladies cryptogamiques : méthodes de lutte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
@@ -201,6 +213,7 @@ knitr::include_graphics("./images/fungi-diversity.jpg")
 ## 2.1. Caractéristiques générales
 
 ### Classification : au sein du "Tree of Life"<br>
+LECA = dernier ancêtre commun des eucaryotes
 .center[
 ```{r echo=F, out.width="70%"}
 knitr::include_graphics("./images/tree-life.jpg")
@@ -651,8 +664,10 @@ knitr::include_graphics("./images/courbes-progression2.jpg")
 ---
 
 layout: false
-class: section-slide, inverse, center, middle, animated, fadeIn
-<div class="my-footer"><span style="color:white">S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : méthodes de lutte</span></div>
+class: main-slide, middle, animated, fadeIn
+<div class="my-footer">
+Maladies cryptogamiques : méthodes de lutte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 3. Méthodes de lutte
 
@@ -660,7 +675,9 @@ class: section-slide, inverse, center, middle, animated, fadeIn
 
 layout: true
 class: main-slide, animated, fadeIn
-<div class="my-footer"><span>S. Guyader &nbsp; - &nbsp; Maladies cryptogamiques : méthodes de lutte</span></div>
+<div class="my-footer">
+Maladies cryptogamiques : méthodes de lutte
+<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
@@ -689,7 +706,7 @@ class: main-slide, animated, fadeIn
 <br>
 - Chimique<br><br>
 - Génétique<br><br>
-- Biologique<br><br>
+- Biocontrôle<br><br>
 - Prophylactique<br><br>
 - Intégrée
 ]
@@ -707,7 +724,7 @@ chimie de synthèse.
 
 ### Biocides et produits désinfectants/stérilisants
 .Large[
-- ex. : bouillie bordelaise, fumigation et désifection des sols
+- ex. : bouillie bordelaise, fumigation et désinfection des sols
 - peu sélectifs
 - moins couramment utilisés
 ]
@@ -833,32 +850,31 @@ knitr::include_graphics("./images/boom-bust.jpg")
 
 ---
 
-## 3.3. Méthode biologique
+## 3.3. Biocontrôle
 
 .blue-block[
-.Large[Réduction de l’inoculum ou de l’activité d’un bioagresseur par au moins un **organisme non-humain** (_lutte biologique_) ou par des **produits issus du vivant** (_biocontrôle_)
+.Large["L’ensemble des méthodes de *protection des végétaux* qui utilisent des **mécanismes naturels**. Il vise à la protection des plantes en privilégiant l’utilisation de mécanismes et d’interactions qui régissent les relations entre espèces dans le milieu naturel"
 ]
 ]
 <br>
 
 .Large[
-- Utilisation de sols suppressifs : favorisent le maintien et l’**activité d’organismes antagonistes** (bactéries *Pseudomonas fluorescens*…, champignons *Trichoderma* spp. …)
-<br><br>
-- Application directe d’antagonistes (unique ou répétée) :
- * protection croisée (**stimulation des défenses** naturelles de la plante)
- * pré-colonisation des sites (**compétition** interspécifique)
- * mycoparasitisme (champignons parasités par d'autres microbes)
- * prédation (organismes consommant les champignons pathogènes)
- * production de métabolites antifongiques
+Ces agents sont habituellement classés en 2 grandes catégories :
+
+- les **macro-organismes** invertébrés
+- les **produits phytopharmaceutiques** de biocontrôle :
+  * les micro-organismes
+  * les médiateurs chimiques tels que les phéromones, les substances allélochimiques (allomones et kairomones) et les phytophéromones
+  * les substances naturelles d'origine animale, végétale ou minérale
 ]
 
 ---
 
-## 3.3. Méthode biologique
+## 3.3. Biocontrôle
 
 .center[
 ```{r echo=F, out.width="50%"}
-knitr::include_graphics("./images/biocontrole1.jpg")
+knitr::include_graphics("./images/biocontrole1.png")
 ```
 ]
 
@@ -998,14 +1014,4 @@ knitr::include_graphics("./images/pertes-nuisibilite.jpg")
 <br>
 **SA** = seuil d'action
 ]
-]
-
----
-
-.left-column3[
-```{r echo=F, out.width="90%"}
-mermaid(
-  
-)
-```
 ]

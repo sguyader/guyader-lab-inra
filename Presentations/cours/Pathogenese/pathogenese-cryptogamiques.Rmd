@@ -6,6 +6,7 @@ date:
 output:
   xaringan::moon_reader:
     lib_dir: libs
+    chakra: libs/remark-latest.min.js
     css: [default, "style/tweak.css", "style/bootstrap_table.css", "style/footer-header.css", "hygge"]
     nature:
       highlightStyle: github
@@ -29,9 +30,9 @@ library(kableExtra)
 class: title-slide, animated, fadeIn
 
 # Maladies cryptogamiques : pathogénèse et réponses de l'hôte
-### 27 janvier 2020 / Master 1 Biologie Santé 
+### 3 février 2020 / Master 1 Biologie Santé 
 #### Sébastien GUYADER - INRAE - UR Astro - Petit-Bourg - _sebastien.guyader@inrae.fr_
-<br><br><br>
+<br><br><br><br>
 .right[<img src="./images/cc-by-nc-sa.png" alt="license" width="120"/>]
 
 ---
@@ -40,7 +41,7 @@ layout: true
 class: main-slide, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : pathogénèse et réponses de l'hôte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>3 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 name: plan
@@ -76,7 +77,7 @@ layout: false
 class: main-slide, middle, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : pathogénèse et réponses de l'hôte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>3 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 1. Introduction
 
@@ -86,7 +87,7 @@ layout: true
 class: main-slide, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : pathogénèse et réponses de l'hôte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>3 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
@@ -241,7 +242,7 @@ layout: false
 class: main-slide, middle, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : pathogénèse et réponses de l'hôte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>3 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 2. Immunité, résistance et sensibilité
 
@@ -251,7 +252,7 @@ layout: true
 class: main-slide, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : pathogénèse et réponses de l'hôte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>3 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
@@ -484,7 +485,7 @@ layout: false
 class: main-slide, middle, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : pathogénèse et réponses de l'hôte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>3 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 3. Perturbations physiologiques et symptômes
 
@@ -494,7 +495,7 @@ layout: true
 class: main-slide, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : pathogénèse et réponses de l'hôte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>3 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
