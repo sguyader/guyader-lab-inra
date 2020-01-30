@@ -2351,8 +2351,6 @@ Entered on [2019-12-04 Wed 09:04]
  de l’agriculture, quelles perspectives pour l’unité ?"
  - se raccrocher à ACCAF 2 : adaptation + atténuation au CC
 
-
-  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
 *** 2020-01-21 Tuesday
 **** Visite CD Astro - Jour 2
 *7. Discussions sur collaborations possibles Astro/URZ*
@@ -2360,4 +2358,103 @@ Entered on [2019-12-04 Wed 09:04]
 *8. Discussion thématique 4 :* "Ecosystèmes de microfermes"
 *9. Point visio avec représentants SPE*
  - Q : quid du profil chercheur IRD ?
- - au niveau SPE, montée des sujets sur les effets du changement climatique
+ - au niveau SPE, montée des sujets sur les effets du changement
+   climatique
+*10. Debriefing*
+ - dynamique positive, des choses se mettent en place
+ - après brassage d'idées, resserrer et concrétiser (rédiger)
+ - structurer en entrant par questions de recherche, favoriser interfaces
+ - ne pas rester sur des questions appliquées
+ - se demander : comment veut-on être perçus d'ici 5-10 ans ?
+ 
+*** 2020-01-22 Wednesday
+**** Visite CD Astro - Jour 3 : URZ/Astro
+*1. Ambition Guadeloupe*
+   - réflexion attendue pour 2020 entre unités du CRAG
+   - pilotée par un chef de département
+   - plan d'action sur 4-5 ans, en 4 points :
+     1) animations transversales
+        + polyculture élevage
+        + bioéconomie circulaire territorialisée et agroécologie
+        + santé : one health / eco health
+     2) réflexion collective sur
+        + dispositifs expé
+        + CRB
+        + expés systèmes
+     3) GPEC : analyse globale des moyens et des compétences pour
+        soutenir cette dynamique
+     4) déclinaison des partenariats académiques et socio-économiques
+        (notamment projet One Health encouragé -> Insula)
+   - analyse réflexive autour de projets fédérateurs, dégager
+     priorités thématiques réalisables autour de questoins
+     scientifiques qu'on peut porter et valoriser à l'international
+ 
+*2. Ambition Antilles-Guyane (Ientifiant Thématique 1 du 3SC - 2030)*
+   - Q : quelle est la stratégie partenariale du Centre ?
+*** 2020-01-23 Thursday
+**** Réunion CHING :ching:meeting:
+  - JS : 
+
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2020-01-28 Tuesday
+**** *Réunion avec C. Lannou - Equipe IP2C*
+
+1. Présentation IP2C - L. Penet - "Approche agroécologique des mutualistes et des bioagresseurs"
+   - comment mobiliser les réseaux mycorhiziens :
+     * effet démontré en conditions contrôlées, mais sous-exploité en agriculture
+     * plutôt qu'utiliser propagules, utiliser l'effet donneur de plantes
+     * vers développement de protoypes TRL5-6
+     * effet donneur offre une protection contre bioagresseurs
+       telluriques (/Ralstonia solanacearum/, /Meloidogyne incognita/)
+     * CL :
+       + front de science qui monte à SPE : interactions plantes/plantes
+       + sujet plantes de service à développer dans métaprogramme
+         Santé des Plantes
+   - anthracnose de l'igname et durabilité des résistances
+     * résistance : approche par métanalyse de 4 populations (3 inrae,
+       1 cirad)
+     * CL :
+       + CATI "baric" pour la bioinformatique
+
+2. Thèse Pauline Dentika
+   - diapo problématique : hypothèses ; d'où viennent ces hypothèses,
+     quel lien entre les 2
+   - diapo plan de recherche : en quoi les 3 axes répondent aux 2 hypothèses
+   - axe 1 :
+     * éléments paysagers ? non car seulement inventaire des adventices
+     * mieux décrire l'ACP : à quoi correspondent les points ?
+       i.e. quelles sont les variables
+     * goyavier : seulement 3 arbres échantillonnés, quelle puissance
+       stat ?
+   - axe 2 :
+     * comparaison génétique des souches sur manguier
+   - axe 3 :
+     * cooccurrence truncatum/gloeosporioides : mieux expliquer la
+       stratégie expérimentale
+
+3. Thèse Mame Boucar Diouf
+   - programme :
+     * étude prévalence de l'ensemeble des virus d'igname en Guadeloupe
+     * étude de l'impact des pratiques culturales sur trabsmission des
+       virus
+     * recherche de plantes réservoir
+     * étudier la dynamique de recontamination des virus d'igname
+     * symptomatologie et impact des virus sur croissance et
+       production des ignames
+   - pour discuter des différences de prévalence entre basse terre et
+     grande terre, ne pas forcément parler d'antagonisme entre virus,
+     mais d'abord s'intéresser aux vecteurs potentiels
+   - prodimad "ici à Roujol" ?
+
+4. Discussion générale équipe IP2C
+   - intégration officielle de la virologie dans IP2C
+   - activités phénotypage plateforme CRB : à définir en interne
+   - CL :
+     * dynamique positive
+     * potentiel intéressant
+     * s'identifier par questions de recherche principales
+     * collaborations avec autres unités à développer (les rendre
+       visibles pour l'HCERES)
+     * 
+  
+     [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
