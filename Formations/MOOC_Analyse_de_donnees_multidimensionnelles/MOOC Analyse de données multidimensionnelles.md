@@ -1,21 +1,21 @@
 ---
 title: Analyse de données multidimensionnelles
 output:
-  pdf_document:
-    toc: true
-    toc_depth: 2
-    df_print: kable
-    latex_engine: xelatex
   html_document:
     theme: flatly
     toc: true
     toc_depth: 2
     toc_float: true
     df_print: kable
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    df_print: kable
+    latex_engine: xelatex
 mainfont: Avenir Next LT Pro
 fontsize: 18pt
 ---
-# ACP
+# ACP - Analyse en Composantes Principales
 
 ## 1. Données - Problématique
 
@@ -100,7 +100,7 @@ fontsize: 18pt
     + se visualiser par une ellipse autour des individus et des variables pour lesquels on a des données manquantes qui ont été imputées
     + fonction `MIPCA` dans `missMDA`
 
-# AFC
+# AFC - Analyse Factorielle des Correspondances
 
 ## 1. Données
 
@@ -167,7 +167,7 @@ fontsize: 18pt
   - le nombre maximum d'axes d'inertie non nulle est égal au minimum de ($I-1$, $J-1$) ; de même $\phi^2 < min(I-1, J-1)$
   - **V de Cramer** : $V = \frac{\phi^2}{min(I-1, J-1)}$ (compris entre 0 et 1), indicateur borné de la liaison entre les 2 variables
 
-# ACM : analyse des correspondances multiples
+# ACM - Analyse des Correspondances Multiples
 
 ## 1. Données - Problématique
 
@@ -394,7 +394,7 @@ fontsize: 18pt
   - le partitionnement peut être utilisé pour pré-traiter un jeu de données de grandes dimensions
   - on peut caractériser les classes obtenues par des variables actives et supplémentaires, quantitatives ou qualitatives
 
-# AFM
+# AFM - Analyse Factorielle Multiple
 
 ## 1. Données - Problématique
 
