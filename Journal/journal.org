@@ -2458,3 +2458,89 @@ Entered on [2019-12-04 Wed 09:04]
      * 
   
      [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+** 2020-02 February
+*** 2020-02-03 Monday
+**** Présentation sur l'APA (Cirad)
+- l'APA régule es échanges de matériel vivant
+  + APA = Accès et Partage des Avantages
+  + PN = Protocole de Nagoya
+  + RG = ressources génétiques
+  + TIRPAA = traité international sur les ressources phytogénétiques
+    pour l'alimentation et l'agriculture
+  + ATM : Accord de Transfert de Matériel
+- APA pour lutter l'appropriation illégitime des ressources :
+  souveraineté des Etats sur leurs ressources
+- mécanisme d'APA :
+  + régulation (ou pas) par les Etats de l'accès à leurs RG
+  + l'APA concerne les RG fournies soit par le pays d'origine, soit
+    par le pays qui les a acquises conformément à la CBD (Convention
+    sur la Diversité Biologique, Rio, 1992)
+  + s'applique aussi aux connaissances traditionnelles (CT) associèes
+    au RG
+  + l'utilisation des RG et CT doit s'effectuer selon un partage juste
+    et équitable des avantages qui en découlent pour le pays fournisseur
+- le PN ajoute à la CDB les notions de produits dérivés, et d'activités de
+  recherche et développement
+- pour les micro-organimes, il y a un décret pour les exclusions en France
+- pour recherche sans visée commerciale, il suffit de faire une
+  procédure de déclaration (pas besoin d'autorisation) ; il y a un
+  formulaire de demande simplifiée APA sur (www.demarches-simplifiees.fr/commencer/apa-declaration-pmorale)
+- réglement européen :
+  + pour utilisation sur territoire Européen
+  + si ressource accédée à partir de xx/xx/2014
+  + obligation de diligence
+- pour les micro-organismes :
+  + exemption de toute demande pour une durée de 3 ans à partir de fin
+    2019 pour une ressource française (y-compris DROM), donc jusqu'à
+    fin 2022 pour l'instant
+  + pour les ressources venant d'autres pays, il faut se renseigner aurès de leurs
+    services pour déclarer le projet, le besoin, l'utilisation prévue...
+- la liste des points focaux (i.e. qui contacter) est disponible
+  sur absch.cbd.int
+*** 2020-02-04 Tuesday
+**** Formation "Gestion de données - Systèmes d'Information" - Cirad Astre
+1. Introduction
+   - *SI :* ensemble de procédés pour assurer la gestion de données
+     + donnée : l'élément de base d'une observation, caractérise une information
+     + information : caractérise une observation, est caractérisée par
+       1 ou + données
+     + système : ensemble de procédés, de pratiques organisées...
+     + 4 étapes : collecter > centraliser > analyser > restituer
+       * collecter : décrire les observation, utiliser protocoles standardisés
+         pour homogénéiser la collecter
+       * centraliser : rassembler les données en un lieu unique pour
+         éviter leur dissémination ; organiser leur stockage
+       * analyser : comprendre, interpréter les observations
+       * restituer : informer les acteurs ; vulgariser +/- selon
+         destinataires
+     + optimiser le SI :
+       * standardisation : collecter données de manière homogène (ex :
+         format de saisie des dates ; listes de choix...) -> former les collecteurs
+       * disponibilité : rendre la collecte possible à tout moment
+         (prévoir ressources matérielles nécessaires)
+   - NTIC : nouvelles technologies d'information et de communication
+     + outils modernes facilitant la communication et l'échange d'information
+     + intégration dans les SI au niveau des 4 étapes
+     + permettent l'optimisation de :
+       * rapidité
+       * fiabilité
+       * partageabilité
+       * sécurité
+     + mais avant d'implémenter les NTIC : 
+       * étudier le contexte (nécessit ? possibilité d'ultiliser sur
+         le terrain ? les compétences sont-elles sur place ? budget
+         suffisant pour achat et pérennité ? ...)
+       * établir un cahier des charges
+       * développer et déployer sur le terrain (avec phases de test)
+2. Méthode EVASYON
+   - 2 objectifs :
+     + évaluer un SI existant
+     + élaborer le schéma d'un SI en vue de son implémentation
+   - étape 1 : métadonnées
+   - étape 2 : cartographie des acteurs (niveaux géographiques / administratifs
+     ; 1 carte par thématique ex.: humain/animal/végétal...)
+   - étape 3 : on décrit les flux de données, et les actions
+     (collecte, centralisation, analyse, partage)
+   - étape 4 : créer une fiche "Flux Action" (tableau) à partir de la carte
+   - étape 5 : cataloguage des données (tableau) en suivant le Dublin Core
+   
