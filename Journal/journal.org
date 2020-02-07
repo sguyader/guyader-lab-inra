@@ -2543,4 +2543,13 @@ Entered on [2019-12-04 Wed 09:04]
      (collecte, centralisation, analyse, partage)
    - étape 4 : créer une fiche "Flux Action" (tableau) à partir de la carte
    - étape 5 : cataloguage des données (tableau) en suivant le Dublin Core
-   
+3. KoboToolBox
+   - basé sur Open Data Kit
+   - collecte des données :
+     + par un ordinateur, connecté à la BdD formulaire KTB
+     + par un outil type smartphone/tablette, via appli "KoBo Collect"
+       (pas besoin de connexion active)
+     + via un compte KTB perso, avec formulaire "invité" (gestion de
+       droits pour l'invité, de la simple consultation des données à
+       la modification du formaulaire)
+     + 3 statuts pour les donnée : validé, en attente, non validé
