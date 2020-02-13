@@ -2553,3 +2553,9 @@ Entered on [2019-12-04 Wed 09:04]
        droits pour l'invité, de la simple consultation des données à
        la modification du formaulaire)
      + 3 statuts pour les donnée : validé, en attente, non validé
+*** 2020-02-10 Monday
+**** *Réunion équipe Ip2C*
+- 2 points : nom de l'équipe ; mutualisation des techniciens
+- nom de l'équipe : Agrodiversité
+- techniciens : trame de besoins à enovoyer par Laurent
+
