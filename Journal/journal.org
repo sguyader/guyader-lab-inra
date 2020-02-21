@@ -2558,4 +2558,54 @@ Entered on [2019-12-04 Wed 09:04]
 - 2 points : nom de l'équipe ; mutualisation des techniciens
 - nom de l'équipe : Agrodiversité
 - techniciens : trame de besoins à enovoyer par Laurent
-
+*** 2020-02-13 Thursday
+**** *Réunion CHING* :meeting:ching:
+1. Discussion sur cahier des charges direction unité
+   - FB propose de partir de sa lettre de mission
+   - JBN : quel est le contexte de la démarche ?
+   - FB : pas un processus standard à INRAE (en standard, une
+     nomination par les dpts sans consultation de l'unité, proposée à
+     puis actée par la DG) ; Astro est un cas particulier du fait qu'il y a 4 départements de tutelle pour la
+     même unité ; les départments souhaitent qu'il y ait un consensus
+     dans l'unité avant d'enterriner la décision
+   - date butoir : entretiens par visio le 13 mars
+   - rôles du DU Astro :
+     + animation sci.
+     + gestion 
+     + communication
+     + correspondant des dépts pour stratégie sci. et moyens pour sa mise en oeuvre
+   - LP : problèmes de ressources humaines, notamment au niveau technique
+   - FB : propose
+*** 2020-02-20 Thursday
+**** *Réunion mise en place comité Politique de Site Antilles* :meeting:politique:site:
+- politique de site : contrat pour 10 ans, charte signée fin 2019
+- Objectif des comités d'animation:
+  + Plateforme Antilles Recherche et Innovation (PARI), 6 axes thématiques :
+    * santé en environnement insulaire tropical
+    * mer et océan
+    * biodiversité en milieu insulaire
+    * risques et énergie
+    * dynamique des sociétés et territoires caraïbes
+    * numérique
+  + 3 niveaux d'animation :
+    * 1 comité stratégique : 21 membres (plutôt responsables d'instituts)
+      - coordonne la politique
+      - veille à cohérence avec politiques publiques et stratégies noationales et territoriales
+      - tenu au courant des projets collaboratifs
+      - organise son AG au moins 1 fois par an
+    * 1 comité de liaison
+      - 2 DRRT et 2 Vice Présidents Recherche UA (Gpe et Mqe)
+      - assure bon focntionnement des réunions  et exécute décisions
+        du comité stratégique
+      - rapport d'activité 1 fois par an remonté au CS
+      - suivi et compte rendu des CA
+    * 12 comités d'animation (6 axes, Gpe + Mqe)
+      - réunions 2x par an
+      - chaque comité désigne 1 animateur et 1 rapporteur
+      - émet une feuille de route pour mise en oeuvre des travaux
+      - rapport périodique avancée des travaux
+      - recommandation sen termes de projection, organisation de la
+        réorientation de la stratégie
+      - rapport d'activité à mi-contrat et fin contrat
+- lister les projets depuis 2013 (liste probablement déjà disponible à
+  la Région)
