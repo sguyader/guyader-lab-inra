@@ -1,0 +1,12 @@
+n15_w062_3arc_v2.tif et n16_w062_3arc_v2.tif :
+NASA SRTM v3 void filled
+https://earthexplorer.usgs.gov/
+
+N15W062.hgt et N16W062.hgt :
+viewfinderpanoramas Jonathan de Ferranti
+http://viewfinderpanoramas.org/dem3/D20.zip
+http://viewfinderpanoramas.org/dem3/E20.zip
+
+srtm_24_09.tif :
+cgiar
+(http://srtm.csi.cgiar.org/wp-content/uploads/files/srtm_5x5/TIFF/srtm_24_09.zip)
