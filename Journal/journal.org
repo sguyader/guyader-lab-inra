@@ -1652,7 +1652,7 @@ Retour sur la venue des CD
      + où en est-on :
        * URZ : en cours d'achèvement
        * Astro : scénarisation en cours avec maîtrise d'oeuvre,
-         engager les travaux en 2020, identifier besoins non staisfait
+         engager les travaux en 2020, identifier besoins non staisfaits
          pour instruire éventuel projet complémentaire (regroupement
          de toutes les équipes ?)
        * USDAR : financements acquis (marché maîtrise d'oeuvre fin 2019)
@@ -1662,8 +1662,8 @@ Retour sur la venue des CD
      + Sciences :
        proposer des changements systémiques urgents, mais pas de
        modèle unique
-     + international : 3e rang mondial sur 10 doamines de recherche ;
-       horizon Europe (opportunits majeures)
+     + international : 3e rang mondial sur 10 domaines de recherche ;
+       horizon Europe (opportunités majeures)
 
    - 70 ans du Centre :
      + manifestations scientifiques et techniques :  portes ouvertes à
@@ -2609,3 +2609,61 @@ Entered on [2019-12-04 Wed 09:04]
       - rapport d'activité à mi-contrat et fin contrat
 - lister les projets depuis 2013 (liste probablement déjà disponible à
   la Région)
+** 2020-03 March
+*** 2020-03-10 Tuesday
+**** *Réunion équipe Agrodiversité* :meeting:agrodiversité:
+- introduction nouvelle équipe par L. Penet
+- tour de table de présentation de chacun
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2020-03-12 Thursday
+**** *AG Astro*
+1. Mission DU adjoint
+   - prise en charge organisation et gestion activités techniques et
+     expé, RH
+   - relations avec UE
+   - amélioration communication interne
+   - mise en place nouveau Conseil d'Unité
+   - mail : dirastro-antilles
+   - rdv bimensuel avec tous acteurs implqiés dans expés (dès vendredi
+     20, 11h, salle AK)
+   - liaison privilégiée avec l'UE
+
+2. Conseil d'Unité
+   - élu pour 2 ans
+   - déclaration candidatures jusqu'au 27/03, vote du 30/03 au 04/04,
+     ou du 06/04 au 10/04
+   - réunions environ 5/6 par an
+
+3. Future Direction Unité
+   - synthèse des discussions réunions cadres (13/02 et 05/03)
+   - 
+
+4. Evaluation
+   - envoi fichiers du 28/08/20 au 04/09/20 (rapport final)
+   - éval mars/avril 2021
+   - nouveau projet 01/01/2022
+   - projet sur 4 axes :
+     + agrodiversité pour gestion durable des agrosystèmes et contrôle
+       des bioagresseurs
+     + quelle agriculture sur des sols pollués ?
+     + changement climatique, vulnérabilités de l'agriculture
+     + transition de l'agriculture vers des écosystèmes de microfermes
+   - AG à prévoir en juin pour ébauche et discussion projet
+
+5. Projet immo
+   - début extension ~ juin 2020
+   - début travaux dans bâtiment occupé ~ septembre 2020
+
+6. Fonctionnement unité
+   - gestion du risque de crise Covid-19
+  
+   [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2020-03-26 Thursday
+**** *Réunion CODIR*
+- doc bilan évaluation :
+  + par thème
+  + sur période du 01/01/15 au 30/06/20
+- ajouter stratégie à 5 ans et analyse SWOT par thème
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
