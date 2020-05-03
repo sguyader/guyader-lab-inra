@@ -15,7 +15,7 @@ res.hcpc = HCPC(res.mca, graph=FALSE, nb.clust=6)
 
 dend <- as.dendrogram(res.hcpc$call$t$tree)
 
-dend %>% set("labels_col", "transparent") %>% plot(, main="Dendrogramme")
+dend %>% set("labels_col", "transparent") %>% plot(main="Dendrogramme")
 rect.dendrogram(dend, k=6, border = rep("black",6), lty = 2, lwd = 1, lower_rect=-0.002)
   
 dend <- as.dendrogram(res.hcpc$call$t$tree)
