@@ -14,13 +14,13 @@ theme_set(theme_bw())
 ##############################################
 
 # Télécharger les données de la Johns Hopkins University
-download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", destfile = "data/covid19_confirmed.csv")
-download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv", destfile = "data/covid19_deaths.csv")
-download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv", destfile = "data/covid19_recovered.csv")
-download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv", destfile = "data/UID_ISO_FIPS_LookUp_Table.csv")
+download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", destfile = "data/covid19_confirmed_25avr2020.csv")
+download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv", destfile = "data/covid19_deaths_25avr2020.csv")
+download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv", destfile = "data/covid19_recovered_25avr2020.csv")
+download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Tablecsv", destfile = "data/UID_ISO_FIPS_LookUp_Table_25avr2020.csv")
 
 # Charger les identifiants
-covid_uid <- read_csv("data/UID_ISO_FIPS_LookUp_Table.csv") %>%
+covid_uid <- read_csv("data/UID_ISO_FIPS_LookUp_Table_25avr2020.csv") %>%
   rename("Province.State" = "Province_State") %>% rename("Country.Region" = "Country_Region") %>%
   slice(1:267)
 # Filtrer les identifiants pour pays à conserver
@@ -31,7 +31,7 @@ covid_uid[41,2] <- NA
 covid_uid[41,3] <- "CHI"
 
 # Confirmés
-covid_confirmed <- read_csv("data/covid19_confirmed.csv") %>%
+covid_confirmed <- read_csv("data/covid19_confirmed_25avr2020.csv") %>%
   rename("Province.State" = "Province/State") %>% rename("Country.Region" = "Country/Region")
 
 covid_confirmed <- unite(covid_confirmed, Country, c(Province.State, Country.Region), sep=", ", remove=F, na.rm=T)
@@ -68,7 +68,7 @@ length(unique(covid_confirmed_long$Country)) # doit faire 208
 
 
 # Décédés
-covid_deaths <- read_csv("data/covid19_deaths.csv") %>%
+covid_deaths <- read_csv("data/covid19_deaths_25avr2020.csv") %>%
   rename("Province.State" = "Province/State") %>% rename("Country.Region" = "Country/Region")
 
 covid_deaths <- unite(covid_deaths, Country, c(Province.State, Country.Region), sep=", ", remove=F, na.rm=T)
@@ -105,7 +105,7 @@ covid_deaths_long <- bind_rows(covid_deaths_long, australia, canada, china) %>% 
 length(unique(covid_deaths_long$Country)) # doit faire 208
 
 # Guéris
-covid_recovered <- read_csv("data/covid19_recovered.csv") %>%
+covid_recovered <- read_csv("data/covid19_recovered_25avr2020.csv") %>%
   rename("Province.State" = "Province/State") %>% rename("Country.Region" = "Country/Region")
 
 covid_recovered <- unite(covid_recovered, Country, c(Province.State, Country.Region), sep=", ", remove=F, na.rm=T)
@@ -466,7 +466,7 @@ write_excel_csv(World2, "natural_earth_data.csv")
 #########################################
 
 
-download.file("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv", destfile = "data/covid-testing-all-observations.csv")
+download.file("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv", destfile = "data/covid-testing-all-observations_01mai2020.csv")
 
 covid_testing <- read_csv("data/covid-testing-all-observations.csv")
 covid_testing <- separate(covid_testing, col=Entity, into=c("Country", "type_test"), sep=" - ") %>%
