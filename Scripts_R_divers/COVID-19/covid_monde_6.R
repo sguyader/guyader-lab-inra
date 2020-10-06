@@ -274,18 +274,19 @@ worldmap
 gomp.confirmed.fun <- confirmed ~ Asym*exp(-exp(-b*(as.numeric(date)-xmid)))
 
 # créer un tableau vide dans le quel les paramètres des courbes ajustées seront écrits
-results.confirmed <- tibble(params=c("b_confirmed","Asym_confirmed","xmid_confirmed", "P(b)_confirmed", "P(Asym)_confirmed", "P(xmid)_confirmed", "converged_confirmed", "nbiter_confirmed"))
+results.confirmed <- tibble(params=c("AUC_confirmed","b_confirmed","Asym_confirmed","xmid_confirmed", "P(b)_confirmed", "P(Asym)_confirmed", "P(xmid)_confirmed", "converged_confirmed", "nbiter_confirmed"))
 
 # boucle d'ajustements
 for(i in unique(jhu.covid.3$Country)) {
   tryCatch({ # fonction pour intercepter les erreurs et laisser la boucle de continuer
     dat <- filter(jhu.covid.3, Country == i) # filtrer par région/pays
+    AUC_confirmed <- DescTools::AUC(as.numeric(dat$date), dat$confirmed, method="linear")
     model1 <- nlsLM(gomp.confirmed.fun, data=dat, start=list(b=0.1, Asym=5e4, xmid=1.83e4), control = nls.lm.control(maxiter=100))  # ajustement nonliéaire avec algorithme Levenberg-Marquardt
     res <- tibble(coef(model1))
     names(res) <- i
     res <- rbind(res, summary(model1)$coefficients[10], summary(model1)$coefficients[11], summary(model1)$coefficients[12], model1$convInfo$isConv, model1$convInfo$finIter
 )
-    results.confirmed <- cbind(results.confirmed, res) # ajouter les paramètres au tableau
+    results.confirmed <- cbind(results.confirmed, rbind(AUC_confirmed, res)) # ajouter les paramètres au tableau
     # newdata = expand.grid(date=as.Date(dat$date)) # créer un jeu de dates servant de valeurs explicatives au modèle pour générer les courbes
     # pred <- predict(model1, newdata=newdata) # générer les valeurs prédites par le modèle
     # p <- ggplot(dat) + # générer le graphique confirmed = f(date) et le stocker en mémoire
@@ -312,21 +313,22 @@ gompertz_param_table.confirmed <- results.confirmed %>%
 gomp.deaths.fun <- deaths ~ Asym*exp(-exp(-b*(as.numeric(date)-xmid)))
 
 # créer un tableau vide dans le quel les paramètres des courbes ajustées seront écrits
-results.deaths <- tibble(params=c("b_deaths","Asym_deaths","xmid_deaths", "P(b)_deaths", "P(Asym)_deaths", "P(xmid)_deaths", "converged_deaths", "nbiter_deaths"))
+results.deaths <- tibble(params=c("AUC_deaths","b_deaths","Asym_deaths","xmid_deaths", "P(b)_deaths", "P(Asym)_deaths", "P(xmid)_deaths", "converged_deaths", "nbiter_deaths"))
 
 # boucle d'ajustements
-#for(i in unique(jhu.covid.3$Country)) {
-for(i in unique(filter(jhu.covid.3, Country %in% c(c("Benin", "Brunei Darussalam", "Curacao", "Cayman Islands", "French Guiana", "Montserrat", "British Virgin Islands", "Yemen, Rep.")))[[3]])) {
+for(i in unique(jhu.covid.3$Country)) {
+#for(i in unique(filter(jhu.covid.3, Country %in% c(c("Benin", "Brunei Darussalam", "Curacao", "Cayman Islands", "French Guiana", "Montserrat", "British Virgin Islands", "Yemen, Rep.")))[[3]])) {
   ##### start=list(b=0.1, Asym=5e4, xmid=1.835e4)
   ##### start=list(b=3, Asym=2, xmid=1.83e4)
   tryCatch({ # fonction pour intercepter les erreurs et laisser la boucle de continuer
     dat <- filter(jhu.covid.3, Country == i) # filtrer par région/pays
-    model1 <- nlsLM(gomp.deaths.fun, data=dat, start=list(b=3, Asym=2, xmid=1.83e4), control = nls.lm.control(maxiter=100))  # ajustement nonliéaire avec algorithme Levenberg-Marquardt
+    AUC_deaths <- DescTools::AUC(as.numeric(dat$date), dat$deaths, method="linear")
+    model1 <- nlsLM(gomp.deaths.fun, data=dat, start=list(b=0.1, Asym=5e4, xmid=1.835e4), control = nls.lm.control(maxiter=100))  # ajustement nonliéaire avec algorithme Levenberg-Marquardt
     res <- tibble(coef(model1))
     names(res) <- i
     res <- rbind(res, summary(model1)$coefficients[10], summary(model1)$coefficients[11], summary(model1)$coefficients[12], model1$convInfo$isConv, model1$convInfo$finIter
     )
-    results.deaths <- cbind(results.deaths, res) # ajouter les paramètres au tableau
+    results.deaths <- cbind(results.deaths, rbind(AUC_deaths, res)) # ajouter les paramètres au tableau
     # newdata = expand.grid(date=as.Date(dat$date)) # créer un jeu de dates servant de valeurs explicatives au modèle pour générer les courbes
     # pred <- predict(model1, newdata=newdata) # générer les valeurs prédites par le modèle
     # p <- ggplot(dat) + # générer le graphique confirmed = f(date) et le stocker en mémoire
@@ -353,7 +355,7 @@ gompertz_param_table.deaths <- results.deaths %>%
 gomp.recovered.fun <- recovered ~ Asym*exp(-exp(-b*(as.numeric(date)-xmid)))
 
 # créer un tableau vide dans le quel les paramètres des courbes ajustées seront écrits
-results.recovered <- tibble(params=c("b_recovered","Asym_recovered","xmid_recovered", "P(b)_recovered", "P(Asym)_recovered", "P(xmid)_recovered", "converged_recovered", "nbiter_recovered"))
+results.recovered <- tibble(params=c("AUC_recovered","b_recovered","Asym_recovered","xmid_recovered", "P(b)_recovered", "P(Asym)_recovered", "P(xmid)_recovered", "converged_recovered", "nbiter_recovered"))
 
 # boucle d'ajustements
 for(i in unique(jhu.covid.3$Country)) {
@@ -362,12 +364,13 @@ for(i in unique(jhu.covid.3$Country)) {
   ### start=list(b=0.1, Asym=5, xmid=1.83e4))
   tryCatch({ # fonction pour intercepter les erreurs et laisser la boucle de continuer
     dat <- filter(jhu.covid.3, Country == i) # filtrer par région/pays
+    AUC_recovered <- DescTools::AUC(as.numeric(dat$date), dat$recovered, method="linear")
     model1 <- nlsLM(gomp.recovered.fun, data=dat, start=list(b=0.1, Asym=1e5, xmid=1.83e4), control = nls.lm.control(maxiter=100))  # ajustement nonliéaire avec algorithme Levenberg-Marquardt
     res <- tibble(coef(model1))
     names(res) <- i
     res <- rbind(res, summary(model1)$coefficients[10], summary(model1)$coefficients[11], summary(model1)$coefficients[12], model1$convInfo$isConv, model1$convInfo$finIter
     )
-    results.recovered <- cbind(results.recovered, res) # ajouter les paramètres au tableau
+    results.recovered <- cbind(results.recovered, rbind(AUC_recovered, res)) # ajouter les paramètres au tableau
     # newdata = expand.grid(date=as.Date(dat$date)) # créer un jeu de dates servant de valeurs explicatives au modèle pour générer les courbes
     # pred <- predict(model1, newdata=newdata) # générer les valeurs prédites par le modèle
     # p <- ggplot(dat) + # générer le graphique confirmed = f(date) et le stocker en mémoire
@@ -389,12 +392,12 @@ gompertz_param_table.recovered <- results.recovered %>%
   arrange(Country)
 
 ####
-gompertz_param_table_all <- cbind(gompertz_param_table.confirmed, select(gompertz_param_table.deaths, -Country), select(gompertz_param_table.recovered, -Country)) %>%
+gompertz_param_table_all <- cbind(gompertz_param_table.confirmed, dplyr::select(gompertz_param_table.deaths, -Country), dplyr::select(gompertz_param_table.recovered, -Country)) %>%
   arrange(Country)
 
-covid_result_table <- bind_cols(arrange(dat.last, Country), select(gompertz_param_table_all, -Country))
+covid_result_table <- bind_cols(arrange(dat.last, Country), dplyr::select(gompertz_param_table_all, -Country))
 
-#write_excel_csv(gompertz_param_table_all, "gompertz_param_table_03mai2020.csv")
+write_excel_csv(gompertz_param_table_all, "gompertz_param_table_10mai2020.csv")
 
 
 ### Liste des pays
@@ -493,8 +496,8 @@ World2[158,"temp_mar20"] <- mean(F_to_C(Poly_temp_mar20$tmpf), na.rm=T)
 World2[158,"temp_mean"] <- mean(World2[[158,"temp_dec19"]], World2[[158,"temp_jan20"]], World2[[158,"temp_fev20"]], World2[[158,"temp_mar20"]])
 
 ###
-covid_data <- bind_cols(arrange(World2, ISO_A3), arrange(covid_uid, iso3)[12], arrange(covid_result_table, ISO_A3)[c(3,6:32)]) %>%
-  select(-GEOUNIT) %>%
+covid_data <- bind_cols(arrange(World2, ISO_A3), arrange(covid_uid, iso3)[12], arrange(covid_result_table, ISO_A3)[c(3,6:35)]) %>%
+  dplyr::select(-GEOUNIT) %>%
   relocate(Country, .after=ISO_A2)
 
 covid_data$condirmed_p_million <- covid_data$confirmed_30avr / covid_data$Population * 1e6
@@ -513,11 +516,11 @@ covid_data <- covid_data %>% relocate(condirmed_p_million, .after=recovered_30av
 #########################################
 
 
-download.file("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv", destfile = "data/covid-testing-all-observations_10mai2020.csv")
+download.file("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv", destfile = "data/covid-testing-all-observations_17mai2020.csv")
 
-covid_testing <- read_csv("data/covid-testing-all-observations_10mai2020.csv")
+covid_testing <- read_csv("data/covid-testing-all-observations_17mai2020.csv")
 covid_testing <- separate(covid_testing, col=Entity, into=c("Country", "type_test"), sep=" - ") %>%
-  select(Country, "Cumulative total", type_test, Date) %>%
+  dplyr::select(Country, "Cumulative total", type_test, Date) %>%
   rename(cumul_tests="Cumulative total")
 
 last_tests <- covid_testing %>%
@@ -526,7 +529,7 @@ last_tests <- covid_testing %>%
   arrange(Date) %>%
   filter(row_number()==n()) %>%
   arrange(Country) %>%
-  filter(Country != "Hong Kong") %>%
+  filter(Country != "Hong Kong")
 
 
 last_tests$Country[17] <- "Czech Republic"
@@ -542,8 +545,13 @@ first_cases <- jhu.covid.3 %>%
   filter(confirmed > 0 ) %>%
   filter(row_number() == 1) %>%
   arrange(Country) %>%
-  select(Country, date) %>%
+  dplyr::select(Country, date) %>%
   rename(start_epid=date)
+first_cases[42,"start_epid"] <- as.Date("2019-12-10", origin = "1970-01-01") #China
+first_cases[99,"start_epid"] <- as.Date("2020-01-15", origin = "1970-01-01") #Japan
+first_cases[103,"start_epid"] <- as.Date("2020-01-20", origin = "1970-01-01") #South Korea
+first_cases[185,"start_epid"] <- as.Date("2020-01-21", origin = "1970-01-01") #Taiwan
+first_cases[187,"start_epid"] <- as.Date("2020-01-14", origin = "1970-01-01") #Thailand
 
 last_cases <- jhu.covid.3 %>%
   group_by(Country) %>%
@@ -551,7 +559,7 @@ last_cases <- jhu.covid.3 %>%
   filter(confirmed > 0 ) %>%
   filter(row_number() == n()) %>%
   arrange(Country) %>%
-  select(Country, date) %>%
+  dplyr::select(Country, date) %>%
   rename(last_epid=date)
 
 testing <- bind_cols(first_cases, last_cases[2]) %>%
@@ -569,19 +577,22 @@ covid_data_all <- covid_data_all %>% relocate(cumul_tests_p_million, .after=cumu
 
 covid_data_all <- covid_data_all %>%
   mutate(date_first_cases = start_epid, days_since_first_cases = epid_duration) %>%
-  select(-epid_duration, -start_epid) %>%
+  mutate(AUC_confirmed_pmillion = AUC_confirmed / Population * 1e6) %>%
+  mutate(AUC_deaths_pmillion = AUC_deaths / Population * 1e6) %>%
+  mutate(AUC_recovered_pmillion = AUC_recovered / Population * 1e6) %>%
+  dplyr::select(-epid_duration, -start_epid) %>%
   arrange(ISO_A3) 
 
 write_excel_csv(covid_data_all, "covid_data_all.csv")
 
 ### Covid response policy
 
-download.file("https://github.com/OxCGRT/covid-policy-tracker/raw/master/data/OxCGRT_latest.csv", destfile = "data/covid_response_10mai2020.csv")
+download.file("https://github.com/OxCGRT/covid-policy-tracker/raw/master/data/OxCGRT_latest.csv", destfile = "data/covid_response_17mai2020.csv")
 
-covid_response <- read_csv("data/covid_response_10mai2020.csv")
+covid_response <- read_csv("data/covid_response_17mai2020.csv")
 covid_response <- covid_response %>% mutate(Date=lubridate::ymd(Date)) %>%
   filter(Date < "2020-05-01") %>%
-  filter(!CountryName %in% c("Turkmenistan", "Yemen"))
+  filter(!CountryName %in% c("Hong Kong", "Lithuania", "Solomon Islands", "Turkmenistan", "Yemen"))
 
 ggplot(covid_response, aes(x=Date, y=StringencyIndex)) +
   geom_line(aes(group=CountryCode), alpha=0.3)
@@ -590,9 +601,10 @@ response_table <- tibble(CountryCode=unique(covid_response$CountryCode), Country
 
 for(i in unique(covid_response$CountryName)) {
   tryCatch({ 
-    dat <- filter(covid_response, CountryName == i, Date <= "2020-04-25")
+    dat <- filter(covid_response, CountryName == i)
+    dat$StringencyIndex[is.na(dat$StringencyIndex)] <- 0
     # AUC et SI
-    AUC_value <- DescTools::AUC(as.numeric(dat$Date), dat$StringencyIndex, method="linear")
+    AUC_value <- DescTools::AUC(as.numeric(dat$Date), dat$StringencyIndex)
     date_SI_sup0 <- dat$Date[which(dat$StringencyIndex > 0)][1]
     date_SI_sup50 <- dat$Date[which(dat$StringencyIndex > 50)][1]
     date_SI_max <- dat$Date[which(dat$StringencyIndex == max(dat$StringencyIndex, na.rm=T))][1]
@@ -602,17 +614,17 @@ for(i in unique(covid_response$CountryName)) {
     response_table$date_SI_sup50[response_table$CountryName == i] <- date_SI_sup50
     response_table$date_SI_max[response_table$CountryName == i] <- date_SI_max
     response_table$SI_max[response_table$CountryName == i] <- SI_max
-    if(i == "Kosovo") response_table[155,1] <- "XKX"
-    # # graphe
-    # p <- ggplot(dat, aes(x=as.Date(Date), y=StringencyIndex)) +
-    #   geom_point() +
-    #   #geom_line(aes(x=as.Date(Date), y=pred1), color="red") +
-    #   #geom_line(aes(x=as.Date(Date), y=pred2), color="blue") +
-    #   scale_x_date(date_breaks="1 week", labels=scales::date_format("%d-%m-%Y")) +
-    #   theme(axis.text.x = element_text(angle = 90)) +
-    #   labs(title = paste("Evolution de la réponse au COVID-19 en", i), x="date", y="Indice d'intensité")
-    # ggsave(p, filename=paste("dyn_stringency_",i,".png"),
-    #        path="stringency_plots", width=8, height=5, units="in", dpi=72)
+    if(i == "Kosovo") response_table[162,1] <- "XKX"
+    # graphe
+    p <- ggplot(dat, aes(x=as.Date(Date), y=StringencyIndex)) +
+      geom_point() +
+      #geom_line(aes(x=as.Date(Date), y=pred1), color="red") +
+      #geom_line(aes(x=as.Date(Date), y=pred2), color="blue") +
+      scale_x_date(date_breaks="1 week", labels=scales::date_format("%d-%m-%Y")) +
+      theme(axis.text.x = element_text(angle = 90)) +
+      labs(title = paste("Evolution de la réponse au COVID-19 en", i), x="date", y="Indice d'intensité")
+    ggsave(p, filename=paste("dyn_stringency_",i,".png"),
+           path="stringency_plots", width=8, height=5, units="in", dpi=72)
   }, error=function(e){cat("ERROR :",i, "\n")})
 }
 
@@ -621,23 +633,23 @@ response_table_2 <- response_table %>%
   arrange(ISO_A3)
 
 response_table_2 <- left_join(covid_data_all[,1:3], response_table_2)
-response_table_2 <- select(response_table_2, -c(2,4)) %>%
+response_table_2 <- dplyr::select(response_table_2, -c(2,4)) %>%
   mutate(date_SI_sup0 = as.Date(date_SI_sup0, "1970-01-01"), date_SI_sup50 = as.Date(date_SI_sup50, "1970-01-01"), date_SI_max = as.Date(date_SI_max, "1970-01-01"))
 
-response_table_3 <- cbind(covid_data_all, select(response_table_2, -ISO_A3, -Country))
+response_table_3 <- cbind(covid_data_all, dplyr::select(response_table_2, -ISO_A3, -Country))
 
 response_table_3 <- response_table_3 %>%
   mutate(date_SI_sup0 = date_SI_sup0 - date_first_cases, date_SI_sup50 = date_SI_sup50 - date_first_cases, date_SI_max = date_SI_max - date_first_cases) %>%
-  select(ISO_A3, Country, AUC_SI, date_SI_sup0, date_SI_sup50, date_SI_max, SI_max)
+  dplyr::select(ISO_A3, Country, AUC_SI, date_SI_sup0, date_SI_sup50, date_SI_max, SI_max)
 
 write_excel_csv(response_table_3, "covid_response_data_10mai2020.csv")
 
 ### Mobility
 library(partykit)
 
-download.file("https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv", destfile = "data/covid_mobility_10mai2020.csv")
+download.file("https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv", destfile = "data/covid_mobility_17mai2020.csv")
 
-covid_mobility <- read_csv("data/covid_mobility_10mai2020.csv")
+covid_mobility <- read_csv("data/covid_mobility_17mai2020.csv")
 covid_mobility <- covid_mobility %>%
   filter(date < "2020-05-01", is.na(sub_region_1)) %>%
   filter(country_region != "Réunion") %>%
@@ -675,14 +687,14 @@ for(i in unique(covid_mobility$country_region)) {
       mobility_table$workplaces_date_split[mobility_table$CountryName == i] <- date_split
     }
     dat$parks.party.predict <- predict(party.fit)
-    p <- ggplot(data=dat, aes(date, workplaces)) +
-      geom_point() +
-      geom_line(aes(y=parks.party.predict)) +
-      scale_x_date(date_breaks="1 week", labels=scales::date_format("%d-%m-%Y")) +
-      theme(axis.text.x = element_text(angle = 90)) +
-      labs(title = paste("Evolution de la mobilité en", i), x="date", y="Changement de fréquentation lieux de travail (en %)")
-    ggsave(p, filename=paste("dyn_mobility_",i,"_workplaces.png"),
-           path="mobility_plots", width=8, height=5, units="in", dpi=72)
+    # p <- ggplot(data=dat, aes(date, workplaces)) +
+    #   geom_point() +
+    #   geom_line(aes(y=parks.party.predict)) +
+    #   scale_x_date(date_breaks="1 week", labels=scales::date_format("%d-%m-%Y")) +
+    #   theme(axis.text.x = element_text(angle = 90)) +
+    #   labs(title = paste("Evolution de la mobilité en", i), x="date", y="Changement de fréquentation lieux de travail (en %)")
+    # ggsave(p, filename=paste("dyn_mobility_",i,"_workplaces.png"),
+    #        path="mobility_plots", width=8, height=5, units="in", dpi=72)
   }, error=function(e){cat("ERROR :",i, "\n")})
 }
 
@@ -714,7 +726,7 @@ mobility_table_3 <- mobility_table_2 %>% rowwise() %>%
 mobility_table_3 <- mobility_table_3 %>% rowwise() %>%
   mutate(mobility_change_index_date_split = median(c(retail_and_recreation_date_split, grocery_and_pharmacy_date_split, parks_date_split, transit_stations_date_split, residential_date_split, workplaces_date_split), na.rm=T))
 
-mobility_table_3 <- mobility_table_3 %>% select(Country, residential_change, residential_date_split, mobility_change_index, mobility_change_index_date_split) %>%
+mobility_table_3 <- mobility_table_3 %>% dplyr::select(Country, residential_change, residential_date_split, mobility_change_index, mobility_change_index_date_split) %>%
   arrange(Country)
 
 mobility_table_3 <- left_join(first_cases, mobility_table_3)
@@ -723,7 +735,15 @@ mobility_table_3 <- mobility_table_3 %>%
 
 
 response_and_mobility_table <- left_join(arrange(response_table_3, Country), mobility_table_3) %>%
-  select(-start_epid) %>%
+  dplyr::select(-start_epid) %>%
   arrange(ISO_A3)
 
 write_excel_csv(response_and_mobility_table, "covid_response_and_mobility_10mai2020.csv")
+
+### urbanisation
+#GDALinfo("data/GHS_BUILT_LDS2014_GLOBE_R2018A_54009_1K_V2_0.tif")
+library(terra)
+#urban_dens_raster <- raster("data/GHS_BUILT_LDS2014_GLOBE_R2018A_54009_1K_V2_0.tif")
+urban_dens_raster <- rast("data/GHS_BUILT_LDS2014_GLOBE_R2018A_54009_1K_V2_0.tif") # terra
+plot(urban_dens_raster, useRaster=T)
+urban_dens_raster_longlatproj <- project(x=urban_dens_raster, y="+proj=longlat +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0")
