@@ -1,19 +1,19 @@
 site	commune	Latitude	Longitude	nb_echantillons	YMV	YMMV	YaV1	CoV1	DMaV	Macluravirus	Potexvirus	Betaflexiviridae
 Les Abymes	Les Abymes	16.281371	-61.513222	40	7.5	50	92.5	2.5	25	0	0	60
-Anse_Bertrand	Anse-Bertrand	16.462118	-61.439613	64	1.56	100	95.31	15.63	3.13	1.56	0	14.06
-Baie_Mahault	Baie-Mahault	16.240528	-61.605444	32	0	75	21.88	6.25	68.75	0	28.13	46.88
+Anse-Bertrand	Anse-Bertrand	16.462118	-61.439613	64	1.56	100	95.31	15.63	3.13	1.56	0	14.06
+Baie-Mahault	Baie-Mahault	16.240528	-61.605444	32	0	75	21.88	6.25	68.75	0	28.13	46.88
 Baillif	Baillif	16.032127	-61.731655	72	51.39	100	63.89	0	0	0	1.39	13.89
-Morne_a_leau	Morne-à-l’Eau	16.326313	-61.420475	40	52.5	92.5	95	2.5	0	0	0	77.5
-Petit_Canal	Petit-Canal	16.402739	-61.488786	56	0	92.86	0	33.93	3.57	0	0	12.5
-Port_Luis	Port-Louis	16.460508	-61.515881	44	0	81.82	81.82	0	11.36	0	0	54.55
-St_Francois	Saint-François	16.28445	-61.289085	48	0	31.25	4.17	6.25	0	0	0	75
-Ste_Anne	Sainte-Anne	16.26347	-61.424006	20	0	0	0	0	50	0	0	100
-Moule	Le Moule	16.298527	-61.400209	36	44.44	55.56	0	0	0	0	0	88.89
+Morne-à-l'eau	Morne-à-l’Eau	16.326313	-61.420475	40	52.5	92.5	95	2.5	0	0	0	77.5
+Petit-Canal	Petit-Canal	16.402739	-61.488786	56	0	92.86	0	33.93	3.57	0	0	12.5
+Port-Louis	Port-Louis	16.460508	-61.515881	44	0	81.82	81.82	0	11.36	0	0	54.55
+Saint-François	Saint-François	16.28445	-61.289085	48	0	31.25	4.17	6.25	0	0	0	75
+Sainte-Anne	Sainte-Anne	16.26347	-61.424006	20	0	0	0	0	50	0	0	100
+Le Moule	Le Moule	16.298527	-61.400209	36	44.44	55.56	0	0	0	0	0	88.89
 Lamentin_1	Lamentin	16.277069	-61.676445	50	0	60	84	24	74	52	4	86
 Lamentin_2	Lamentin	16.280915	-61.65711	20	55	0	0	0	15	0	30	90
 Roujol	Petit-Bourg	16.182762297588	-61.589748970495	56	0	0	78.57	80.36	12.5	0	41.07	53.57
-Petit_Bourg	Petit-Bourg	16.218745	-61.612828	36	16.67	100	36.11	2.78	63.89	13.89	19.44	86.11
+Petit-Bourg	Petit-Bourg	16.218745	-61.612828	36	16.67	100	36.11	2.78	63.89	13.89	19.44	86.11
 Trianon	Grand-Bourg	15.899226	-61.31697	48	31.25	93.75	43.75	0	0	0	0	0
-Grand Bassin	Saint-Louis	15.959562	-61.246233	44	22.22	41.67	30.56	0	0	36.11	0	16.67
+Grand-Bassin	Saint-Louis	15.959562	-61.246233	44	22.22	41.67	30.56	0	0	36.11	0	16.67
 Malonzo	Capesterre-de-Marie-Galante	15.900281	-61.240885	48	0	22.92	14.58	0	0	0	0	0
 Pirogue	Grand-Bourg	15.905133	-61.283179	28	0	96.43	100	57.14	0	0	0	0
