@@ -1,0 +1,164 @@
+unique.data_covid_1000_cases.country.
+Afghanistan
+Angola
+Albania
+Andorra
+United Arab Emirates
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Belgium
+Benin
+Burkina Faso
+Bangladesh
+Bulgaria
+Bahrain
+Bahamas
+Bosnia and Herzegovina
+Belarus
+Belize
+Bolivia
+Brazil
+Botswana
+Central African Republic
+Canada
+Switzerland
+Chile
+China
+Cote d'Ivoire
+Cameroon
+"Congo, the Democratic Republic of the"
+Congo
+Colombia
+Cape Verde
+Costa Rica
+Cuba
+Cyprus
+Czech Republic
+Germany
+Djibouti
+Denmark
+Dominican Republic
+Algeria
+Ecuador
+Egypt
+Spain
+Estonia
+Ethiopia
+Finland
+France
+Gabon
+United Kingdom
+Georgia
+Ghana
+Guinea
+Gambia
+Guinea-Bissau
+Equatorial Guinea
+Greece
+Guatemala
+Guam
+Guyana
+Honduras
+Croatia
+Haiti
+Hungary
+Indonesia
+India
+Ireland
+Iran
+Iraq
+Iceland
+Israel
+Italy
+Jamaica
+Jordan
+Japan
+Kazakhstan
+Kenya
+Kyrgyzstan
+"Korea, South"
+Kuwait
+Lebanon
+Liberia
+Libya
+Liechtenstein
+Sri Lanka
+Lesotho
+Lithuania
+Luxembourg
+Latvia
+Morocco
+Moldova
+Madagascar
+Maldives
+Mexico
+North Macedonia
+Mali
+Malta
+Myanmar
+Montenegro
+Mozambique
+Mauritania
+Malawi
+Malaysia
+Namibia
+Niger
+Nigeria
+Nicaragua
+Netherlands
+Norway
+Nepal
+New Zealand
+Oman
+Pakistan
+Panama
+Peru
+Philippines
+Poland
+Puerto Rico
+Portugal
+Paraguay
+Palestine
+Qatar
+Kosovo
+Romania
+Russia
+Rwanda
+Saudi Arabia
+Sudan
+Senegal
+Singapore
+Sierra Leone
+El Salvador
+San Marino
+Somalia
+Serbia
+South Sudan
+Suriname
+Slovakia
+Slovenia
+Sweden
+Swaziland
+Syria
+Chad
+Togo
+Thailand
+Tajikistan
+Trinidad and Tobago
+Tunisia
+Turkey
+Uganda
+Ukraine
+Uruguay
+United States
+Uzbekistan
+Venezuela
+"Virgin Islands, U.S."
+Vietnam
+Yemen
+South Africa
+Zambia
+Zimbabwe

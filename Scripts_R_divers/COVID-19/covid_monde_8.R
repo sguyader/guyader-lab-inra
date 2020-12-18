@@ -5,6 +5,7 @@ library(rnaturalearth)
 #library(gganimate)
 library(sf)
 library(minpack.lm)
+library(directlabels)
 
 theme_set(theme_bw())
 
@@ -13,21 +14,21 @@ theme_set(theme_bw())
 ##############################################
 
 # Télécharger les données de la Johns Hopkins University
-download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", destfile = "data/covid19_confirmed_16sep2020.csv")
-download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv", destfile = "data/covid19_deaths_16sep2020.csv")
-download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv", destfile = "data/covid19_recovered_16sep2020.csv")
+download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv", destfile = "data/covid19_confirmed_13nov2020.csv")
+download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv", destfile = "data/covid19_deaths_13nov2020.csv")
+download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv", destfile = "data/covid19_recovered_13nov2020.csv")
 
-download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv", destfile = "data/UID_ISO_FIPS_LookUp_Table_16sep2020.csv")
+download.file("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv", destfile = "data/UID_ISO_FIPS_LookUp_Table_13nov2020.csv")
 
 # Charger les identifiants
-covid_uid <- read_csv("data/UID_ISO_FIPS_LookUp_Table_16sep2020.csv") %>%
+covid_uid <- read_csv("data/UID_ISO_FIPS_LookUp_Table_13nov2020.csv") %>%
   rename("Province.State" = "Province_State") %>% rename("Country.Region" = "Country_Region") %>%
   filter(UID < 1000) %>%
   filter(!iso3 %in% c("HKG", "MAC", "ASM", "GUM", "MNP", "VIR", "PRI", "BES")) %>%
   arrange(Combined_Key)
 
 # Confirmés
-covid_confirmed <- read_csv("data/covid19_confirmed_16sep2020.csv") %>%
+covid_confirmed <- read_csv("data/covid19_confirmed_13nov2020.csv") %>%
   rename("Province.State" = "Province/State") %>% rename("Country.Region" = "Country/Region")# %>%
   #filter(!Country.Region %in% c())
 
@@ -66,7 +67,7 @@ length(unique(covid_confirmed_long$Country)) # doit faire 211
 
 
 # Décédés
-covid_deaths <- read_csv("data/covid19_deaths_16sep2020.csv") %>%
+covid_deaths <- read_csv("data/covid19_deaths_13nov2020.csv") %>%
   rename("Province.State" = "Province/State") %>% rename("Country.Region" = "Country/Region")# %>%
 #filter(!Country.Region %in% c("Comoros", "Tajikistan"))
 
@@ -105,7 +106,7 @@ length(unique(covid_deaths_long$Country)) # doit faire 211
 
 # Guéris
 
-covid_recovered <- read_csv("data/covid19_recovered_16sep2020.csv") %>%
+covid_recovered <- read_csv("data/covid19_recovered_13nov2020.csv") %>%
   rename("Province.State" = "Province/State") %>% rename("Country.Region" = "Country/Region")# %>%
 #filter(!Country.Region %in% c("Comoros", "Tajikistan"))
 
@@ -337,9 +338,10 @@ for(i in unique(jhu.covid.3$Country)) {
 # gompertz_param_table_all <- cbind(gompertz_param_table.confirmed, dplyr::select(gompertz_param_table.deaths, -Country), dplyr::select(gompertz_param_table.recovered, -Country)) %>%
 #   arrange(Country)
 
-covid_result_table <- bind_cols(arrange(dat.last, Country), dplyr::select(arrange(results.confirmed, Country), -Country), dplyr::select(arrange(results.deaths, Country), -Country), dplyr::select(arrange(results.recovered, Country), -Country))
+covid_result_table <- bind_cols(arrange(dat.last, Country), dplyr::select(arrange(results.confirmed, Country), -Country), dplyr::select(arrange(results.deaths, Country), -Country), dplyr::select(arrange(results.recovered, Country), -Country)) %>% filter(ISO_A3 %in% c("ABW","ATG","BHS","BMU","BRB","CUB","CUW","CYM","DMA","DOM","GLP","MTQ","GRD","HTI","JAM","KNA","LCA","TCA","TTO","VCT","VGB"))
 
-write_excel_csv(covid_result_table, "covid_result_table_16sep2020.csv")
+write_excel_csv(covid_result_table, "covid_result_table_caribbean.csv")
+
 
 
 ### Liste des pays
@@ -439,9 +441,10 @@ World2[158,"temp_mar20"] <- mean(F_to_C(Poly_temp_mar20$tmpf), na.rm=T)
 World2[158,"temp_mean"] <- mean(World2[[158,"temp_dec19"]], World2[[158,"temp_jan20"]], World2[[158,"temp_fev20"]], World2[[158,"temp_mar20"]])
 
 ###
-covid_data <- bind_cols(arrange(World2, ISO_A3), arrange(covid_uid, iso3)[12], arrange(covid_result_table, ISO_A3)[c(3,6:11)]) %>%
+covid_data <- bind_cols(arrange(filter(World2, ISO_A3 %in% c("ABW","ATG","BHS","BMU","BRB","CUB","CUW","CYM","DMA","DOM","GLP","MTQ","GRD","HTI","JAM","KNA","LCA","TCA","TTO","VCT","VGB")), ISO_A3), arrange(filter(covid_uid, iso3 %in% c("ABW","ATG","BHS","BMU","BRB","CUB","CUW","CYM","DMA","DOM","GLP","MTQ","GRD","HTI","JAM","KNA","LCA","TCA","TTO","VCT","VGB")), iso3)[12], arrange(covid_result_table, ISO_A3)[c(3,6:11)]) %>%
   dplyr::select(-GEOUNIT) %>%
-  relocate(Country, .after=ISO_A2)
+  relocate(Country, .after=ISO_A2) %>%
+  filter(ISO_A3 %in% c("ABW","ATG","BHS","BMU","BRB","CUB","CUW","CYM","DMA","DOM","GLP","MTQ","GRD","HTI","JAM","KNA","LCA","TCA","TTO","VCT","VGB"))
 
 covid_data$condirmed_p_million <- covid_data$confirmed_31aou / covid_data$Population * 1e6
 covid_data$deaths_p_million <- covid_data$deaths_31aou / covid_data$Population * 1e6
@@ -451,7 +454,40 @@ covid_data <- covid_data %>% relocate(condirmed_p_million, .after=recovered_31ao
   relocate(deaths_p_million, .after=condirmed_p_million) %>%
   relocate(recovered_p_million, .after=deaths_p_million)
 
-write_excel_csv(covid_data, "covid_data_16sep2020.csv")
+covid_data_caribbean <- covid_data %>% filter(ISO_A3 %in% c("ABW","ATG","BHS","BMU","BRB","CUB","CUW","CYM","DMA","DOM","GRD","HTI","JAM","KNA","LCA","TCA","TTO","VCT","VGB", "GLP", "MTQ")) %>% arrange(ISO_A3)
+
+jhu_covid_caribbean <- jhu.covid.3 %>% filter(ISO_A3 %in% c("ABW","ATG","BHS","BMU","BRB","CUB","CUW","CYM","DMA","DOM","GRD","HTI","JAM","KNA","LCA","TCA","TTO","VCT","VGB", "GLP", "MTQ")) %>% arrange(ISO_A3)
+
+jhu_covid_caribbean$population <- rep(covid_data_caribbean$Population, each=223)
+
+ggplot(jhu_covid_caribbean, aes(x=as.Date(date), y=confirmed/population*1e6, group=ISO_A3)) +
+  geom_line(aes(color=ISO_A3)) +
+  geom_dl(aes(label = ISO_A3), method = list("last.qp", cex = .75, hjust = 0, vjust = 0)) +
+  labs(x="date", y= "confirmed cases per million", color="Country code") +
+  scale_x_date(date_breaks="1 month", labels=scales::date_format("%B")) +
+  theme(axis.text.x = element_text(angle = 0, size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title = element_text(size = 18))
+
+ggplot(jhu_covid_caribbean, aes(x=as.Date(date), y=deaths/population*1e6, group=ISO_A3)) +
+  geom_line(aes(color=ISO_A3)) +
+  geom_dl(aes(label = ISO_A3), method = list("last.points", cex = .75, hjust = 1, vjust = 0)) +
+  labs(x="date", y= "deaths per million", color="Country code") +
+  scale_x_date(date_breaks="1 month", labels=scales::date_format("%B")) +
+  theme(axis.text.x = element_text(angle = 0, size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title = element_text(size = 18))
+
+ggplot(jhu_covid_caribbean, aes(x=as.Date(date), y=recovered/population*1e6, group=ISO_A3)) +
+  geom_line(aes(color=ISO_A3)) +
+  geom_dl(aes(label = ISO_A3), method = list("last.points", cex = .75, hjust = 1, vjust = 0)) +
+  labs(x="date", y= "recovered per million", color="Country code") +
+  scale_x_date(date_breaks="1 month", labels=scales::date_format("%B")) +
+  theme(axis.text.x = element_text(angle = 0, size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title = element_text(size = 18))
+
+write_excel_csv(jhu_covid_caribbean, "covid_data_caribbean.csv")
 
 
 #########################################
@@ -536,14 +572,21 @@ covid_response <- covid_response %>% mutate(Date=lubridate::ymd(Date)) %>%
   filter(Date < "2020-09-01") %>%
   filter(!CountryName %in% c("Hong Kong", "Solomon Islands", "Turkmenistan"))
 
-ggplot(covid_response, aes(x=Date, y=StringencyIndex)) +
-  geom_line(aes(group=CountryCode), alpha=0.3)
+ggplot(filter(covid_response, CountryCode %in% c("ABW","ATG","BHS","BMU","BRB","CUB","CUW","DMA","DOM","FRA","GRD","HTI","JAM","KNA","LCA","TCA","TTO","VCT","VGB")), aes(x=Date, y=StringencyIndex)) +
+  geom_line(aes(group=CountryCode, color=CountryCode)) +
+  geom_dl(aes(label = CountryCode), method = list("last.bumpup", cex = .75, hjust = 0, vjust = 0)) +
+  labs(x="date", y= "Stringency Index (%)", color="Country code") +
+  scale_x_date(date_breaks="1 month", labels=scales::date_format("%B")) +
+  theme(axis.text.x = element_text(angle = 0, size = 12),
+        axis.text.y = element_text(size = 12),
+        axis.title = element_text(size = 18))
 
-response_table <- tibble(CountryCode=unique(covid_response$CountryCode), CountryName=unique(covid_response$CountryName), AUC_SI=NA, date_SI_sup0=NA, date_SI_sup50=NA, date_SI_max=NA, SI_max=NA)
+response_table <- tibble(CountryCode=unique(covid_response$CountryCode), CountryName=unique(covid_response$CountryName), AUC_SI=NA, date_SI_sup0=NA, date_SI_sup50=NA, date_SI_max=NA, SI_max=NA, SI_last=NA)
 
-for(i in unique(covid_response$CountryName)) {
+#for(i in unique(covid_response$CountryName)) {
+for(i in c("ABW","ATG","BHS","BMU","BRB","CUB","CUW","DMA","DOM","FRA","GRD","HTI","JAM","KNA","LCA","TCA","TTO","VCT","VGB")) {
   tryCatch({ 
-    dat <- filter(covid_response, CountryName == i)
+    dat <- filter(covid_response, CountryCode == i)
     dat$StringencyIndex[is.na(dat$StringencyIndex)] <- 0
     # AUC et SI
     AUC_value <- DescTools::AUC(as.numeric(dat$Date), dat$StringencyIndex)
@@ -551,11 +594,13 @@ for(i in unique(covid_response$CountryName)) {
     date_SI_sup50 <- dat$Date[which(dat$StringencyIndex > 50)][1]
     date_SI_max <- dat$Date[which(dat$StringencyIndex == max(dat$StringencyIndex, na.rm=T))][1]
     SI_max <- max(dat$StringencyIndex, na.rm=T)
-    response_table$AUC_SI[response_table$CountryName == i] <- AUC_value
-    response_table$date_SI_sup0[response_table$CountryName == i] <- date_SI_sup0
-    response_table$date_SI_sup50[response_table$CountryName == i] <- date_SI_sup50
-    response_table$date_SI_max[response_table$CountryName == i] <- date_SI_max
-    response_table$SI_max[response_table$CountryName == i] <- SI_max
+    SI_last <- dat$StringencyIndex[which(dat$Date == last_date)][1]
+    response_table$AUC_SI[response_table$CountryCode == i] <- AUC_value
+    response_table$date_SI_sup0[response_table$CountryCode == i] <- date_SI_sup0
+    response_table$date_SI_sup50[response_table$CountryCode == i] <- date_SI_sup50
+    response_table$date_SI_max[response_table$CountryCode == i] <- date_SI_max
+    response_table$SI_max[response_table$CountryCode == i] <- SI_max
+    response_table$SI_last[response_table$CountryCode == i] <- SI_last
     if(i == "Kosovo") response_table[162,1] <- "XKX"
     # graphe
     p <- ggplot(dat, aes(x=as.Date(Date), y=StringencyIndex)) +
@@ -582,9 +627,9 @@ response_table_3 <- cbind(covid_data_all, dplyr::select(response_table_2, -ISO_A
 
 response_table_3 <- response_table_3 %>%
   mutate(date_SI_sup0 = date_SI_sup0 - date_first_cases, date_SI_sup50 = date_SI_sup50 - date_first_cases, date_SI_max = date_SI_max - date_first_cases) %>%
-  dplyr::select(ISO_A3, Country, AUC_SI, date_SI_sup0, date_SI_sup50, date_SI_max, SI_max)
+  dplyr::select(ISO_A3, Country, AUC_SI, date_SI_sup0, date_SI_sup50, date_SI_max, SI_max, SI_last)
 
-write_excel_csv(response_table_3, "covid_response_data_16sep2020.csv")
+write_excel_csv(response_table_3, "covid_response_data_caribbean.csv")
 
 ### Mobility
 library(partykit)
