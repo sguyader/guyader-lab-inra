@@ -2745,3 +2745,84 @@ Entered on [2019-12-04 Wed 09:04]
 
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+* 2021
+** 2021-01 January
+*** 2021-01-14 Thursday
+**** *Réunion viro* :meeting:virologie:
+- Gersende
+  + analyse de croisements bananiers acuminate*balbisiana 93 individus
+
+**** Réunion Ching                                         :meeting:ching: 
+- instances de l'unité
+  + création d'un Conseil Scientifique d'Unité
+    * préparer animations scientifiques autour des programmes, faire
+      le bilan
+    * instruire les participations aux AAP
+    * 17 personnes (AI à DR), réunion 2x par mois
+  + Conseil d' unité :
+    * 5/an dont 2 AG
+    * discuter de chantiers à lancer/à suivre
+  + pôles de fonctionnement :
+    * Gestion/RH, BM-MB-CIV, PCBT, Expé terrain, Instru scientif,
+      Modélisation/informatique/données, Comm et impact, ressources
+      immo et dev durable
+- informations de l'unité
+  + AAP et événements scintif : analyse puis diffusion de manière ciblée par les DUs
+  + infos générales : redif générale à l'unité
+
+**** Visite Ambition Gpe
+- lundi 25 : milieu de matinée -> rencontre CDs et cadres astro ;
+  après-midi : 4 groupes interdisciplinaires travaillant sur les 4
+  thèmes indépendament session 1
+- mardi 26 : début matinée -> session 2 ; deuxième moitié matinée :
+  restitution/animation/discussion transversale
+
+**** Evaluation HCERES
+- semaine du 22 au 26 mars
+- 1/2 journée : matinée du lundi 22
+- 45mn bilan, 1h projet
+
+**** AG Astro 29/01
+
+
+
+
+  
+- State "TODO"       from "STARTED"    [2021-01-14 Thu 14:46]
+- State "STARTED"    from "TODO"       [2021-01-14 Thu 14:46]
+- State "TODO"       from              [2021-01-14 Thu 14:46]
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+** 2021-02 February
+*** 2021-02-04 Thursday
+**** *Réunion CUS* :meeting:CUS:
+- AMI AAP Ecophyto
+  + Gwad'air : évaluer, surveiller pollutions
+  + INRAE : tester des PNPP (substances naturelles)  
+- MP SALSYA : autour de la chlordécone (Opale) avec orientation One Health
+- MP METABIO : reproposer TiBio en élargissant à d'autres unités
+- Prépa séminaire 26/02
+- Fiche présentation Astro
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2021-02-09 Tuesday
+**** *Formation InfoDoc - Plan de Gestion de Données*
+- le PGD est une porte d'entrée pour produire des données répondant au
+  principe FAIR
+- site d'entrée aux différents services : https://datapartage.inrae.fr
+- DMP OPIDoR : modèles sur https://dmp.opidor.fr (créer en ligne avec
+  le tableau de bord, ou télécharger un modèle vide)
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org::*2021-02-09 Tuesday][2021-02-09 Tuesday]]
+** 2021-03 March
+*** 2021-03-04 Thursday
+**** *Préparation évaluation Astro*
+22 mars à partir de 7h30
+- 7h45 présentation unité (FB 35mn + 25mn questions)
+  * 12mn par pilier
+- 8h55 Présentation projet (JMB et AR 25mn + 20mn questions)
+- 10h05 échanges avec scientifiques (sauf DUs)
+- 10h40 échanges avec techniciens et administratifs
+- 11h20 échanges avec personnels non permanents (doctorants, CDD,
+  stagiaires)
+- 11h55 entretiens avec DUs
+- fin 12h25
