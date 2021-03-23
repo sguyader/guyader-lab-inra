@@ -1,0 +1,61 @@
+---
+title: "Séminaire Perspectives PO FEDER 2021-2026 - Agroécologie"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    df_print: kable
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    df_print: kable
+    latex_engine: xelatex
+mainfont: Avenir Next LT Pro
+fontsize: 18pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Attentes de la région
+
+Deux gros projets seront financés :
+
+-   Santé globale
+
+-   Agroécologie
+
+Lettre d'intention à remettre à la Région
+
+## Présentation des projets PO 2014-2020
+
+1.  Rivage
+
+    -   "innover en agroécologie pour gérer, présevrer et restaurer la qualité environnementale du territoire"
+    -   objectifs : réduire l'impact de l'agriculture sur l'environnement
+
+2.  Cavalbio
+
+    -   enjeux : dévleoppement du territoire, agroécologie : produire autrement, acteurs au centre du développement
+    -   cible : petite agriculture familiale (80% des exploitations recensées)
+
+3.  AgroEcodiv
+
+    -   2 filières : agrumes et ignames (agrumes : contrainte HLB ; ignames : renverser la situation déclinante de la filière)
+    -   enjeux : optimiser gestion et mobilisation biodiversité, caractériser caratères clés, sécuriser mobilisation et proagation biodiversité, valorisation économique des innovations
+
+## Défi : penser l'après 2020
+
+-   Agroécologie : dimensions bitechnique, orgasionnelle, territoriale
+
+-   objectif de la réunion :
+
+    -   pluie d'idées (du plus fin/disciplinaire au plus large/englobant)
+    -   les questions soulevées doivent être étayées pas un contexte favorable, impact fort attendu, front de science à défricher...
+    -   s'attarder sur les points de convergence transversaux
+
+-   
