@@ -20,18 +20,17 @@ output:
 ---
 
 ```{r setup, include=FALSE, message=FALSE}
-options(htmltools.dir.version = FALSE)
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
 library(knitrBootstrap)
-library(anicon)
-library(icon)
 library(kableExtra)
 library(DiagrammeR)
+library(fontawesome)
 ```
 
 class: title-slide, animated, fadeIn
 
 # Maladies cryptogamiques : méthodes de lutte
-### 27 janvier 2020 / Master 1 Biologie Santé 
+### 9 février 2020 / Master 1 Biologie Santé 
 #### Sébastien GUYADER - INRAE - UR Astro - Petit-Bourg - _sebastien.guyader@inrae.fr_
 <br><br><br><br><br><br>
 .right[<img src="./images/cc-by-nc-sa.png" alt="license" width="120"/>]
@@ -42,7 +41,7 @@ layout: true
 class: main-slide, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : méthodes de lutte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 name: plan
@@ -78,7 +77,7 @@ layout: false
 class: main-slide, middle, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : méthodes de lutte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 1. Introduction
 
@@ -88,7 +87,7 @@ layout: true
 class: main-slide, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : méthodes de lutte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
@@ -153,12 +152,13 @@ knitr::include_graphics("./images/phytophtora-tubercule.jpg")
 
 ### Maladie = interaction entre 3 éléments fondamentaux
 
-.indent[.indent[.indent[.indent[.indent[.indent[
-```{r, echo=FALSE, out.width="70%"}
-DiagrammeR::grViz("triangle.dot")
+<center>
+```{r, echo=FALSE, out.width="50%"}
 
+#knitr::include_graphics("triangle.png")
+grViz("triangle.dot")
 ```
-]]]]]]
+</center>
 
 ---
 
@@ -166,12 +166,12 @@ DiagrammeR::grViz("triangle.dot")
 
 ### Maladie = interaction entre 3 éléments fondamentaux
 
-.indent[.indent[.indent[.indent[.indent[.indent[
-```{r, echo=FALSE, out.width="70%"}
-DiagrammeR::grViz("tetraedre.dot")
+<center>
+```{r, echo=FALSE, out.width="50%"}
+grViz("tetraedre.dot")
 
 ```
-]]]]]]
+</center>
 
 ---
 
@@ -179,7 +179,7 @@ layout: false
 class: main-slide, middle, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : méthodes de lutte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 2. Biologie et épidémiologie des champignons phytopathogènes
 
@@ -189,7 +189,7 @@ layout: true
 class: main-slide, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : méthodes de lutte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
@@ -200,7 +200,7 @@ Maladies cryptogamiques : méthodes de lutte
 - .Large[Groupe très hétérogène]<br><br>
 - .Large[Plus de 100 000 espèces recensées]<br><br>
 - .Large[Responsables de 60% des maladies des plantes]<br><br>
-- .Large[Organismes hétérotrophes (par absorption)]<br><br>
+- .Large[Organismes hétérotrophes (se nourrissent par absorption)]<br><br>
 - .Large[Grand potentiel d'adaptation aux milieux]
 ]
 .pull-right[
@@ -226,9 +226,10 @@ knitr::include_graphics("./images/tree-life.jpg")
 
 ### Classification : au sein des "vrais champignons"
 
+
 .center[
 ```{r, echo=FALSE, out.width="100%"}
-DiagrammeR::grViz("eumycetes3.dot")
+grViz("eumycetes3.dot")
 ```
 ]
 
@@ -238,9 +239,9 @@ DiagrammeR::grViz("eumycetes3.dot")
 
 ### Caractéristiques morphologiques<br>
 
-- .Large[Thalle filamenteux = mycélium (ou unicellulaires comme la levure)]<br><br>
-- .Large[Filaments = hyphes, se nourissent des nutriments par absorption]<br><br>
-- .Large[Paroi cellulaire faite de chitine + glucanes]<br><br>
+- .Large[Thalle filamenteux = **mycélium** (ou unicellulaires comme les levures)]<br><br>
+- .Large[Filaments = **hyphes**, se nourissent des nutriments par absorption]<br><br>
+- .Large[Paroi cellulaire faite de **chitine** + glucanes]<br><br>
 - .Large[Les hyphes peuvent être septés, ou non (coenocytiques)]<br><br>
 - .Large[Certains ont un mode de vie essentiellement sous forme haploïde (ascomycètes), d'autres ont une phase dikaryotique longue (basidiomycètes)]
 
@@ -667,7 +668,7 @@ layout: false
 class: main-slide, middle, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : méthodes de lutte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 # 3. Méthodes de lutte
 
@@ -677,7 +678,7 @@ layout: true
 class: main-slide, animated, fadeIn
 <div class="my-footer">
 Maladies cryptogamiques : méthodes de lutte
-<span>27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
+<span>2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader</span></div> 
 
 ---
 
@@ -776,11 +777,11 @@ knitr::include_graphics("./images/fongicides2.jpg")
  * coût
 	
 - Nombre de traitements annuels pour quelques cultures :
- * blé : 6.6
- * maïs : 3.7
- * colza : 6.7
- * pommier : 17.6
- * vigne : 20
+ * blé : > 6
+ * maïs : > 3
+ * colza : > 6
+ * pommier : > 17
+ * vigne : > 20
 ]
 
 ---
@@ -993,7 +994,7 @@ Niveau d’intensité de maladie justifiant la mise en œuvre de moyens de lutte
 .Large[
 Dépend de la balance coûts de la lutte / revenus de la culture
 <br><br><br>
-.indent[.indent[**`r anicon::faa("hand-point-right", speed="slow")` Utilisation de modèles de nuisibilité et d’économie**]]
+.indent[.indent[**`r fa("caret-right", fill="#00A3A6")` Utilisation de modèles de nuisibilité et d’économie**]]
 ]
 
 ---

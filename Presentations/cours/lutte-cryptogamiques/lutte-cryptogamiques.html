@@ -4,8 +4,7 @@
     <title>Maladies cryptogamiques</title>
     <meta charset="utf-8" />
     <meta name="author" content="Sébastien GUYADER" />
-    <script src="libs/jquery/jquery.min.js"></script>
-    <script src="libs/elevate-section-attrs/elevate-section-attrs.js"></script>
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/hygge.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
@@ -13,8 +12,7 @@
     <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
     <script src="libs/grViz-binding/grViz.js"></script>
     <script src="libs/kePrint/kePrint.js"></script>
-    <link href="libs/font-awesome-animation/font-awesome-animation-emi.css" rel="stylesheet" />
-    <script src="libs/fontawesome/js/fontawesome-all.min.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="style/tweak.css" type="text/css" />
     <link rel="stylesheet" href="style/bootstrap_table.css" type="text/css" />
     <link rel="stylesheet" href="style/footer-header.css" type="text/css" />
@@ -28,7 +26,7 @@
 class: title-slide, animated, fadeIn
 
 # Maladies cryptogamiques : méthodes de lutte
-### 27 janvier 2020 / Master 1 Biologie Santé 
+### 9 février 2020 / Master 1 Biologie Santé 
 #### Sébastien GUYADER - INRAE - UR Astro - Petit-Bourg - _sebastien.guyader@inrae.fr_
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 .right[&lt;img src="./images/cc-by-nc-sa.png" alt="license" width="120"/&gt;]
@@ -39,7 +37,7 @@ layout: true
 class: main-slide, animated, fadeIn
 &lt;div class="my-footer"&gt;
 Maladies cryptogamiques : méthodes de lutte
-&lt;span&gt;27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
+&lt;span&gt;2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
 
 ---
 name: plan
@@ -75,7 +73,7 @@ layout: false
 class: main-slide, middle, animated, fadeIn
 &lt;div class="my-footer"&gt;
 Maladies cryptogamiques : méthodes de lutte
-&lt;span&gt;27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
+&lt;span&gt;2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
 
 # 1. Introduction
 
@@ -85,7 +83,7 @@ layout: true
 class: main-slide, animated, fadeIn
 &lt;div class="my-footer"&gt;
 Maladies cryptogamiques : méthodes de lutte
-&lt;span&gt;27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
+&lt;span&gt;2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
 
 ---
 
@@ -140,10 +138,10 @@ Maladies cryptogamiques : méthodes de lutte
 
 ### Maladie = interaction entre 3 éléments fondamentaux
 
-.indent[.indent[.indent[.indent[.indent[.indent[
-<div id="htmlwidget-e776ee434a405271f3b0" style="width:70%;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e776ee434a405271f3b0">{"x":{"diagram":"graph {\n  graph [pad=\"0.212,0.055\" bgcolor=transparent, layout=\"neato\"]\n  node [style=filled,\n    fixedsize=true,\n    width=0.9,\n    height=0.3,\n    color=\"transparent\",\n    fontcolor=\"white\",\n    fontsize=12]\n\n  Plante [fillcolor=\"#3a7794\" pos=\"0,0!\"]\n  Pathogène [fillcolor=\"#94563a\" pos=\"2,0!\"]\n  Milieu [fillcolor=\"#4a943a\" pos=\"1,1.8!\"]\n  Homme [fillcolor=\"transparent\" fontcolor=\"#E9EBEE\" pos=\"2.1,0.9!\"]\n\n  Plante -- Pathogène\n  Plante -- Milieu\n  Pathogène -- Milieu\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-]]]]]]
+&lt;center&gt;
+<div id="htmlwidget-12247c8127db7d43b940" style="width:50%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-12247c8127db7d43b940">{"x":{"diagram":"graph {\n  graph [pad=\"0.212,0.055\" bgcolor=transparent, layout=\"neato\"]\n  node [style=filled,\n    fixedsize=true,\n    width=0.9,\n    height=0.3,\n    color=\"transparent\",\n    fontcolor=\"white\",\n    fontsize=12]\n\n  Plante [fillcolor=\"#3a7794\" pos=\"0,0!\"]\n  Pathogène [fillcolor=\"#94563a\" pos=\"2,0!\"]\n  Milieu [fillcolor=\"#4a943a\" pos=\"1,1.8!\"]\n  Homme [fillcolor=\"transparent\" fontcolor=\"#E9EBEE\" pos=\"2.1,0.9!\"]\n\n  Plante -- Pathogène\n  Plante -- Milieu\n  Pathogène -- Milieu\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+&lt;/center&gt;
 
 ---
 
@@ -151,10 +149,10 @@ Maladies cryptogamiques : méthodes de lutte
 
 ### Maladie = interaction entre 3 éléments fondamentaux
 
-.indent[.indent[.indent[.indent[.indent[.indent[
-<div id="htmlwidget-1464fc9c6703b529a9e9" style="width:70%;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1464fc9c6703b529a9e9">{"x":{"diagram":"graph {\n  graph [pad=\"0.212,0.055\" bgcolor=transparent, layout=\"neato\"]\n  node [style=filled,\n    fixedsize=true,\n    width=0.9,\n    height=0.3,\n    color=\"transparent\",\n    fontcolor=\"white\",\n    fontsize=12]\n\n  Plante [fillcolor=\"#3a7794\" pos=\"0,0!\"]\n  Pathogène [fillcolor=\"#94563a\" pos=\"2,0!\"]\n  Milieu [fillcolor=\"#4a943a\" pos=\"1,1.8!\"]\n  Homme [fillcolor=\"#833a94\" pos=\"2.1,0.9!\"]\n\n  Plante -- Pathogène\n  Plante -- Milieu\n  Pathogène -- Milieu\n\n  subgraph hom {\n    edge  [style=dashed]\n    Plante -- Homme\n    Milieu -- Homme\n    Pathogène -- Homme\n  }\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-]]]]]]
+&lt;center&gt;
+<div id="htmlwidget-a7e3f632b1702e14c279" style="width:50%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a7e3f632b1702e14c279">{"x":{"diagram":"graph {\n  graph [pad=\"0.212,0.055\" bgcolor=transparent, layout=\"neato\"]\n  node [style=filled,\n    fixedsize=true,\n    width=0.9,\n    height=0.3,\n    color=\"transparent\",\n    fontcolor=\"white\",\n    fontsize=12]\n\n  Plante [fillcolor=\"#3a7794\" pos=\"0,0!\"]\n  Pathogène [fillcolor=\"#94563a\" pos=\"2,0!\"]\n  Milieu [fillcolor=\"#4a943a\" pos=\"1,1.8!\"]\n  Homme [fillcolor=\"#833a94\" pos=\"2.1,0.9!\"]\n\n  Plante -- Pathogène\n  Plante -- Milieu\n  Pathogène -- Milieu\n\n  subgraph hom {\n    edge  [style=dashed]\n    Plante -- Homme\n    Milieu -- Homme\n    Pathogène -- Homme\n  }\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+&lt;/center&gt;
 
 ---
 
@@ -162,7 +160,7 @@ layout: false
 class: main-slide, middle, animated, fadeIn
 &lt;div class="my-footer"&gt;
 Maladies cryptogamiques : méthodes de lutte
-&lt;span&gt;27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
+&lt;span&gt;2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
 
 # 2. Biologie et épidémiologie des champignons phytopathogènes
 
@@ -172,7 +170,7 @@ layout: true
 class: main-slide, animated, fadeIn
 &lt;div class="my-footer"&gt;
 Maladies cryptogamiques : méthodes de lutte
-&lt;span&gt;27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
+&lt;span&gt;2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
 
 ---
 
@@ -183,7 +181,7 @@ Maladies cryptogamiques : méthodes de lutte
 - .Large[Groupe très hétérogène]&lt;br&gt;&lt;br&gt;
 - .Large[Plus de 100 000 espèces recensées]&lt;br&gt;&lt;br&gt;
 - .Large[Responsables de 60% des maladies des plantes]&lt;br&gt;&lt;br&gt;
-- .Large[Organismes hétérotrophes (par absorption)]&lt;br&gt;&lt;br&gt;
+- .Large[Organismes hétérotrophes (se nourrissent par absorption)]&lt;br&gt;&lt;br&gt;
 - .Large[Grand potentiel d'adaptation aux milieux]
 ]
 .pull-right[
@@ -205,9 +203,10 @@ LECA = dernier ancêtre commun des eucaryotes
 
 ### Classification : au sein des "vrais champignons"
 
+
 .center[
-<div id="htmlwidget-87904614592564dd7dfc" style="width:100%;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-87904614592564dd7dfc">{"x":{"diagram":"graph {\n  graph [rankdir=TB, pad=\"0.212,0.055\", bgcolor=transparent, layout=\"dot\", splines=\"line\", nodesep=0.5]\n  node [fixedsize=true,\n    shape=box,\n    width=2,\n    height=0.4,\n    color=\"transparent\",\n    fontsize=16,\n    fontname=\"Arial\"]\n\n  EUMYCOTA [style=filled, fillcolor=\"#833a94\", fontcolor=white, color=\"black\"]\n  Chytridiomycota [color=\"black\"]\n  Chytridiomycètes\n  invisible1 [style=invisible, width=0, height=0]\n  Mucoromycètes\n  Symbiomycota [color=\"black\"]\n  Gloméromycètes [label=<<i>Gloméromycètes<\/i>>]\n  Dikarya [label=<<b>Dikarya<\/b>>, color=\"black\"]\n  Entorrhizomycètes []\n  Basidiomycètes [label=<<b>Basidiomycètes<\/b>>]\n  Ascomycètes [label=<<b>Ascomycètes<\/b>>]\n\n  EUMYCOTA -- Chytridiomycota\n  EUMYCOTA -- invisible1 [style=dashed]\n  Chytridiomycota -- Chytridiomycètes [style=dashed]\n  invisible1 -- {Mucoromycètes, Symbiomycota}\n  Symbiomycota -- Gloméromycètes [style=dashed]\n  Symbiomycota -- Dikarya\n  Dikarya -- {Entorrhizomycètes, Basidiomycètes, Ascomycètes}\n  \n  { rank=same; Chytridiomycètes, Mucoromycètes, Gloméromycètes, Entorrhizomycètes, Basidiomycètes, Ascomycètes }\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-446605e529b9fbf89a1c" style="width:100%;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-446605e529b9fbf89a1c">{"x":{"diagram":"graph {\n  graph [rankdir=TB, pad=\"0.212,0.055\", bgcolor=transparent, layout=\"dot\", splines=\"line\", nodesep=0.5]\n  node [fixedsize=true,\n    shape=box,\n    width=2,\n    height=0.4,\n    color=\"transparent\",\n    fontsize=16,\n    fontname=\"Arial\"]\n\n  EUMYCOTA [style=filled, fillcolor=\"#833a94\", fontcolor=white, color=\"black\"]\n  Chytridiomycota [color=\"black\"]\n  Chytridiomycètes\n  invisible1 [style=invisible, width=0, height=0]\n  Mucoromycètes\n  Symbiomycota [color=\"black\"]\n  Gloméromycètes [label=<<i>Gloméromycètes<\/i>>]\n  Dikarya [label=<<b>Dikarya<\/b>>, color=\"black\"]\n  Entorrhizomycètes []\n  Basidiomycètes [label=<<b>Basidiomycètes<\/b>>]\n  Ascomycètes [label=<<b>Ascomycètes<\/b>>]\n\n  EUMYCOTA -- Chytridiomycota\n  EUMYCOTA -- invisible1 [style=dashed]\n  Chytridiomycota -- Chytridiomycètes [style=dashed]\n  invisible1 -- {Mucoromycètes, Symbiomycota}\n  Symbiomycota -- Gloméromycètes [style=dashed]\n  Symbiomycota -- Dikarya\n  Dikarya -- {Entorrhizomycètes, Basidiomycètes, Ascomycètes}\n  \n  { rank=same; Chytridiomycètes, Mucoromycètes, Gloméromycètes, Entorrhizomycètes, Basidiomycètes, Ascomycètes }\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -216,9 +215,9 @@ LECA = dernier ancêtre commun des eucaryotes
 
 ### Caractéristiques morphologiques&lt;br&gt;
 
-- .Large[Thalle filamenteux = mycélium (ou unicellulaires comme la levure)]&lt;br&gt;&lt;br&gt;
-- .Large[Filaments = hyphes, se nourissent des nutriments par absorption]&lt;br&gt;&lt;br&gt;
-- .Large[Paroi cellulaire faite de chitine + glucanes]&lt;br&gt;&lt;br&gt;
+- .Large[Thalle filamenteux = **mycélium** (ou unicellulaires comme les levures)]&lt;br&gt;&lt;br&gt;
+- .Large[Filaments = **hyphes**, se nourissent des nutriments par absorption]&lt;br&gt;&lt;br&gt;
+- .Large[Paroi cellulaire faite de **chitine** + glucanes]&lt;br&gt;&lt;br&gt;
 - .Large[Les hyphes peuvent être septés, ou non (coenocytiques)]&lt;br&gt;&lt;br&gt;
 - .Large[Certains ont un mode de vie essentiellement sous forme haploïde (ascomycètes), d'autres ont une phase dikaryotique longue (basidiomycètes)]
 
@@ -523,24 +522,24 @@ Mildiou des cucurbitacées&lt;br&gt;
 &lt;tbody&gt;
   &lt;tr grouplength="2"&gt;&lt;td colspan="2" style="font-style: italic; border-bottom: 1px solid;"&gt;Telluriques&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Inoculum primaire endogène, présent avant semis &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Inoculum primaire endogène, présent avant semis &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Dispersion des spores infectieuses à courte distance &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Contact inoculum/racine &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Contact inoculum/racine &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Contact racine-racine ou inoculum/racine &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr grouplength="3"&gt;&lt;td colspan="2" style="font-style: italic; border-bottom: 1px solid;"&gt;Aériennes&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Inoculum primaire majoritairement exogène &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Inoculum primaire majoritairement exogène &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; Dispersion propagules infectieuses courte/longue distance &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Absent avant semis (mais pas toujours) &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Absent avant semis (mais pas toujours) &lt;/td&gt;
    &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left; padding-left: 2em;" indentlevel="1"&gt; Disponibilité inoculum/ sensibilité organe &lt;/td&gt;
+   &lt;td style="text-align:left;padding-left: 2em;" indentlevel="1"&gt; Disponibilité inoculum/ sensibilité organe &lt;/td&gt;
    &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -600,7 +599,7 @@ layout: false
 class: main-slide, middle, animated, fadeIn
 &lt;div class="my-footer"&gt;
 Maladies cryptogamiques : méthodes de lutte
-&lt;span&gt;27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
+&lt;span&gt;2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
 
 # 3. Méthodes de lutte
 
@@ -610,7 +609,7 @@ layout: true
 class: main-slide, animated, fadeIn
 &lt;div class="my-footer"&gt;
 Maladies cryptogamiques : méthodes de lutte
-&lt;span&gt;27 janvier 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
+&lt;span&gt;2 février 2020 / Master 1 Biologie Santé / Sébastien Guyader&lt;/span&gt;&lt;/div&gt; 
 
 ---
 
@@ -705,11 +704,11 @@ chimie de synthèse.
  * coût
 	
 - Nombre de traitements annuels pour quelques cultures :
- * blé : 6.6
- * maïs : 3.7
- * colza : 6.7
- * pommier : 17.6
- * vigne : 20
+ * blé : &gt; 6
+ * maïs : &gt; 3
+ * colza : &gt; 6
+ * pommier : &gt; 17
+ * vigne : &gt; 20
 ]
 
 ---
@@ -912,7 +911,7 @@ Niveau d’intensité de maladie justifiant la mise en œuvre de moyens de lutte
 .Large[
 Dépend de la balance coûts de la lutte / revenus de la culture
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
-.indent[.indent[**<span>&lt;i class="fas  fa-hand-point-right faa-flash animated faa-slow "&gt;&lt;/i&gt;</span> Utilisation de modèles de nuisibilité et d’économie**]]
+.indent[.indent[**&lt;svg style="height:0.8em;top:.04em;position:relative;fill:#00A3A6;" viewBox="0 0 192 512"&gt;&lt;path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/&gt;&lt;/svg&gt; Utilisation de modèles de nuisibilité et d’économie**]]
 ]
 
 ---
@@ -983,6 +982,32 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -1000,17 +1025,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {
