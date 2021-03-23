@@ -21,17 +21,17 @@ data_covid_ts <- data_covid_ts %>%
   mutate(active_cases=confirmed-deaths-recovered, .after=deaths) %>%
   
   mutate(confirmed_per_million = confirmed/population*1e6, .after=confirmed) %>%
-  mutate(auc_confirmed_per_million = DescTools::AUC(as.numeric(date), confirmed_per_million, method="linear"),
-         .after=confirmed_per_million) %>%
+  mutate(auc_confirmed_per_million = DescTools::AUC(as.numeric(date),
+         confirmed_per_million, method="linear"), .after=confirmed_per_million) %>%
   mutate(deaths_per_million = deaths/population*1e6, .after=deaths) %>%
-  mutate(auc_deaths_per_million = DescTools::AUC(as.numeric(date), deaths_per_million, method="linear"),
-         .after=deaths_per_million) %>%
+  mutate(auc_deaths_per_million = DescTools::AUC(as.numeric(date),
+         deaths_per_million, method="linear"), .after=deaths_per_million) %>%
   mutate(recovered_per_million = recovered/population*1e6, .after=recovered) %>%
-  mutate(auc_recovered_per_million = DescTools::AUC(as.numeric(date), recovered_per_million, method="linear"),
-         .after=recovered_per_million) %>%
+  mutate(auc_recovered_per_million = DescTools::AUC(as.numeric(date),
+         recovered_per_million, method="linear"), .after=recovered_per_million) %>%
   mutate(active_cases_per_million = recovered/population*1e6, .after=active_cases) %>%
-  mutate(auc_active_cases_per_million = DescTools::AUC(as.numeric(date), active_cases_per_million, method="linear"),
-         .after=active_cases_per_million) %>%
+  mutate(auc_active_cases_per_million = DescTools::AUC(as.numeric(date),
+         active_cases_per_million, method="linear"), .after=active_cases_per_million) %>%
   
   mutate(new_cases = c(confirmed[1], diff(confirmed)), .after=active_cases_per_million) %>%
   mutate(new_cases = replace(new_cases, new_cases < 0, 0)) %>%
@@ -46,42 +46,45 @@ data_covid_ts <- data_covid_ts %>%
   mutate(new_recovered_per_million = new_recovered/population*1e6, .after=new_recovered) %>%
   
   mutate(hosp_per_million = hosp/population*1e6, .after=hosp) %>%
-  mutate(auc_hosp_per_million = DescTools::AUC(as.numeric(date), hosp_per_million, method="linear"),
-         .after=hosp_per_million) %>%
+  mutate(auc_hosp_per_million = DescTools::AUC(as.numeric(date),
+         hosp_per_million, method="linear"), .after=hosp_per_million) %>%
   mutate(vent_per_million = vent/population*1e6, .after=vent) %>%
-  mutate(auc_vent_per_million = DescTools::AUC(as.numeric(date), vent_per_million, method="linear"),
-         .after=vent_per_million) %>%
+  mutate(auc_vent_per_million = DescTools::AUC(as.numeric(date),
+         vent_per_million, method="linear"), .after=vent_per_million) %>%
   mutate(icu_per_million = icu/population*1e6, .after=icu) %>%
-  mutate(auc_icu_per_million = DescTools::AUC(as.numeric(date), icu_per_million, method="linear"),
-       .after=icu_per_million)
+  mutate(auc_icu_per_million = DescTools::AUC(as.numeric(date),
+         icu_per_million, method="linear"), .after=icu_per_million)
 
-data_covid_end_date <- filter(data_covid_ts, date == max(date))
+data_covid_end_date <- filter(data_covid_ts, date == max(date) & confirmed > 50)
 write_excel_csv(data_covid_end_date, "data_covid_end_date_30nov2020.csv")
 
 # définir le seuil minimum du nombre de cas pour le décompte
-nth_cases <- 100 # you can vary
-statistic <- "confirmed_per_million" # you can also choose other stat
+nth_cases <- 50 # you can vary
 
 # Cases greater than threshold
-data_covid_100_cases <- data_covid_ts %>% filter(confirmed >= nth_cases)
+data_covid_50_cases <- data_covid_ts %>% filter(confirmed >= nth_cases & country %in% unique(data_covid_end_date$country))
 
 # Create 'days since' column
-data_covid_100_cases <- data_covid_100_cases %>% group_by(country) %>%
-  mutate("days_since_first_100_cases" = 1:n(), .after = date)
+data_covid_50_cases <- data_covid_50_cases %>% group_by(country) %>%
+  mutate("days_since_first_50_cases" = 1:n(), .after = date)
 
-# sort by highest "confirmed_per_million" numbers
-data_cases_order <- data_covid_100_cases %>% group_by(country) %>%
+# choix de la variable à étudier
+statistic <- "confirmed_per_million" # you can also choose other stat
+
+# sort by highest "statistic" numbers
+data_cases_order <- data_covid_50_cases %>% group_by(country) %>%
+  filter(country %in% unique(data_covid_end_date$country)) %>%
   filter(date == max(date)) %>%
   select(country, !!sym(statistic)) %>%
   arrange(desc(!!sym(statistic)))
 
 # subset data based on selected parameter -  top N countries and analyzed columns
-N = 100
+N = nrow(data_cases_order)
 topN <- ungroup(data_cases_order) %>% filter(between(row_number(), 1, N)) 
 
-data_covid_cases_sub <- data_covid_100_cases %>%
+data_covid_cases_sub <- data_covid_50_cases %>%
   filter(country %in% topN$country) %>%
-  select(country, days_since_first_100_cases, !!sym(statistic))
+  select(country, days_since_first_50_cases, !!sym(statistic))
 
 # Make same length time series from countries data
 data_covid_trajectories <- pivot_wider(data_covid_cases_sub, names_from=country, values_from = !!sym(statistic))
@@ -107,70 +110,78 @@ data_trajectories_trans_list <- lapply(split(data_trajectories_trans, seq(nrow(d
                                        function(x) x[!is.na(x)])
 names(data_trajectories_trans_list) <- colnames(data_covid_trajectories)[-1]
 
-# data_trajectories_trans_list_norm <- lapply(names(data_trajectories_trans_list),
-#                                             function(i) norm_z(data_trajectories_trans_list[[i]]))
-# names(data_trajectories_trans_list_norm) <- colnames(data_covid_trajectories)[-1]
+data_trajectories_trans_list_norm <- lapply(names(data_trajectories_trans_list),
+                                            function(i) norm_z(data_trajectories_trans_list[[i]]))
+names(data_trajectories_trans_list_norm) <- colnames(data_covid_trajectories)[-1]
 
-k <- 2:14
-
-
+k <- 2:8
 clust_res <- tsclust(data_trajectories_trans_list,
                      k = k,
                      trace = T,
                      #seed = 12345,
                      
                      type = "h",
-                     #centroid = "median",
+                     #centroid = "dba",
                      preproc = zscore,
-                     distance = "dtw_basic"
-                     #args = tsclust_args(dist = list(window.size = 20L))
-
-                     # type = "h",
-                     # preproc = zscore,
-                     # distance = "dtw_basic",
-                     # #centroid =shape_extraction,
-                     # control = hierarchical_control(method = "average")
+                     control = hierarchical_control(method = "ward.D2"),
+                     args = tsclust_args(dist = list(norm = "L2")),
+                     distance = "sbd"
 )
 
-vis_df <- sapply(clust_res_h2, cvi, b=clust_res_h@cluster, type="VI")
-names(vis_df) <- k
-vis_df
+# vis_df <- sapply(clust_res, cvi, b=clust_res[[1]]@cluster, type="VI")
+# names(vis_df) <- k
+# vis_df
+# plot(vis_df)
+
+vis_df <- sapply(clust_res, cvi, b=clust_res[[1]]@cluster, type="internal")
+colnames(vis_df) <- k
+vis_df <- as.data.frame(vis_df)
+plot(as.numeric(vis_df[4,])~as.numeric(colnames(vis_df)))
+
+index <- 6
+
+plot(clust_res[[index-(min(k)-1)]], type="series")
+plot(clust_res[[index-(min(k)-1)]], type="series", labels = list(
+  nudge_x = -5, nudge_y = 0.2, size=3, alpha=0.8, label.padding=0.1))
+plot(clust_res[[index-(min(k)-1)]], type="centroid")
+plot(clust_res[[index-(min(k)-1)]], type="dendrogram", labels = list(nudge_x = -5, nudge_y = 0.2))
 
 
-plot(clust_res[[5]], type="series", labels = list(nudge_x = -5, nudge_y = 0.2))
-plot(clust_res[[5]], type="centroid", labels = list(nudge_x = -5, nudge_y = 0.2))
-plot(clust_res[[5]], type="dendrogram", labels = list(nudge_x = -5, nudge_y = 0.2))
+data_clust_id <- as_tibble(data.frame(cluster = clust_res@cluster, country = names(data_trajectories_trans_list)))
 
+# 
+# data_clust_id <- as_tibble(data.frame(cluster = clust_res[[index]]@cluster, country = names(clust_res[[index-(min(k)-1)]]@cluster)))
 
-data_clust_id <- as_tibble(data.frame(cluster = clust_res[[5]]@cluster, country = names(data_trajectories_trans_list)))
+data_clust_id_long <- data_clust_id %>% slice(rep(1:n(), each=nrow(data_covid_trajectories)))
 
+data_trajectories_long <- pivot_longer(data_covid_trajectories, !days_since_first_50_cases, names_to="country", values_to=paste0(statistic)) %>% arrange(country)
 
-data_clust_id <- as_tibble(data.frame(cluster = clust_res[[5]]@cluster, country = names(clust_res[[5]]@cluster)))
-data_clust_id <- data_clust_id %>% slice(rep(1:n(), each=nrow(data_covid_trajectories)))
+data_plot <- bind_cols(data_trajectories_long, data_clust_id_long[1])
 
-data_trajectories_long <- pivot_longer(data_covid_trajectories, !days_since_first_100_cases, names_to="country", values_to=paste0(statistic)) %>% arrange(country)
-
-data_plot <- bind_cols(data_trajectories_long, data_clust_id[1])
-
-ggplot(data_plot, aes_string(x="days_since_first_100_cases", y=paste(statistic), group = "country")) +
+ggplot(data_plot, aes_string(x="days_since_first_50_cases", y=paste(statistic), group = "country")) +
   facet_wrap(~cluster, ncol = ceiling(sqrt(length(unique(data_plot$cluster)))), scales = "free_y") +
-  geom_line(color = "grey10", alpha = 0.75, size = 0.8) +
-  scale_y_continuous(trans = 'log10') +
+  geom_line(aes(color = country), alpha = 0.75, size = 0.8) +
+  #scale_y_continuous(trans = 'log10') +
+  guides(color="none") +
   labs(x = colnames(data_plot)[1], y = statistic) +
   theme_bw()
 
-
-dend <- as.dendrogram(clust_res[[5]])
+dend <- as.dendrogram(clust_res[[index-(min(k)-1)]])
 
 dend <- dend %>%
-  color_branches(k = k) %>%
-  color_labels(k = k) %>%
-  set("branches_lwd", 1) %>%
-  set("labels_cex", 0.8)
+  color_branches(k = index) %>%
+  color_labels(k = index) %>%
+  set("branches_lwd", 0.8) %>%
+  set("labels_cex", 0.6) %>%
+  plot(horiz=T)
+dend
 
-ggd1 <- as.ggdend(dend)
+ggd1 <- as.ggdend(dend, type="rectangle")
 
-ggplot(ggd1, horiz = T)
+ggplot(ggd1, horiz = T) +
+  ylim(max(get_branches_heights(dend)), -1)
+
+
 
 #################################
 #      graphes
