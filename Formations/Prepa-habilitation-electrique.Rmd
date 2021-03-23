@@ -1,0 +1,241 @@
+---
+title: "Préparation habilitation électrique"
+author: "Sébastien Guyader"
+date: "3/15/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction - Statistiques et accidents
+
+-   Electrisation : choc non mortel / Electrocution : choc mortel
+-   Pyramide des risques :
+
+<!-- -->
+
+                                 -Décès-                            
+                          -Accident travail av.-                    
+                      --- incapacité permanente ---                 
+                -----------Accident du travail----------            
+          ------------------Presque accident------------------      
+    ----------------------Situation dangereuse----------------------
+
+## Notions de base en électricité
+
+-   Tension (V) \~ Pression
+-   Intensité (A) \~ Débit
+-   Loi d'Ohm : $U = R \times I \Rightarrow I=U/R$
+
+## Le risque de choc électrique
+
+-   passage d'un courant électrique avec conséquence néfaste au niveau physiologique
+
+-   3 critères de risque d'électrocution :
+
+    -   le chemin du courant : y a-t-il des organes vitaux sur le passage
+    -   l'intensité du courant : dépend de la tension de contact ($U_{c}$) et de la résistance du corps ($R_{c}$) : $$I_{c} = \frac{U_{c}}{R_{c}}$$
+    -   la durée du passage du courant dans le corps (surtout en basse tension : collage)
+
+-   Effets du courant sur le corps :
+
+    -   Asphyxie par blocage du diaphragme
+    -   Arrêt du coeur par fibrillation
+    -   Brûlures internes. En courant continu : brûlures puis décomposition du sang par électrolyse
+    -   Brûlures superficielles
+    -   Collage : effet tétanisant sous l'effet du courant
+    -   Seuil théorique de collage : à partir de 10mA pour 5s
+    -   Seuil théorique de fibrillation cardiaque : 40 mA pour 5s
+
+-   Différentiel 30mA : provoque ouverture d'un interrupteur interne en cas de "fuite" de courant par contact manuel avec un conducteur
+
+-   Tensions limites conventionelles (limites de tension pour sécurité) :
+
+    |                | U~L~ alternatif (V) | U~L~ continu (V) |
+    |----------------|---------------------|------------------|
+    | Milieu sec     | 50                  | 120              |
+    | Milieu humide  | 25                  | 60               |
+    | Milieu immergé | 12.5                | 30               |
+
+## Prévention des chocs électriques
+
+-   Risques de choc :
+
+    -   Ex. de risques :
+
+        -   contact direct : entre un conducteur actif et un sol conducteur
+
+        -   contact indirect : entre une masse en défaut et un sol conducteur
+
+        -   "tension de pas" = zone de surface de sol autour du point d'entrée du courant qui diffuse celui-ci à une certaine distance autour (en direction du poste transformateur) -\> le courant circule d'un pied à l'autre en passant par le corps quand on fait un pas
+
+    -   Mesures passives de protection :
+
+        -   contre contacts directs :
+
+            -   par éloignement (ex : mettre lignes de haute tension en hauteur ; \> 3m d'une ligne à 20kV)
+
+            -   par obstacles (capots, couvercle...)
+
+            -   par isolation des câbles
+
+        -   contre contacts indirects :
+
+            -   *classe 0 :* appareils sans branchement à la terre = INTERDIT
+            -   *classe 1 :* appareils avec branchement à la terre (toujours utiliser une prise et rallonge avec terre ; faire vérifier que la prise de terre est bonne \<100 Ohm ; vérifier qu'il y un différentiel 30mA)
+            -   *classe 2 :* garantie que la carcasse ne peut pas être sous tension (symbole : 2 carrés l'un dans l'autre)
+            -   *classe 3 :* alimentation par batterie (symbole : 3 en chiffres romains dans un losange)
+
+    -   Mesures actives :
+
+        -   contacts directs :
+
+            -   protection complémentaire (différentiels)
+
+## Prévention des incendies d'origine électrique
+
+-   Loi de Joule : $W=R \times I^2 \times t$
+
+-   Défauts d'installation :
+
+    -   surcharge de la canalisation
+    -   isolation insuffisante ou dégradée
+    -   dispositifs de protection insuffisants
+    -   connexions défectueuses (mauvais serrage -\> augmentation de la résistance)
+    -   appareils surchargés
+    -   appareil ou armoire électrique mal ventilés
+    -   décharges électrostatiques
+    -   foudre
+
+-   Appareils de protection :
+
+    -   disjoncteurs
+
+    -   bobine déclenchement à distance
+
+    -   contacts auxiliaires
+
+## Prescriptions de sécurité
+
+-   Décret de 2010 du code du travail :
+
+    -   à l'employeur de définir et mettre en place les mesures de prévention
+
+    -   concerne le spersonnes qui menent des travaux sur les installations électriques ou au voisinage
+
+    -   l'employeur doit remettre à chaque personne concernée un **carnet de prescription**
+
+    -   arrêté de 2012 rend **obligatoire** la norme NFC18-510 de janvier 2012 :
+
+        -   formation théo. et pratique obligatoire + évaluation
+
+        -   l'employeur doit donner les habilitations suite à des formations
+
+        -   définit les modalités d'exécution des travaux sur ouvrages électriques ou au voisinage
+
+    -   habilitation = reconnaissance **par l'employeur** de la capacité d'une personne placée sous son autorité à accomplir **en sécurité** vis-à-vis du risque électrique les tâches qui lui sont confiées
+
+    -   habilitation (= sécurité) différent de qualification (= technique)
+
+    -   l'habilitation permet de répondre à :
+
+        -   où ? (domaines de tension + ouvrages)
+
+        -   qui ? (personnel)
+
+        -   quoi ? (opérations)
+
+    -   définitions :
+
+        -   personnes :
+
+            -   employeur
+
+            -   chargé de travaux (électricien ; organise le chantier dont la sécurité électrique ou non)
+
+            -   chargé d'interventions (électricien ; identifie les dysfonctionnements, effectue un dépannage)
+
+            -   chargé de consignation (électricien ; met l'installation hors tension et s'assure que ça reste hors tension)
+
+            -   exécutant électricien (électricien, sous responsabilité d'un chargé de travaux ou d'interventions)
+
+            -   non électricien (encadré par un chargé de travaux ou de chantier)
+
+            -   surveillant de sécurité (d'accompagnement ; d'opération ; de limites)
+
+        -   ouvrages :
+
+            -   de distribution (20kV, 63kV...)
+
+            -   installations
+
+            -   équipements
+
+        -   opérations
+
+    -   domaines de tension :
+
+        -   0-50V : très basse tension
+
+        -   50-100V : basse tension
+
+        -   1-50kV : HTA (distance \> 3m sans autorisation)
+
+        -   \> 50kV : HTB (distance \> 5m sans autorisation)
+
+    -   symboles d'habilitation :
+
+        -   1ère lettre :
+
+            -   B (basse tension)
+
+            -   H (haute tension)
+
+        -   2nde lettre :
+
+            -   C = consignation (électricien)
+
+            -   T = travaux sous tension (formation spécifique)
+
+            -   N = nettoyage sous tension
+
+            -   V = voisinage
+
+            -   R = intervention (réparation/dépannage)
+
+            -   S = interventions élementaires ; seulement basse tension ; non électricien (réenclencher disjonceteur 1 fois, consignation des petits circuits terminaux, remplacement ampoule...)
+
+            -   E = opérations particulières (mesurages, essais, manoeuvres, vérifications) mais pas travaux
+
+            -   F = travaux en fouilles
+
+            -   P = opérations photovoltaïques
+
+        -   indice numérique :
+
+            -   0 = personne réalisant des travaux d'ordre non électrique
+
+            -   1 = exécutant électricien
+
+            -   2 = chargé de travaux
+
+        -   validité : indiquée par l'employeur (selon la norme, mais elle recommande un recyclage tous les 3 ans)
+
+    -   consignation :
+
+        1.  séparer l'ouvrage des sources de tension, de façon certaine
+        2.  condamner en position d'ouverture les organes de séparation
+        3.  identifier visuellement l'ouvrage sur le lieu de travail
+        4.  vérifier l'absence de tension (VAT) sur chaque conducteur actif et mettre immédiatement après à la terre et en court-circuit (MALTCC ; rarement en BT) chacun des conducteurs (vérifier le bon fonctionnement de l'appareil avant **et après** la VAT)
+
+## Matériels de sécurité
+
+-   gants d'isolement
+
+-   veste en coton
+
+-   nappe isolante
+
+## 
