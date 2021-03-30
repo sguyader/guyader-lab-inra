@@ -2826,3 +2826,56 @@ Entered on [2019-12-04 Wed 09:04]
   stagiaires)
 - 11h55 entretiens avec DUs
 - fin 12h25
+*** 2021-03-23 Tuesday
+**** *Recyclage SST*
+- risque = exposition à un danger (le danger est toujours là, pas le risque)
+- si une personne se sent mal au travail, systématiquement appeler le médecin du SAMU avant de décider quoi que ce soit
+- dégagement d'urgence : si victime est visible, si danger non contrôlable, immédiat, vital
+- malaise : quel âge ? antécédents ? quelle douleur et où ? prend un traitement ?
+- blessure à l'abdomen : allonger la victime et lui relever les jambes...
+- blessure au thorax : mettre la personne en position demi-assise
+- problème respiratoire (asthme...) : mettre la personne en position demi-assise, la calmer, éloigner les personnes autour
+- en cas d'attaque terroriste : composer le 114 (numéro pour malentendants, mais c'est un service de textos qui permet de rester
+  silencieux)
+***
+*** 2021-03-25 Thursday
+**** *Commission applications et sites web*
+- HA : mission de la commission = identifier les besoins partagés
+  entre unités et les prioriser
+- Francianne Nuissier :
+  + présentation de la commission : pourquoi / objectifs / modalités
+    de fonctionnement
+  + rôles : maître d'ouvrage -> comité de pilotage
+  + zoom sur les projets :
+    * site web != application web
+    * sites web administratifs du centre :
+      - annuaire
+      - cantine
+      - GRR
+      - intranet
+    * applications scientifiques Centre
+      - adventices
+      - collections
+      - DGIS
+      - Herbier
+      - Labcollector
+      - Olga V1
+      - Olga V3
+      - Portail InterTROP
+      - TransFAIRE
+      - Vonvon
+  + comment continuer à gérer tous ces sites ? -> temps consacré par F
+    Nuissier à chaque projet
+    * TransFAIRE : environ 1200 accès par mois, intérêt à faire une
+      refonte pour meilleure fronctionnalité et mieux pouvoir en
+      extraire des informations et statistiques
+    * TransFAIRE + Cantine : besoin urgent car bientôt version
+      incompatibles avec mises à jour au niveau serveur -> refaire de zéro
+    * il faudrait un CDD d'environ 7 mois (Astro + SDAR + Centre)
+      niveau AI (minimum)/IE
+    * en parallèle, essayer d emonter un proejt pour obtenir des financements
+  + organisation :
+    * fréquence des réunions ?
+    * quel rôle des membres ?
+    * devons recenser tous les sites et applications même si certains
+      sont pris en charge localement ?
