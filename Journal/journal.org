@@ -2879,3 +2879,118 @@ Entered on [2019-12-04 Wed 09:04]
     * quel rôle des membres ?
     * devons recenser tous les sites et applications même si certains
       sont pris en charge localement ?
+*** 2021-03-30 Tuesday
+**** *Réunion Pôle inforamtique/modélisation/données*
+- JMB doit faire un courrier au PC pour nommer SG représentant d'Astro
+  dans la comission informatique du Centre
+- discussion sur possibilité de convertir quota MOO Astro en CDD AI ou
+  IE
+- Pôle :
+  + composition : PRI + Thierry Bajazet + François Causeret + Loïc
+    Guindé + Franciane Nuissier + Antoine + Jean-Marc
+  + adjoint : Loïc ou Francianne
+  + calendrier :
+    * annonce officielle à l'Unité pour les pôles
+    * proposer une organisation + feuille de route sur l'année aux DU
+      et DUA
+    * puis présenter en CU puis en AG
+  + obtenir un état des lieux des postes : que chaque agent ait un
+    poste, y compris temporaires ; notamment pour consultations / enquêtes
+  + réflexion à avoir sur les PRI
+  + modélisation :
+    * quel rôle aux modèles ? comment expérimenter in silico ?
+  + données
+  + optimisation spatiale
+  
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2021-03-31 Wednesday
+**** *Présentation du MP DIGIT-BIO*
+- retour sur l'enquête : principales compétences des répondants = modélisation, plantes, génétique, bioinfo, statistiques, génomique
+- présentation générales des MP
+  * 2018 : bilan sur les MP de 1ère génération -> vers les MP de 2ème génération
+  * renouvellement du cahier des charges pour simplifier et harmoniser
+    les procédures entre les différents MP
+  * 10 thématiques ont été identifiées en premier lieu
+  * chaque MP est fondé sur un document directeur
+  * types de soutien :
+    + consortia multiacteurs
+    + projets exploratoires
+    + projets emblématiques interdisciplinaires
+    + 1/2 bourses de thèse (1 à 2 / MP / an)
+  * les MP promeuvent les approches systémiques, interdisciplinaires
+    et l'intégration transversale des recherches entre plusieurs départements
+- DIGIT-BIO (C. Caranta + Hervé Monod)
+  * enjeux scientifiques :
+    + explosion quantitative et qualitative des données ; données pour la
+      modélisation et modèles pour expérimentation ; big data -> vers
+      smart data
+    + nouvelles possibilités et méthodes pour l'exploration et
+      l'exploitation des données
+    + nouveau cap franchi dans biologie des systèmes : représentation
+      de plus en plus multiscalaire et multi-dimensionnelle du vivant
+  * postionnement : INRAE 2030 et enjeux sociétaux
+    + OS5 : mobiliser la science des données et les technologies du
+      numérique au service des transitions : caractériser les *réponses
+      adaptatives* des organismes et des populations face au CC...
+    + mobiliser la *biodiversité*
+    + implémenter et optimiser processus biotechno pour *usages efficients et circulaires des ressources*
+    + dvper un *approche globale de la santé*
+    1. recherches cognitives et à visée applicative en biologie,
+     mobilisant les sciences du numérique
+    2. soutien à la communeauté scientifique interdisciplinaire
+    3. pour une recherche au meilleur niveau international
+  * 4 axes de recherche (images)
+  * Positionnement de DIGIT-BIO dans le paysage des MP
+    + s'intéresse aux échelles du vivant peu ou pas prises en compte
+      dans les autres MP (plutôt infra-individu jusqu'à population homogène)
+    + enjeu à moyen terme d'alimenter les autres MP
+    + interactions d'abord avec HOLOFLUX et SYALSA
+    + infrastructures en appui : plateformes, unités expérimentales,
+      CATI
+    + renforcement des partenariats pour une programmation conjointe
+      - national : Inria, CNRS, instituts "3 IA" (à instruire)
+      - international : EMBL-EBI et réseau ELIXIR-EU
+  * Présentation 1 : exemple autour de la biologie du développement
+  * Présentation 2 : exemple autour de la statistique et machine
+    learning pour l'intégration de données de biologie haut débit :
+    transformation via kernels
+  * conclusion :
+    + accompagner mathématisatiopn de la biologie
+    + décloisonner les communautés (règnes/objets, échelles, disciplines)
+    + soutenir recherches avec respect cadre open/fair
+    + ...
+  * animation : série de webinaires sur l'IA, les concepts
+    mathématiques, la représentation /in silico/
+  * workshops
+  * développer la "création collaborative numérique" (ex : hackathons)
+  * accompagner l'émergence et la co-construction de projets (AMI), 2 types
+    d'actions :
+    + consortia interdisciplinaires avec au moins 1 livrable :
+      permettre incubation d'un projet, rédaction d'un article,
+      événement scientifique, participation ou organisation d'un
+      hackathon (10 k€ max)
+    + projets exploratoires : initier un projet potentiellement risqué
+      (50 k€ max, 2 ans max)
+  * critères d'évaluation : adéquation aux objectifs du MP, interdisciplinarité, qualité scientifique,
+    ambitions et perspectives de poursuite post-MP
+   
+    
+
+  
+[[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+** 2021-04 April
+*** 2021-04-15 Thursday
+**** *Forge INRAE*
+- adresse de la forge INRAE : https://forgemia.inra.fr/
+- possibilité de créer des "projets" de différents types :
+  * publics : tout le monde peut y accéder sans autorisation
+  * internes : accès par toute personne inscrire
+  * privés : accès au cas par cas ou par appartenance à un groupe
+- FAQ : https://forgemia.inra.fr/adminforgemia/doc-public/-/wikis/FAQ
+- préconisations :
+  https://datapartage.inrae.fr/Partager-Publier/Cas-particulier-des-logiciels/Preconisation-INRA-pour-l-utilisation-d-une-forge-logicielle
+
+**** *Réunion Viro*
+
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
