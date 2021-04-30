@@ -2994,3 +2994,13 @@ Entered on [2019-12-04 Wed 09:04]
 **** *Réunion Viro*
 
   [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2021-04-30 vendredi
+**** *Réunion projet ECHLORE*
+Caroline Méjean, Hélène Raynal, JM Blazy, S. Guyader
+- modèle Mosaica : tout le territoire peut produire, mais une
+  sous-partie est contaminée par la CLD
+- 
+
+Entered on [2021-04-30 ven. 11:16]
+  
+  [[file:~/Documents/GitHub/guyader-lab-inra/Journal/journal.org::*2021-04%20April][2021-04 April]]
