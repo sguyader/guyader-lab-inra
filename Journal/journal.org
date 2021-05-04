@@ -3002,5 +3002,28 @@ Caroline Méjean, Hélène Raynal, JM Blazy, S. Guyader
 - 
 
 Entered on [2021-04-30 ven. 11:16]
+
+** 2021-05 May
+*** 2021-05-04 Tuesday
+**** *Atelier BIOSEFAIR*
+- Présentation Marc Deconchat : présentation du MP
+  * 3 questions de Biosefaire :
+    + comment interfaces entre milieux et interactions entrze
+      activités influent sur biodiveersité et services écosystémiques ?
+    + quelle dynamique des réseaux de services écosystémiques dans un
+      contexte de changements globaux, et en réponse aux actions de
+      pilotage engagées pour les transitions ?
+    + la santé globale : vers de nouveaux enjeux de la préservation de
+      la biodiversité ?
+- Présentations :
+  * biodiversité dans les forêts et protection contre les bioagresseurs
+  * risques sur la santé humaine et animale liés àl'exposition avec
+    des animaux sauvages des forêts (chevreuils)
+  * pesticides et santé : liens entre BIOSEFAIR et SYSALSA
+  * approche integrative de l'évaluation des produits phytosanitaires mitotoxiques
+  * de l'écotoxicologie à l'agroécotoxicologie
+  * biodiversité et santé mentale
+- Atelier biodiversité / santé végétale B
+  * diversité des traits / diversité systémique
   
-  [[file:~/Documents/GitHub/guyader-lab-inra/Journal/journal.org::*2021-04%20April][2021-04 April]]
+    [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
