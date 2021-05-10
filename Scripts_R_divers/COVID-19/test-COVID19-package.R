@@ -11,7 +11,7 @@ library(tidyverse)
 library(cowplot)
 library(directlabels)
 
-data_covid_ts <- covid19(raw=F) %>%
+data_covid_ts <- covid19(raw=T) %>%
   filter(date < "2020-12-01") %>%
   filter(!is.na(iso_alpha_2)) %>%
   rename(country = administrative_area_level_1) %>%
