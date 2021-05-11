@@ -1,0 +1,3049 @@
+# -*- mode: org -*-
+# -*- coding: utf-8 -*-
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/rtf-full.css"/>
+#+STARTUP: overview indent inlineimages logdrawerhh
+
+#+TITLE:       Journal de bord
+#+AUTHOR:      Sébastien Guyader
+#+LANGUAGE:    fr
+#+TAGS: export(e) noexport(n) 
+#+TAGS: R(R) OrgMode(O) Stats(S) 
+#+TAGS: meeting(m)
+#+OPTIONS:   H:3 num:nil toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:nil
+#+LATEX_COMPILER: xelatex
+#+LATE-CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper]
+#+LATEX_HEADER: \usepackage[margin=2.5cm]{geometry}
+#+LATEX_HEADER_EXTRA: \usepackage{fontspec}
+#+LATEX_HEADER_EXTRA: \setmainfont{Calibri}
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+COLUMNS: %25ITEM %TODO %3PRIORITY %TAGS
+#+SEQ_TODO: TODO(t!) STARTED(s!) WAITING(w@) APPT(a!) | DONE(d!) CANCELLED(c!) DEFERRED(f!)
+
+* informations were gathered and first demonstrated in my [[https://github.com/alegrand/RR_webinars/blob/master/1_replicable_article_laboratory_notebook/index.org][First webinar on reproducible research: litterate programming]]. :noexport:
+***** Emacs shortcuts :noexport:
+Here are a few convenient emacs shortcuts for those that have never
+used emacs. In all of the emacs shortcuts, =C=Ctrl=, =M=Alt/Esc= and
+=S=Shift=.  Note that you may want to use two hours to follow the emacs
+tutorial (=C-h t=). In the configuration file CUA keys have been
+activated and allow you to use classical copy/paste (=C-c/C-v=)
+shortcuts. This can be changed from the Options menu.
+  - =C-x C-c= exit
+  - =C-x C-s= save buffer
+  - =C-g= panic mode ;) type this whenever you want to exit an awful
+    series of shortcuts
+  - =C-Space= start selection marker although selection with shift and
+    arrows should work as well
+  - =C-l= reposition the screen
+  - =C-_= (or =C-z= if CUA keys have been activated)
+  - =C-s= search
+  - =M-%= replace
+  - =C-x C-h= get the list of emacs shortcuts
+  - =C-c C-h= get the list of emacs shortcuts considering the mode you are
+    currently using (e.g., C, Lisp, org, ...)
+  - With the "/reproducible research/" emacs configuration, ~C-x g~ allows
+    you to invoke [[https://magit.vc/][Magit]] (provided you installed it beforehand!) which
+    is a nice git interface for Emacs.
+  There are a bunch of cheatsheets also available out there (e.g.,
+  [[http://www.shortcutworld.com/en/linux/Emacs_23.2.1.html][this one for emacs]] and [[http://orgmode.org/orgcard.txt][this one for org-mode]] or this [[http://sachachua.com/blog/wp-content/uploads/2013/05/How-to-Learn-Emacs-v2-Large.png][graphical one]]).
+***** Org-mode shortcuts :noexport:
+  Many emacs shortcuts start by =C-x=. Org-mode's shortcuts generaly
+  start with =C-c=.
+  - =Tab= fold/unfold
+  - =C-c c= capture (finish capturing with =C-c C-c=, this is explained on
+    the top of the buffer that just opened)
+  - =C-c C-c= do something useful here (tag, execute, ...)
+  - =C-c C-o= open link
+  - =C-c C-t= switch todo
+  - =C-c C-e= export
+  - =M-Enter= new item/section
+  - =C-c a= agenda (try the =L= option)
+  - =C-c C-a= attach files
+  - =C-c C-d= set a deadl1ine (use =S-arrows= to navigate in the dates)
+  - =A-arrows= move subtree (add shift for the whole subtree)
+  - table des matières : ajouter  =#+TOC: headlines 2= à l'endroit
+    souhaité (avec ici 2 niveaux)
+***** Org-mode Babel (for literate programming)
+  - =<s + tab= template for source bloc. You can easily adapt it to get
+    this:
+    #+BEGIN_EXAMPLE
+      #+begin_src shell
+      ls
+      #+end_src
+    #+END_EXAMPLE
+    Now if you =C-c C-c=, it will execute the block.
+    #+BEGIN_EXAMPLE
+  #+RESULTS:
+  | #journal.org# |
+  | journal.html  |
+  | journal.org   |
+  | journal.org~  |
+    #+END_EXAMPLE
+  
+  - Source blocks have many options (formatting, arguments, names,
+    sessions,...), which is why I have my own shortcuts =<b + tab= bash
+    block (or =B= for sessions).
+    #+BEGIN_EXAMPLE 
+  #+begin_src shell :results output :exports both
+  ls /tmp/*201*.pdf
+  #+end_src
+
+  #+RESULTS:
+  : /tmp/2015_02_bordeaux_otl_tutorial.pdf
+  : /tmp/2015-ASPLOS.pdf
+  : /tmp/2015-Europar-Threadmap.pdf
+  : /tmp/europar2016-1.pdf
+  : /tmp/europar2016.pdf
+  : /tmp/M2-PDES-planning-examens-janvier2016.pdf
+    #+END_EXAMPLE
+  - I have defined many such templates in my configuration. You can
+    give a try to =<r=, =<R=, =<RR=, =<g=, =<p=, =<P=, =<m= ...
+  - Some of these templates are not specific to babel: e.g., =<h=, =<l=,
+    =<L=, =<c=, =<e=, ...
+
+* 2018
+** 2018-11 November
+*** 2018-11-15 Thursday
+**** *Rapprochement GENEPI-BETWEEN - Première réunion (cadres)*
+
+  - modalité actuelles d'interaction sau sein des 2 équipes
+  - devenir des manips Between après le départ de Gladys Loranger
+  - thèse de Coraline Moulin : manips finies, analyse et valorisation en cours
+  - projet RITA plantain : stagiaires prévus coencadrés Gladys/Fred Burner
+  - questions sur ce que Victor Vaillant va faire
+  - il y a toujours des manips en cours avec des nématodes (interactions mycorhizes/nématodes)
+  - faire un point avec Gladys sur les actions en cours (proposition pour les 14, 17 ou 18 décembre)
+  - lancer un doodle (fait)
+  
+**** *Live MOOC Recherche reproductible*                               :RechReprod:
+
+  - données volumineuses : git-lfs / git-annex
+  
+**** *Réunion CHING*                                                   :ching:
+
+  - tour de table :
+    - MOOC recherche reproductible sur la fin
+    - début des réunions sur le rapprochement GENEPI-BETWEEN
+    - départ de Mirza
+
+*** 2018-11-17 Saturday
+**** *Installation et configuration d'Emacs org-mode pour ce journal*
+*** 2018-11-19 Monday
+**** *Installation du système complet sur mon mini-pc Windows 10 perso*
+
+  - notepad++ 7.5.9 (à partir du Windows store pour pouvoir le définir comme éditeur de fichiers .txt par défaut)
+  - Git 2.19.1
+  - R 3.5.1
+  - Python 3.7.1
+  - Perl (Strawberry) 5.28.0.1
+  - ImageMagick 7.0.8 Q16
+  - Ghostscript 9.25 (ajout du répertoire du binaire dans la variable d'environnement PATH)
+  - MikTex 2.9.6
+  - paquet TeX "pdfcrop"
+  - Xournal 0.4.8
+  - TexMaker 5.0.3
+  - emacs 26.1 -- version modifiée pour Windows, obtenue [[https://vigou3.gitlab.io/emacs-modified-windows/][à partir de cette source]]
+  
+**** *Travail sur un script pour convertir un tableau (aide à F. Causeret pour Cavalbio)* :R:
+
+*** 2018-11-20 Tuesday
+**** *Script et tableaux finaux pour l'analyse économétrique envoyés à F. Causeret* :R:
+
+**** *Recyclage SST*                                                   :SST:
+
+  - Intro :
+    - penser à renseigner le "registre santé et sécurité au travail" disponible dans chaque unité, si on a une chose à faire remonter (amélioration, danger potentiel)
+    - document "autorisation de sortie" sans infirmière (disponible sur le site intranet prévention, auprès des AP)
+    - fiche d'appel d'urgence dans chaque unité
+    - site internet www.apo.com
+
+  - Plan d'intervention SST
+
+  - numéros d'appel :
+    - 15 (SAMU, en priorité si à la maison ou au travail)
+    - 18 (pompiers)
+    - 17 (gendarmerie, sur voie publique)
+    - 112 (numéro européen, y compris en cas d'attaque terroriste)
+    - 114 (texto, pour personnes malentendantes)
+    - 196 (à terre, si on voit un danger en mer)
+
+  - malaise :
+    - communiquer, poser des questions
+    - AVC : inspecter les signes (déformation visage, douleur tête et bras...)
+    - appel :
+      - je me présente, SST, numéro par lequel j'appelle
+      - je décris la situation, le nb de victimes, ce que j'ai fait
+      - le lieu exact
+      - si on envoie une personne à tel endroit
+      - attendre que le service nous dise de raccrocher
+    - si crise d'épilepsie, dégager l'espace et attendre que la crise passe
+
+  - PLS :
+    - si victime inconsciente qui respire
+    - pour dégager les voies respiratoires
+	
+  - Saignements
+    - faire se moucher vigoureusement si saignement de nez, pincer les narines 10 minutes
+    - abondant : Arrêter, Allonger, Alerter
+    - arrêter par compression ; pansement si on doit s'éloigner ; si pansement imbibé au retour, reprendre compression
+    - garrot si besoin de s'absenter pour porter secours à d'autres victimes
+	
+  - Brûlure
+    - thermique ou électrique : arroser par ruissellement
+    - inhalation
+    
+*** 2018-11-21 mercredi
+
+**** *Test de modification du journal sur mini-PC perso*         :OrgMode:
+
+**** *Améliorations au journal / OrgMode*                        :OrgMode:
+
+*** 2018-11-22 Thursday
+
+**** *Configuration autour de la recherche reproductible*        :RechRepro:
+- lu pas mal de références sur rmarkdown, emacs-OrgMode,
+  bookdown... pour trouver la solution idéale pour la prise de notes
+- installé =bookdown= mais ça paraît compliqué : pas de gestion au jour
+  le jour, ou alors il faut créer un chapitre par jour et/ou activité,
+  ce qui rend ensuite difficile de tout avir sous l'oeil ->
+  emacs-OrgMode gagne haut la main
+- désinstallé TexLive pour installer TinyTeX sous R/RStudio, mais ça
+  casse le fonctionnement de LaTeX avec emacs, donc désinstallé
+  TinyTex et réinstallé TexLive (à partir du site web de TexLive, non
+  pas à partir du gestionnaire de paquets de la distribution Linux)
+- installé la librarie =citr= pour tester l'intégration de références
+  biblio directement depuis Zotero dans un fichier rmarkdown
+- à propos de =bookdown=, j'ai trouvé comment initialiser un nouveau
+  book :
+  - créer un nouveau projet R
+  - dans la console, taper : =bookdown:::bookdown_skeleton(getwd())=
+  - cela va créer un squelette de livre à éditer
+
+*** 2018-11-23 Friday
+
+**** *Customisation des templates OrgMode*                         :OrgMode:
+
+**** *Envoi de la version finale de l'exercice 3 du module 3 pour le MOOC RR* :RechRepro:
+
+**** *Aide à Laurent Penet sur un script R pour sortie graphique ACP*    :R:
+
+*** 2018-11-26 Monday
+
+**** *Setup sur emacs :*
+- installation des paquets :
+  - magit : gestion du dépôt git depuis emacs
+  - golden-ratio : gestion auto des tailles de fenêtres
+  - ox-pandoc : options multiples d'export
+
+**** *Fin de configuration d'emacs OrgMode sur minipc perso*
+
+*** 2018-11-29 Thursday
+
+**** *Réunion ching*                                                 :CODIR:
+1. Retour des départements sur les piliers scientifiques d'ASTRO
+   - doc temporaire envoyé par Alban Thomas
+     discussions CODIR : très critiques, beaucoup de confusion
+   - prochain rendez-vous : fin janvier ou débit férier
+     finalisation des piliers scientifiques
+ 
+2. Directeur adjoint Astro
+   - R. Tournebize volontaire comme DUA
+   - tâches principales : représentation UR, intérim, appui sur
+     dossiers administratifs
+   - aussi :
+     - animation équipes techniques
+     - gestion installations expérimentales
+     - interactions/communication dans l'unité
+     - relations avec partenaires profesionnels
+   - réponse aux besoins et demandes des personnels de l'unité
+   - remarques :
+     - repondérer fonctions principales (plus) / secondaires (moins)
+     - préciser les rôles d'interlocuteur entre DU et DUA
+
+3. Exécution et instruction des projets en cours
+   - FEDER 2ème tranche :
+     - les dossiers seront distribués par la Région "dès que possible"
+     - réunions de préparation à prévoir
+   - RITA :
+     - conventions courent à partir du 15 octobre, pour 18 mois (au
+       lieu de 3 ans)
+     - le CIRAD veut déposer une 2ème tranche pour 2019-2020
+
+4. Questions diverses
+   - AAP ANSES : peut intéresser Astro
+     - possibilité de projets exploratoires (50k€ sur 2 ans), ou projet
+     - moins risqué (200k€ sur 3 ans)
+     
+** 2018-12 December
+
+*** 2018-12-04 Tuesday
+
+**** *Réunion préparation MALIN tranche 2*
+- tâches dans lesquelles j'interviens :
+  - WP1 : facteurs d'émergence
+    + tâche 3a : dynamique d'évolution des pathogènes en lien avec
+      l'émergence
+      1. cartographie anthracnose (souches/paysage/hôtes)
+      2. dispersion aérienne (capture de spores)
+      3. étude phylogéographique (microsatellites)
+  - WP2 : résistance de l'hôte
+    + tache 6 : arrangements spatiaux de variétés (modélisation + champ)
+  - WP3 : communication + formation
+    + tâche 7 : communication
+    + tâche 8 : formation (master Biologie Santé, accueil stagiaires)
+    + tâche 9 : gestion et coordination
+- temps dédié : Cf tableau
+- coût : Cf tableau
+- Question : quid de Pauline ? (non-permanente, salaire financé par ailleurs)
+- Demande d'aide :
+  - on pourra référer au dossier scientifique
+  - double entrée par WP et par année
+  - années 2019 à 2021
+  - pas besoin d'incrémenter de 1% par an (on part de base 2018)
+  - mettre les temps en jours ou 1/2 jours, pas en % de temps
+  - pour coûts directs, demander les devis, en HT, les numéroter et classer par WP
+  - pour le personnel, faire 1 ligne par personne (y-compris
+    stagiaires) par année et par WP
+  - pour congrès en à l'étranger, demander coûts dans la devise étrangère
+  - devis : mettre le nom du demandeur et le numéro, copie
+    informatique+papier à archiver
+
+*** 2018-12-10 Monday
+
+**** *Paquet R "prettydoc"*
+- permet de faire un rendu simple, joli et léger d'un document HTML à
+  partir de rmarkdown
+- exemple de header yaml à mettre :
+  #+BEGIN_SRC yaml
+  ---
+  title: Titre
+  author: Auteur
+  date: date
+  output:
+    prettydoc::html_pretty:
+      theme: architect
+      highlight: github
+  ---
+  #+END_SRC
+  
+**** *Préparation cours M1 Biologie-Santé UEP83.1*
+- les cours débutent le 14 janvier pour le module Surveillance
+  Sanitaire
+- mes cours :
+  - Maladies cryptogamique : pathogénèse et réponses de l’hôte (2h)
+  - Méthodes de lutte contre les maladies cryptogamiques des plantes :
+    diagnostic, éradication, résistance variétale, lutte chimique (3h)
+    
+***** DONE : donner les dates et heures de disponibilité
+- State "DONE"       from "TODO"       [2019-10-18 Fri 11:04]
+
+**** *remark.js*
+- installer les paquets =xaringan= et =xaringan-themer=:
+  #+BEGIN_SRC r
+  devtools::install_github("gadenbuie/xaringanthemer")
+  devtools::install_github('yihui/xaringan')
+  #+END_SRC
+- pour ajouter une barre de progression :
+  - ajouter un fichier "progress-bar.css" dans le répertoire courant
+  - dans l'en-tête yaml, déclarer le fichier css et ajouter les lignes suivantes :
+    #+BEGIN_SRC r
+    slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    #+END_SRC
+    
+*** 2018-12-11 Tuesday
+
+**** *Importer des diaporamas PPTX :*
+- installer le paquet =slidex=
+- importer avec la commande =convert_pptx()=
+
+*** 2018-12-14 vendredi
+
+**** *Rapprochement GENEPI-BETWEEN - Deuxième réunion (cadres)*
+- 3 projets en cours 2020-2021 (feder, et feader avec JL Diman)
+  1. fondation de france : thèse Coraline et prolongation avec 3ème
+    année au champ (2019)
+  2. intenséco plantain (ferme pilote)
+  3. agroécodiv tranche 2 (ferme pilote + UE)
+- stagiaires coencadrés par Gladys en 2019 sur les 3 projets, avec
+  surtout Fred et Philippe
+- Chantal fait moins de faune du sol, Gladys ayant récupéré les
+  échantillons
+- il faut assurer une transition avec les techniciens qui ne sont plus
+  occupés à 100% sur les projets
+- Fred : terrain > serre > labo (dispositifs expé), géré par Gladys
+- Philippe : mycorrhizes Marie + fin thèse Coraline, Laurent prendrait
+  la gestion
+- Chantal : un peu avec Marie sur interactions mycorrhizes/nématodes,
+  Laurent prendrait la gestion
+- faire entretiens individuels DU + agents
+- voir avec Chantal si elle pourrait se former en mycologie
+- faire un échange sur les projets de chacun pour préparer la fusion
+- inclure Marie Umber
+
+*** 2018-12-20 jeudi
+
+**** Réunion Ching
+Présents: Yoana Faure (YF), Régis Tournebize (RT), Antoine Richard
+(AR), Jorge Sierra (JS), François Bussière (FB), François Causeret
+(FC), Alfred Venthou-Dumaine (AVD), Bernard Fils-Lycaon (BFL),
+Sébastien Guyader (SG), Marie-Françoise Zébus (MFZ), Jean-Bapiste
+Nanette (JBN), Thierry Bajazet (TB)
+
+1. tour de table :
+   - SG :
+     - MOOC Recherche Reproductible terminé, en cours de validation
+     - utilise les outils et pratiques apprises dans le MOOC
+   - BFL :
+     - FEDER Tr2 : a modifié les tableurs (années, grades, masse
+       salariale... ) boucler les demandes d'aide, refaire les devis
+     - tableur : pour CDDs, faire une ligne par personne (ne pas
+       pooler) ; pour missions, séparer frais de mission, frais de
+       voyage, frais d'inscription...
+     - fin FEDER : juin 2021, donc redispatcher les actions jusqu'à
+       juin 2021
+     - la DG impose les projets de plus de 1M€ (coût complet, incluant
+       35% de coûts d'environnement) à demander l'avis de la DGDS, du
+       DU, du PC, des CD
+     - ne pas demnder de CDD avant juillet 2019
+   - AVD : 
+     - regoupements EIC => changements de matériel en eic, et des
+       prises RJ45 dans les bureaux à partir de mars 2019
+     - les stagiaires ne peuvent plus tuliser de poste perso sur le réseau INRA
+     - a reçu 3 protocoles pour des demandes en serre
+   - JBN/TB :
+     - va faire le point sur les demandes de travaux pour bâtiment
+       (demande de D. Rufer)
+     - prévoient la réorganisation de l'observatoire
+   - FC :
+     - Explorer va démarrer et permettre de soutenir les activités de la microferme
+     - pas mal de personnes (stages) passent sur la microferme
+     - analyses sur les enquêtes des agriculteurs de Cavalbio Ignames
+     - sera correspondant de la mission Données (SAE2) à partir de janvier
+   - JS :
+     - rédige un papier avec P. Chopin sur changement Climatique
+     - travaille sur demande financement pour une thèse
+     - adapte Morgwaik en espagnol
+     - va changer de bureau
+   - AR :
+     - refléxion sur l'évolution de l'observatoire
+     - arrivée le 7 janvier d'une stagiaire M2 (Axelle Mordier)
+     - accueil début janvier de Pascale Bade pour travailler sur des manips sur
+       matière organique, en vue d'une éventuelle intégration
+   - RT :
+     - rédaction de rapports
+     - dossiers Rita 2 et Agroécodiv 2...
+   - YF :
+     - allée à Orléans pour rencontres des CRB
+       - réflexion sur rôle des collections à l'INRA
+       - travail à faire sur un modèle économique propre au CRB
+       - réflexion suite à publication de la normale ISO "Biobanking
+     - récoltes collection ignames surtout des /D. bulbifera/
+     - stagiaire M1 encadrée par Marie (relation symptômes/indexation),
+       a soutenu
+   - MFZ :
+     - travail sur notices Prodinra
+     - peu de dépôts de nouvelles notices
+     - a paricipé à la réunion nationale du personnel IST INRA
+     - propose une jurnée Opendata sur le centre si besoin
+2. Point échanges avec départements :
+   - 28-29 janvier 2019 :
+   - animé par C. Lannou
+   - probablement plénière avec cadres
+   - toujours pas de rapport sur l'UE
+3. Préparation des 70 ans du Centre :
+   - JS propose de montrer des obtentions concrètes (variétés...)
+   - ...
+4. Point stages
+5. Mise à jour de l'organigramme de l'unité
+
+* 2019
+
+** 2019-01 January
+
+*** 2019-01-14 Monday
+
+**** Test de la fonction de lien vers un document:
+- utiliser C-u C-c C-l
+- exemple : voici un lien vers mon "readme"
+
+*** 2019-01-24 Thursday
+
+**** *Réunion FB travail sur Pilier 1*
+- présenter questions scientifiques
+- ok pour viro/épidémio
+- écophysio/phénotypage : Régis
+
+**** *Réunion ching*                                         :meeting:ching:
+- présentation intro FB :
+  - présentation unité (enjeux+question chapeau) + organisation
+  - pilier 1 : penser aux collaborations, projets, 1 ou 2 résultats
+    marquants, besoins en compétences, 40 minutes
+    
+*** 2019-01-28 Monday
+
+**** *Rencontre CD/Astro 28/29 janvier 2019* :meeting:
+1. Présentation générale de l'unité et introduction des 2 piliers
+   - commentaires CL : pilier 1 clairement igname+tomate, pilier 2 moins clair
+     comment l'interface se fait entre les piliers 1 et 2 ?
+   - SAE2 : piliers bien définis, fonctionnels
+     y a-t-il tension entre "astro" et plateformes CRB/PolEauSol ?
+     Sont-elles bien valorisées ?
+   - CL : question sur départ de Gladys Loranger
+     attente bien exprimée de la population à laquelle on cherche à
+     répondre ?
+   - SPE : quels exemples d'observation du changement climatique
+     localement ?
+2. Présentation Pilier 2
+   - CL : la dégradation des sols tropicaux est-elle prégnente en
+     Guadeloupe ?
+   - SPE : a-t-on constaté une dégradation physique des sols ?
+   - SAE2 : surpris par l'intitulé du profil CR demandé ; vis-à-vis du
+     projet d'unité où peu de personnes SAE2, y a-t-il des cmpétences à l'UA pour complémenter
+     les besoins de RH ? Sur quelles cultures aller en Guadeloupe vers
+     l'avenir (pour se démarquer des autres)
+   - CL : quels supports (cultures) ?
+     y a-t-il une tension entre "sols" et autres composantes (par
+     exemple plante/épidémio)
+     sommes nous un lieu attractif pour collègues d'autres unités ?
+   - SAE2 : c'est assez clair (présentation peut être améliorée),
+     parmi questions de recherche il faut bien expliquer ce qui est
+     plus convaincant et à faire resortir (quels verrous à lever en
+     priorité)
+     quelle transférabilité du modèle Mosaïca ?
+   - SAE2 : est-ce qu'on dose aussi métabolites issus des pesticides ?
+   - SPE : y a-t-il un risque d'évolution de la pollution avec le
+     changement climatique ?
+   - CL : quelle position officielle du CIRAD sur l'observatoire ?
+3. Présentation Pilier 1
+4. Evolution projet d'unité et besoins en compétences
+   - CL : quels profils déjà remontés aux départements ?
+   - SAE2 : définir 1 objectif d'unité, et dire qu'on a besoin de 2
+     piliers et pourquoi
+   - CL : questions sur fermes pilote, comment elles favorisent les
+     interactions
+     il faut de la transversalité entre les 2 piliers, les supports
+     microferme et observatoire pollutions permettent de la
+     transversalité
+5. Animation Scientifique
+
+*** 2019-01-29 Tuesday
+
+**** *Rencontre CD/Astro 28/29 janvier 2019 - jour2* :meeting:
+1. Points divers
+   - retroplanning HCERES
+     commencer rapport éval début 2020, dépôt août/septembre 2020
+     éval prévue entre novembre 2020 et février 2021
+     2020
+     visite CD BAP et EA à prévoir dans les 6 mois avant, peut-être
+     SPE pour l'éval
+   - Conseil Scientifique : à nous de décider si on en a encore besoin
+     ; on peut changer sa configuration
+2. Retour à chaud 
+   SAE2 :
+   - satisfait des présentations
+   - contenu scientifique clair, effort de structuration piliers clair
+   - articulation intéressante avec URZ
+   - positif début animation sur recherches participatives (à
+     poursuivre même sur autres sujets)
+   - richesse partenariats (Cuba, LISAH)
+   - partenariat montre dynamisme
+   - sur présentation du projet, bien montrer problématique de
+     l'unité, et comment les 2 piliers sont nécessaires (question de
+     présentation)
+   - s'en servir pour justifier les demandes de postes
+   - montrer comment on y arrive avec beaucoup de disciplines mais peu
+     de chercheurs par discipline
+   - changement d'échelle peut être une interface de réflexion au sein de l'unité
+   - ne plus faire ressortir les recherches via les contrats, montrer
+     que les contrats ne sont que des moyens financiers pour faire aboutir
+   - site internet : ça ne va pas du tout -> soigner notre communication
+   JP Rossi :
+   - présentation claire des piliers
+   - animation interne bien mise en valeur, à cultiver
+   - mettre en avant le reste (autre que l'animation)
+   - muliples activités mais en face d'un effectif faible
+   - pour clarifier, montrer comment on met en face des ETP
+   - bien mettre en avant questions scientifiques, complémentarité
+     entre piliers, moins les projets
+   C Lannou :
+   - bien mis en valeur les infrastructures (opale, microferme) mais peu le CRB
+   - il faut les faire vivre, et les rendre attractives
+   - projet original
+   - unité pluridisciplinaire, c'est une chance et un risque à la fois
+   - attention à ne pas se laisser aller par les "forces centrifuges"
+   - voir comment on se présente en termes d'équipes (1, 2 ou
+     plus.... pour HCERES)
+   - qu'est-ce qui est réel et vraiment structurant ?
+   - identifier les grands enjeux structurants : ex. sols dégradés,
+     agriculture climato-intelligente, pilier 1 (donc CL voit 3 enjeux
+     structurants)
+   - pilier 1 : bcp de choses dedans, essayer de présenter de manière
+     plus structurée
+   - importance des collaborations : essayer d'attirer vers nous
+     encore plus
+   - profiter de l'animation 70 ans du Centre pour gagner en visibilté
+
+*** 2019-01-31 Thursday
+
+**** *Réunion CHING*                                         :ching:meeting:
+Retour sur la venue des CD
+- positif : 
+  - ont vu ce qu'ils étaient venus voir
+  - 2 piliers montrent l'intérêt des 2 structures (CRB et plateforme)
+  - essayer d'attirer d'autres équipes, point important pour
+    évaluation
+  - liens URZ
+  - richesse partenariat
+  - pour évaluation, choisir comment on se représente, mais montrer
+    que c'est pertinent
+- à travailler :
+  - beaucoup de disciplines, difficulté à gérer mais on doit montrer
+    comment on y arrive
+  - essayer de replacer l'unité dans les enjeux structurants et autres
+    de l'INRA et des départements
+  - montrer comment le projet d'unité s'appuie sur les piliers,
+    articulations fonctionnelles, que les contrats sont seulement des
+    moyens d'y arriver
+  - fonctionnement financier à clarifier
+  - mettre à jour site web
+  - montrer des indicateurs sur les modèles
+  - pilier 1 paraît trop fragmenté
+  - challenge : créer et maintenir animation scientifique intra- et inter-piliers
+  - quelles ETP de collaborations interviennent sur nos projets
+
+** 2019-02 February
+
+*** 2019-02-06 Wednesday
+
+**** *Réunion UE Péyi - parcelles* :meeting:
+1. Conversion en "bio"
+   - proposition UE : convertir la partie EST du domaine en bio
+   - la conversion en bio est une nécessité pour le projet de la microferme
+   - accord de tous les présents
+2. Tarification expérimentations
+   - l'expérimentateur doit établir un bon de commande suite à la
+     demande de devis
+   - en fin d'expé, l'UE doit fournir une facture ajustée
+   - base minimale 1000 m²
+   - 100€ par passage d'outil, épandage (fumure, engrais)
+   - tarif pour paillage canne (dépend du prix de la balle de paille)
+   - 
+
+*** 2019-02-28 Thursday
+
+**** *CODIR*                                                       :meeting:codir:
+- point hébergement stagiaires 2019 : logement+bureaux
+- animation scientifique :
+  * Jorge propose une animation sur le changement d'échelles et les
+    ponts piliers 1 et 2
+
+** 2019-03 March
+
+*** 2019-03-11 Monday
+
+**** *MOOC "Analyse de données multidimensionnelles"* :mooc:r:
+
+*ACP*
+1. Données - Problématique
+   - type de données pour ACP : tableaux rectangulaires avec *individus*
+     en lignes, et *variables quantitatives* en colonnes
+   - étude des individus :
+     + quand dit-on que 2 individus se ressemblent
+       du point de vue de l'ensemble des variables ?
+     + si beaucoup d'individus, peut-on faire un bilan des
+       ressemblances ?
+     + construction de groupes d'invididus
+   - étude des variables :
+     + recherche de ressemblance entre variables : on parle plutôt de liaisons
+     + souvent liaisons linéaires -> coeff. de corrélation
+     + visualisation de la matrice des corrélations
+     + recherche d'un petit nombre d'indicateurs synthétiques pour
+       résumer bcp de variables
+   - objectifs de l'ACP :
+     + descriptif / exploratoire : visualistaion de données
+       par graphiques simples
+     + synthèse / résumé de grands tableaux individus x variables
+
+2. Etude des individus
+   - on cherche à étudier les distances entre individus au sein du nuage
+   - on étudie la forme du nuage réduit à 2 dimensions
+   - centrage - réduction des données : prétraitement
+     + toujours centrer le nuage ne change pas sa forme
+     + réduire les données (=standardiser =normer) est nécessaire si
+       les variables sont exprimées dans des unités différentes
+     + la réduction permet de donner la même importance à chaque
+       variable : plus la variance d'une variable est grande, plus
+       cette variable aura d'importance
+   - l'ACP cherche un sous-espace qui résume au mieux les données
+       (i.e. la forme originale du nuage)
+   - pour ajuster le nuage, on cherche l'image qui maximise la
+     distance entre individus (qui éclate le plus le nuage), donc la
+     variabilité sur plusieurs dimensions = l'*inertie*
+     + trouver le meilleur axe (facteur) qui déforme le moins le nuage :
+       maximiser la somme des carrés coordonnées projetées sur l'axe
+       (on veut maximiser l'*inertie* \(\sum_{i}(OH_i)²\) avec O=centre gravité du nuage, H=coordonnée du point /i/
+       sur l'axe)
+     + ensuite trouver le meilleur plan qui contient le meilleur axe,
+       avec le second axe orthogonal au premier, et maximisant
+       toujours l'inertie \(\sum_{i}(OH_i)²\)
+     + on peut chercher d'autres axes ensuite, sachant qu'il faut
+       toujours que le nouvel axe soit orthogonal à tous les autres et
+       maximise l'inertie
+   - interprétation du graphe des individus grâce aux variables :
+     + on va considérer les coordonnées des individus sur les 2
+       premiers axes, donnant 2 nouveaux vecteurs \(F_.1\) et \(F_.2\) avec /I/ valeurs
+       rassemblant les coordoonées des /I/ individus
+     + on calcule la corrélation entre chaque variable \(x_.k\) et
+       \(F_.1\) et \(F_.2\) : le cercle des corrélations
+
+3. Etude des variables
+   - on représente les variables par des flèches partant de l'origine
+   - quand les variables sont centrées, le cosinus de l'angle entre 2
+     variables /k/ et /l/ correspond à la correlation entre celles-ci :
+     \(cos(\theta_kl)=r(x_.k, x_.l)\)
+   - si les variables sont réduites, les extrémités des flèches des
+     variables se situent sur une hypersphère de rayon 1
+   - comme pour les individus, on cherche les axes orthogonaux qui
+     maximisent la somme des carrés des corrélations entre l'axe et chacune des variables
+   - *attention* : seules les variables bien projetées (avec une flèche
+     proche su cercle des corrélations) peuvent être interprétées
+     quant à leur corrélation
+
+4. Aides à l'interprétation
+   - Pourcentage d'inertie (d'information) expliqué par chaque dimension
+   - Information supplémentaire : variables quanti ou quali supplémentaires
+     + on peut directement superposer les variables quantitatives
+     + on va projeter chaque modalité des variables qualitatives au barycentre des
+       individus qui prennent cette modalité
+   - Qualité de représentation : les éléments bien projetés sont interprétables
+     + d'une variable : cos² entre une variable et sa projection
+     + d'un individu : cos² entre /Oi/ et /OH_i/
+     + on additionne les cos² calculés sur les 2 premiers axes pour
+       avoir la qualité de la projection sur le premier plan
+   - Contribution à la construction d'un axe :
+     + d'une variable : carré de la corrélation entre la variable et
+       l'axe par rapport à la somme des carrés des corrélations de
+       toutes les variables avec l'axe (exprimé en pourcentage)
+     + d'un individu : carré de sa coordonnée sur l'axe par rapport à
+       la somme des carrés des coordonnées de tous les individus
+       (exprimé en pourcentage)
+     + la contribution permet de savoir si un axe a été construit
+       surtout à cause d'une certaine variable ou d'un certain
+       individu
+     + si un individu contribue très fortement, on peut chercher à
+       expliquer pourquoi, et à refaire l'analyse en retirant cet
+       individu très particulier
+   - Description des dimensions :
+     + par les variables quantitatives :
+       * calcul des corrélations entre chaque variable et la dimension /s/
+       * tri des coefficients de corrélation significatifs
+     + par les variables qualitatives :
+       * analyse de variance des coordonnées des individus sur l'axe /s/
+         expliqués par la variable qualitative
+       * 1 test /F/ par variable pour voir si la liaison est
+         significative entre les coordonnées des individus sur l'axe
+         et la variable
+       * 1 test /t/ de Student par modalité pour comparer le moyenne de
+         la modalité avec la moyenne générale des modalités
+
+5. Gestion des données manquantes
+   - package =missMDA=
+   - ne pas faire :
+     + supprimer les NA (on élimine de l'information)
+     + imputation par la moyenne des données présentes (entraîne une
+       distortion des liaisons entre variables)
+   - ACP itérative
+     + si 2 individus /x/ et /y/ se ressemblent sur l'ensemble des variables, on
+       peut imputer une donnée manquante pour une variable de
+       l'individu /x/ par la valeur prise par l'individu /y/ pour cette
+       même variable
+     + pour l'ACP itérative, on impute la valeur manquante par la
+       moyenne prise par tous les individus pour la variable, puis on
+       fait une 1ère ACP sur ce tableau complété, on met à jour la
+       valeur manquante par la coordonnée de sa projection sur la
+       droite d'ACP, et on réitère le processus jusqu'à convergence
+     + faiblesse de la méthode : surajustement possible si on a une
+       trop grande croyance dans la liaison entre les variables
+     + on utilise alors l'*ACP itérative régularisée*
+     + conséquences :
+       * on renforce les liaisons entre variables, donc on
+         *surestime les % d'inertie* associés aux premières dimensions
+         de l'ACP
+   - Imputation multiple :
+     + on impute plusieurs fois le tableau en générant chaque fois une
+       valeur plausible mais différente de chaque valeur manquante
+     + cela va ajouter une incertitude sur l'imputation
+     + se visualiser par une ellipse autour des individus et des
+       variables pour lesquels on a des données manquantes qui ont été
+       imputées
+     + fonction *=MIPCA=* dans =missMDA=
+
+*AFC*
+1. Données
+   - tableau de contingence ou tableau croisé : /n/ individus représentés par 2 variables
+     qualitatives  V_1 et V_2 dont les modalités sont réprésentées en
+     colonnes pour l'une et lignes pour l'autre. A l'intersection de
+     la ligne /i/ et de la colonne /j/, on trouve le nombre d'invidus
+     concernés par à la fois la modalité /i/ de V_1 et la modalité /j/ de V_2
+   - le tableau de contigence est transformé en tableau de
+     probabilités : \(f_ij=\frac{x_ij}{n}\)
+   - ainsi pour couple de modalités (/i,j/) on la probablité d'obtention
+     de ce couple
+   - les probabilités marginales s'obtiennent par la somme en ligne ou
+     colonne des probabilités
+   - la liaison entre V_1 et V_2 est l'écart entre les données et le
+     *modèle d'indépendance*
+
+2. Modèle d'indépendance
+   - rappel : 2 événements indépendants : \( P(A et B) = P(A) x P(B) \)
+   - si V_1 et V_2 sont indépendantes, alors \( f_ij = f_{i.} x f_{.j} \) : la
+     probabilité conjointe est le produit des probilités marginales
+   - autrement dit \( frac{f_ij}{f_{i.}} = f_{.j} \) et \( frac{f_ij}{f_{.j}} =
+     f_{i.} \) : la probabilité conditionnelle = probabilité marginale
+   - on fait un test du \chi²
+   - \chi² = n\phi² : intensité de la liaison = écart entre probabilités
+     théoriques et observées
+   - on a une information sur la nature de la liaison (association
+     entre modalités), mais pas sur la significativité
+   - l'AFC va par exemple comparer les "profils lignes" de chaque
+     madalité /i/ (= distribution conditionnelle de la variable V_2
+     sachant que l'on possède la modalité /i/ de V_1) avec le "profil
+     ligne moyen" (= distribution marginale V_2, profil de l'ensemble
+     des individus étudiés)
+
+3. Les nuages et leur ajustement
+   - nuage des profils lignes : /I/ points de coordonnées f_ij/f_{i.} sur
+     l'axe /j/ dans un espace à /J/ dimensions
+   - nuage des profils colonnes : J points de coordonnées f_ij/f_{.j} sur
+     l'axe /i/ dans un espace à /I/ dimensions
+   - si indépendance entre les lignes : pour tout /i/ on a f_ij/f_{i.}=f_{.j}
+     => les profils lignes sont confondus avec le profil moyen, le
+     nuage /N_I/ se réduit au point /G_I (centre de gravité, origine)/
+     => l'inertie du nuage est nulle
+   - ainsi, plus les données s'écartent de l'indépendance, plus les
+     profils s'écartent de l'origine
+   - l'inertie du nuage /N_I/ par rapport à son centre de gravité /G_I/
+     est calculé par le \phi² (=\chi²/n), qui est donc bien une
+     mesure de l'intensité de la liaison
+   - idem pour le nuage /N_J/
+   - On a une dualité importante : \( Inertie(N_J/G_j) = Inertie(N_I/G_I)
+     \)
+     c'est-à-dire que les lignes et les colonnes jouent des rôles symétriques
+   - l'AFC cherche à décomposer l'inertie du nuage /N_I/ par analyse
+     factorielle : elle fait une projection du nuage sur une série
+     d'axes orthogonaux d'inertie maximum
+   - visualisation sur un graphe des 2 premières dimensions :
+     + un point au centre du graphe (intersection des axes) est
+       une ligne/colonne dont le profil est proche du profil ligne/colonne moyen
+     + l'interprétation de la projection des lignes et des colonnes se
+       fait de la même manière sur les axes, en vertu de la dualité
+
+4. Pourcentages d'inertie et inertie en AFC
+   - qualité de représentation de /N_I/ par un axe : inertie projetée
+     sur cet axe / inertie totale
+   - en général exprimée en % = valeur propre
+   - les % d'inertie mesurent l'écart à l'indépendance
+   - les % d'inertie projetées s'additionnent, la somme totale =
+     inertie totale de /N_I/ = \phi²
+   - n\phi²=\chi² => comparer au \chi² théorique pour trouver la probabilité critique
+   - on peut faire un histogramme des valeurs propres et observer la décroissance en fonction du
+     rang de l'axe, ce qui permet de savoir combien d'axes conserver
+   - si une valeur propre = 1, on a parfaite opposition, 2 catégories
+     mutuellement exclusives
+   - en AFC, il faut d'abord regarder les valeurs propres
+   - quand une valeur propre d'un axe est très inférieure à 1, on est loin
+     d'une association exclusive entre une ligne et une colonne
+   - quand \phi² est très inférieur au nombre d'axes (qui est le maximum
+     de la somme des inerties des axes si chacune valait 1), on est loin d'une
+     liaison parfaite (i.e. loin d'une association exclusive) entre
+     les modalités des 2 variables
+
+5. Représentation simultanée des lignes et des colonnes
+   - relation de transition = propriétés barycentriques
+   - une ligne est du côté des colonnes auxquelles elle s'associe le plus
+   - une colonne est du côté des lignes auxquelles elle s'associe le plus
+   - attention : on peut comparer les distances des points lignes
+     entre eux ou des points colonnes entre eux, mais pas entre points
+     lignes et points colonnes (seule la direction est interprétable)
+
+6. Aides à l'interprétation
+   - *qualité de représentation* d'un point (ou du nuage) : inertie
+     projetée sur l'axe / inertie totale = cos²
+   - pour démarrer l'interprétation d'une AFC, on commence par les
+     points remarquables : éloignés du centre du centre le long d'un
+     axe, avec une bonne qualité de représentation sur cet axe
+   - *contribution* d'un point : inertie projetée du point sur l'axe (brute, ou en
+     % de l'inertie totale de l'axe)
+   - on peut additionner les les contributions de plusieurs point sur
+     un axe pour savoir à quel point cet axe est déterminé par ces points
+   - pour de grands tableaux, on peut sélectionner un sous-ensemble
+     d'éléments à interpréter s'ils ont une forte contribution
+     (conjointement à leur qualité)
+   - important : si dans le tableau on a des effectifs marginaux très
+     différents d'une ligne (ou colonne) à une autre, il faudra
+     impérativement examiner les contributions (les points extrêmes ne
+     sont pas forcément les plus contributifs)
+   - on peut visualiser des lignes ou colonnes supplémentaires
+   - propriété intéressante de l'AFC, l'*équivalence
+     distributionnelle* : si plusieurs lignes (ou colonnes) ayant le même profil sont
+     regroupées en une seule, les résultats de l'AFC sont strictement équivalents
+   - on peut utiliser cette propriété et regrouper sous un terme
+     unique 2 termes strictement équivalents
+   - nb maximum d'axes d'inertie non nulle est égal au minimum de
+     (/I/-1, /J/-1) ; de même \phi² inférieur ou égal à min(I/-1, /J/-1)
+   - V de Cramer = \phi² / min(I/-1, /J/-1) (compris entre 0 et 1),
+     indicateur borné de la liaison entre les 2 variables
+
+*ACM : analyse des correspondances multiples*
+1. Données - Problématique
+   - tableau de données rectangulaire :
+       /I/ individus en lignes
+       /J/ variables qualitatives en colonnes
+       /v_{ij}/ = modalité de la varible /j/ passédée par l'individu /i/
+   - ex : enquête sur /I/ personnes, avec /J/ questions pouvant prendre
+     des modalités distinctes (ex : /j/ = statut marital, modalités =
+     {célibataire, marié, veuf, divorcé,...}
+   - à partir du tableau de données, on construit un tableau
+     disjonctif complet ("TDC") : toujours /I/ lignes, mais les modalités sont
+     "splittées" en colonnes (si /K/ modalités, on a /K/ x /J/ colonnes au
+     total) ; dans le tableau, on met "1" si l'individu possède la
+     modalité, "0" s'il ne la possède pas
+   - une colonne est appelée "fonction indicatrice", ou "indicatrice"
+   - à partir du TDC, on calcule la marge-colonne pour chaque
+     individu : elle vaut /J/ ; la somme totale du tableau vaut /IJ/
+   - étude des individus :
+     + 1 individu = 1 ligne = ensemble de ses modalités
+     + ressemblance des individus
+     + variabilité des individus
+     + principales dimensions de la variabilité des individus (en relation
+       avec les modalités)
+   - étude des variables :
+     + Liaisons entre variables qualitatives (en relation avec les modalités)
+     + Visualisation d'ensemble des associations entre modalités
+     + Variable synthétique (chercher un indicateur quantitatif fondé sur des
+       variables qualitatives)
+   - problématique proche de l'ACP
+   - On a parfois 2 types de variables dans un même tableau, par
+     exemple : variables liés à l'activité (cinéma, restaurant...) +
+     variables signalétiques (âge, sexe de l'individu)
+   - dans ce cas on peut souhaiter traiter les variables
+     "signalétiques" comme des variables supplémentaires, ou
+     inversement, ou traiter les 2 en actif
+   - dans le premier cas, un individu est représenté uniquement par
+     son profil d'activité, son poids est de 1/I
+   - la valeur d'une cellule du TDC :
+     /y_{ik}/ = 1 ou 0
+   - si un individu possède une modalité /k/ rare, cela le caractérise
+     bcp plus qu'une modalité fréquente, et inversement si une
+     modalité est partagée par tous les individus, elle n'en
+     caractérise aucun, d'où : /x_{ik}/ = /y_{ik}/ / /p_k/, qui est
+     équivalent à la donnée centrée réduite de l'ACP
+
+2. Analyse des individus
+   - nuage des lignes = des individus
+   - 1 individu = 1 point représenté dans un espace à /K dimensions
+     (il a /K/ valeurs, car il y a /K/ modalités)
+   - chaque modalité a un poids proportionnel à son effectif = /p_k /// /J/
+   - l'individu est représenté par un point /M_i/ de coordonnées /x_{ik}/
+     et a un poids de 1 // I/
+   - l'ensemble des points individus forme un nuage /N_I/ de centre de
+     gravité /G_I/ = /O/ (origine)
+   - la distance entre 2 individus est la somme des carré des écarts
+     sur chaque axe (modalité) pondérée par le poids de la modalité correspondate, /p_k/
+     / /J/
+   - si 2 individus prennent les mêmes modalités, ils ont le même
+     profil : distance = 0
+   - s'ils ont en commun beaucoup de modalités, leur distance sera petite
+   - s'ils on en commun bcp de modalités, mais qu'il diffèrent sur 1
+     modalité relativement rare, alors la distance sera plus grande,
+     pour refléter cette spécificité
+   - si 2 individus ont en commun une modalité rare, la distance ser
+     plus petite pour refléter cette spécificité commune
+   - inertie d'un individu = carré de la distance au centre de gravité
+     pondéré par son poids
+   - l'inertie du nuage /N_I/ = somme des inerties des individus = (/K/ /
+     /J)/ - 1
+   - cette inertie totale dépend donc uniquement du format du tableau
+     (nombre de modalités et de varaibles), contrairement à l'analyse
+     des correspondances (AFC) où l'inertie mesurée par le \phi² mesure
+     l'écart à l'indépendance ; elle se rapproche davantage de
+     l'inertie en ACP qui dépend uniquement du nombre de variables
+   - on ajuste le nuage des individus par projection séquentielle sur des axes
+     orthogonaux d'inertie maximale
+   - on commence par regarder la décroissance des inerties
+   - regarder le nuage pour voir s'il y a des représentations
+     particulières :
+     + regarder si on voit des groupes distincts
+     + un nuage en "V" (effet Guttman") : souvent le premier axe
+       ségrège les individus selon une valeur allant de - au + élevée,
+       et le second axe oppose les individus les plus extrèmes (les -
+       et le +) aux individus moyens
+     + colorier les individus selon certaines modalités (ex. :
+       jardinage oui/non) pour voir s'ils ont tendance à se répartir
+       selon cette modalité
+   - on peut visualiser les *modalités* sur le graphe des individus en
+     les plaçant au barycentre des individus qui les possèdent ; on
+     peut interpréter la distance des modalité au point d'origine
+     (barycentre du nuage) en fonction de la taille des effectifs :
+     moins une modalité est possédée par des individus, plus elle
+     s'éloigne du point d'origine
+   - représentation des *variables* : l'idée est de considérer les
+     coordonnées projetées des individus sur un axe et de calculer un
+     indicateur de liaison entre ces coordonnées et chaque variable
+     qualitative :
+     + on calcule le rapport de corrélation entre la variable /j/ et la
+       composante /s/ : \eta(/v_{.j}, /F_s/)
+     + on examine le carré \eta² qui donne le pourcentage de variablité
+       de la variable quantitative expliquée par la variable qualitative
+     + on fait un graphe de ces valeurs pour les variable = "graphe du carré des laisons"
+     + ce graphe s'inscrit dans un carré (0,1) sur les 2 premières dimensions
+     + attention, on ne peut pas interpréter la significativité
+       numérique car la construction de l'analyse se fait en
+       maximisant les les corrélations (sauf pour les variables
+       supplémentaires) : l'axe /s/ est orthogonal à tout axe /t,/ et est
+       l'axe le plus le plus lié aux variables qualitatives au sens du
+       \eta²
+  
+3. Etude des modalités
+   - nuage des modalités = nuage des colonnes
+   - ensemble de /I/ valeurs numériques représentées par un point /M_k/
+     dans un espace à /I/ dimensions
+   - la variance d'une modalité /k/ est le carré de la distance entre
+     cette modalité et le point d'origine qui est le centre de gravité
+     du nuage /N_K/ : /Var(k)/ = /d²(k,O)/ = ... = (1 / /p_k/) - 1
+   - ainsi, la distance entre un point /M_k/ et l'origine est d'autant
+     plus grande que cette modalité est rare : en ACM, les modalités
+     rares sont plus éloignées de l'origine
+   - attention, le poids diminue avec la rareté, il y a antagonisme poids/distance
+   - ce qui compte en ACM, c'est l'inertie d'une modalité /k/ = (1 - /p_k/) / /J/
+   - quand une modalité est rare, elle a une forte inertie et va
+     influencer les résultats de l'ACM
+   - une modalité rare (1/10) aura autant d'influence qu'une modalité
+     très rare (l'inertie diminue fortement au début, mais de moins en
+     moins avec la rareté)
+   - plus il y a d'individus qui possèdent0 une seule des 2 modalités,
+     plus la distance entre ces 2 modalités est grande
+   - inertie d'une modalité : /Inertie(k)/ = (1 - /p_k/) / /J/
+   - inertie d'une variable : /Inertie(j)/ = (/K_j/ - 1) / J (elle est
+     proportionnelle au nb de modalités de la variable)
+   - principe de double propriété barycentrique : si on dilate
+     les nuages des modalités (ou des individus) d'un facteur 1 /
+     \sqrt{\lambda}, on obtient une représentation optimale à la fois des
+     individus et des modalité : un individu est du côté des modalités
+     qu'il possède, et réciproquement une modalité est du côté des
+     individus qui la possèdent
+
+4. Aider à l'interprétation
+   - l'*inertie d'un axe* en ACM : \lambda_s = 1/J * \Sigma{\eta²(F_s, v_{.j})} = moyenne
+     des carrés des rapports de corrélation (donc toujours comprise
+     entre 0 et 1)
+   - ainsi, *l'inertie d'un axe mesure la relation entre cet axe et les
+     variables considérées*
+   - souvent les inerties sont plus grandes qu'en ACP ou AFC, car les
+     individus évoluent dans un espace de plus grandes dimensions (dim
+     = /K/ - /J/)
+   - le pourcentage d'inertie maximum sur une dimension /s/ est
+     inférieur ou égal à /J/ / (/K/ - /J/) * 100
+   - la moyenne des valeurs propres non nulles est = 1 / /J/
+   - donc, on va interpréter luniquement les dimensions dont l'inertie
+     est > 1 // J/
+   - comme il y a bcp de dimensions, la qualité des projections (cos²)
+     des individus tend à être relativement faible
+   - les contributions des modalités doivent être regardées dans le
+     tableau des contributions, et ne sont pas déduites du graphe :
+     une contribution importante ne correspond pas forcément à une
+     position extrême sur le graphe (car une modalité est associée à
+     un poids qui dépend de sa fréquence)
+   - la contribution d'une variable est la somme des contributions de
+     toutes ses modalités = rapport de corrélation entre l'axe et la
+     variable / /J/
+   - la contribution relative d'une variable : contribution de la
+     variable / inertie de l'axe \lambda_s
+   - utilisation des relations de transition pour les éléments
+     (individus, modalités) supplémentaires
+   - en ACM on travaille avec des données qualitatives, donc les
+     variables quantitatives sont forcément traitées en variables supplémentaires
+   - parfois on peut calculer une variable quantitative à partir du
+     tableau, à partir d'une hypothèse, et l'utiliser comme variable
+     quantitative supplémentaire à analyser, analysée sur le graphe
+     des corrélations comme en ACP
+   - on peut aussi discrétiser une variable quantitative en classes,
+     et l'analyser en variable qualitative active
+   - description des dimensions : par les variables qualitatives
+     actives (test de Fisher), les modalités (test de Student) et les
+     variable quantitatives (corrélation)
+   - tableau de Burt : tableau qui croise toutes les modalités et
+     variables entre elles 2 à 2 (analogue à une matrice des corrélations
+     entre variables quantitatives)
+   - on peut réaliser une AFC sur le tableau de Burt : valeurs propres
+     de Burt = (valeurs propres du TDC)²
+   - l'ACM ne dépend que des liaisons entre variables prises 2 à 2
+     (analogie avec l'ACP qui ne dépend que de la matrice des corrélations)
+   - conclusion : l'ACM pour analyser tableaux individus x variables qualiatives
+   - c'est une méthode très générale, notamment utile pour analyser
+     des enquêtes
+   - interprétation des valeurs propres comme une moyenne des rapports
+     de corrélation au carré : les facteurs de l'ACM sont des
+     variables quantitatives qui synthétisent les variables qualitatives
+   - il peut être utile de valider les interprétations en revenant aux
+     données initiales : l'ACM suggère des liaisons entre des
+     variables qualitatives,on peut alors construire un tableau croisé
+     de 2variables qu'on analyse par AFC
+   - l'ACM peut être vue comme un pré-traitement en vue d'une analyse
+     de classification
+
+*Classification*
+1. Classification ascendante hiérarchique (CAH)
+   - construire des groupes (ou classes) d'individus ayant des traits ou
+     caractères communs
+   - 2 types de classification :
+     + hiérarchique : arbre, CAH
+     + méthode de partitionnement : partition
+   - tableau de données : /I/ individus en lignes x /K/ variables
+     quantitatives en colonnes
+   - l'objectif est de produire une structure (arborescence) afin de :
+     + mettre en évidence des liens hiérarchiques entre individus ou
+       goupes d'individus
+     + détecter un nombre de classes "naturel" au sein de la population
+   - critères de classification : ressemblence entre individus
+     + distance euclidienne
+     + indices de similarité (Jacquard, ...)
+   - on s'intéresse aussi à la ressemblance entre groupes :
+     + saut minimum ou lien simple (plus petite distance)
+     + lien complet (plus grande distance)
+     + critère de Ward
+   - algorithme :
+     + on part de 8 points individuels, on calcule la distance
+       euclidienne entre chaque individu 2 à 2
+     + on regarde quelle est la distance la plus petite
+     + on regroupe ces individus en 1 nouveau groupe
+     + on calcule la distance entre chaque ce groupe et chaque autre
+       individu, en utilisant la mesure du *saut minimum* (plus petite
+       distance entre un des membres du nouveau groupe et un autre individu)
+   - une fois un arbre réalisé, on peut définir un niveau de coupure
+     (distance) pour construire une partition
+   - critères de qualité d'une partition :
+     + quand les individus d'une même classe sont proches =
+       variabilité intra-classe réduite
+     + quand les individus de 2 classes différentes sont éloignés =
+       variabilité inter-classes élevée
+     + or, inertie totale = inertie intra-classe + inertie inter-classe :
+       théorème de Huygens (avec inertie = somme des carrés des écarts)
+     + donc pour améliorer la qualité, il suffit de s'intéresser à un
+       seul des 2 critères : minimiser la variabilité intra va
+       mathématiquement maximiser la variabilité inter, et réciproquement
+     + la qualité de la partition peut se mesurer au final par le
+       rapport (inertie inter) / (inertie intra) qui sera compris
+       entre 0 et 1
+     + le rapport vaut 0 quand les classes ont les mêmes moyennes pour
+       toute variable /k/, on ne peut donc pas classifier
+     + le rapport vaut 1 si tous les individus d'une classe sont
+       indentiques pour toute variable /k/, c'est donc idéal pour classifier
+     + attention, ce critère dépend du nombre d'individus et du nombre
+       de classes, sa valeur ne peut pas être jugée dans l'absolu
+   - méthode de Ward :
+     + on commence par établir 1 classe par individu : inertie inter-classe
+       = inertie totale
+     + à chaque étape, on agrège les classe /a/ et /b/ qui minimisent la
+       diminution de l'inertie inter-classe
+     + permet d'éviter l'effet de chaîne en regroupant les objets de
+       faible poids et en regroupant des classes  ayant des centres de
+       gravité proches
+
+2. Exemple et choix du nombre de classes
+   - exemple des températures mensuelles moyennes sur 30 ans (12 variables) pour
+     15 villes de France + latitude et longitude en données supplémentaires
+   - questions : quelles villes ont des profils similaires ? comment
+     caractériser des groupes de villes ?
+   - sur le graphique on voit l'histogramme des inerties, montrant la
+     perte d'inertie si on regroupe des classes
+   - la somme des pertes d'inertie = inertie totale
+   - on peut calculer le pourcentage (inertie inter) / (inertie
+     totale) * 100 pour voir quel pourcentage d'information est
+     expliqué par les classes ainsi faites
+   - il faut s'assurer que l'on peut interpréter les regoupements en
+     classes
+ 
+3. Méthode de partitionnement
+   - méthode directe : K-means = "méthode d'agrégation autour des
+     centres mobiles"
+   - algorithme :
+     + on définit arbitrairement le nombre /Q/ de classes souhaité
+     + on choisit au hasard /Q/ individus, puis on attribue à ces
+       classes les individus qui en sont le plus proche
+     + on calcule le barycentre des /Q/ classes
+     + puis on réitère l'affectation des individus les proches au
+       barycentre et on recalcule le barycentre
+     + quand l'algorithme a convergé, on a trouvé les /Q/ classes optimales
+   - 2 défauts :
+     + il faut connaître a priori le nombre de classes /Q/
+     + la partition finale est sensible à l'initialisation (solution :
+       lancer plusieurs fois l'algorithme et garder la meilleure
+       partition)
+
+4. Compléments
+   - Consolidation d'une partition obtenue par CAH
+     + on utilise la partition obtenue par CAH pour initialiser le
+       partitionnement par K-means
+     + avantage : on consolide le partitionnement car il minimise l'inertie
+     + inconvénient : on perd l'information de hiérarchie (certains
+       individus peuvent changer de classe lors du partitionnement K-means)
+   - CAH en grandes dimensions :
+     + si trop grand nombre de variables :
+       * la CAH devient difficile et plus longue à calculer (car besoin de calculer de nombreuse distances)
+       * on peut faire une ACP pour ne garder que les premières dimensions
+       * on réalise alors la CAH sur un tableau individus x dimensions
+         factorielles (quantitatives, de taille plus raisonable)
+     + Si trop grand nombre d'individus :
+       * l'algorithme de CAH est trop long et peut ne pas aboutir
+       * faire une partition par K-means en une centaine de classes
+       * construire la CAH à partir de ces classes (en utilisant
+         l'effectif des classes dans le calcul)
+       * on obtient ainsi le "haut" de l'arbre hiérarchique
+       * (en général si le nombre d'individus est très grand, il est
+         inutile de commenter le bas de l'arbre)
+   - CAH sur des variables qualitatives : 2 stratégies
+     + se ramener à des variables quantitatives :
+       * faire une ACM en ne conserver que les premières dimensions
+       * faire la CAH à partir des composantes principales de l'ACM
+     + utiliser des mesures adaptées aux données qualitatives : indice
+       de similarité, de dissimilarité de Jaccard, etc.
+       * on obtient une matrice des distances
+       * on construit la CAH sur cette matrice
+   - Enchaînement analyse factorielle - classification
+     + données qualitatives : l'ACM renvoie des composantes
+       principales qui sont quantitatives, sur lesquelles ont peut
+       faire directement une classification
+     + l'intérêt de réaliser une analyse factorielle en préalable
+       à une classification, c'est de concentrer l'information sur les
+       premières composantes, et éliminer les dernières qui continnent
+       le bruit -> classification plus stable
+     + on peut aussi visualiser l'arbre et les classes sur un plan
+       factoriel, donnant une vue plus complète de l'information
+
+5. Caractérisation des classes d'individus
+   - Constitution des classes : édition des parangons (parangon = individu le plus proche du centre d'une classe)
+   - caractérisation des classes par les variables : 1) trouver les
+     variables les plus caractérisantes pour la partition, 2) caractériser une classe (ou un groupe d'individus) par des
+       variables quantitatives, et 3) trier les variables qui caractérisent le mieux les classes
+   a) variables caractérisant le mieux la partition :
+     + on peut considérer la partition comme une variable qualitative
+       = variable de classe, avec autant de modalités qu'il y a de classes
+     + pour chaque variable quantitative (colonne) : construire un modèle
+       d'analyse de variance entre la variable quantitative
+       expliquée et la variable de classe, puis faire un test de
+       Fisher de l'effet de la classe
+     + on garde les variables ayant une probabilité critique < 5%, et
+       trier ces variables en fonction de leur probabilité critique
+     + exemple des données villes/températures mensuelles : la
+       variable "octrobre" est celle qui caractérise le mieux les
+       classes avec /P/ = 1.93e-05
+     + mais attention : comme ces variables sont actives et ont donc
+       participé à la construction des classes, il faut interpéter ces
+       probabilités avec prudence
+   b) caractériser une classe par les variables quantitatives :
+     + représenter graphiquement les variables colonnes en fonction de
+       la variable quantitative et colorer les points en fonction des classes
+     + idée 1 : si les valeurs de la variable /X/ pour la classe /q/
+       semblent tirées au hasard parmi les valeurs de /X/, alors /X/ ne
+       caractérise pas la classe /q/
+     + idée 2 : plus l'hypothèse d'un tirage aléatoire est douteuse,
+       plus /X/ caractérise /q/
+     + construire un test : tirage au hasard de /n_q/ valeurs parmi /N/,
+       quelles valeurs peut prendre \(\bar{x}_q\) (i.e. quelle est la
+       loi de \(\bar{X}_q\) ?
+     + valeur-test = \(\bar{x}_q - \bar{x} / {écart type de \bar{X}_q}\)
+       suit une loi Normale centrée réduite
+     + si |valeur-test| > 1.96 alors elle vient pas d'une loi Normale
+       et la variable /X/ caractérise donc la class /q/
+     + plus |valeur-test| est grande, mieux la variable /X/ caractérise
+       la classe /q/
+     + on peut classer les variables par |valeur-test| décroissante et
+       chercher les valeurs soit les plus positives (moyenne dans
+       classe supértieure à la moyenne générale) ou la plus négative
+       (moyenne dans la classe plus basse que la moyenne générale)
+   c) caractériser des classes par les variables qualitatives :
+     + pour chaque variable qualitative, construire un test du \chi²
+       entre la variable et la variable de classe
+     + trier les variables par probabilité critique croissante
+     + si une variable qualitative caractérise significativement une
+       classe, on peut ensuite voir si elle se caractérise par une
+       modalité particulière de cette variable qualitative
+     + pour ce faire, on construit un tableau réduit avec les
+       effectifs de cette classe prenant la modalité ou non, et les
+       effectifs des autres classes, et on compare les proportions
+     + la variable aléatoire calculée suit une loi hypergéométrique et
+       permet de mesurer si elle dévie significativement de l'hypothèse H_0 de non
+       sur-représentation de la modalité dans la classe
+     + on a alors une nouvelle valeur test centrée réduite :
+       plus v.test est > (ou <) à 1.96, plus on a une sur- (ou sous) représentation de la
+       modalité dans la classe considérée, et donc plus cette modalité
+       caractérise la classe
+   d) on peut caractériser une classe par les axes factoriels
+     + les axes sont des variables quantitatives, donc même
+       méthodologie que b) (dans le tableau d'analyse, la moyenne
+       générale est toujours égale à 0 car les données ont été
+       centrées-réduites sur les axes)
+   - conclusion :
+     + la classification s'applique aux tableaux individus x variables
+       quantitatives -> l'ACM permet de transformer des variables
+       qualitatives en variables quantitatives (dimensions factorielles)
+     + la CAH donne un arbre hiérarchique qui montre les distances en
+       individus et groupes d'individus, et une idée du nombre de classes
+     + on peut alors utiliser une méthode partitionnement comme le
+       K-means pour consolider les classes
+     + le partitionnement peut être utilisé pour pré-traiter un jeu de
+       données de grandes dimensions
+     + on peut caractériser les classes obtenues par des variables
+       actives et supplémentaires, quantitatives ou qualitatives
+
+*AFM*
+1. Données - Problématique
+   - ex : 10 vins de Loire en individus lignes, descripteurs
+     sensoriels comme variables colonnes (dans chaque cellule, la note
+     moyenne attribuée par des juges pour chaque vin et chaque
+     variable) et une dernière collone avec la variable cépage
+     (qualitative : Vouvray ou Sauvigon)
+   - on pourrait faire une analyse par ACP, avec le cépage en variable
+     qualitative supplémentaire
+   - cependant, il y a 3 catégories de juges : experts, consommateurs, étudiants
+   - questions : comment caractériser les vins ? sont-ils décrits de
+     la même façon par les différentes catégories de juges ? y a-t-il
+     des spécificités par catégorie de juges ?
+   - on peut ajouter une variable supplémentaire qui est
+     l'appréciation globale de chaque vin par 60 consommateurs (note hédonique)
+   - structure du tableau de données :
+     + /I/ vins (individus) en lignes
+     + /J/ variables quantitatives et/ou qualitatives formant des
+       groupes de /K_j/ variables
+     + la valeur prise dans une cellule du tableau est notée /x_{ik}/
+   - autres types d'exemples : génomique (mesures d'ADN, d'expression,
+     de prétéines), enquêtes avec plusieurs groupes de variables,
+     économie (indicateurs économiques chaque année)...
+   - objectifs :
+     + étudier les ressemblances entre individus du point de vue de
+       l'ensemble des variables ET les relations entre variables
+     + étudier globalement les ressemblances/différences entre groupes
+       de variables
+     + étudier les individus pour voir s'ils sont décrits de la
+       manière par différents groupes de variables (ex : un vin est-il
+       décrit de la manière par plusieurs catégories de juges)
+     + comparer les typologies issues des analyses séparées
+   - *important* : il faut veiller au bon équilibre d'influence de
+     chaque groupe de variable dans l'analyse
+
+2. Equilibre et ACP globale
+   - en ACP, le fait de normer équilibre l'influence de chaque
+     variable (dans le calcul des distances entre individus /i/ et /i'/)
+   - en AFM, on équilibre les groupes
+   - idée 1 de pondération : diviser chaque variable par l'inertie totale du groupe
+     auquel elle appartient (ainsi, un groupe ayant moins de variables
+     aura la même influence qu'un groupe qui aura plus) ; mais
+     problème : cette méthode est sensible à la répartition des
+     inerties au sein de chaque groupe
+   - idée 2 : pondérer en fonction de l'inertie maximum d'une
+     dimension, en divisant chaque variable par la (racine carrée de
+     la) 1ère valeur propre du groupe auquel elle appartient
+   - l'AFM est un ACP pondérée :
+     + calculer la 1ère valeur propre \(\lambda_1^j\) du groupe de variables /j/
+       (/j/ = 1 ... /J/)
+     + réaliser l'ACP globale sur le tableau pondéré où chaque valeur
+       est divisée par la racine carrée de la valeur propre
+   - on donné un même poids à toutes les variables d'un même groupe,
+     on préserve ainsi la structure (i.e. l'équilibre des variables) du groupe
+   - pour chaque groupe, la variance de la principale dimension (1ère
+     valeur propre) est égale à 1
+   - aucun groupe ne peut donc générer à lui seul la première dimension
+   - un groupe multidimensionnel contribue à plus de dimensions qu'un
+     groupe unidimensionnel
+   - les représentations graphiques sont les mêmes qu'en ACP :
+     + étudier les ressemblances entre individus du point de vue de
+       l'ensemble des variables
+     + étudier les relations entre variables (graphe des corrélations)
+     + décrire les individus à partir des variables
+   - mêmes sorties qu'en ACP (coordonnées, cosinus, contributions)
+   - ajout d'individus et variables supplémentaires (quantitatifs et
+     qualitatifs)
+
+3. Etude des groupes de variables
+   - la première composante principale de l'AFM est la variable /v_1/ qui
+     maximise la liaison avec tous les groupes (au sens de l'inertie
+     projetée de toutes les variables du groupe /j/ sur /v_1,/ /L_g/)
+   - cette inertie /L_g/ vaut 0 si toutes les variables du groupe /K_j/ sont
+     non-corrélées à /v_1/, et vaut 1 si la variable /v_1/ est confondue
+     avec la 1ère composante principale du groupe /K_j/
+   - on peut représenter les groupes en utilisant cette mesure de
+     liaison /L_g/ entre les groupes et les 2 premières composantes
+     principales /v_1/ et /v_2/, ce qui donne un graphique avec des axes x
+     et y de coordonnés sur un plan [0,1]
+   - un groupe /j/ a pour coordonées /L_g(/K_j, v_1)/ et /L_g(/K_j, v_2)/
+   - ce graphe donne une représentation synthétique des groupes : les
+     positions relatives des individus sont-elles plus ou moins
+     similaires d'un groupe à l'autre
+   - mesure de similarité entre groupes : /L_g/ entre 2 groupes de
+     variables
+   - mesurer le /L_g/ entre un groupe de variables et lui-même, cela
+     revient à mesurer la dimensionalité de ce groupe
+   - comme /L_g/ entre 2 groupes n'est pas borné, on peut le diviser par
+     la dimensionalité de chacun des 2 groupes pour obtenir le critère
+     /RV/ compris entre 0 et 1
+   - RV(/K_j/, /K_m/) = 0 si toutes les variables de /K_j/ et /K_m/ sont
+     non-corrélées, ou = 1 si les 2 nuages de point sont homothétiques
+   - on peut aussi calculer ces indices pour le groupe "total" MFA et
+     voir comment chaque groupe de variables se rapproche de la moyenne
+   - représentation des points partiels : il s'agit de représenter
+     chaque individu uniquement par les variables d'un seul groupe
+   - dans ce cas on obtient un nuage avec autant de points que de groupes (par
+     exemple si on a 3 groupes, un individu sera représenté par un
+     nuage de 3 points correspond chacun à la vue de l'individu par un
+     des 3 groupes) et avec au barycentre le point global de l'individu
+   - pour que la représentation soit bonne, il faut en revanche
+     dilater ce nuage de points en le divisant par le nombre de groupes /J/
+   - les points partiels permettent d'observer la concordnace ou
+     discordance de représentation des individus par les groupes de
+     variables
+   - Les relations de transition de l'ACP s'appliquent aux points
+     moyens en AFM, pour l'interprétation des individus grâce au
+     graphe des variables : un individu se retrouve du côté des
+     vraiables pour lesquelles il prend de fortes valeurs
+   - ratio d'inertie = inertie inter individus sur l'axe /s/ / inertie
+     totale sur l'axe /s/ (avec inertie totale = inertie inter + inertie intra)
+   - permet d'estimer si les points partiels sont globalement proches
+     des points moyens, dimension par dimension : si le ratio est
+     proche de 1, alors les coordonnées des points partiels tendent à
+     être proches des coordonnées du point moyen correspondant sur cette dimension
+   - l'inertie intra-individu peut aussi être décomposée par
+     individu : on trie les individus par inertie intra décroissante
+     pour voir quel individus sont vus de manière moins concordante
+     par les différents groupes de variables
+
+4. Compléments
+   - Si on a des groupes de variables toutes qualitatives, même
+     principe : on cherche à équilibrer les groupes dans une analyse globale
+     + on réalise des graphes spécifiques de l'ACM pour analyser les
+       différences/similitudes entre groupes
+     + le graphe des individus, comme en ACM, contient les modalités qui
+       se retrouvent au barycentre des individus qui la prennent
+     + ensuite graphes spécifiques : groupes, représentation superposée,
+       axes partiels des analyses séparées
+   - pour un tableau de données mixtes (groupes de variables
+     quantitatifs et groupes de variables qualitatifs), l'AFM fonctionne comme une ACP
+     pour les quantitatives, et comme une ACM pour les qualitatives
+   - la pondération de l'AFM permet d'analyser les deux types de
+     variables conjointement
+   - cas particulier : si chaque groupe est composé d'une seule
+     variable, on réalise une AFDM (Analyse Factorielle de Données Mixtes)
+     + En AFDM, on fait le graphes des individus et des modalités de
+       l'ACM, le graphe du cercle des corrélations de l'ACP, et le
+       graphe du carré des liaisons de l'ACM
+   - l'AFM peut être utilisée sur des tableau de contingence (AFMTC)
+     par exemple :
+     + extension à l'analyse textuelle
+     + enquête dans plusieurs pays (CSP x questions par pays, avec nombre de personnes ayant
+       répondu oui à une question) chaque pays représente 1 TdC
+     + en écologie (sites x espèces par année, avec la fréquence de
+       l'espèce /j/ dans le site /i/) chaque année représente
+       1 TdC
+   - on peut ajouter des individus ou variables (ou groupes de
+     variables) supplémentaires
+   - indicateurs : contribution et qualité de représentation
+     + pour individus et variables, mêmes calculs qu'en ACP
+     + pour un groupe de variables, sa contribution à un axe est sa
+       coordonnée sur l'axe divisée par la somme des coordonnées, x100
+       (contribution relative)
+     + qualité de représentation d'un groupe : cos² entre le point et
+       sont projeté sur l'axe (on peut faire la somme des cos² pour la
+       contribution dans un plan ou sous-espace
+   - description des dimensions :
+     + par des variables quantitatives :
+       * calcul de la corrélation entre chaque variable et la composante principale
+       * tri des coefficients de corrélation pour ne conserver que les significatifs
+     + par des variables qualitatives :
+       * construire une analyse de varaince avec les coordonnées des
+         individus expliqués par la variable qualitative puis faire un
+         test /F/ par variable
+       * pour chaque catégorie, on rélaise un test de Student
+       
+** 2019-05 May
+
+*** 2019-05-15 Wednesday
+
+**** Application nouvelle Politique Qualité : projet Astro :meeting:qualité:
+
+***** Présentation EureQUA :
+- méthode d'identification des facteurs de succès
+- aide à la décision en appui au pilotage des activités de recherche
+  et d'expérimentation
+- trois étapes :
+  1. positionner les activités sur la trame proposée
+  2. déterminer ce qui impacte les activités (feuille excel)
+     regroupant 13 familles d'éléments, par phase de déroulement,
+     selon risques et opportunités
+  3. prioriser les actions
+- améliorer le fonctionnement de l'organisation et contribuer à la
+  maîtrise des risques
+  
+***** Projet scientifique et managérial d'Astro :meeting:
+- 2 objectifs : 1/ définir les axes de recherche, 2/ répondre à la
+  demande HCERES
+- ...
+- comment identifier les facteurs impactants : risques et opportunités
+- comment déterminer les plus impactants, et prioriser : 2 matrices
+  (risques / opportunités)
+
+*** 2019-05-20 Monday
+
+**** Formation/sensibilisation Validation des méthodes quantitatives et métrologie :meeting:qualité:
+- métrologie : fonction qui s'applique à des grandeurs physiques mesurables directement par un instrument
+- l'objectif quant à l'utilisation des mesures est important
+- on cherche à avoir confiance dans les mesures produites et les
+  méthodes (avec la répétabilité) -> AQR
+- l'écart d'une moyenne à la valeur réelle -> justesse, biais
+- l'écart-type -> dispersion, fidélité
+- VIM : vocabulaire international de métrologie
+  + répétabilité : réaliser les mesures dans les mêmes conditions
+  + fidélité intermédiaire : 1 ou qqs paramètrres peuvent varier
+    (temps, opérateur, ...)
+  + reproductibilité : inter-laboratoire
+- Profil d'exactitude :
+  + définir la quantité mesurée :
+    * fondamentaux :
+      - à partir du mode opératoire rédigé de la méthode
+      - préciser la formule de calcul du résultat final
+      - (Q_mesurée)_validation = (Q_mesurée)_routine avec même ombre de répétitions
+  + définir les objectifs de la validation (par rapport à la demande scientifique)
+    * définir le domaine de validation (choisir le domaine
+      d'application : gamme de concentrations, 1 ou plusieurs types de matrices, ...)
+    * choisir les limites d'acceptabilité (+/- \lambda), d'après :
+      - une exigence scientifique
+      - un document réglementaire
+      - une pratique de la profession
+      (en général \lambda est exprimé en % sur tout le domaine)
+  + sélectionner des échantillons de validation
+    * choix des matrices
+    * attribution d'une valeur de référence à chaque échantillon de validation
+      - fondamental pour estimer la justesse
+      - valeur de référence = valeur établie avec incertitude connue
+      - plusieurs approches possibles : matériaux de référence
+        certifiés, externes ou internes, ajouts dosés, ...
+  + planifier les essais d'étalonnage (méthodes indirectes)
+    * pour estimer les coefficients du modèle mathématique
+    * choisir :
+      - le nombre de séries, identique au nombre de séries de validation
+      - le nombre de répétitions
+      - le nombre des niveaux d'étalonnage (selon la fonction de réponse)
+  + planifier les essais de validation
+    * avec les échantillons de validation
+    * choisir le nombre de séries I, de répétitions J, de niveaux de
+      concentration K : au moins I=3, J=2, K=3, soit 18 essais au total au minimum
+  + réaliser les essais :
+    * appliquer la méthode telle qu'elle sera appliquée en routine
+  + calculer les concentrations prédites inverses :
+    * déterminer le modèle d'étalonnage
+      - regression par les moindres carrés
+  + déterminer les critères de performance par niveau de la méthode
+    (tableur existant)
+
+** 2019-06 June
+
+*** 2019-06-24 Monday
+
+**** Réunion Projet Immobilier Astro Ouest :meeting:immobilier:
+- Rencontre avec M. Théophile, architecte
+- Présentation du diagnostic (photos du bâtiment et abords)
+- Présentation du diagramme fonctionnel
+
+- Scénario 1 :
+  + labos au nord, tertiaire au sud
+  + construction extension zone collection (125 m² + 20 m²)
+  + voirie pour l'accès autour du bâtiment côté ouest
+  + problèmes : pas assez de surface en labo et tertiaire, présence mixte de
+    tertiaire (salle AK + bureaux Suzia et Marie) au milieu de la
+    partie labo (CIV) au sud
+
+- Scénario 2 :
+  + tertiaire à l'extrémité nord de l'aile droite
+  + labos côté sud
+  + problèmes : pas assez de surface en tertiaire (manque 300 m²)
+
+- Scénario 3 :
+  + idem 3, ajout extension tertiaire 98m²
+  + problèmes : manque encore 200 m² en tertiaire
+
+- Scénario 4 (privilégié) :
+  + augmentation teriaire vers le sud de l'aile droite
+  + extension labo au sud de l'aile gauche (139 m²)
+  + problèmes : manque 70 m² tertiaire, manque 73 m² de labo
+  + dans l'extension : froid (frigos, congélos), chaud (étuves),
+    broyages (végétaux, sol), stockage (échantillons, consommables,
+    petit matériel)
+
+- Scénario 5 :
+  + comme le 4, avec en plus ajout extension tertiaire 100 m² du 3
+
+- Scénario 6 :
+  + comme le 5, avec extension supplémentaire labo 82 m²
+  
+** 2019-09 September
+
+*** 2019-09-13 Friday
+
+**** Réunion Malin 2 - WP1 : outils de détection :meeting:malin:
+- Retard sur pas mal de points (sauf pour IPG)
+- RFID : pour végétaux (virus, autres ?)
+
+*** 2019-09-16 Monday
+
+**** AG Centre :meeting:crag:
+
+1. Nouveaux arrivants
+
+   - remplaçante Agent Comptable : Christiane ...
+   - Juliette Kermarrec : adjointe au DSA
+   - Sandrine Etapin : service gestion personnel
+   
+2. Actualités
+
+   - RH :
+     + Fusion INRA-IRSTEA :
+       * télétravail : 2 jours max par semaine, avec conditions
+       * cycle de travail : 36h (30j congés) ou 38h40 (30j congés + 15
+         RTT) ; journée solidarité intégrée à raision de 10 minutes /
+         semaine
+       * changement régime indemnitaire
+       * promotions : nombre inchangé ; instances maintenues pour le
+         moment, CPAN renouvelées en 2022
+     + CET : dès 15 jours cumulés, paiement possible ; augmentation de l'indemnité
+     + 14-16 octobre : visite de X au sujet de la retraite, entretiens
+       individuels possibles
+     + C. Anaïs reste en attente de remontée du formulaire de formations
+     + Formations à venir : gestion ouverte des données ; écriture
+       professionnelle (dossiers, CV, etc...)
+
+   - Plan d'urgence interne (PUI) du Centre :
+     mise à jour en continu
+     exercice réalisé le 20/06/2019 à PTEA
+
+   - CLDD :
+     + financement obtenu pour mener quelques actions, notamment
+       autour espace restauration / réunion, et composteur +
+       méthaniseur pour déchets de cuisine
+
+   - immobilier (Labbé)
+     + rappel objectifs :
+       * recentrer dispositif recherche et rapprochant les unités
+       * conforter et prolonger vie de certains bâtiments
+       * abandonner d'autres
+     + rappel phasage et financements
+       * Phase 1. 2017-2019 : URZ : CPER CRB-PSA
+       * Phase 2. 2019-2020 : UR Astro : CPER CRB-PT (500 k€ dont 150 INRA) + complément
+          INRA (500 k€)
+       * Phase 3. 2020-2021 : USDAR : Feder Batex (680k€ dont 140 INRA) + complément INRA
+          (370 k€)
+     + où en est-on :
+       * URZ : en cours d'achèvement
+       * Astro : scénarisation en cours avec maîtrise d'oeuvre,
+         engager les travaux en 2020, identifier besoins non staisfaits
+         pour instruire éventuel projet complémentaire (regroupement
+         de toutes les équipes ?)
+       * USDAR : financements acquis (marché maîtrise d'oeuvre fin 2019)
+
+   - INRAE
+     + le "e" est polysémique
+     + Sciences :
+       proposer des changements systémiques urgents, mais pas de
+       modèle unique
+     + international : 3e rang mondial sur 10 domaines de recherche ;
+       horizon Europe (opportunités majeures)
+
+   - 70 ans du Centre :
+     + manifestations scientifiques et techniques :  portes ouvertes à
+       Godet, journées techniques manguiers, présentation projets
+       européens
+     + à venir :  4 actions sont prévues pour la fête de la Science, avec un Village des
+       Sciences sur le Centre + présence au Village de Pointe-à-Pitre
+     + Séminaire atelier : juin "souveraineté alimentaire" avec
+       "Nouvel Vwa" / filière fruit à pain
+     + Manifestation de clôture en présence du PDG et de sa
+       délégation : 4 jours en décembre 
+
+3. Démarche évaluation RPS et QVT
+
+   1) RPS : de quoi s'agit-il ?
+      - fait partie de la prévention des risques du travail
+      - vise à réduire les risque d'accidents du travail et de
+        maladies professionnelles
+      - prise de conscience de l'aspect psychologique : la souffrance
+        au travail, sous l'effet des mutations du monde du travail
+      - définition des RPS par M. Gollac 2011 la plus consuelle
+      - prévenir RPS implique :
+        + prévention primaire : identifier les facteurs de risque
+        + prévention secondaire : accompagner les situations à risque
+          en "adaptant l'homme à son travail" (formation,
+          accompagnement, ...)
+        + prévention tertiaire : gérer des situations de crise quand
+          elles surviennent
+      - accord-cadre 22/10/2013 fixant obligations légales des
+        instituts pour prise en charge des RPS
+
+   2) Prévention des RPS à l'INRA
+      - l'INRA rappelle ses obligations légales
+      - essaye d'aller au-delà des obligations légales
+      - évaluation-conseil : interaction avec les agents au niveau des unités
+      - association avec le CHSCT
+      - formations spécifiques des encadrants, CHSCT et agents
+        impliqués dans la prévention
+      - intégration des plans d'actions dans le document unique
+        (DUERP)
+      - 1er plan d'action RPS 2014-2017 : objectif d'évaluation de 2
+        unités / an au minimum
+      - 2ème plan d'action RPS 2018-2021 : soutien méthodologique de
+        l'ANACT, 3 actions :
+        A. Sensibilisation des acteurs prévention RPS (piloté
+        par la DG)
+        B. Sensibilisation à la prévention RPS (piloté par les PC) /
+        C. Accueil
+        des nouveaux arrivants (piloté par les PC)
+        D. Evolution et diffusion nouvelle plaquette
+        E. Création et diffusion du support d'affichage de
+        sensibilisation à la QVT
+        ...
+      - dispositifs nationaux :
+        * CASSID
+        * prestations AXIS MUNDI
+        * dispositif d'accompagnement des collectifs de la DRH
+        * MRPUIE (pour Unités Expérimentales)
+        * ...
+
+   3) Rôle du psy du travail de la MCP
+
+      - appui à mise en oeuvre du plan d'action
+      - agit dans le cadre du plan de prévention 2018-2021
+      - conseil sur situations d'urgence
+      - conseil/avis sur situations délicates/problématiques
+      - accompagnement possible de collectifs en difficulté
+      - accompagnements individuels "au fil de l'eau"
+
+   4) QVT et articulation RPS/QVT
+
+      - classification des risques par l'ANACT 2007 : 
+        stress au travail | souffrance au travail | violences au
+        travail | harcèlements | conduites addictives | épuisement professionnel
+      - ambition des partenaires sociaux
+      - 6 dimensions à la QVT :
+        Relations au travail et climat social | Contenu du travail | Santé au travail |
+        Compétences parcours professionnel | Egalité professionnelle
+        pour tous | Management participatif et engagement
+      - la QVT est une vision positive des RPS, avec une approche plus globale
+
+   5) Baromètre QVT : qqs résultats généraux nationaux
+
+      - près de 50% de répondants au niveau national
+      - QVT plutôt bonne
+      - plusieurs atouts à l'INRA (rapports sociaux, exigences au
+        travail, éthiques et valeurs, égalité et non discrimination, ...)
+      - à améliorer, attentes fortes des agents (changement et orientation,
+        management et organisation, rapports sociaux externes, avec
+        hiérarchie, action ressources humaines...)
+      - facteurs en lien aec stress (rythme de travail, pics
+        d'activité, organisation au travail, ne pas être interrompu ou
+        dérangé, quantité de travail, ...)
+      - facteurs en lien avec la QVT (relation de travail avec
+        l'institut, organistion du travail, sentiment de sécurité au
+        travail, fier de travailler à l'INRA, travail de qualité,
+        travail reconnu à sa juste valeur, ...)
+      - les discriminations sont faiblement ressenties, facteurs
+        identifiés (genre, handicap, état de santé, activité
+        syndicales ou mutualistes, âge, capacité à s'exprimer dans une
+        autre langue que le français, ...)
+      - égalité de traitement à surveiller (avancement, recrutement, ...)
+      - les résultats par centres viendront fin septembre
+      - suivi de l'évolution : questionnaire intermédiaire fin
+        septembre 2019 pour centres impactés par fusion INRA-IRSTEA, questionnaire
+        complet début 2020 (post fusion)
+      - élaboration des actions QVT de l'institut courant 2020
+
+   6) Partenariat INRA/ANACT
+    
+      - évaluation rétrospective de l'évaluation-conseil RPS sur une
+        unité (Occitanie Montpellier, ARA, Val de Loire)
+      - formation-action QVT (centres...)
+      - co-intervention exprimentale ANACT-INRA dans le cadre de
+        l'évaluation-conseil RPS d'une unité cible (Bourgogne FC, NA
+        Poitiers, CRAG SDAR)
+
+   7) ARACT Guadeloupe et accompagnements des SDAR
+
+      - évaluation de la démarche de prévention des RPS à l'INRA et
+        expérimentation chemin-faisant (rencontres préalables ; séances
+        collectives ; entretiens inividuels ou collectifs ; groupe
+        d'évaluation ; élaboration des axes ; suivi et mise en oeuvre
+        d'un plan d'action)
+
+**** Rencontre psychologue MCP / Astro :meeting:
+- Présents : D. Lange, T. Bajazet et S. Guyader
+- comment l'évaluation-conseil a été perçue, si ça a
+  donné des suites ?
+- quels sont les ressentis des agents de l'unité globalement ?
+- impression du psychologue : décalage entre ce qui ressort de
+  l'évaluation-conseil, et l'impression de non intégration des
+  différentes composantes de l'unité (fusion pas vraiment aboutie)
+
+*** 2019-09-26 Thursday
+
+**** CODIR Astro 26 septembre 2019 :meeting:codir:
+Présents : FB, AR, SG, MU, RT, JMB
+Excusés : LP (MC et JS "démissionnaires")
+
+- Construction et participation au PPR interdom "APIDOM"
+
+  + terme "agroforesterie" trop restrictif
+  + systèmes plurispécifiques
+  + intégrer les amendements type biostimulants/biochar pour la santé des plantes
+  + intégrer les arbres de service
+
+- Perspectives projets début 2020
+
+  + 3 stages + 1 CDD à préfinancer pour les FEDER
+  + contrat de prestation de service pour Romain Rochette sur Explorer
+
+- Faits marquants bilan Centre 2017-2018
+
+  + patho 2017 
+
+- Questions diverses
+
+  + 1 candidate pour le poste BAMI gestionnaire de l'unité
+  + proposition pour être formateurs pour VIVEA (exploitants agricoles)
+
+** 2019-10 October
+
+*** 2019-10-08 Tuesday
+
+**** Réunion projets post-MALIN (CIRAD Neufchâteau) :meeting:malin:
+- Diaporama PYT
+  * rapport évaluation "Insular"
+    + faiblesses :
+      - absence d'hypothèses claires
+      - nombre insuffisant de répétitions par site et par île
+      - ne montre pas la portée générique à d'autres îles
+      - pas fourni instruments et documents politiques pertinents
+      - plan de communciation sur seule population locale
+      - pas de discussion sur portées concrètes
+    + possibilités de financement alternatif à l'étude avec V. Weck :
+      - par FEDER pour partenaires Gpe et Belgique
+      - discussion avec Région Réunion pour financement partenaire Réunion
+      - revoir le projet pour répondre aux faiblesses (surtout
+        dispositif expérimental/répétitions)
+      - objectif démarrage 1er trimestre 2020
+  * Horizon Europe
+    + programmation 2021-2027
+    + soutien de la Région pour projet européen sur thématique santé et environnement
+    + est-ce que le consortium Malin veut s'engager dans la
+      construction d'un projet HE ?
+    + projet FP8 ou Outil Partnership ?
+    + réunion à prévoir avec V. Weck et qqs personnes autour de la programmation
+  * Accord de consortium
+    + nouvelle circulation avec objectif de signature avant fin 2019
+  * Manifestations/formations
+    + cycle de 3 formations : One Health, SIG
+    + Village des Sciences
+    
+*** 2019-10-10 Thursday
+
+**** Réunion début thèse Boukar                                  :meeting:épidémiologie:thèse:
+[Boukar, PYT, MU, Eric Francius, SG]
+- objet : définir modalités de prospections
+- utiliser le réseau RITA (4 parcelles dont 1 à Marie-Galante, issues
+  des mêmes semences) +
+  autres producteurs déjà approchés et possiblement intéressés
+- on peut tabler sur ~20 parcelles
+- Kabusah et Goana sont bien présentes
+- 2 variétés * 20 échantillons * 20 parcelles + autres variétés
+
+*** 2019-10-17 Thursday
+
+**** Réunion Ching du 17/10/2019 :meeting:ching:
+Présents : AR, FC, DR, MFZ, TB, JBN, SG, FB, JMB, MU, DP, MC (Visio)
+***** Tour de table
+- MC :
+  * Projet Interlude obtenu (EcoPhyto) : leviers territoriaux pour réduction des
+    pesticides en cultures légumières
+  * Chantal Flérault a suivi une formation à Sophia Antipolis
+    (pré-mycorrhization pour protection contre les nématodes)
+  * MC a été experte pour Conseil Scientifique de mise en place d'une
+    startup de production de mycorrhizes
+  * Philippe Julianus passé TREx
+
+- AR :
+  * projet Immerge doit bientôt passer en CRUP (FEDER sur tranche 2) :
+    effet des retombées atmo sur santé et sols
+  * projet Rivage passé en CRUP
+  * ANR Pyrosar : transformer les sargasses en charbons pour piéger les pesticides
+  * dernière expé transferts pesticides remise en place (anticipation Rivage 2)
+  * réponse à problématique de 4pour1000 (sollicitation Jorge et
+    Harry)
+  * projet OPALE : AR met la pression pour avoir un interlocuteur du
+    CIRAD, sinon continue sans eux
+  * visite de préfigurateurs en Guadeloupe sur plusieurs dispositifs
+    de recherche, mais visite du dispositif Opale annulée (rien sur
+    les dispositifs sur le végétal)
+  * sollicitation par l'IREPS -> problématique Chlordécone / JAFA
+  * interview par Gpe la 1ère avec RT sur Chlordécone et transferts
+    vers plantes
+  * mobilisé pour les CAPN en novembre
+  * participation au séminaire Eau et Agriculture (INRA+IRSTEA)
+  * stage 1ère année BTS à démarrer pour 3 semaines
+  * AR est le nouveau correspond TransFaire de l'unité
+  * colloque Sargasses la semaine prochaine
+
+- JMB :
+  * séminaire ADEME à Paris où a présenté Explorer
+  * formé pour être référent SAE2 pour montage de projets Européens
+  * avec Harry Archimède, chargé de réfléchir sur un projet PIA3 pour un
+    dispositif industriel
+  * invité à un séminaire GOSS sur la chlordécone et les SHS à Paris le 6 novembre
+
+- JBN :
+  * poursuite activités, prélèvements, et mise en place des dispositifs
+  * a le sentiment que trop de temps est passé sur la route poute aller
+    faire de simples prélèvements à cause de l'absence de partenaires
+    dans le consortium
+  
+- DR :
+  * dans le cadre de du budget 2020, dépôt d'une AIC (SEPIA) sur
+    brunissement après cuisson : influence cuisson sur phénols,
+    mécanismes d'oxydation (collaboration ave Rennes) 20k€ / an sur 2 ans
+  * délégation qualiticiens CIRAD pour mise en place d'un dispositif
+    d'analyses sensorielles sur banane à cuire (plantain et autres) :
+    formation pour goûter, avec l'idée d'appliquer cela à l'igname par
+    la suite
+
+- FC :
+  * recrutement d'un apprenti sur la microferme, à partir du 28/10, sera présent 1
+    semaine sur 2 (bac pro conduite et gestion exploitation agricole)
+    ; FC est officiellement reconnu formateur d'apprentis
+  * projet Nutwind sur comportements alimentaires des habitants de Mqe
+    et Gpe
+
+- TB :
+  * activités sur Rivage et Opale
+  * s'intéresse aux capteurs connectés, internet des objets ; certains
+    équipements sont acquis via Explorer ; cherche à voir comment on
+    pourrait connecter certains équipements existants
+
+- MFZ :
+  * passe beaucoup de temps sur formations IST et montage séminaire
+    OpenScience fin Novembre
+  * grand séminaire IST INRA et IRSTEA à Bordeaux en Novemebre
+  * va initier P Trafond pour dépôt sur Prodinra
+
+- DP :
+  * prend contact avec la commission BAP "Sélection Participative"
+
+- SG :
+  * année creuse pour l'anthracnose (multiplication d'un variété
+    sensible pour futurs essais)
+  * 
+
+- MC :
+  * arrivée de Mame Boucar Diouf en thèse ; prospections commencées
+  * stagiaire de césure Prodimad pourle suivi en serre de cousse-couches
+    supposées saines ou assainies : évaluer production et recontamination
+  * CRB : journées nationales des CRB (plutôt orienté systèmes
+    d'information et gestion, mais aussi présentation du CRB-PT)
+  * audit de suivi du CRB du 19 au 23 novembre
+
+- FB :
+  * réunion DUs Centre
+  * avis avorable émis pour mobilité sur poste gestionnaire d'Unité
+
+*** 2019-10-22 Tuesday
+
+**** JIEM 2019 - Ifremer - Nantes - 22 et 23 octobre 2019 :séminaire:modélisation:statistiques:
+
+***** Introduction : Réseaux
+- GDR EcoStat (S. Dray)
+  + objectifs : faire reconnaitre écologie statistique comme
+    discipline, évaluer, développer et appliquer méthodes nouvelles
+  + projet intial déposé en 2013 au CNRS ; renouvelé en 2017
+  + plus de 700 inscrits sur la liste
+  + convention CNRS + Ifremer
+  + site web, liste de diffusion, bourse d'échanges, réunions
+    annuelles, gratifications M2
+  + 9 et 10 mars 2020 : 5èmes journées annuelles (Rennes)
+
+- GDR MascotNum (A. Nouy)
+  + méthodes stochastiques pour l'analyse de codes numériques
+  + objectis : expériences numériques, quantification de
+    l'incertitude, 
+  + créé en 2006, dirigé par H. Monod
+  + partenaires académiques et non (10 companies)
+  + plus de 400 inscrits sur la liste
+  + fonds du CNRS + partenaires industriels ("club des partenaires)
+  + plusieurs événements annuels selon thématiques
+
+- Mexico (R. Faivre)
+  + créé en 2006
+  + objectifs : animation scientifique autour des méthodes, inciter
+    scientifiques à analyse statitique de leurs simulations
+  + écoles chercheurs, journées thématiques, Rencontres Mexico
+  + ouvrage édité en 2013 "Analyse de sensibilité et explration de
+    modèles" (Quae)
+
+- Réseau RESSTE (T. Opitz)
+  + fondé en 2014
+  + environ 70 membres
+  + financé par INRA dpt MIA
+  + modèles, méthodes et algorithmes pour les données spatiotemporelles
+  + article de revue "Analyszing spatio-temporal data..." journal de
+    la Société Française de Staistiques
+
+***** Session 1 : Analyse des structures spatiales multivariées...
+Analyse des structures spatiales multivariées en écologie des
+communautés avec le package "adespatial" (Stéphane Dray, Laboratoire
+de Biométrie et Biologie Evolutive)
+- étude des communeautés écologiques (assemblages d'individus de
+  différentes espèces), comment cette composition varie dans le temps
+  et l'espace, identifier les facteurs ou processus à 'origine de ces variations
+- principe : abondance d'espèces dans différents sites, mesure de
+  différentes variables -> différents tableaux de données
+- initialmeent, on pratiquait des analyses type PCA, COA...
+- on ajoute les paramètres écologiques décrivant un filtrage
+  environnemental -> niches écologiques : tableau espèces + tableau
+  environnement -> RDA, CCA...
+- problème : il peut manquer des données ou variables, d'autres
+  processus non mesurés peuvent agir -> utiliser les structures
+  spatiales comme proxy (variables latentes)
+- on ajoute la structure spatiale de manière explicite
+- package "adespatial" sur R : lien packages "multivariate" et "spatial"
+- l'espace est traité comme un graphe -> autocorrélation spatiale
+  (indice de Moran), décomposition positive/négative, décomposition multiéchelle
+- méthodes multivariées spatiales
+
+Méthode pour des suivis environnementaux plus efficaces (Claire Kermorvant, CNRS / UNIV PAU)
+- exemples : inventaires naturalistes, études d'impacts environnementaux, évaluer
+  périodiquement des mesures de gestion
+- théorie : basé sur modèle, ou sur protocole probabiliste
+- résultats pour la palourde en Arcachon : il faut toujour une taille
+  d'échantillonnage supérieure pour échantillonnage simple aléatoire,
+  que si on utilise une méthode d'optimisation spatiale (par exemple
+  par tessellation)
+
+***** Session 2 : statistiques spatiotemporelles
+Multiple Factor Analysis applied to the spatio-temporal analysis of fish habitats (Mathieu DORAY, IFREMER)
+- analyses multivariée (MFA) pour description des habitats
+- analyse de séries temporelles de cartes
+- individu = cellule d'une grille spatiale ; groupe = année ;
+  variables multiples dans chaque cellule
+- MFA poissons, MFA environnement, puis inférence entre les deux
+- l'autocorreléation n'est pas modélisée explicitement, mais on voit
+  l'autocorrélation quand on replace les cellules sur une carte
+
+Guiding decision-making to mitigate lynx-vehicle collisions using
+spatially-explicit individual-based models (Sarah Bauduin, Centre
+d'Ecologie Fonctionnelle et Evolutive Montpellier)
+- modèles individu-centrés spatiallement explicites
+- les collisions sont le principal facteur de mortalité des lynx en France
+- dévelopé avec NetLogoR
+- interface utilisateur simplifiée pour que les acteurs puissent
+  tester eux-mêmes les odifications de l'environnement et faire
+  tourner le modèle
+
+Application de modèles dynamiques bayésiens aux séries temporelles de
+surveillance de l'environnement marin (Dominique Soudant, VIGIES)
+- généralisation dynamique des modèles linéaires : les paramètres
+  peuvent varier dans le temps
+- permet de ne plus avoir à adapter les données aux méthodes
+- permet d'identifier des ruptures dans les variables mesurées
+
+Spatial and temporal variability of Sabellaria alveolata
+bioconstructions: from multi-scale monitoring to statistical modelling
+to disentangle drivers of changes (Aurélien Boyé, IFREMER)
+
+Modélisation hiérarchique spatiotemporelle et inférence avec INLA
+(Thomas Opitz, Biostatistique et Processus Spatiaux)
+- INLA : integrated nested laplace approximation ; pour modèles généralisés additifs
+- SPDE : stochastic partial derivative equation : pour estimer les
+  effets aléatoires spatiotemporels (erreur)
+- INLA est dans un cadre bayésien : le prédicteur linéaire (covariables
+  prédictives + erreur) est une gaussienne multivariée
+- package R-INLA : r-inla.org
+
+Approche INLA/SPDE de la distribution des juvéniles de poissons plats
+dans la zone de nourricerie de Baie de Seine (Thibault CARIOU,
+Ifremer)
+
+
+Impacts de dynamiques territoriales sur la diversité aviaire en
+méditerranée - Une analyse spatiale à grande échelle (Julien Papaïx /
+Emily Walker, INRA BioSP)
+- première partie de l'étude : regarder les trajectoires d'évolution
+  agricole dans le bassin méditerranéen à résolution de 2km par typologie :
+  intensification, extensification, sous pression urbaine, abandon de surface
+- deuxième partie : effet de ces changements sur diversité des oiseaux
+- 4 indices de diversité : rihesse spécifique, richesse fonctionnell,
+  dispersion fonctionnelle, functionnal evenness
+- sur 355 espèces d'oiseaux, à la résolution de 110 km
+- données additionnelles : élévation, paramètres bioclimatiques
+- en passant par des ACP
+- développement de modèles GLMM spatiaux avec INLA-SPDE
+- modèle 1 : sans land system, avec juste fonction de correlation
+  pour le spatial
+- modèle 2 : le land system est explicitement ajouté
+
+***** Session 3 : Incertitude
+High-dimensional approximation for uncertainty and parametric
+analyses (Anthony Nouy, École Centrale de Nantes)
+- approximation du modèle /X/ : surrogate model plus faciles à opérer
+  (évaluation, intégration, dérivation)
+- approximation en hautes dimensions :
+- approximations de faible rang et formats de tenseurs
+
+Approche probabiliste pour la prédiction d'ondes de tempête (Pierre
+Sochala)
+- modèle de propagation acoustique à 9 paramètres
+- AS avec méthode de Morris (faire varier les paramètres avec des
+  valeurs discrètes : min, val1, val2, max)
+
+Modélisation des incertitudes de la prévision du bruit dans
+l'environnement - Application au bruit des éoliennes (Bill Kayser,
+Unité Mixte de Recherche en Acoustique Environnementale)
+
+***** Session 4 : Analyse de Sensibilité - Calibration
+Guide pour la pratique de l'optimisation de modèles complexes
+(Stéphanie Mahévas, Ifremer)
+- calibration : c'est quoi ?
+  + en stats, méthode d'estimation (méthode inverse) : chercher
+    valeurs de X permettant de rerpoduire au mieux Y
+  + calbbration d emodèle : ajustement de paramètres en intégrant
+    l'incertitude des paramètres et/ou du modèle pour obtenir une
+    représntantion du modèle
+  + le cas le plus simple : ajustement linéaire Y=aX
+  + objectif : estimer des paramètres qu'on n'arrive pas à estimer
+    réellement, ou trouver un meilleur modèle, ou donner plus de
+    crédibilité au modèle en soutien à la prise de décision
+- calibration : comment ?
+  + comparer par un critère Ysim et Yobs : on cherche les valeurs de X
+    (paramètres) qui minimisent la différence par un processus itératif
+  + 3 grandes étapes :
+    * pré-processing : construire une fonction objectif
+    * choix de l'algorithme
+    * post-processing : évaluer la qualité de l'optimisation
+
+OpenMOLE pour l'étude des modèles systèmes complexes (Mathieu
+Leclaire, Institut des sytèmes complexes de Paris Île de France /
+Centre de recherche en èpistémologie appliquée)
+- exemple : modèle "zombieland"
+- plateforme pour calibrer touts types de modèles
+
+Elucidation et conséquences de la dynamique spatiale de la sole de
+Manche-est : Calibration, validation et analyse de sensibilité de
+modèles alternatifs de pêcherie (Sigrid Lehuta, IFREMER)
+- 3 versions d'un modèle avec différentes assumptions de structure (1
+  population, 1 métapopulation, ou 3 populations différentes ?)
+- calibration du modèle ISIS Fish avec le paquet R "calibrar"
+- puis validation
+
+Améliorer la confiance dans les modèles d'écosystèmes complexes :
+l'analyse de sensibilité d'un modèle d'écosystème Atlantis (Chloe
+Bracis, IFREMER)
+- modèle end-to-end : hydrographie + ecologie + facteurs humains
+- AS par méthode de Morris (globale, one-at-a-time)
+
+Assessing the stability of marine systems when species feed on
+fisheries catches: a qualitative modelling approach (Lyndsay
+Clavareau, Ifremer)
+- impact de la déprédation dan les modèles écologiques
+
+***** Session 5 : Dynamique de population
+Utilisation de la modélisation pour l'analyse de séries temporelles
+hétérogènes: cas du lièvre d'Europe en France (Ilona Grentzmann,
+Direction de la Recherche et Expertise, ONCFS)
+- etudier l'effet de la structure d'âge sur la dynamique de
+  reproduction du lièvre
+- state-space modèle : processus d'observation est lié à un processus
+  biologique caché lié au temps (chaîne de Markov cachée)
+
+Résultats préliminaires sur les relations entre un indice d'abondance
+issu des données SACROIS et de variables environnementales (Claire
+Kerorvant, Ifremer)
+- effet du changement climatique sur le rouget en golfe de Gascogne
+- données issues de navires de pêche sur la présence de rougets dans
+  les filets, dans l'espace et le temps
+- covariables environnementales (nutriments et production primaire)
+- modèles GAMM avec effet aléatoire sur chaque maille de la carte
+  (effet spatial), décomposition de Fourier pour la saisonalité
+
+Relative contribution of processes involved in the fish community
+response to climate change (Morgane Travers-Trolet, Ifremer)
+- contribution relative de différents processus écologiques
+- lesquels sont plus impactés par le changement climatique ?
+- modèle individu centré spatialisé OSMOSE
+- calibré avec "calibrar"
+- 2 projections climatiques testées : RCP4.5 et 8.5
+
+Accounting for non-stationarity in epidemiology using stochastic
+models with time-varying parameters (Bernard Cazelles, CNRS/IRD)
+- prendre en compte la non stationarité
+- non stat. due aux changements et évolution dans les caractéristiques
+  des pathogènes, et dépendance à l'environnement et aux actions humaines
+- approche statistique : utiliser décomposition en ondelettes (domaine fréquences et temporel)
+- reconstruction de l'évolution dans le temps de certains paramètres avec space time model
+- processus système : SIR avec beta(t) et gamma(t)
+- processus d'observation
+- inférence avec filtre de Kalman étendu
+- particle diffusion (SMC) et MCMC
+- Cf. Cazelles (2018) PLoS Computational Biology
+
+Méthode statistique génétique pour inférer la dynamique
+spatio-temporelle d'une population (Verena Trenkel, Ifremer)
+- modèle de biomasse Bayésien
+- estimation de l'abondance par la proportion de juvéniles et adultes
+  apparentés génétiquement
+- package R "kinference"
+
+** 2019-11 November
+
+*** 2019-11-04 Monday
+
+**** Réunion avec Vanessa Weck - Objet : projet Insular et suites au projet MALIN :meeting:malin:insular:région:
+1. Insular
+   - critique des experts concernant le nombre de réplicats
+   - réduire le nombre de biotopes pour augmenter le nombre de
+     réplicats (privilégier les biotopes parallèles avec la Réunion,
+     donc probablement supprimer la mangrove car il n'y en a pas à la Réunion)
+   - enveloppe dégagée : en attente des projets sargasse ; réponse
+     espérée le 5 novembre
+   - le Région va faire au mieux pour être sûrs que la Réunion reste
+     dans le projet pour garder la cohérence du projet (intérêt stratégique)
+   - le partenaire Belge peut rentrer sur notre budget
+   - projet faisable sur 3 ans (limite au 31 décembre 2023)
+   - réunion semaine du 18 nov. pour étudier possibilité d'ouverture
+     de lignes budgétaires pour projets déposés et faisant l'objet
+     d'une évaluation scientifique
+   - démarrage idéal au 1er janvier 2020 (si dépôt début décembre)
+
+2. Suite de Malin
+   - il faudrait une stratégie coordonnée pour faire remonter des
+     topics Horizon Europe, à nous de faire une proposition
+   - PYT voudrait qu'on continue à s'intégrer au niveau du
+     consortium pour être plus visibles
+   - idée de faire un pôle pluri-institutionnel en santé, regroupé sur
+     un même site
+   - pour programmation 2021-2027, les thèses seront éligibles sur le FEDER
+   - proposer grands thèmes et leurs contributions aux enjeux
+   - souhait de la région que les équipes des RUP soient mieux
+     représentées auprès de la Commission
+   - s'assurer que les mot clés soient présents au niveau des
+     partnerships
+   - la Commission souhaite que pour la prochaine programmation il n'y
+     ait plus de décalages
+*** 2019-11-14 Thursday
+**** *Réunion Ching* :meeting:ching:
+- infos du DU :
+  + AG Astro à venir le 29/11/2019
+  + BAP :
+    * le poste BAP TR en BAMI sur lequel on n'a pas eu de candidat est maintenu pour l'arbitrage
+    * Carole Caranta arrête direction du dpt BAP au 1er janvier 2020, sera adjointe DG scientifique INRA : recherche fondamentale à l'INRA, et interdisciplinarité
+    * métaprogrammes BAP : 3 lancés en 2020, 6 nouveaux en réflexion
+  + évaluation HCERES : remise du rapport scientifique septembre 2020
+  + visite des CDs d'Astro :
+    * viendront dès janvier 2020, avec les CDs de l'URZ : du 20 au 22
+      janvier
+    * déroulé :
+      - 20 am : bilan
+      - 20 pm et 21 am : ateliers en groupes
+      - 21 pm : discussion sur synthèse des ateliers
+      - 22 : discussion avec l'URZ et bioéconomie
+      - thèmes transversaux que nous avions identifiés : changements d'échelle, comment passer des pratiques culturales aux systèmes de culture, comment cultiver sur sols pollués
+      - thèmes proposés par CDs : quels partenariats métropole et caraïbes ? quels systèmes agricoles dans le contexte des petites Antilles ? quelles interactions entre piliers ?
+    * C. Lannou a prévu de venir les 26 et 27 janvier avec sa chargée d'innovation au sujet du biocontrôle (atelier Astro, UE Péyi, partenaires professionnels : mycorrhizes, auxiliaires locaux, fourmi manioc, co-conception d'agrosystèmes multiespèces)
+- tour de table :
+  + MC :
+    * stagiaires prévus (extraction ADN mycorrhizes, mise en place parcelles, interactions en pot plants de tomates mycorhizées / nématodes)
+  + LD :
+    * venue d'une chercheuse d'Avignon en mission pour RTBFoods : clarifier positionnement de l'INRA sur le projet (aptitudes à la transformation des produits et attentes des consommateurs)
+    * va partir en mission (chimiométrie)
+  + LG :
+    * modélisation Explorer : données agroéco de la microferme intégrées pour simulations dans Mosaica
+  + AR :
+    * missions : projet sargasse, CAPN, séminaire fusion INRAe
+  + LP :
+    * enseignements à l'UA
+  + IF :
+    * audit CRB à venir fin novembre
+    * participé à réunion des CRB avec MU
+    * a signalé de gros problèmes de salles de culture
+
+Entered on [2019-11-14 Thu 13:24]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2019-11-21 Thursday
+**** *Réunion CODIR* :meeting:codir:
+- Visite des départements 20-22 janvier 2020 :
+  + 4 dates bloquées pour ateliers de préparation
+  + réflexion sur un projet commun d'avenir autour du PIA Astro/URZ
+
+Entered on [2019-11-21 Thu 14:07]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+** 2019-12 December
+*** 2019-12-04 Wednesday
+**** Visite PDG INRA Philippe MAUGUIN
+- Présentation du 3SC
+  + spécificités du Centre en zone tropicale : hotspot de
+    biodiversité, immersion dans les bassins caribéen et amazonien,
+    espaces fortement impactés par les changements globaux
+  + enjeux : #INRA 2025 "sécurité alimentaire et nutritionnelle",
+    Régional (S3, Sresri et Srdeii)
+  + 2 identifiants :
+    * Transition agroécologique et bioéconomie en milieu tropical
+      - cibles : toutes les agricultures
+      - orientations des recherches : alternatives écologiques,
+        bioéconomie, résilience, organisation
+      - susciter l'innovation dans la valorisation des techniques et
+        des agrobioressources
+    * Ecologie intégrative et valorisation des forêts tropicales
+      - caractériser, protéger et valoriser
+      - susciter l'innovation dans la valorisation
+  + Stratégie de site et de partenariat
+    * 3 ambitions
+      - Actions à forte pertinence
+      - Intégration caribéenne
+      - ...
+
+
+Entered on [2019-12-04 Wed 09:04]
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+* 2020
+** 2020-01 January
+*** 2020-01-09 Thursday
+**** Réunion présentation préprojet Démonstrateur Ecosystème de microfermes
+     - projet sur 6 ans, 4 écosystèmes de 4 microfermes : NGT, NBT,
+       SBT, M-G
+     -
+*** 2020-01-20 Monday
+**** Visite CD Astro - Jour 1
+*0. Présentation bilan d'Astro* - F. Bussière
+*1. Bilan Pilier 1* - L. Penet
+*2. Bilan Pilier 2* - JM. Blazy
+*3. Perspectives et grandes lignes du projet d'unité* - F. Bussière
+*4. Discussions thématique 1 :* "Gestion de l’agrodiversité pour une
+ gestion durable du milieu et des bioagresseurs"
+ - quels travaux permettent de répondre/contribuer aux questions
+   soulevées ?
+ - en d'autres termes : quelles questions de recherche ?
+ - quelle est notre carte d'identité ?
+*5. Discussion thématique 2 :* "Agriculture sur sols pollués : quelle
+ place dans le projet d’unité ?"
+*6. Discussion thématique 3 :* "Changement climatique et vulnérabilités
+ de l’agriculture, quelles perspectives pour l’unité ?"
+ - se raccrocher à ACCAF 2 : adaptation + atténuation au CC
+
+*** 2020-01-21 Tuesday
+**** Visite CD Astro - Jour 2
+*7. Discussions sur collaborations possibles Astro/URZ*
+ - en cours : karusmart et ferme pilote
+*8. Discussion thématique 4 :* "Ecosystèmes de microfermes"
+*9. Point visio avec représentants SPE*
+ - Q : quid du profil chercheur IRD ?
+ - au niveau SPE, montée des sujets sur les effets du changement
+   climatique
+*10. Debriefing*
+ - dynamique positive, des choses se mettent en place
+ - après brassage d'idées, resserrer et concrétiser (rédiger)
+ - structurer en entrant par questions de recherche, favoriser interfaces
+ - ne pas rester sur des questions appliquées
+ - se demander : comment veut-on être perçus d'ici 5-10 ans ?
+ 
+*** 2020-01-22 Wednesday
+**** Visite CD Astro - Jour 3 : URZ/Astro
+*1. Ambition Guadeloupe*
+   - réflexion attendue pour 2020 entre unités du CRAG
+   - pilotée par un chef de département
+   - plan d'action sur 4-5 ans, en 4 points :
+     1) animations transversales
+        + polyculture élevage
+        + bioéconomie circulaire territorialisée et agroécologie
+        + santé : one health / eco health
+     2) réflexion collective sur
+        + dispositifs expé
+        + CRB
+        + expés systèmes
+     3) GPEC : analyse globale des moyens et des compétences pour
+        soutenir cette dynamique
+     4) déclinaison des partenariats académiques et socio-économiques
+        (notamment projet One Health encouragé -> Insula)
+   - analyse réflexive autour de projets fédérateurs, dégager
+     priorités thématiques réalisables autour de questoins
+     scientifiques qu'on peut porter et valoriser à l'international
+ 
+*2. Ambition Antilles-Guyane (Ientifiant Thématique 1 du 3SC - 2030)*
+   - Q : quelle est la stratégie partenariale du Centre ?
+*** 2020-01-23 Thursday
+**** Réunion CHING :ching:meeting:
+  - JS : 
+
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2020-01-28 Tuesday
+**** *Réunion avec C. Lannou - Equipe IP2C*
+
+1. Présentation IP2C - L. Penet - "Approche agroécologique des mutualistes et des bioagresseurs"
+   - comment mobiliser les réseaux mycorhiziens :
+     * effet démontré en conditions contrôlées, mais sous-exploité en agriculture
+     * plutôt qu'utiliser propagules, utiliser l'effet donneur de plantes
+     * vers développement de protoypes TRL5-6
+     * effet donneur offre une protection contre bioagresseurs
+       telluriques (/Ralstonia solanacearum/, /Meloidogyne incognita/)
+     * CL :
+       + front de science qui monte à SPE : interactions plantes/plantes
+       + sujet plantes de service à développer dans métaprogramme
+         Santé des Plantes
+   - anthracnose de l'igname et durabilité des résistances
+     * résistance : approche par métanalyse de 4 populations (3 inrae,
+       1 cirad)
+     * CL :
+       + CATI "baric" pour la bioinformatique
+
+2. Thèse Pauline Dentika
+   - diapo problématique : hypothèses ; d'où viennent ces hypothèses,
+     quel lien entre les 2
+   - diapo plan de recherche : en quoi les 3 axes répondent aux 2 hypothèses
+   - axe 1 :
+     * éléments paysagers ? non car seulement inventaire des adventices
+     * mieux décrire l'ACP : à quoi correspondent les points ?
+       i.e. quelles sont les variables
+     * goyavier : seulement 3 arbres échantillonnés, quelle puissance
+       stat ?
+   - axe 2 :
+     * comparaison génétique des souches sur manguier
+   - axe 3 :
+     * cooccurrence truncatum/gloeosporioides : mieux expliquer la
+       stratégie expérimentale
+
+3. Thèse Mame Boucar Diouf
+   - programme :
+     * étude prévalence de l'ensemeble des virus d'igname en Guadeloupe
+     * étude de l'impact des pratiques culturales sur trabsmission des
+       virus
+     * recherche de plantes réservoir
+     * étudier la dynamique de recontamination des virus d'igname
+     * symptomatologie et impact des virus sur croissance et
+       production des ignames
+   - pour discuter des différences de prévalence entre basse terre et
+     grande terre, ne pas forcément parler d'antagonisme entre virus,
+     mais d'abord s'intéresser aux vecteurs potentiels
+   - prodimad "ici à Roujol" ?
+
+4. Discussion générale équipe IP2C
+   - intégration officielle de la virologie dans IP2C
+   - activités phénotypage plateforme CRB : à définir en interne
+   - CL :
+     * dynamique positive
+     * potentiel intéressant
+     * s'identifier par questions de recherche principales
+     * collaborations avec autres unités à développer (les rendre
+       visibles pour l'HCERES)
+     * 
+  
+     [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+** 2020-02 February
+*** 2020-02-03 Monday
+**** Présentation sur l'APA (Cirad)
+- l'APA régule es échanges de matériel vivant
+  + APA = Accès et Partage des Avantages
+  + PN = Protocole de Nagoya
+  + RG = ressources génétiques
+  + TIRPAA = traité international sur les ressources phytogénétiques
+    pour l'alimentation et l'agriculture
+  + ATM : Accord de Transfert de Matériel
+- APA pour lutter l'appropriation illégitime des ressources :
+  souveraineté des Etats sur leurs ressources
+- mécanisme d'APA :
+  + régulation (ou pas) par les Etats de l'accès à leurs RG
+  + l'APA concerne les RG fournies soit par le pays d'origine, soit
+    par le pays qui les a acquises conformément à la CBD (Convention
+    sur la Diversité Biologique, Rio, 1992)
+  + s'applique aussi aux connaissances traditionnelles (CT) associèes
+    au RG
+  + l'utilisation des RG et CT doit s'effectuer selon un partage juste
+    et équitable des avantages qui en découlent pour le pays fournisseur
+- le PN ajoute à la CDB les notions de produits dérivés, et d'activités de
+  recherche et développement
+- pour les micro-organimes, il y a un décret pour les exclusions en France
+- pour recherche sans visée commerciale, il suffit de faire une
+  procédure de déclaration (pas besoin d'autorisation) ; il y a un
+  formulaire de demande simplifiée APA sur (www.demarches-simplifiees.fr/commencer/apa-declaration-pmorale)
+- réglement européen :
+  + pour utilisation sur territoire Européen
+  + si ressource accédée à partir de xx/xx/2014
+  + obligation de diligence
+- pour les micro-organismes :
+  + exemption de toute demande pour une durée de 3 ans à partir de fin
+    2019 pour une ressource française (y-compris DROM), donc jusqu'à
+    fin 2022 pour l'instant
+  + pour les ressources venant d'autres pays, il faut se renseigner aurès de leurs
+    services pour déclarer le projet, le besoin, l'utilisation prévue...
+- la liste des points focaux (i.e. qui contacter) est disponible
+  sur absch.cbd.int
+*** 2020-02-04 Tuesday
+**** Formation "Gestion de données - Systèmes d'Information" - Cirad Astre
+1. Introduction
+   - *SI :* ensemble de procédés pour assurer la gestion de données
+     + donnée : l'élément de base d'une observation, caractérise une information
+     + information : caractérise une observation, est caractérisée par
+       1 ou + données
+     + système : ensemble de procédés, de pratiques organisées...
+     + 4 étapes : collecter > centraliser > analyser > restituer
+       * collecter : décrire les observation, utiliser protocoles standardisés
+         pour homogénéiser la collecter
+       * centraliser : rassembler les données en un lieu unique pour
+         éviter leur dissémination ; organiser leur stockage
+       * analyser : comprendre, interpréter les observations
+       * restituer : informer les acteurs ; vulgariser +/- selon
+         destinataires
+     + optimiser le SI :
+       * standardisation : collecter données de manière homogène (ex :
+         format de saisie des dates ; listes de choix...) -> former les collecteurs
+       * disponibilité : rendre la collecte possible à tout moment
+         (prévoir ressources matérielles nécessaires)
+   - NTIC : nouvelles technologies d'information et de communication
+     + outils modernes facilitant la communication et l'échange d'information
+     + intégration dans les SI au niveau des 4 étapes
+     + permettent l'optimisation de :
+       * rapidité
+       * fiabilité
+       * partageabilité
+       * sécurité
+     + mais avant d'implémenter les NTIC : 
+       * étudier le contexte (nécessit ? possibilité d'ultiliser sur
+         le terrain ? les compétences sont-elles sur place ? budget
+         suffisant pour achat et pérennité ? ...)
+       * établir un cahier des charges
+       * développer et déployer sur le terrain (avec phases de test)
+2. Méthode EVASYON
+   - 2 objectifs :
+     + évaluer un SI existant
+     + élaborer le schéma d'un SI en vue de son implémentation
+   - étape 1 : métadonnées
+   - étape 2 : cartographie des acteurs (niveaux géographiques / administratifs
+     ; 1 carte par thématique ex.: humain/animal/végétal...)
+   - étape 3 : on décrit les flux de données, et les actions
+     (collecte, centralisation, analyse, partage)
+   - étape 4 : créer une fiche "Flux Action" (tableau) à partir de la carte
+   - étape 5 : cataloguage des données (tableau) en suivant le Dublin Core
+3. KoboToolBox
+   - basé sur Open Data Kit
+   - collecte des données :
+     + par un ordinateur, connecté à la BdD formulaire KTB
+     + par un outil type smartphone/tablette, via appli "KoBo Collect"
+       (pas besoin de connexion active)
+     + via un compte KTB perso, avec formulaire "invité" (gestion de
+       droits pour l'invité, de la simple consultation des données à
+       la modification du formaulaire)
+     + 3 statuts pour les donnée : validé, en attente, non validé
+*** 2020-02-10 Monday
+**** *Réunion équipe Ip2C*
+- 2 points : nom de l'équipe ; mutualisation des techniciens
+- nom de l'équipe : Agrodiversité
+- techniciens : trame de besoins à enovoyer par Laurent
+*** 2020-02-13 Thursday
+**** *Réunion CHING* :meeting:ching:
+1. Discussion sur cahier des charges direction unité
+   - FB propose de partir de sa lettre de mission
+   - JBN : quel est le contexte de la démarche ?
+   - FB : pas un processus standard à INRAE (en standard, une
+     nomination par les dpts sans consultation de l'unité, proposée à
+     puis actée par la DG) ; Astro est un cas particulier du fait qu'il y a 4 départements de tutelle pour la
+     même unité ; les départments souhaitent qu'il y ait un consensus
+     dans l'unité avant d'enterriner la décision
+   - date butoir : entretiens par visio le 13 mars
+   - rôles du DU Astro :
+     + animation sci.
+     + gestion 
+     + communication
+     + correspondant des dépts pour stratégie sci. et moyens pour sa mise en oeuvre
+   - LP : problèmes de ressources humaines, notamment au niveau technique
+   - FB : propose
+*** 2020-02-20 Thursday
+**** *Réunion mise en place comité Politique de Site Antilles* :meeting:politique:site:
+- politique de site : contrat pour 10 ans, charte signée fin 2019
+- Objectif des comités d'animation:
+  + Plateforme Antilles Recherche et Innovation (PARI), 6 axes thématiques :
+    * santé en environnement insulaire tropical
+    * mer et océan
+    * biodiversité en milieu insulaire
+    * risques et énergie
+    * dynamique des sociétés et territoires caraïbes
+    * numérique
+  + 3 niveaux d'animation :
+    * 1 comité stratégique : 21 membres (plutôt responsables d'instituts)
+      - coordonne la politique
+      - veille à cohérence avec politiques publiques et stratégies noationales et territoriales
+      - tenu au courant des projets collaboratifs
+      - organise son AG au moins 1 fois par an
+    * 1 comité de liaison
+      - 2 DRRT et 2 Vice Présidents Recherche UA (Gpe et Mqe)
+      - assure bon focntionnement des réunions  et exécute décisions
+        du comité stratégique
+      - rapport d'activité 1 fois par an remonté au CS
+      - suivi et compte rendu des CA
+    * 12 comités d'animation (6 axes, Gpe + Mqe)
+      - réunions 2x par an
+      - chaque comité désigne 1 animateur et 1 rapporteur
+      - émet une feuille de route pour mise en oeuvre des travaux
+      - rapport périodique avancée des travaux
+      - recommandation sen termes de projection, organisation de la
+        réorientation de la stratégie
+      - rapport d'activité à mi-contrat et fin contrat
+- lister les projets depuis 2013 (liste probablement déjà disponible à
+  la Région)
+** 2020-03 March
+*** 2020-03-10 Tuesday
+**** *Réunion équipe Agrodiversité* :meeting:agrodiversité:
+- introduction nouvelle équipe par L. Penet
+- tour de table de présentation de chacun
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2020-03-12 Thursday
+**** *AG Astro*
+1. Mission DU adjoint
+   - prise en charge organisation et gestion activités techniques et
+     expé, RH
+   - relations avec UE
+   - amélioration communication interne
+   - mise en place nouveau Conseil d'Unité
+   - mail : dirastro-antilles
+   - rdv bimensuel avec tous acteurs implqiés dans expés (dès vendredi
+     20, 11h, salle AK)
+   - liaison privilégiée avec l'UE
+
+2. Conseil d'Unité
+   - élu pour 2 ans
+   - déclaration candidatures jusqu'au 27/03, vote du 30/03 au 04/04,
+     ou du 06/04 au 10/04
+   - réunions environ 5/6 par an
+
+3. Future Direction Unité
+   - synthèse des discussions réunions cadres (13/02 et 05/03)
+   - 
+
+4. Evaluation
+   - envoi fichiers du 28/08/20 au 04/09/20 (rapport final)
+   - éval mars/avril 2021
+   - nouveau projet 01/01/2022
+   - projet sur 4 axes :
+     + agrodiversité pour gestion durable des agrosystèmes et contrôle
+       des bioagresseurs
+     + quelle agriculture sur des sols pollués ?
+     + changement climatique, vulnérabilités de l'agriculture
+     + transition de l'agriculture vers des écosystèmes de microfermes
+   - AG à prévoir en juin pour ébauche et discussion projet
+
+5. Projet immo
+   - début extension ~ juin 2020
+   - début travaux dans bâtiment occupé ~ septembre 2020
+
+6. Fonctionnement unité
+   - gestion du risque de crise Covid-19
+  
+   [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2020-03-26 Thursday
+**** *Réunion CODIR*
+- doc bilan évaluation :
+  + par thème
+  + sur période du 01/01/15 au 30/06/20
+- ajouter stratégie à 5 ans et analyse SWOT par thème
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+** 2020-07 July
+*** 2020-07-13 Monday
+** 2020-09 September
+*** 2020-09-11 Friday
+**** *Conseil d'Unité*
+1. Rappel des mission du CU
+   - mandat des élus : 2 ans
+   - réunions doivent àavoir lieu au moins 5 fois par an
+   - le CU est consulté sur l'ensemble des thèmes liés au
+     fonctionnement de l'Unité et vie collective
+   - bilan de fonctionnement du CU à donner en fin d'année
+   - prochain CU le 25/09/2020 9h - 11h
+
+2. Définition et gestion des horaires de travil (Caroline Anaïs)
+   - moduels de #temps : CET, temps, congés
+   - outil qui permettra aussi de saisir son temps sur contrats de
+     recherche
+
+3. Organisation des prochains échanges sur le projet d'Unité
+   -
+*** 2020-09-17 Thursday
+**** *Réunion Ching*
+1. Organisatoin unité :
+   - répartition tâches entre JMB et AR
+2. Projet scientifique :
+   - chocs
+   - leviers
+   - 3 projets d'action concrètes de conergence interdisciplinaire sur
+     #résilience et #transition
+  
+     [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2020-09-24 Thursday
+**** *CODIR 24/09/2020*
+- modalités d'organisation de l'Unité
+  +  
+- plan du rapport d'évaluation
+  + audition du 22 au 26 mars
+
+*CU 25/09/2020*
+- covid19 :
+  + télétravail encouragé au maximum (jusqu'à 5j / semaine)
+  + cantine : retour aux plats à emporter
+  +
+** 2020-10 October
+*** 2020-10-16 Friday
+**** *Comité de thèse Mame-Boucar DIOUF*
+- Hypothèse sélection positive pour les 2 isolats CoV1 ???
+- perspectives : me semble sortir de ce qui était prévu (risques
+  d'introduction ?)
+- CoV1 : possibilité d'échantillonner sur hôtes alternatives en dehors
+  de zones igname ?
+** 2020-11 November
+*** 2020-11-06 Friday
+**** *Réunion virologie* :meeting:virologie:
+- RM Gomez : prévoit séquençage d'un nouveau Potyvirus avec Astre (MINIon ?)
+- IFaure : 
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2020-11-09 Monday
+**** *Réunion chantiers Informatique et Science ouverte*
+1. Informatique dans l'unité
+   - PRI : seul Alfred est PRI officiellement ; Lucienne et Thierry
+     ont suivi la formation PRI mais ne sont pas reconnus
+     officiellement
+   - faire un point sur ressources humaines
+   - faire un état des lieux des postes
+   - prévoir des postes pour temporaires
+
+2. Production, gestion et mise à disposition des données
+   - proposer restitution du MOOC Rech Reprod
+   - se former sur outils INRAE disponibles
+  
+   [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2020-11-19 Thursday
+**** *Réunion enseignements UA*
+
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+* 2021
+** 2021-01 January
+*** 2021-01-14 Thursday
+**** *Réunion viro* :meeting:virologie:
+- Gersende
+  + analyse de croisements bananiers acuminate*balbisiana 93 individus
+
+**** Réunion Ching                                         :meeting:ching: 
+- instances de l'unité
+  + création d'un Conseil Scientifique d'Unité
+    * préparer animations scientifiques autour des programmes, faire
+      le bilan
+    * instruire les participations aux AAP
+    * 17 personnes (AI à DR), réunion 2x par mois
+  + Conseil d' unité :
+    * 5/an dont 2 AG
+    * discuter de chantiers à lancer/à suivre
+  + pôles de fonctionnement :
+    * Gestion/RH, BM-MB-CIV, PCBT, Expé terrain, Instru scientif,
+      Modélisation/informatique/données, Comm et impact, ressources
+      immo et dev durable
+- informations de l'unité
+  + AAP et événements scintif : analyse puis diffusion de manière ciblée par les DUs
+  + infos générales : redif générale à l'unité
+
+**** Visite Ambition Gpe
+- lundi 25 : milieu de matinée -> rencontre CDs et cadres astro ;
+  après-midi : 4 groupes interdisciplinaires travaillant sur les 4
+  thèmes indépendament session 1
+- mardi 26 : début matinée -> session 2 ; deuxième moitié matinée :
+  restitution/animation/discussion transversale
+
+**** Evaluation HCERES
+- semaine du 22 au 26 mars
+- 1/2 journée : matinée du lundi 22
+- 45mn bilan, 1h projet
+
+**** AG Astro 29/01
+
+
+
+
+  
+- State "TODO"       from "STARTED"    [2021-01-14 Thu 14:46]
+- State "STARTED"    from "TODO"       [2021-01-14 Thu 14:46]
+- State "TODO"       from              [2021-01-14 Thu 14:46]
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+** 2021-02 February
+*** 2021-02-04 Thursday
+**** *Réunion CUS* :meeting:CUS:
+- AMI AAP Ecophyto
+  + Gwad'air : évaluer, surveiller pollutions
+  + INRAE : tester des PNPP (substances naturelles)  
+- MP SALSYA : autour de la chlordécone (Opale) avec orientation One Health
+- MP METABIO : reproposer TiBio en élargissant à d'autres unités
+- Prépa séminaire 26/02
+- Fiche présentation Astro
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2021-02-09 Tuesday
+**** *Formation InfoDoc - Plan de Gestion de Données*
+- le PGD est une porte d'entrée pour produire des données répondant au
+  principe FAIR
+- site d'entrée aux différents services : https://datapartage.inrae.fr
+- DMP OPIDoR : modèles sur https://dmp.opidor.fr (créer en ligne avec
+  le tableau de bord, ou télécharger un modèle vide)
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org::*2021-02-09 Tuesday][2021-02-09 Tuesday]]
+** 2021-03 March
+*** 2021-03-04 Thursday
+**** *Préparation évaluation Astro*
+22 mars à partir de 7h30
+- 7h45 présentation unité (FB 35mn + 25mn questions)
+  * 12mn par pilier
+- 8h55 Présentation projet (JMB et AR 25mn + 20mn questions)
+- 10h05 échanges avec scientifiques (sauf DUs)
+- 10h40 échanges avec techniciens et administratifs
+- 11h20 échanges avec personnels non permanents (doctorants, CDD,
+  stagiaires)
+- 11h55 entretiens avec DUs
+- fin 12h25
+*** 2021-03-23 Tuesday
+**** *Recyclage SST*
+- risque = exposition à un danger (le danger est toujours là, pas le risque)
+- si une personne se sent mal au travail, systématiquement appeler le médecin du SAMU avant de décider quoi que ce soit
+- dégagement d'urgence : si victime est visible, si danger non contrôlable, immédiat, vital
+- malaise : quel âge ? antécédents ? quelle douleur et où ? prend un traitement ?
+- blessure à l'abdomen : allonger la victime et lui relever les jambes...
+- blessure au thorax : mettre la personne en position demi-assise
+- problème respiratoire (asthme...) : mettre la personne en position demi-assise, la calmer, éloigner les personnes autour
+- en cas d'attaque terroriste : composer le 114 (numéro pour malentendants, mais c'est un service de textos qui permet de rester
+  silencieux)
+***
+*** 2021-03-25 Thursday
+**** *Commission applications et sites web*
+- HA : mission de la commission = identifier les besoins partagés
+  entre unités et les prioriser
+- Francianne Nuissier :
+  + présentation de la commission : pourquoi / objectifs / modalités
+    de fonctionnement
+  + rôles : maître d'ouvrage -> comité de pilotage
+  + zoom sur les projets :
+    * site web != application web
+    * sites web administratifs du centre :
+      - annuaire
+      - cantine
+      - GRR
+      - intranet
+    * applications scientifiques Centre
+      - adventices
+      - collections
+      - DGIS
+      - Herbier
+      - Labcollector
+      - Olga V1
+      - Olga V3
+      - Portail InterTROP
+      - TransFAIRE
+      - Vonvon
+  + comment continuer à gérer tous ces sites ? -> temps consacré par F
+    Nuissier à chaque projet
+    * TransFAIRE : environ 1200 accès par mois, intérêt à faire une
+      refonte pour meilleure fronctionnalité et mieux pouvoir en
+      extraire des informations et statistiques
+    * TransFAIRE + Cantine : besoin urgent car bientôt version
+      incompatibles avec mises à jour au niveau serveur -> refaire de zéro
+    * il faudrait un CDD d'environ 7 mois (Astro + SDAR + Centre)
+      niveau AI (minimum)/IE
+    * en parallèle, essayer d emonter un proejt pour obtenir des financements
+  + organisation :
+    * fréquence des réunions ?
+    * quel rôle des membres ?
+    * devons recenser tous les sites et applications même si certains
+      sont pris en charge localement ?
+*** 2021-03-30 Tuesday
+**** *Réunion Pôle inforamtique/modélisation/données*
+- JMB doit faire un courrier au PC pour nommer SG représentant d'Astro
+  dans la comission informatique du Centre
+- discussion sur possibilité de convertir quota MOO Astro en CDD AI ou
+  IE
+- Pôle :
+  + composition : PRI + Thierry Bajazet + François Causeret + Loïc
+    Guindé + Franciane Nuissier + Antoine + Jean-Marc
+  + adjoint : Loïc ou Francianne
+  + calendrier :
+    * annonce officielle à l'Unité pour les pôles
+    * proposer une organisation + feuille de route sur l'année aux DU
+      et DUA
+    * puis présenter en CU puis en AG
+  + obtenir un état des lieux des postes : que chaque agent ait un
+    poste, y compris temporaires ; notamment pour consultations / enquêtes
+  + réflexion à avoir sur les PRI
+  + modélisation :
+    * quel rôle aux modèles ? comment expérimenter in silico ?
+  + données
+  + optimisation spatiale
+  
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2021-03-31 Wednesday
+**** *Présentation du MP DIGIT-BIO*
+- retour sur l'enquête : principales compétences des répondants = modélisation, plantes, génétique, bioinfo, statistiques, génomique
+- présentation générales des MP
+  * 2018 : bilan sur les MP de 1ère génération -> vers les MP de 2ème génération
+  * renouvellement du cahier des charges pour simplifier et harmoniser
+    les procédures entre les différents MP
+  * 10 thématiques ont été identifiées en premier lieu
+  * chaque MP est fondé sur un document directeur
+  * types de soutien :
+    + consortia multiacteurs
+    + projets exploratoires
+    + projets emblématiques interdisciplinaires
+    + 1/2 bourses de thèse (1 à 2 / MP / an)
+  * les MP promeuvent les approches systémiques, interdisciplinaires
+    et l'intégration transversale des recherches entre plusieurs départements
+- DIGIT-BIO (C. Caranta + Hervé Monod)
+  * enjeux scientifiques :
+    + explosion quantitative et qualitative des données ; données pour la
+      modélisation et modèles pour expérimentation ; big data -> vers
+      smart data
+    + nouvelles possibilités et méthodes pour l'exploration et
+      l'exploitation des données
+    + nouveau cap franchi dans biologie des systèmes : représentation
+      de plus en plus multiscalaire et multi-dimensionnelle du vivant
+  * postionnement : INRAE 2030 et enjeux sociétaux
+    + OS5 : mobiliser la science des données et les technologies du
+      numérique au service des transitions : caractériser les *réponses
+      adaptatives* des organismes et des populations face au CC...
+    + mobiliser la *biodiversité*
+    + implémenter et optimiser processus biotechno pour *usages efficients et circulaires des ressources*
+    + dvper un *approche globale de la santé*
+    1. recherches cognitives et à visée applicative en biologie,
+     mobilisant les sciences du numérique
+    2. soutien à la communeauté scientifique interdisciplinaire
+    3. pour une recherche au meilleur niveau international
+  * 4 axes de recherche (images)
+  * Positionnement de DIGIT-BIO dans le paysage des MP
+    + s'intéresse aux échelles du vivant peu ou pas prises en compte
+      dans les autres MP (plutôt infra-individu jusqu'à population homogène)
+    + enjeu à moyen terme d'alimenter les autres MP
+    + interactions d'abord avec HOLOFLUX et SYALSA
+    + infrastructures en appui : plateformes, unités expérimentales,
+      CATI
+    + renforcement des partenariats pour une programmation conjointe
+      - national : Inria, CNRS, instituts "3 IA" (à instruire)
+      - international : EMBL-EBI et réseau ELIXIR-EU
+  * Présentation 1 : exemple autour de la biologie du développement
+  * Présentation 2 : exemple autour de la statistique et machine
+    learning pour l'intégration de données de biologie haut débit :
+    transformation via kernels
+  * conclusion :
+    + accompagner mathématisatiopn de la biologie
+    + décloisonner les communautés (règnes/objets, échelles, disciplines)
+    + soutenir recherches avec respect cadre open/fair
+    + ...
+  * animation : série de webinaires sur l'IA, les concepts
+    mathématiques, la représentation /in silico/
+  * workshops
+  * développer la "création collaborative numérique" (ex : hackathons)
+  * accompagner l'émergence et la co-construction de projets (AMI), 2 types
+    d'actions :
+    + consortia interdisciplinaires avec au moins 1 livrable :
+      permettre incubation d'un projet, rédaction d'un article,
+      événement scientifique, participation ou organisation d'un
+      hackathon (10 k€ max)
+    + projets exploratoires : initier un projet potentiellement risqué
+      (50 k€ max, 2 ans max)
+  * critères d'évaluation : adéquation aux objectifs du MP, interdisciplinarité, qualité scientifique,
+    ambitions et perspectives de poursuite post-MP
+   
+    
+
+  
+[[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+** 2021-04 April
+*** 2021-04-15 Thursday
+**** *Forge INRAE*
+- adresse de la forge INRAE : https://forgemia.inra.fr/
+- possibilité de créer des "projets" de différents types :
+  * publics : tout le monde peut y accéder sans autorisation
+  * internes : accès par toute personne inscrire
+  * privés : accès au cas par cas ou par appartenance à un groupe
+- FAQ : https://forgemia.inra.fr/adminforgemia/doc-public/-/wikis/FAQ
+- préconisations :
+  https://datapartage.inrae.fr/Partager-Publier/Cas-particulier-des-logiciels/Preconisation-INRA-pour-l-utilisation-d-une-forge-logicielle
+
+**** *Réunion Viro*
+
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2021-04-30 vendredi
+**** *Réunion projet ECHLORE*
+Caroline Méjean, Hélène Raynal, JM Blazy, S. Guyader
+- modèle Mosaica : tout le territoire peut produire, mais une
+  sous-partie est contaminée par la CLD
+- 
+
+Entered on [2021-04-30 ven. 11:16]
+
+** 2021-05 May
+*** 2021-05-04 Tuesday
+**** *Atelier BIOSEFAIR*
+- Présentation Marc Deconchat : présentation du MP
+  * 3 questions de Biosefaire :
+    + comment interfaces entre milieux et interactions entrze
+      activités influent sur biodiveersité et services écosystémiques ?
+    + quelle dynamique des réseaux de services écosystémiques dans un
+      contexte de changements globaux, et en réponse aux actions de
+      pilotage engagées pour les transitions ?
+    + la santé globale : vers de nouveaux enjeux de la préservation de
+      la biodiversité ?
+- Présentations :
+  * biodiversité dans les forêts et protection contre les bioagresseurs
+  * risques sur la santé humaine et animale liés àl'exposition avec
+    des animaux sauvages des forêts (chevreuils)
+  * pesticides et santé : liens entre BIOSEFAIR et SYSALSA
+  * approche integrative de l'évaluation des produits phytosanitaires mitotoxiques
+  * de l'écotoxicologie à l'agroécotoxicologie
+  * biodiversité et santé mentale
+- Atelier biodiversité / santé végétale B
+  * diversité des traits / diversité systémique
+  
+    [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2021-05-11 mardi
+**** <<<<<<< HEAD
+  [[file:~/Documents/GitHub/guyader-lab-inra/Journal/journal.org::*2021-04%20April][2021-04 April]]
+** 2021-05 mai
+*** 2021-05-11 mardi
+**** *Réunion CUS*
+1. Retour sur l'évaluation à froid
+2. Retour sur le rapport HCERES
+3. 
+
+Entered on [2021-05-11 mar. 13:07]
+  
+  [[file:~/Documents/GitHub/guyader-lab-inra/Journal/journal.org]]
+=======
+    [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+>>>>>>> 3a406d99a628eeb3432af00e034cd47c15b8c648
+
+Entered on [2021-05-11 mar. 18:52]
+  
+  [[file:~/Documents/GitHub/guyader-lab-inra/Journal/journal.org::*2021][2021]]
