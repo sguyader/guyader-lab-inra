@@ -12,10 +12,12 @@ library(cowplot)
 library(directlabels)
 
 data_covid_ts <- covid19(raw=T) %>%
-  filter(date < "2020-12-01") %>%
-  filter(!is.na(iso_alpha_2)) %>%
+  filter(date < "2021-05-01") %>%
   rename(country = administrative_area_level_1) %>%
-  relocate(country, .after = id)
+  relocate(country, .after = id) %>%
+  mutate(confirmed = replace_na(confirmed, 0)) %>%
+  mutate(deaths = replace_na(deaths, 0)) %>%
+  mutate(recovered = replace_na(recovered, 0))
 
 data_covid_ts <- data_covid_ts %>%
   mutate(active_cases=confirmed-deaths-recovered, .after=deaths) %>%
@@ -47,7 +49,7 @@ data_covid_ts <- data_covid_ts %>%
   
   mutate(hosp_per_million = hosp/population*1e6, .after=hosp) %>%
   mutate(auc_hosp_per_million = DescTools::AUC(as.numeric(date),
-         hosp_per_million, method="linear"), .after=hosp_per_million) %>%
+         hosp_per_million, method="linear", na.rm=T), .after=hosp_per_million) %>%
   mutate(vent_per_million = vent/population*1e6, .after=vent) %>%
   mutate(auc_vent_per_million = DescTools::AUC(as.numeric(date),
          vent_per_million, method="linear"), .after=vent_per_million) %>%
@@ -56,7 +58,7 @@ data_covid_ts <- data_covid_ts %>%
          icu_per_million, method="linear"), .after=icu_per_million)
 
 data_covid_end_date <- filter(data_covid_ts, date == max(date) & confirmed > 50)
-write_excel_csv(data_covid_end_date, "data_covid_end_date_30nov2020.csv")
+write_excel_csv(data_covid_end_date, "data_covid_end_date_30avril2021.csv")
 
 # définir le seuil minimum du nombre de cas pour le décompte
 nth_cases <- 50 # you can vary
@@ -138,7 +140,7 @@ colnames(vis_df) <- k
 vis_df <- as.data.frame(vis_df)
 plot(as.numeric(vis_df[4,])~as.numeric(colnames(vis_df)))
 
-index <- 6
+index <- 3
 
 plot(clust_res[[index-(min(k)-1)]], type="series")
 plot(clust_res[[index-(min(k)-1)]], type="series", labels = list(
@@ -188,7 +190,7 @@ ggplot(ggd1, horiz = T) +
 #################################
 ggplot(data = data_covid_ts, aes(x = date, y = deaths/population * 100)) +
   geom_line(aes(color = id)) +
-  geom_dl(aes(label = Country), method = list("last.points", cex = .75, hjust = 1, vjust = 0)) +
+  geom_dl(aes(label = country), method = list("last.points", cex = .75, hjust = 1, vjust = 0)) +
   #scale_y_continuous(# trans="log10") + 
   theme(legend.position = "none") +
   ggtitle("Cas confirmés en % de la population (échelle log)")
