@@ -7,7 +7,7 @@ author: "Sébastien Guyader"
 date: "`r format(Sys.Date(), '%d %B %Y')`"
 output:
   revealjs::revealjs_presentation:
-    theme: default
+    theme: sky
     css: styles/reveal_inrae.css
     includes:
       in_header: header.html
