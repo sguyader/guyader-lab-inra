@@ -1,5 +1,5 @@
 ---
-title: | 
+title: |
   ![](styles/bloc_etat.png){width=2in}  
   <b>Pôle DIM</b>
 subtitle: "Données - Informatique - Modélisation"
@@ -7,17 +7,22 @@ author: "Sébastien Guyader"
 date: "`r format(Sys.Date(), '%d %B %Y')`"
 output:
   revealjs::revealjs_presentation:
-    theme: sky
+    theme: default
     css: styles/reveal_inrae.css
     includes:
       in_header: header.html
     transition: fade
+    fig_width: 7
+    fig_height: 6
+    fig_retina: NULL
     background_transition: default
     center: true
+    disableLayout: true
     reveal_options:
       slideNumber: true
       previewLinks: true
-
+      width: 100%
+      height: 100%
 ---
 
 ```{r setup, include=FALSE}
@@ -26,18 +31,20 @@ knitr::opts_chunk$set(
 	message = FALSE,
 	warning = FALSE,
 	dpi = 300,
-	out.width = "80%",
+	out.height = "60%",
+	out.width = "60%",
 	dev.args=list(bg="transparent")
 )
 ```
 
 ```{r packages}
+library(extrafont)
+loadfonts()
 library(InraeThemes)
 library(dplyr)
 library(ggplot2)
 library(gt)
 ```
-
 
 # Introduction {data-background=#E0FFFF}
 
@@ -70,7 +77,7 @@ Pour plus d'informations sur la personnalisation (transitions, animation des lis
 
 Ci-dessous un graphique avec un thème INRAE :
 
-```{r example, message = FALSE, fig.width = 14, fig.height=8, dpi = 320, out.width = "90%", fig.align = "center"}
+```{r example, message = FALSE, fig.align = "center"}
 library(InraeThemes)
 library(ggplot2)
 
@@ -89,7 +96,7 @@ display <- list(
     scale_color_inrae() +
     scale_shape_manual(values = c(15, 16)) +
     labs(title = "Titre", subtitle = "Sous-titre") +
-    theme_inrae(),
+    theme_inrae(base_family = "Avenir Next LT Pro"),
   
   ggplot(example_datasets$cars, aes_string(x = 'mpg', fill = 'cyl',
                                            colour = 'cyl')) + 
@@ -97,7 +104,7 @@ display <- list(
     scale_fill_inrae() +
     scale_color_inrae() +
     labs(fill = 'Cylinders', colour = 'Cylinders', x = 'MPG', y = 'Density') +
-    theme_inrae(),
+    theme_inrae(base_family = "Avenir Next LT Pro"),
   
   ggplot(example_datasets$dia, aes_string(x = 'price', fill = 'cut')) + 
     geom_histogram(binwidth = 850) + 
@@ -105,13 +112,13 @@ display <- list(
     ylab('Count') + 
     scale_fill_inrae() +
     scale_x_continuous(label = function(x) paste0(x / 1000, 'k'))+
-    theme_inrae(),
+    theme_inrae(base_family = "Avenir Next LT Pro"),
   
   ggplot(example_datasets$drivers, aes_string(x = 'Year', y = 'Deaths',
                                               fill = "Year")) + 
     geom_boxplot(size = 0.25) + 
     ylab('Monthly Deaths') +
-    theme_inrae() +
+    theme_inrae(base_family = "Avenir Next LT Pro") +
     scale_fill_inrae() +
     coord_flip() +
     labs(caption = "Caption") 
@@ -159,7 +166,7 @@ iris %>%
 
 ## Avec affichage du code
 
-```{r echo = TRUE, out.width = "80%", fig.align="center", fig.width = 10, fig.height = 4}
+```{r echo = TRUE, out.width = "20%", fig.align="center", fig.width = 10, fig.height = 4}
 
 # On charge un package
 library(ggplot2)
@@ -170,7 +177,7 @@ ggplot(example_datasets$cars, aes_string(x = 'mpg', fill = 'cyl',
     scale_fill_inrae() +
     scale_color_inrae() +
     labs(fill = 'Cylinders', colour = 'Cylinders', x = 'MPG', y = 'Density') +
-    theme_inrae()
+    theme_inrae(base_family = "Avenir Next LT Pro")
 ```
 
 # Merci de votre attention ! {data-background=#E0FFFF}
