@@ -2880,9 +2880,9 @@ Entered on [2019-12-04 Wed 09:04]
     * devons recenser tous les sites et applications même si certains
       sont pris en charge localement ?
 *** 2021-03-30 Tuesday
-**** *Réunion Pôle inforamtique/modélisation/données*
+**** *Réunion Pôle informatique/modélisation/données*
 - JMB doit faire un courrier au PC pour nommer SG représentant d'Astro
-  dans la comission informatique du Centre
+  dans la commission informatique du Centre
 - discussion sur possibilité de convertir quota MOO Astro en CDD AI ou
   IE
 - Pôle :
@@ -3027,3 +3027,61 @@ Entered on [2021-04-30 ven. 11:16]
   * diversité des traits / diversité systémique
   
     [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2021-05-17 Monday
+**** *Réunion Pôles de fonctionnement Astro*
+- Tour de Pôles :
+  * Biologie :
+    + ~13 agents
+    + éclaircir les objectifs et contours du pôle / animations
+    + mieux anticiper les besoins par les personnes qui prévoient de
+      faire de la BM
+  * Physico-Chimie/Biochimie/Technologie (PCBT) :
+  * Expérimentation végétale :
+    + mieux coordonner les besoins et les moyens humains
+    + réunions par 15aine pour distribuer et planifier le travail
+    + facilité de mise en place du travail par répartition sur plus
+      grand nombre de personnes
+    + difficulté : casser le fonctionnement qui dure depuis au moins
+      20 ans
+    + adjointe préssentie : Yoana Faure
+    + recenser les compétences de chacun (GPEC)
+    + ~10 personnes
+  * Instrumentation :
+    + répondre aux besoins en instrumentation et mesures physiques automatiques
+    + pour : pédologie, agronomie, hydrologie...
+    + ambitions :
+      - tests
+      - dvpt de méthodes
+      - tests sur nvelles technologies (télécommunication, téléaction...)
+    + mission aussi en métrologie
+    + actuellement : 1 CR, 2 AI, 1 TR temps partiel
+    + réunions mensuelles : bilan, information, formation...
+    + priorités : passer la gestion des matériels sous GQlab ; dvpper
+      estimation des incertitudes de mesure ; accélérer transition numérique
+    + harmoniser la budgétisation des achats de matériel et
+      prestations métrologie
+  * MIND :
+    + lancer des enquêtes
+  * Communication-Valorisation-Impact
+    + ojectifs : valoriser personnes et travaux, faire rayonner centre
+      et unité, favoriser cohésion
+    + organisation :
+      - bureau
+      - contribution des agents
+      - sondages
+      - meilleure implication des cadres
+      - service comm Centre
+    + priorités :
+      - communiquer pour fidéliser nos publics cibles
+      - mieux exploiter les outils disponibles
+      - développer de nouveaux outils
+    + difficultés / défis :
+      - plan de communication
+      - maintenir l'adhésion
+    + immobilier et infrastructures :
+      - 2 co-responsables : F. Causeret et P. Bade
+      - priorités :
+        * bien-être au travail
+        * développement durable : optimiser la consommation énergétique
+        * 
+      - 

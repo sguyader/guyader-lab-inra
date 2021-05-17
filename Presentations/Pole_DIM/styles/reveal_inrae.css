@@ -21,20 +21,15 @@ Auteur : David Carayon
   width:50%;
 }
 
-
-<style>
-
 .slide-background:first-child {
-  background-color: #00FF00;
+  background-color: #E0FFFF;
 }
 
 /* Headings */
 
-
-
 .reveal p, ul, li {
   color: #000000;
-  font-family: "Avenir Next Condensed";
+  font-family: "Noto Sans";
 }
 
 /* titres */
