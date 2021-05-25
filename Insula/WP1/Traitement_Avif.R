@@ -25,14 +25,51 @@
 
 # E1 Observation du jeux de donn?es :
 ##Chargement du jeux de donn?es :
-install.packages("vegan")
-install.packages("entropart")
-install.packages("tidyverse")
+library(vegan)
+library(entropart)
+library(tidyverse)
 library(readr)
-setwd("~/Downloads/Insula_data")
-library(readr)
-AVIF <- read_delim("AVIF.csv", ";", escape_double = FALSE, trim_ws = TRUE)
-View(AVIF)
+
+AVIF <- read_delim("WP1/data/AVIF.csv", ";", 
+                   escape_double = FALSE, locale = locale(encoding = "ISO-8859-1"), 
+                   trim_ws = TRUE)
+
+###
+AVIF_table_df <- as.data.frame(table(AVIF$Id_site, AVIF$Nom_sc))
+colnames(AVIF_table_df) <- c("Id_site", "Nom_sc", "Count")
+
+AVIF_matrix <- AVIF_table_df %>% pivot_wider(names_from = Nom_sc, values_from = Count)
+
+AVIF_dist_matrix <- AVIF_matrix %>% select(-Id_site) %>% vegdist(method="jaccard")
+
+AVIF_dist_matrix
+
+tr <- (spantree(AVIF_dist_matrix))
+
+cl <- as.hclust(tr)
+plot(cl)
+
+plot(tr, col = cutree(cl, 5), pch=16)
+
+gp1 <- AVIF_table_df %>% group_by(Id_site)
+
+gp2 <- gp1 %>%
+  summarise(
+    species_name = Nom_sc,
+    count = sum(Count),
+    freq = Count/n())
+gp2
+
+gp3 <- gp2 %>% group_by(Id_site) %>%
+  summarise(
+    Species_richness = n()
+  )
+
+test <- 
+
+###
+
+
 D <-AVIF %>%
   unclass()%>%
   as.data.frame()    # changer le type de facteur
