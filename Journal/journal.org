@@ -3084,4 +3084,28 @@ Entered on [2021-04-30 ven. 11:16]
         * bien-être au travail
         * développement durable : optimiser la consommation énergétique
         * 
-      - 
+      -
+** 2021-06 June
+*** 2021-06-03 Thursday
+**** *Webinaire démonstration connecteur Nextcloud-Dataverse*
+- https://nextcloud.inrae.fr : stockage capacitif + édition de
+  documents
+- bientôt espaces de 100 Go disponibles pour chacun, sur demande
+- connexion par ldap
+- on dépose les données sur nextcloud
+- on téléverse sur datainrae grâce au connecteur data-inrae "bridge"
+- il demande un jeton ("token"), qu'on génère la première fois
+  seulement (valable 1 an)
+- pour le serveur pré-prod, il y a une limite de 5 Go par fichier et
+  une détection des doublons de contenu
+- pour le moment un dataset doit déjà avoir été créé sur le dataverse,
+  mais par la suite on pourra créer un nouveau dataset directement
+  depuis nextcloud
+- pour fichiers > 5Go, il y aura la possibilité de publier un lien sur
+  le dataset
+- version test sur https://nextcloud-pprod.stockage.inrae.fr/
+- alors que nextcloud est utilisable en internet, mais l'environnement pré-rpod
+  data-inrae n'est disponible qu'en intranet/vpn (pour le moment)
+
+  
+  [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
