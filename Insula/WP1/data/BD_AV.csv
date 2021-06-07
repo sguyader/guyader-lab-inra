@@ -1,0 +1,849 @@
+Id_data;Id_site;Etat;biotope;Id_method;Id_ecoute;Regne;Famille;Genre;Espece;Nom_sc;Nom_co;Taxonomic_order;Count;Index
+INSULAAV1;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_001
+INSULAAV2;B0VB;nndegrade;FM;p2;B0VBp2;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_002
+INSULAAV3;B0VB;nndegrade;FM;p3;B0VBp3;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_003
+INSULAAV4;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;2;AV_001
+INSULAAV5;B0VB;nndegrade;FM;p3;B0VBp3;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_003
+INSULAAV6;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;4;AV_001
+INSULAAV7;B0VB;nndegrade;FM;p2;B0VBp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;3;AV_002
+INSULAAV8;B0VB;nndegrade;FM;p3;B0VBp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;4;AV_003
+INSULAAV9;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_001
+INSULAAV10;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_001
+INSULAAV11;B0VB;nndegrade;FM;p2;B0VBp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_002
+INSULAAV12;B0VB;nndegrade;FM;p3;B0VBp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_003
+INSULAAV13;B0VB;nndegrade;FM;p3;B0VBp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_003
+INSULAAV14;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;2;AV_001
+INSULAAV15;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Turdidae;Turdus;nudigenis;Turdus nudigenis;Merle à  lunettes;27419;1;AV_001
+INSULAAV16;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_001
+INSULAAV17;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;2;AV_001
+INSULAAV18;B0VB;nndegrade;FM;p2;B0VBp2;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_002
+INSULAAV19;B0VB;nndegrade;FM;p3;B0VBp3;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_003
+INSULAAV20;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_001
+INSULAAV21;B0VB;nndegrade;FM;p2;B0VBp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_002
+INSULAAV22;B0VB;nndegrade;FM;p3;B0VBp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_003
+INSULAAV23;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_001
+INSULAAV24;B0VB;nndegrade;FM;p2;B0VBp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_002
+INSULAAV25;B0VB;nndegrade;FM;p3;B0VBp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_003
+INSULAAV26;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_001
+INSULAAV27;B0VB;nndegrade;FM;p2;B0VBp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_002
+INSULAAV28;B0VB;nndegrade;FM;p3;B0VBp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_003
+INSULAAV29;B0VB;nndegrade;FM;p1;B0VBp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_001
+INSULAAV30;B0VB;nndegrade;FM;p2;B0VBp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_002
+INSULAAV31;B0VB;nndegrade;FM;p3;B0VBp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_003
+INSULAAV32;B0BA;nndegrade;FM;p1;B0BAp1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_004
+INSULAAV33;B0BA;nndegrade;FM;p2;B0BAp2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_005
+INSULAAV34;B0BA;nndegrade;FM;p3;B0BAp3;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_006
+INSULAAV35;B0BA;nndegrade;FM;p1;B0BAp1;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_004
+INSULAAV36;B0BA;nndegrade;FM;p2;B0BAp2;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_005
+INSULAAV37;B0BA;nndegrade;FM;p1;B0BAp1;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_004
+INSULAAV38;B0BA;nndegrade;FM;p2;B0BAp2;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_005
+INSULAAV39;B0BA;nndegrade;FM;p1;B0BAp1;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_004
+INSULAAV40;B0BA;nndegrade;FM;p2;B0BAp2;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_005
+INSULAAV41;B0BA;nndegrade;FM;p1;B0BAp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;5;AV_004
+INSULAAV42;B0BA;nndegrade;FM;p2;B0BAp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;5;AV_005
+INSULAAV43;B0BA;nndegrade;FM;p3;B0BAp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;5;AV_006
+INSULAAV44;B0BA;nndegrade;FM;p1;B0BAp1;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_004
+INSULAAV45;B0BA;nndegrade;FM;p3;B0BAp3;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_006
+INSULAAV46;B0BA;nndegrade;FM;p1;B0BAp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;3;AV_004
+INSULAAV47;B0BA;nndegrade;FM;p2;B0BAp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;4;AV_005
+INSULAAV48;B0BA;nndegrade;FM;p3;B0BAp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;5;AV_006
+INSULAAV49;B0BA;nndegrade;FM;p3;B0BAp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_006
+INSULAAV50;B0BA;nndegrade;FM;p2;B0BAp2;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_005
+INSULAAV51;B0BA;nndegrade;FM;p3;B0BAp3;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_006
+INSULAAV52;B0BA;nndegrade;FM;p1;B0BAp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_004
+INSULAAV53;B0BA;nndegrade;FM;p2;B0BAp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_005
+INSULAAV54;B0BA;nndegrade;FM;p1;B0BAp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_004
+INSULAAV55;B0BA;nndegrade;FM;p2;B0BAp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_005
+INSULAAV56;B0BA;nndegrade;FM;p3;B0BAp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_006
+INSULAAV57;B0BA;nndegrade;FM;p1;B0BAp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_004
+INSULAAV58;B0BA;nndegrade;FM;p2;B0BAp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;3;AV_005
+INSULAAV59;B0BA;nndegrade;FM;p3;B0BAp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_006
+INSULAAV60;B0BA;nndegrade;FM;p1;B0BAp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;3;AV_004
+INSULAAV61;B0BA;nndegrade;FM;p2;B0BAp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_005
+INSULAAV62;B0BA;nndegrade;FM;p3;B0BAp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;3;AV_006
+INSULAAV63;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Columbidae;Patagioenas;leucocephala;Patagioenas leucocephala;Pigeon à  couronne blanche;1900;1;AV_007
+INSULAAV64;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Columbidae;Patagioenas;leucocephala;Patagioenas leucocephala;Pigeon à  couronne blanche;1900;1;AV_008
+INSULAAV65;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_007
+INSULAAV66;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_008
+INSULAAV67;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_009
+INSULAAV68;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_007
+INSULAAV69;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;2;AV_008
+INSULAAV70;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_009
+INSULAAV71;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_007
+INSULAAV72;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_008
+INSULAAV73;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;2;AV_009
+INSULAAV74;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;1;AV_008
+INSULAAV75;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;1;AV_009
+INSULAAV76;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Rallidae;Gallinula;galeata;Gallinula galeata;Gallinule d'Amérique;5280;1;AV_009
+INSULAAV77;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Scolopacidae;Tringa;solitaria;Tringa solitaria;Chevalier solitaire;5973;1;AV_007
+INSULAAV78;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_007
+INSULAAV79;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_009
+INSULAAV80;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_007
+INSULAAV81;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;3;AV_008
+INSULAAV82;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_009
+INSULAAV83;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_007
+INSULAAV84;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;3;AV_008
+INSULAAV85;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_009
+INSULAAV86;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_007
+INSULAAV87;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_008
+INSULAAV88;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_009
+INSULAAV89;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_008
+INSULAAV90;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_009
+INSULAAV91;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_007
+INSULAAV92;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_008
+INSULAAV93;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;3;AV_009
+INSULAAV94;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_009
+INSULAAV95;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_007
+INSULAAV96;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_008
+INSULAAV97;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;3;AV_007
+INSULAAV98;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_008
+INSULAAV99;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;3;AV_009
+INSULAAV100;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;2;AV_007
+INSULAAV101;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;2;AV_009
+INSULAAV102;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_007
+INSULAAV103;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_008
+INSULAAV104;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_009
+INSULAAV105;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_007
+INSULAAV106;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_009
+INSULAAV107;B0GO;nndegrade;FM;p1;B0GOp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_007
+INSULAAV108;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;2;AV_008
+INSULAAV109;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;2;AV_009
+INSULAAV110;B0GO;nndegrade;FM;p2;B0GOp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_008
+INSULAAV111;B0GO;nndegrade;FM;p3;B0GOp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_009
+INSULAAV112;B0TA;nndegrade;FM;p1;B0TAp1;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_010
+INSULAAV113;B0TA;nndegrade;FM;p2;B0TAp2;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_011
+INSULAAV114;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;2;AV_012
+INSULAAV115;B0TA;nndegrade;FM;p1;B0TAp1;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_010
+INSULAAV116;B0TA;nndegrade;FM;p1;B0TAp1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_010
+INSULAAV117;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_012
+INSULAAV118;B0TA;nndegrade;FM;p1;B0TAp1;Animalia;Trochilidae;Eulampis;holosericeus;Eulampis holosericeus;Colibri falle-vert;4269;1;AV_010
+INSULAAV119;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Rallidae;Gallinula;galeata;Gallinula galeata;Gallinule d'Amérique;5280;1;AV_012
+INSULAAV120;B0TA;nndegrade;FM;p2;B0TAp2;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_011
+INSULAAV121;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_012
+INSULAAV122;B0TA;nndegrade;FM;p2;B0TAp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_011
+INSULAAV123;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_012
+INSULAAV124;B0TA;nndegrade;FM;p1;B0TAp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_010
+INSULAAV125;B0TA;nndegrade;FM;p2;B0TAp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_011
+INSULAAV126;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_012
+INSULAAV127;B0TA;nndegrade;FM;p1;B0TAp1;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_010
+INSULAAV128;B0TA;nndegrade;FM;p2;B0TAp2;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;2;AV_011
+INSULAAV129;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_012
+INSULAAV130;B0TA;nndegrade;FM;p1;B0TAp1;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;1;AV_010
+INSULAAV131;B0TA;nndegrade;FM;p2;B0TAp2;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;1;AV_011
+INSULAAV132;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;1;AV_012
+INSULAAV133;B0TA;nndegrade;FM;p2;B0TAp2;Animalia;Turdidae;Turdus;nudigenis;Turdus nudigenis;Merle à  lunettes;27419;1;AV_011
+INSULAAV134;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Turdidae;Turdus;nudigenis;Turdus nudigenis;Merle à  lunettes;27419;1;AV_012
+INSULAAV135;B0TA;nndegrade;FM;p1;B0TAp1;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_010
+INSULAAV136;B0TA;nndegrade;FM;p2;B0TAp2;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_011
+INSULAAV137;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_012
+INSULAAV138;B0TA;nndegrade;FM;p1;B0TAp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_010
+INSULAAV139;B0TA;nndegrade;FM;p2;B0TAp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_011
+INSULAAV140;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_012
+INSULAAV141;B0TA;nndegrade;FM;p1;B0TAp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;3;AV_010
+INSULAAV142;B0TA;nndegrade;FM;p2;B0TAp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_011
+INSULAAV143;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_012
+INSULAAV144;B0TA;nndegrade;FM;p3;B0TAp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_012
+INSULAAV145;B0LA;nndegrade;FM;p1;B0LAp1;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_013
+INSULAAV146;B0LA;nndegrade;FM;p2;B0LAp2;Animalia;Trochilidae;Eulampis;holosericeus;Eulampis holosericeus;Colibri falle-vert;4269;1;AV_014
+INSULAAV147;B0LA;nndegrade;FM;p1;B0LAp1;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_013
+INSULAAV148;B0LA;nndegrade;FM;p3;B0LAp3;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_015
+INSULAAV149;B0LA;nndegrade;FM;p1;B0LAp1;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_013
+INSULAAV150;B0LA;nndegrade;FM;p2;B0LAp2;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_014
+INSULAAV151;B0LA;nndegrade;FM;p3;B0LAp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_015
+INSULAAV152;B0LA;nndegrade;FM;p1;B0LAp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_013
+INSULAAV153;B0LA;nndegrade;FM;p2;B0LAp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;4;AV_014
+INSULAAV154;B0LA;nndegrade;FM;p2;B0LAp2;Animalia;Parulidae;Parkesia;noveboracensis;Parkesia noveboracensis;Paruline des ruisseaux;32673;1;AV_014
+INSULAAV155;B0LA;nndegrade;FM;p3;B0LAp3;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;2;AV_015
+INSULAAV156;B0LA;nndegrade;FM;p1;B0LAp1;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_013
+INSULAAV157;B0LA;nndegrade;FM;p2;B0LAp2;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;2;AV_014
+INSULAAV158;B0LA;nndegrade;FM;p3;B0LAp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_015
+INSULAAV159;B0LA;nndegrade;FM;p1;B0LAp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_013
+INSULAAV160;B0LA;nndegrade;FM;p2;B0LAp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_014
+INSULAAV161;B0LA;nndegrade;FM;p3;B0LAp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_015
+INSULAAV162;B0LA;nndegrade;FM;p1;B0LAp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_013
+INSULAAV163;B0LA;nndegrade;FM;p2;B0LAp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_014
+INSULAAV164;B0LA;nndegrade;FM;p3;B0LAp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_015
+INSULAAV165;B0LA;nndegrade;FM;p1;B0LAp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_013
+INSULAAV166;B0LA;nndegrade;FM;p2;B0LAp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_014
+INSULAAV167;B0BP;nndegrade;FM;p1;B0BPp1;Animalia;Columbidae;Patagioenas;leucocephala;Patagioenas leucocephala;Pigeon à  couronne blanche;1900;1;AV_016
+INSULAAV168;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Columbidae;Patagioenas;leucocephala;Patagioenas leucocephala;Pigeon à  couronne blanche;1900;1;AV_017
+INSULAAV169;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_018
+INSULAAV170;B0BP;nndegrade;FM;p1;B0BPp1;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_016
+INSULAAV171;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;2;AV_017
+INSULAAV172;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_017
+INSULAAV173;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_018
+INSULAAV174;B0BP;nndegrade;FM;p1;B0BPp1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_016
+INSULAAV175;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;2;AV_017
+INSULAAV176;B0BP;nndegrade;FM;p1;B0BPp1;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;1;AV_016
+INSULAAV177;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;4;AV_018
+INSULAAV178;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_017
+INSULAAV179;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_018
+INSULAAV180;B0BP;nndegrade;FM;p1;B0BPp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_016
+INSULAAV181;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_017
+INSULAAV182;B0BP;nndegrade;FM;p1;B0BPp1;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_016
+INSULAAV183;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_018
+INSULAAV184;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_017
+INSULAAV185;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_018
+INSULAAV186;B0BP;nndegrade;FM;p1;B0BPp1;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_016
+INSULAAV187;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;1;AV_018
+INSULAAV188;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_018
+INSULAAV189;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;2;AV_017
+INSULAAV190;B0BP;nndegrade;FM;p1;B0BPp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_016
+INSULAAV191;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_017
+INSULAAV192;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_018
+INSULAAV193;B0BP;nndegrade;FM;p1;B0BPp1;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;2;AV_016
+INSULAAV194;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;3;AV_017
+INSULAAV195;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_018
+INSULAAV196;B0BP;nndegrade;FM;p1;B0BPp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_016
+INSULAAV197;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_017
+INSULAAV198;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_018
+INSULAAV199;B0BP;nndegrade;FM;p1;B0BPp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;2;AV_016
+INSULAAV200;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;2;AV_017
+INSULAAV201;B0BP;nndegrade;FM;p3;B0BPp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_018
+INSULAAV202;B0BP;nndegrade;FM;p2;B0BPp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_017
+INSULAAV203;B1BPR;degrade;FM;p1;B1BPRp1;Animalia;Columbidae;Streptopelia;decaocto;Streptopelia decaocto;Tourterelle turque;1968;1;AV_019
+INSULAAV204;B1BPR;degrade;FM;p2;B1BPRp2;Animalia;Columbidae;Streptopelia;decaocto;Streptopelia decaocto;Tourterelle turque;1968;2;AV_020
+INSULAAV205;B1BPR;degrade;FM;p2;B1BPRp2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_020
+INSULAAV206;B1BPR;degrade;FM;p1;B1BPRp1;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;1;AV_019
+INSULAAV207;B1BPR;degrade;FM;p3;B1BPRp3;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;2;AV_021
+INSULAAV208;B1BPR;degrade;FM;p2;B1BPRp2;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;1;AV_020
+INSULAAV209;B1BPR;degrade;FM;p2;B1BPRp2;Animalia;Falconidae;Falco;sparverius;Falco sparverius;Crécerelle d'Amérique;11407;2;AV_020
+INSULAAV210;B1BPR;degrade;FM;p1;B1BPRp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;5;AV_019
+INSULAAV211;B1BPR;degrade;FM;p3;B1BPRp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_021
+INSULAAV212;B1BPR;degrade;FM;p2;B1BPRp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_020
+INSULAAV213;B1BPR;degrade;FM;p3;B1BPRp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;1;AV_021
+INSULAAV214;B1BPR;degrade;FM;p2;B1BPRp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;1;AV_020
+INSULAAV215;B1BPR;degrade;FM;p1;B1BPRp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_019
+INSULAAV216;B1BPR;degrade;FM;p3;B1BPRp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_021
+INSULAAV217;B1BPR;degrade;FM;p2;B1BPRp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_020
+INSULAAV218;B1BPR;degrade;FM;p1;B1BPRp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_019
+INSULAAV219;B1BPR;degrade;FM;p3;B1BPRp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_021
+INSULAAV220;B1BPR;degrade;FM;p2;B1BPRp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_020
+INSULAAV221;B1BP;degrade;FM;p1;B1BPp1;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_022
+INSULAAV222;B1BP;degrade;FM;p2;B1BPp2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_023
+INSULAAV223;B1BP;degrade;FM;p3;B1BPp3;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_024
+INSULAAV224;B1BP;degrade;FM;p3;B1BPp3;Animalia;Trochilidae;Eulampis;holosericeus;Eulampis holosericeus;Colibri falle-vert;4269;1;AV_024
+INSULAAV225;B1BP;degrade;FM;p1;B1BPp1;Animalia;Ardeidae;Egretta;thula;Egretta thula;Aigrette neigeuse;7152;1;AV_022
+INSULAAV226;B1BP;degrade;FM;p1;B1BPp1;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;3;AV_022
+INSULAAV227;B1BP;degrade;FM;p2;B1BPp2;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_023
+INSULAAV228;B1BP;degrade;FM;p3;B1BPp3;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_024
+INSULAAV229;B1BP;degrade;FM;p1;B1BPp1;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_022
+INSULAAV230;B1BP;degrade;FM;p2;B1BPp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_023
+INSULAAV231;B1BP;degrade;FM;p3;B1BPp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_024
+INSULAAV232;B1BP;degrade;FM;p1;B1BPp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_022
+INSULAAV233;B1BP;degrade;FM;p2;B1BPp2;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_023
+INSULAAV234;B1BP;degrade;FM;p3;B1BPp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;2;AV_024
+INSULAAV235;B1BP;degrade;FM;p2;B1BPp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_023
+INSULAAV236;B1BP;degrade;FM;p3;B1BPp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;7;AV_024
+INSULAAV237;B1BP;degrade;FM;p1;B1BPp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_022
+INSULAAV238;B1BP;degrade;FM;p2;B1BPp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_023
+INSULAAV239;B1BP;degrade;FM;p3;B1BPp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_024
+INSULAAV240;B1BP;degrade;FM;p1;B1BPp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_022
+INSULAAV241;B1BP;degrade;FM;p2;B1BPp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_023
+INSULAAV242;B1BP;degrade;FM;p1;B1BPp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_022
+INSULAAV243;B1BP;degrade;FM;p3;B1BPp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_024
+INSULAAV244;B1BP;degrade;FM;p1;B1BPp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_022
+INSULAAV245;B1BP;degrade;FM;p1;B1BPp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_022
+INSULAAV246;B1GO;degrade;FM;p1;B1GOp1;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;2;AV_025
+INSULAAV247;B1GO;degrade;FM;p2;B1GOp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_026
+INSULAAV248;B1GO;degrade;FM;p3;B1GOp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_027
+INSULAAV249;B1GO;degrade;FM;p1;B1GOp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_025
+INSULAAV250;B1GO;degrade;FM;p2;B1GOp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_026
+INSULAAV251;B1GO;degrade;FM;p3;B1GOp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_027
+INSULAAV252;B1GO;degrade;FM;p2;B1GOp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_026
+INSULAAV253;B1GO;degrade;FM;p3;B1GOp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_027
+INSULAAV254;B1GO;degrade;FM;p1;B1GOp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_025
+INSULAAV255;B1PI;degrade;FM;p1;B1PIp1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_028
+INSULAAV256;B1PI;degrade;FM;p2;B1PIp2;Animalia;Ardeidae;Ardea;alba;Ardea alba;Grande Aigrette;7124;1;AV_029
+INSULAAV257;B1PI;degrade;FM;p3;B1PIp3;Animalia;Ardeidae;Ardea;alba;Ardea alba;Grande Aigrette;7124;1;AV_030
+INSULAAV258;B1PI;degrade;FM;p2;B1PIp2;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;1;AV_029
+INSULAAV259;B1PI;degrade;FM;p3;B1PIp3;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;1;AV_030
+INSULAAV260;B1PI;degrade;FM;p2;B1PIp2;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_029
+INSULAAV261;B1PI;degrade;FM;p3;B1PIp3;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_030
+INSULAAV262;B1PI;degrade;FM;p1;B1PIp1;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_028
+INSULAAV263;B1PI;degrade;FM;p3;B1PIp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_030
+INSULAAV264;B1PI;degrade;FM;p1;B1PIp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_028
+INSULAAV265;B1PI;degrade;FM;p2;B1PIp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_029
+INSULAAV266;B1PI;degrade;FM;p3;B1PIp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_030
+INSULAAV267;B1PI;degrade;FM;p1;B1PIp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_028
+INSULAAV268;B1PI;degrade;FM;p1;B1PIp1;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_028
+INSULAAV269;B1PI;degrade;FM;p2;B1PIp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_029
+INSULAAV270;B1PI;degrade;FM;p3;B1PIp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;4;AV_030
+INSULAAV271;B1PI;degrade;FM;p1;B1PIp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;4;AV_028
+INSULAAV272;B1PI;degrade;FM;p2;B1PIp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_029
+INSULAAV273;B1PI;degrade;FM;p3;B1PIp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_030
+INSULAAV274;B1PI;degrade;FM;p1;B1PIp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_028
+INSULAAV275;B1PI;degrade;FM;p2;B1PIp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_029
+INSULAAV276;B1PI;degrade;FM;p3;B1PIp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_030
+INSULAAV277;B1PI;degrade;FM;p1;B1PIp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_028
+INSULAAV278;B1PI;degrade;FM;p2;B1PIp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_029
+INSULAAV279;B1PI;degrade;FM;p3;B1PIp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_030
+INSULAAV280;B1RO;degrade;FM;p1;B1ROp1;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_031
+INSULAAV281;B1RO;degrade;FM;p2;B1ROp2;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_032
+INSULAAV282;B1RO;degrade;FM;p3;B1ROp3;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;2;AV_033
+INSULAAV283;B1RO;degrade;FM;p1;B1ROp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_031
+INSULAAV284;B1RO;degrade;FM;p2;B1ROp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_032
+INSULAAV285;B1RO;degrade;FM;p3;B1ROp3;Animalia;Estrildidae;Lonchura;punctulata;Lonchura punctulata;Capucin damier;30145;1;AV_033
+INSULAAV286;B1RO;degrade;FM;p2;B1ROp2;Animalia;Icteridae;Molothrus;bonariensis;Molothrus bonariensis;Vacher luisant;32541;2;AV_032
+INSULAAV287;B1RO;degrade;FM;p3;B1ROp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_033
+INSULAAV288;B1RO;degrade;FM;p1;B1ROp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_031
+INSULAAV289;B1RO;degrade;FM;p2;B1ROp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;3;AV_032
+INSULAAV290;B1RO;degrade;FM;p3;B1ROp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_033
+INSULAAV291;B1RO;degrade;FM;p1;B1ROp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;3;AV_031
+INSULAAV292;B1RO;degrade;FM;p2;B1ROp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;3;AV_032
+INSULAAV293;B1RO;degrade;FM;p3;B1ROp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;3;AV_033
+INSULAAV294;B1RO;degrade;FM;p1;B1ROp1;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_031
+INSULAAV295;B1RO;degrade;FM;p2;B1ROp2;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;2;AV_032
+INSULAAV296;B1RO;degrade;FM;p3;B1ROp3;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_033
+INSULAAV297;B1RO;degrade;FM;p1;B1ROp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_031
+INSULAAV298;B1MA;degrade;FM;p1;B1MAp1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_034
+INSULAAV299;B1MA;degrade;FM;p2;B1MAp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_035
+INSULAAV300;B1MA;degrade;FM;p3;B1MAp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_036
+INSULAAV301;B1MA;degrade;FM;p1;B1MAp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_034
+INSULAAV302;B1MA;degrade;FM;p2;B1MAp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_035
+INSULAAV303;B1MA;degrade;FM;p3;B1MAp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_036
+INSULAAV304;B1MA;degrade;FM;p1;B1MAp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_034
+INSULAAV305;B1MA;degrade;FM;p3;B1MAp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_036
+INSULAAV306;B1MA;degrade;FM;p1;B1MAp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_034
+INSULAAV307;B1MA;degrade;FM;p2;B1MAp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;3;AV_035
+INSULAAV308;B1MA;degrade;FM;p3;B1MAp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_036
+INSULAAV309;B1MA;degrade;FM;p1;B1MAp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_034
+INSULAAV310;B1MA;degrade;FM;p2;B1MAp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_035
+INSULAAV311;B1MA;degrade;FM;p2;B1MAp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_035
+INSULAAV312;C0BA;nndegrade;M;p1;C0BAp1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_037
+INSULAAV313;C0BA;nndegrade;M;p2;C0BAp2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_038
+INSULAAV314;C0BA;nndegrade;M;p3;C0BAp3;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_039
+INSULAAV315;C0BA;nndegrade;M;p1;C0BAp1;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_037
+INSULAAV316;C0BA;nndegrade;M;p1;C0BAp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_037
+INSULAAV317;C0BA;nndegrade;M;p2;C0BAp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_038
+INSULAAV318;C0BA;nndegrade;M;p3;C0BAp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_039
+INSULAAV319;C0BA;nndegrade;M;p1;C0BAp1;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_037
+INSULAAV320;C0BA;nndegrade;M;p2;C0BAp2;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_038
+INSULAAV321;C0BA;nndegrade;M;p3;C0BAp3;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;2;AV_039
+INSULAAV322;C0BA;nndegrade;M;p1;C0BAp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_037
+INSULAAV323;C0BA;nndegrade;M;p2;C0BAp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_038
+INSULAAV324;C0BA;nndegrade;M;p3;C0BAp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_039
+INSULAAV325;C0BA;nndegrade;M;p1;C0BAp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_037
+INSULAAV326;C0BA;nndegrade;M;p2;C0BAp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_038
+INSULAAV327;C0BA;nndegrade;M;p3;C0BAp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_039
+INSULAAV328;C0BA;nndegrade;M;p1;C0BAp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_037
+INSULAAV329;C0BA;nndegrade;M;p2;C0BAp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_038
+INSULAAV330;C0BA;nndegrade;M;p3;C0BAp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_039
+INSULAAV331;C0BA;nndegrade;M;p1;C0BAp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_037
+INSULAAV332;C0BA;nndegrade;M;p2;C0BAp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_038
+INSULAAV333;C0BA;nndegrade;M;p3;C0BAp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_039
+INSULAAV334;C0BA;nndegrade;M;p1;C0BAp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;3;AV_037
+INSULAAV335;C0BA;nndegrade;M;p3;C0BAp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_039
+INSULAAV336;C0PO;nndegrade;M;p1;C0POp1;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_040
+INSULAAV337;C0PO;nndegrade;M;p1;C0POp1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_040
+INSULAAV338;C0PO;nndegrade;M;p2;C0POp2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;2;AV_041
+INSULAAV339;C0PO;nndegrade;M;p3;C0POp3;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_042
+INSULAAV340;C0PO;nndegrade;M;p3;C0POp3;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_042
+INSULAAV341;C0PO;nndegrade;M;p1;C0POp1;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_040
+INSULAAV342;C0PO;nndegrade;M;p3;C0POp3;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;2;AV_042
+INSULAAV343;C0PO;nndegrade;M;p1;C0POp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_040
+INSULAAV344;C0PO;nndegrade;M;p2;C0POp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;3;AV_041
+INSULAAV345;C0PO;nndegrade;M;p3;C0POp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_042
+INSULAAV346;C0PO;nndegrade;M;p1;C0POp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_040
+INSULAAV347;C0PO;nndegrade;M;p2;C0POp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_041
+INSULAAV348;C0PO;nndegrade;M;p3;C0POp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_042
+INSULAAV349;C0PO;nndegrade;M;p1;C0POp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;1;AV_040
+INSULAAV350;C0PO;nndegrade;M;p2;C0POp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;1;AV_041
+INSULAAV351;C0PO;nndegrade;M;p3;C0POp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;1;AV_042
+INSULAAV352;C0PO;nndegrade;M;p3;C0POp3;Animalia;Parulidae;Parkesia;noveboracensis;Parkesia noveboracensis;Paruline des ruisseaux;32673;1;AV_042
+INSULAAV353;C0PO;nndegrade;M;p1;C0POp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_040
+INSULAAV354;C0PO;nndegrade;M;p2;C0POp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;5;AV_041
+INSULAAV355;C0PO;nndegrade;M;p3;C0POp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;3;AV_042
+INSULAAV356;C0PO;nndegrade;M;p1;C0POp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_040
+INSULAAV357;C0PO;nndegrade;M;p2;C0POp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_041
+INSULAAV358;C0PO;nndegrade;M;p3;C0POp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;3;AV_042
+INSULAAV359;C0PO;nndegrade;M;p1;C0POp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_040
+INSULAAV360;C0PO;nndegrade;M;p2;C0POp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_041
+INSULAAV361;C0PO;nndegrade;M;p3;C0POp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;2;AV_042
+INSULAAV362;C0PO;nndegrade;M;p2;C0POp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_041
+INSULAAV363;C0PO;nndegrade;M;p3;C0POp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_042
+INSULAAV364;C0BT;nndegrade;M;p1;C0BTp1;Animalia;Columbidae;Patagioenas;leucocephala;Patagioenas leucocephala;Pigeon à  couronne blanche;1900;1;AV_043
+INSULAAV365;C0BT;nndegrade;M;p1;C0BTp1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_043
+INSULAAV366;C0BT;nndegrade;M;p2;C0BTp2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_044
+INSULAAV367;C0BT;nndegrade;M;p1;C0BTp1;Animalia;Scolopacidae;Actitis;macularius;Actitis macularius;Chevalier grivelé;5970;1;AV_043
+INSULAAV368;C0BT;nndegrade;M;p2;C0BTp2;Animalia;Scolopacidae;Actitis;macularius;Actitis macularius;Chevalier grivelé;5970;1;AV_044
+INSULAAV369;C0BT;nndegrade;M;p2;C0BTp2;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_044
+INSULAAV370;C0BT;nndegrade;M;p1;C0BTp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_043
+INSULAAV371;C0BT;nndegrade;M;p2;C0BTp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_044
+INSULAAV372;C0BT;nndegrade;M;p3;C0BTp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_045
+INSULAAV373;C0BT;nndegrade;M;p1;C0BTp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_043
+INSULAAV374;C0BT;nndegrade;M;p2;C0BTp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_044
+INSULAAV375;C0BT;nndegrade;M;p3;C0BTp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_045
+INSULAAV376;C0BT;nndegrade;M;p1;C0BTp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_043
+INSULAAV377;C0BT;nndegrade;M;p1;C0BTp1;Animalia;Hirundinidae;Progne;dominicensis;Progne dominicensis;Hirondelle à  ventre blanc;23058;1;AV_043
+INSULAAV378;C0BT;nndegrade;M;p1;C0BTp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_043
+INSULAAV379;C0BT;nndegrade;M;p2;C0BTp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;4;AV_044
+INSULAAV380;C0BT;nndegrade;M;p3;C0BTp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;4;AV_045
+INSULAAV381;C0BT;nndegrade;M;p3;C0BTp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_045
+INSULAAV382;C0BI;nndegrade;M;p1;C0BIp1;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;3;AV_046
+INSULAAV383;C0BI;nndegrade;M;p2;C0BIp2;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;3;AV_047
+INSULAAV384;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;2;AV_048
+INSULAAV385;C0BI;nndegrade;M;p1;C0BIp1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;3;AV_046
+INSULAAV386;C0BI;nndegrade;M;p2;C0BIp2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;3;AV_047
+INSULAAV387;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;3;AV_048
+INSULAAV388;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Fregatidae;Fregata;magnificens;Fregata magnificens;Frégate superbe;6903;1;AV_048
+INSULAAV389;C0BI;nndegrade;M;p1;C0BIp1;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_046
+INSULAAV390;C0BI;nndegrade;M;p2;C0BIp2;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_047
+INSULAAV391;C0BI;nndegrade;M;p1;C0BIp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_046
+INSULAAV392;C0BI;nndegrade;M;p2;C0BIp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_047
+INSULAAV393;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_048
+INSULAAV394;C0BI;nndegrade;M;p1;C0BIp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;3;AV_046
+INSULAAV395;C0BI;nndegrade;M;p2;C0BIp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_047
+INSULAAV396;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_048
+INSULAAV397;C0BI;nndegrade;M;p1;C0BIp1;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;2;AV_046
+INSULAAV398;C0BI;nndegrade;M;p2;C0BIp2;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_047
+INSULAAV399;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_048
+INSULAAV400;C0BI;nndegrade;M;p1;C0BIp1;Animalia;Icteridae;Molothrus;bonariensis;Molothrus bonariensis;Vacher luisant;32541;2;AV_046
+INSULAAV401;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Icteridae;Molothrus;bonariensis;Molothrus bonariensis;Vacher luisant;32541;1;AV_048
+INSULAAV402;C0BI;nndegrade;M;p2;C0BIp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;3;AV_047
+INSULAAV403;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;3;AV_048
+INSULAAV404;C0BI;nndegrade;M;p1;C0BIp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;4;AV_046
+INSULAAV405;C0BI;nndegrade;M;p2;C0BIp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_047
+INSULAAV406;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_048
+INSULAAV407;C0BI;nndegrade;M;p1;C0BIp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;3;AV_046
+INSULAAV408;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_048
+INSULAAV409;C0BI;nndegrade;M;p1;C0BIp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_046
+INSULAAV410;C0BI;nndegrade;M;p2;C0BIp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;3;AV_047
+INSULAAV411;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;3;AV_048
+INSULAAV412;C0BI;nndegrade;M;p1;C0BIp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_046
+INSULAAV413;C0BI;nndegrade;M;p2;C0BIp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_047
+INSULAAV414;C0BI;nndegrade;M;p3;C0BIp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_048
+INSULAAV415;C0BC;nndegrade;M;p1;C0BCp1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;3;AV_049
+INSULAAV416;C0BC;nndegrade;M;p2;C0BCp2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;3;AV_050
+INSULAAV417;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;2;AV_051
+INSULAAV418;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;2;AV_051
+INSULAAV419;C0BC;nndegrade;M;p1;C0BCp1;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;2;AV_049
+INSULAAV420;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;2;AV_051
+INSULAAV421;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_051
+INSULAAV422;C0BC;nndegrade;M;p1;C0BCp1;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_049
+INSULAAV423;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;2;AV_051
+INSULAAV424;C0BC;nndegrade;M;p1;C0BCp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_049
+INSULAAV425;C0BC;nndegrade;M;p2;C0BCp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_050
+INSULAAV426;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_051
+INSULAAV427;C0BC;nndegrade;M;p2;C0BCp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_050
+INSULAAV428;C0BC;nndegrade;M;p2;C0BCp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_050
+INSULAAV429;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_051
+INSULAAV430;C0BC;nndegrade;M;p1;C0BCp1;Animalia;Hirundinidae;Hirundo;rustica;Hirundo rustica;Hirondelle rustique;23153;5;AV_049
+INSULAAV431;C0BC;nndegrade;M;p2;C0BCp2;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_050
+INSULAAV432;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Turdidae;Turdus;nudigenis;Turdus nudigenis;Merle à  lunettes;27419;1;AV_051
+INSULAAV433;C0BC;nndegrade;M;p1;C0BCp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;1;AV_049
+INSULAAV434;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;1;AV_051
+INSULAAV435;C0BC;nndegrade;M;p1;C0BCp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;3;AV_049
+INSULAAV436;C0BC;nndegrade;M;p2;C0BCp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_050
+INSULAAV437;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_051
+INSULAAV438;C0BC;nndegrade;M;p1;C0BCp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_049
+INSULAAV439;C0BC;nndegrade;M;p2;C0BCp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_050
+INSULAAV440;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_051
+INSULAAV441;C0BC;nndegrade;M;p1;C0BCp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;4;AV_049
+INSULAAV442;C0BC;nndegrade;M;p2;C0BCp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_050
+INSULAAV443;C0BC;nndegrade;M;p3;C0BCp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_051
+INSULAAV444;C0ME;nndegrade;M;p1;C0MEp1;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_052
+INSULAAV445;C0ME;nndegrade;M;p2;C0MEp2;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_053
+INSULAAV446;C0ME;nndegrade;M;p3;C0MEp3;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_054
+INSULAAV447;C0ME;nndegrade;M;p2;C0MEp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_053
+INSULAAV448;C0ME;nndegrade;M;p3;C0MEp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_054
+INSULAAV449;C0ME;nndegrade;M;p1;C0MEp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_052
+INSULAAV450;C0ME;nndegrade;M;p1;C0MEp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_052
+INSULAAV451;C0ME;nndegrade;M;p2;C0MEp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_053
+INSULAAV452;C0ME;nndegrade;M;p3;C0MEp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;4;AV_054
+INSULAAV453;C0ME;nndegrade;M;p1;C0MEp1;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_052
+INSULAAV454;C0ME;nndegrade;M;p1;C0MEp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;4;AV_052
+INSULAAV455;C0ME;nndegrade;M;p2;C0MEp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;5;AV_053
+INSULAAV456;C0ME;nndegrade;M;p3;C0MEp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;5;AV_054
+INSULAAV457;C0ME;nndegrade;M;p1;C0MEp1;Animalia;Parulidae;Setophaga;ruticilla;Setophaga ruticilla;Paruline flamboyante;32773;1;AV_052
+INSULAAV458;C0ME;nndegrade;M;p2;C0MEp2;Animalia;Parulidae;Setophaga;ruticilla;Setophaga ruticilla;Paruline flamboyante;32773;1;AV_053
+INSULAAV459;C0ME;nndegrade;M;p3;C0MEp3;Animalia;Parulidae;Setophaga;ruticilla;Setophaga ruticilla;Paruline flamboyante;32773;1;AV_054
+INSULAAV460;C0ME;nndegrade;M;p1;C0MEp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_052
+INSULAAV461;C0ME;nndegrade;M;p2;C0MEp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_053
+INSULAAV462;C0ME;nndegrade;M;p1;C0MEp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_052
+INSULAAV463;C0ME;nndegrade;M;p2;C0MEp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_053
+INSULAAV464;C0ME;nndegrade;M;p3;C0MEp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;3;AV_054
+INSULAAV465;C0ME;nndegrade;M;p2;C0MEp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_053
+INSULAAV466;C0ME;nndegrade;M;p3;C0MEp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_054
+INSULAAV467;C0ME;nndegrade;M;p1;C0MEp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_052
+INSULAAV468;C0ME;nndegrade;M;p2;C0MEp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;4;AV_053
+INSULAAV469;C0ME;nndegrade;M;p3;C0MEp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_054
+INSULAAV470;C1PO;degrade;M;p1;C1POp1;Animalia;Trochilidae;Eulampis;holosericeus;Eulampis holosericeus;Colibri falle-vert;4269;1;AV_055
+INSULAAV471;C1PO;degrade;M;p2;C1POp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_056
+INSULAAV472;C1PO;degrade;M;p1;C1POp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;3;AV_055
+INSULAAV473;C1PO;degrade;M;p3;C1POp3;Animalia;Hirundinidae;Progne;dominicensis;Progne dominicensis;Hirondelle à  ventre blanc;23058;1;AV_057
+INSULAAV474;C1PO;degrade;M;p3;C1POp3;Animalia;Mimidae;Mimus;gilvus;Mimus gilvus;Moqueur des savanes;27010;1;AV_057
+INSULAAV475;C1PO;degrade;M;p2;C1POp2;Animalia;Mimidae;Mimus;gilvus;Mimus gilvus;Moqueur des savanes;27010;1;AV_056
+INSULAAV476;C1PO;degrade;M;p3;C1POp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_057
+INSULAAV477;C1PO;degrade;M;p2;C1POp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;5;AV_056
+INSULAAV478;C1PO;degrade;M;p1;C1POp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_055
+INSULAAV479;C1PO;degrade;M;p3;C1POp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_057
+INSULAAV480;C1PO;degrade;M;p2;C1POp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_056
+INSULAAV481;C1PO;degrade;M;p1;C1POp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;3;AV_055
+INSULAAV482;C1PO;degrade;M;p3;C1POp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_057
+INSULAAV483;C1PO;degrade;M;p2;C1POp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_056
+INSULAAV484;C1PO;degrade;M;p1;C1POp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_055
+INSULAAV485;C1PO;degrade;M;p3;C1POp3;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_057
+INSULAAV486;C1PO;degrade;M;p2;C1POp2;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_056
+INSULAAV487;C1GS1;degrade;M;p1;C1GS1p1;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_058
+INSULAAV488;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_059
+INSULAAV489;C1GS1;degrade;M;p3;C1GS1p3;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;2;AV_060
+INSULAAV490;C1GS1;degrade;M;p1;C1GS1p1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;2;AV_058
+INSULAAV491;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;2;AV_059
+INSULAAV492;C1GS1;degrade;M;p3;C1GS1p3;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_060
+INSULAAV493;C1GS1;degrade;M;p1;C1GS1p1;Animalia;Trochilidae;Eulampis;holosericeus;Eulampis holosericeus;Colibri falle-vert;4269;1;AV_058
+INSULAAV494;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Trochilidae;Eulampis;holosericeus;Eulampis holosericeus;Colibri falle-vert;4269;1;AV_059
+INSULAAV495;C1GS1;degrade;M;p1;C1GS1p1;Animalia;Ardeidae;Ixobrychus;exilis;Ixobrychus exilis;Petit Blongios;7073;1;AV_058
+INSULAAV496;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;1;AV_059
+INSULAAV497;C1GS1;degrade;M;p1;C1GS1p1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_058
+INSULAAV498;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_059
+INSULAAV499;C1GS1;degrade;M;p3;C1GS1p3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;3;AV_060
+INSULAAV500;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;3;AV_059
+INSULAAV501;C1GS1;degrade;M;p3;C1GS1p3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_060
+INSULAAV502;C1GS1;degrade;M;p1;C1GS1p1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_058
+INSULAAV503;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_059
+INSULAAV504;C1GS1;degrade;M;p3;C1GS1p3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;5;AV_060
+INSULAAV505;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_059
+INSULAAV506;C1GS1;degrade;M;p3;C1GS1p3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_060
+INSULAAV507;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Mimidae;Mimus;gilvus;Mimus gilvus;Moqueur des savanes;27010;1;AV_059
+INSULAAV508;C1GS1;degrade;M;p3;C1GS1p3;Animalia;Mimidae;Mimus;gilvus;Mimus gilvus;Moqueur des savanes;27010;1;AV_060
+INSULAAV509;C1GS1;degrade;M;p1;C1GS1p1;Animalia;Turdidae;Turdus;nudigenis;Turdus nudigenis;Merle à  lunettes;27419;1;AV_058
+INSULAAV510;C1GS1;degrade;M;p3;C1GS1p3;Animalia;Turdidae;Turdus;nudigenis;Turdus nudigenis;Merle à  lunettes;27419;1;AV_060
+INSULAAV511;C1GS1;degrade;M;p1;C1GS1p1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;9;AV_058
+INSULAAV512;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;5;AV_059
+INSULAAV513;C1GS1;degrade;M;p3;C1GS1p3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;3;AV_060
+INSULAAV514;C1GS1;degrade;M;p1;C1GS1p1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_058
+INSULAAV515;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_059
+INSULAAV516;C1GS1;degrade;M;p3;C1GS1p3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_060
+INSULAAV517;C1GS1;degrade;M;p1;C1GS1p1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_058
+INSULAAV518;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_059
+INSULAAV519;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_059
+INSULAAV520;C1GS1;degrade;M;p1;C1GS1p1;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_058
+INSULAAV521;C1GS1;degrade;M;p2;C1GS1p2;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_059
+INSULAAV522;C1GS1;degrade;M;p3;C1GS1p3;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_060
+INSULAAV523;C1GS2;degrade;M;p1;C1GS2p1;Animalia;Columbidae;Columbina;passerina;Columbina passerina;Colombe à  queue noire;2176;1;AV_061
+INSULAAV524;C1GS2;degrade;M;p2;C1GS2p2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_062
+INSULAAV525;C1GS2;degrade;M;p1;C1GS2p1;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;2;AV_061
+INSULAAV526;C1GS2;degrade;M;p2;C1GS2p2;Animalia;Scolopacidae;Actitis;macularius;Actitis macularius;Chevalier grivelé;5970;1;AV_062
+INSULAAV527;C1GS2;degrade;M;p3;C1GS2p3;Animalia;Ardeidae;Ixobrychus;exilis;Ixobrychus exilis;Petit Blongios;7073;1;AV_063
+INSULAAV528;C1GS2;degrade;M;p2;C1GS2p2;Animalia;Ardeidae;Ixobrychus;exilis;Ixobrychus exilis;Petit Blongios;7073;1;AV_062
+INSULAAV529;C1GS2;degrade;M;p3;C1GS2p3;Animalia;Ardeidae;Egretta;thula;Egretta thula;Aigrette neigeuse;7152;1;AV_063
+INSULAAV530;C1GS2;degrade;M;p3;C1GS2p3;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;2;AV_063
+INSULAAV531;C1GS2;degrade;M;p2;C1GS2p2;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_062
+INSULAAV532;C1GS2;degrade;M;p1;C1GS2p1;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_061
+INSULAAV533;C1GS2;degrade;M;p3;C1GS2p3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_063
+INSULAAV534;C1GS2;degrade;M;p3;C1GS2p3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_063
+INSULAAV535;C1GS2;degrade;M;p2;C1GS2p2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_062
+INSULAAV536;C1GS2;degrade;M;p1;C1GS2p1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_061
+INSULAAV537;C1GS2;degrade;M;p3;C1GS2p3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_063
+INSULAAV538;C1GS2;degrade;M;p2;C1GS2p2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_062
+INSULAAV539;C1GS2;degrade;M;p1;C1GS2p1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_061
+INSULAAV540;C1GS2;degrade;M;p3;C1GS2p3;Animalia;Mimidae;Mimus;gilvus;Mimus gilvus;Moqueur des savanes;27010;2;AV_063
+INSULAAV541;C1GS2;degrade;M;p1;C1GS2p1;Animalia;Mimidae;Mimus;gilvus;Mimus gilvus;Moqueur des savanes;27010;1;AV_061
+INSULAAV542;C1GS2;degrade;M;p3;C1GS2p3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;3;AV_063
+INSULAAV543;C1GS2;degrade;M;p2;C1GS2p2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;8;AV_062
+INSULAAV544;C1GS2;degrade;M;p1;C1GS2p1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;7;AV_061
+INSULAAV545;C1GS2;degrade;M;p3;C1GS2p3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_063
+INSULAAV546;C1GS2;degrade;M;p2;C1GS2p2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_062
+INSULAAV547;C1GS2;degrade;M;p1;C1GS2p1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_061
+INSULAAV548;C1GS2;degrade;M;p2;C1GS2p2;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_062
+INSULAAV549;C1GS2;degrade;M;p1;C1GS2p1;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_061
+INSULAAV550;C1PS;degrade;M;p1;C1PSp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_064
+INSULAAV551;C1PS;degrade;M;p2;C1PSp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_065
+INSULAAV552;C1PS;degrade;M;p3;C1PSp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_066
+INSULAAV553;C1PS;degrade;M;p2;C1PSp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_065
+INSULAAV554;C1PS;degrade;M;p3;C1PSp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_066
+INSULAAV555;C1GB;degrade;M;p1;C1GBp1;Animalia;Columbidae;Streptopelia;decaocto;Streptopelia decaocto;Tourterelle turque;1968;1;AV_067
+INSULAAV556;C1GB;degrade;M;p2;C1GBp2;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;1;AV_068
+INSULAAV557;C1GB;degrade;M;p3;C1GBp3;Animalia;Columbidae;Zenaida;aurita;Zenaida aurita;Tourterelle à  queue carrée;2320;2;AV_069
+INSULAAV558;C1GB;degrade;M;p2;C1GBp2;Animalia;Rallidae;Gallinula;galeata;Gallinula galeata;Gallinule d'Amérique;5280;2;AV_068
+INSULAAV559;C1GB;degrade;M;p3;C1GBp3;Animalia;Rallidae;Gallinula;galeata;Gallinula galeata;Gallinule d'Amérique;5280;1;AV_069
+INSULAAV560;C1GB;degrade;M;p1;C1GBp1;Animalia;Recurvirostridae;Himantopus;mexicanus;Himantopus mexicanus;Echasse d'Amérique;5577;15;AV_067
+INSULAAV561;C1GB;degrade;M;p2;C1GBp2;Animalia;Recurvirostridae;Himantopus;mexicanus;Himantopus mexicanus;Echasse d'Amérique;5577;17;AV_068
+INSULAAV562;C1GB;degrade;M;p3;C1GBp3;Animalia;Recurvirostridae;Himantopus;mexicanus;Himantopus mexicanus;Echasse d'Amérique;5577;13;AV_069
+INSULAAV563;C1GB;degrade;M;p2;C1GBp2;Animalia;Scolopacidae;Calidris;minutilla;Calidris minutilla;Bécasseau minuscule;5892;1;AV_068
+INSULAAV564;C1GB;degrade;M;p1;C1GBp1;Animalia;Scolopacidae;Calidris;pusilla;Calidris pusilla;Bécasseau semipalmé;5900;15;AV_067
+INSULAAV565;C1GB;degrade;M;p3;C1GBp3;Animalia;Scolopacidae;Calidris;pusilla;Calidris pusilla;Bécasseau semipalmé;5900;10;AV_069
+INSULAAV566;C1GB;degrade;M;p1;C1GBp1;Animalia;Scolopacidae;Actitis;macularius;Actitis macularius;Chevalier grivelé;5970;2;AV_067
+INSULAAV567;C1GB;degrade;M;p2;C1GBp2;Animalia;Scolopacidae;Actitis;macularius;Actitis macularius;Chevalier grivelé;5970;2;AV_068
+INSULAAV568;C1GB;degrade;M;p3;C1GBp3;Animalia;Scolopacidae;Actitis;macularius;Actitis macularius;Chevalier grivelé;5970;3;AV_069
+INSULAAV569;C1GB;degrade;M;p1;C1GBp1;Animalia;Scolopacidae;Tringa;melanoleuca;Tringa melanoleuca;Grand Chevalier;5980;1;AV_067
+INSULAAV570;C1GB;degrade;M;p1;C1GBp1;Animalia;Scolopacidae;Tringa;flavipes;Tringa flavipes;Petit Chevalier;5987;1;AV_067
+INSULAAV571;C1GB;degrade;M;p3;C1GBp3;Animalia;Scolopacidae;Tringa;flavipes;Tringa flavipes;Petit Chevalier;5987;1;AV_069
+INSULAAV572;C1GB;degrade;M;p2;C1GBp2;Animalia;Pelecanidae;Pelecanus;occidentalis;Pelecanus occidentalis;Pélican brun;7030;1;AV_068
+INSULAAV573;C1GB;degrade;M;p3;C1GBp3;Animalia;Ardeidae;Ixobrychus;exilis;Ixobrychus exilis;Petit Blongios;7073;2;AV_069
+INSULAAV574;C1GB;degrade;M;p1;C1GBp1;Animalia;Ardeidae;Egretta;thula;Egretta thula;Aigrette neigeuse;7152;1;AV_067
+INSULAAV575;C1GB;degrade;M;p2;C1GBp2;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;1;AV_068
+INSULAAV576;C1GB;degrade;M;p3;C1GBp3;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;1;AV_069
+INSULAAV577;C1GB;degrade;M;p2;C1GBp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_068
+INSULAAV578;C1GB;degrade;M;p3;C1GBp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_069
+INSULAAV579;C1GB;degrade;M;p1;C1GBp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_067
+INSULAAV580;C1GB;degrade;M;p2;C1GBp2;Animalia;Icteridae;Molothrus;bonariensis;Molothrus bonariensis;Vacher luisant;32541;1;AV_068
+INSULAAV581;C1GB;degrade;M;p1;C1GBp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_067
+INSULAAV582;C1GB;degrade;M;p2;C1GBp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_068
+INSULAAV583;C1GB;degrade;M;p1;C1GBp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_067
+INSULAAV584;C1GB;degrade;M;p2;C1GBp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_068
+INSULAAV585;C1GB;degrade;M;p3;C1GBp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_069
+INSULAAV586;C1GB;degrade;M;p1;C1GBp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_067
+INSULAAV587;C1GB;degrade;M;p2;C1GBp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_068
+INSULAAV588;C1GB;degrade;M;p3;C1GBp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_069
+INSULAAV589;C1GB;degrade;M;p1;C1GBp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_067
+INSULAAV590;C1GB;degrade;M;p2;C1GBp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_068
+INSULAAV591;C1GB;degrade;M;p3;C1GBp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_069
+INSULAAV592;C1SF;degrade;M;p1;C1SFp1;Animalia;Columbidae;Streptopelia;decaocto;Streptopelia decaocto;Tourterelle turque;1968;1;AV_070
+INSULAAV593;C1SF;degrade;M;p1;C1SFp1;Animalia;Rallidae;Gallinula;galeata;Gallinula galeata;Gallinule d'Amérique;5280;1;AV_070
+INSULAAV594;C1SF;degrade;M;p2;C1SFp2;Animalia;Rallidae;Gallinula;galeata;Gallinula galeata;Gallinule d'Amérique;5280;2;AV_071
+INSULAAV595;C1SF;degrade;M;p1;C1SFp1;Animalia;Ardeidae;Egretta;thula;Egretta thula;Aigrette neigeuse;7152;1;AV_070
+INSULAAV596;C1SF;degrade;M;p3;C1SFp3;Animalia;Ardeidae;Egretta;thula;Egretta thula;Aigrette neigeuse;7152;1;AV_072
+INSULAAV597;C1SF;degrade;M;p2;C1SFp2;Animalia;Ardeidae;Egretta;thula;Egretta thula;Aigrette neigeuse;7152;1;AV_071
+INSULAAV598;C1SF;degrade;M;p1;C1SFp1;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_070
+INSULAAV599;C1SF;degrade;M;p3;C1SFp3;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_072
+INSULAAV600;C1SF;degrade;M;p2;C1SFp2;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;3;AV_071
+INSULAAV601;C1SF;degrade;M;p1;C1SFp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;3;AV_070
+INSULAAV602;C1SF;degrade;M;p3;C1SFp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_072
+INSULAAV603;C1SF;degrade;M;p2;C1SFp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_071
+INSULAAV604;C1SF;degrade;M;p1;C1SFp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;3;AV_070
+INSULAAV605;C1SF;degrade;M;p3;C1SFp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;5;AV_072
+INSULAAV606;C1SF;degrade;M;p2;C1SFp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_071
+INSULAAV607;C1SF;degrade;M;p1;C1SFp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;3;AV_070
+INSULAAV608;C1SF;degrade;M;p3;C1SFp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_072
+INSULAAV609;C1SF;degrade;M;p2;C1SFp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_071
+INSULAAV610;C1SF;degrade;M;p2;C1SFp2;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_071
+INSULAAV611;C1SF;degrade;M;p1;C1SFp1;Animalia;Icteridae;Molothrus;bonariensis;Molothrus bonariensis;Vacher luisant;32541;1;AV_070
+INSULAAV612;C1SF;degrade;M;p1;C1SFp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;12;AV_070
+INSULAAV613;C1SF;degrade;M;p3;C1SFp3;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;12;AV_072
+INSULAAV614;C1SF;degrade;M;p2;C1SFp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;15;AV_071
+INSULAAV615;C1SF;degrade;M;p1;C1SFp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_070
+INSULAAV616;C1SF;degrade;M;p3;C1SFp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;3;AV_072
+INSULAAV617;C1SF;degrade;M;p2;C1SFp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_071
+INSULAAV618;C1SF;degrade;M;p3;C1SFp3;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_072
+INSULAAV619;C1SF;degrade;M;p2;C1SFp2;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_071
+INSULAAV620;A0CH;nndegrade;FTF;p1;A0CHp1;Animalia;Columbidae;Patagioenas;squamosa;Patagioenas squamosa;Pigeon à cou rouge;1892;1;AV_073
+INSULAAV621;A0CH;nndegrade;FTF;p2;A0CHp2;Animalia;Columbidae;Patagioenas;squamosa;Patagioenas squamosa;Pigeon à cou rouge;1892;1;AV_074
+INSULAAV622;A0CH;nndegrade;FTF;p3;A0CHp3;Animalia;Columbidae;Patagioenas;squamosa;Patagioenas squamosa;Pigeon à cou rouge;1892;1;AV_075
+INSULAAV623;A0CH;nndegrade;FTF;p1;A0CHp1;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_073
+INSULAAV624;A0CH;nndegrade;FTF;p2;A0CHp2;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_074
+INSULAAV625;A0CH;nndegrade;FTF;p3;A0CHp3;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_075
+INSULAAV626;A0CH;nndegrade;FTF;p1;A0CHp1;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;2;AV_073
+INSULAAV627;A0CH;nndegrade;FTF;p2;A0CHp2;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;1;AV_074
+INSULAAV628;A0CH;nndegrade;FTF;p3;A0CHp3;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;2;AV_075
+INSULAAV629;A0CH;nndegrade;FTF;p1;A0CHp1;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_073
+INSULAAV630;A0CH;nndegrade;FTF;p2;A0CHp2;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_074
+INSULAAV631;A0CH;nndegrade;FTF;p3;A0CHp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_075
+INSULAAV632;A0CH;nndegrade;FTF;p1;A0CHp1;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;3;AV_073
+INSULAAV633;A0CH;nndegrade;FTF;p2;A0CHp2;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;4;AV_074
+INSULAAV634;A0CH;nndegrade;FTF;p3;A0CHp3;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;2;AV_075
+INSULAAV635;A0CH;nndegrade;FTF;p1;A0CHp1;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;2;AV_073
+INSULAAV636;A0CH;nndegrade;FTF;p2;A0CHp2;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;1;AV_074
+INSULAAV637;A0CH;nndegrade;FTF;p3;A0CHp3;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;1;AV_075
+INSULAAV638;A0CH;nndegrade;FTF;p1;A0CHp1;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;3;AV_073
+INSULAAV639;A0CH;nndegrade;FTF;p2;A0CHp2;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;3;AV_074
+INSULAAV640;A0CH;nndegrade;FTF;p3;A0CHp3;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_075
+INSULAAV641;A0CH;nndegrade;FTF;p3;A0CHp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_075
+INSULAAV642;A0TA;nndegrade;FTF;p1;A0TAp1;Animalia;Apodidae;Chaetura;martinica;Chaetura martinica;Martinet chiquesol;3792;1;AV_076
+INSULAAV643;A0TA;nndegrade;FTF;p2;A0TAp2;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;1;AV_077
+INSULAAV644;A0TA;nndegrade;FTF;p3;A0TAp3;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_078
+INSULAAV645;A0TA;nndegrade;FTF;p2;A0TAp2;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_077
+INSULAAV646;A0TA;nndegrade;FTF;p2;A0TAp2;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_077
+INSULAAV647;A0TA;nndegrade;FTF;p3;A0TAp3;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;3;AV_078
+INSULAAV648;A0TA;nndegrade;FTF;p1;A0TAp1;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;3;AV_076
+INSULAAV649;A0TA;nndegrade;FTF;p2;A0TAp2;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;3;AV_077
+INSULAAV650;A0TA;nndegrade;FTF;p3;A0TAp3;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;1;AV_078
+INSULAAV651;A0TA;nndegrade;FTF;p1;A0TAp1;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_076
+INSULAAV652;A0TA;nndegrade;FTF;p2;A0TAp2;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_077
+INSULAAV653;A1TA;degrade;FTF;p1;A1TAp1;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;2;AV_079
+INSULAAV654;A1TA;degrade;FTF;p2;A1TAp2;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_080
+INSULAAV655;A1TA;degrade;FTF;p3;A1TAp3;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;2;AV_081
+INSULAAV656;A1TA;degrade;FTF;p3;A1TAp3;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;1;AV_081
+INSULAAV657;A1TA;degrade;FTF;p1;A1TAp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;3;AV_079
+INSULAAV658;A1TA;degrade;FTF;p2;A1TAp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;4;AV_080
+INSULAAV659;A1TA;degrade;FTF;p3;A1TAp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;5;AV_081
+INSULAAV660;A1TA;degrade;FTF;p1;A1TAp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;1;AV_079
+INSULAAV661;A1TA;degrade;FTF;p1;A1TAp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_079
+INSULAAV662;A1TA;degrade;FTF;p2;A1TAp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_080
+INSULAAV663;A1TA;degrade;FTF;p3;A1TAp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;3;AV_081
+INSULAAV664;A1TA;degrade;FTF;p1;A1TAp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_079
+INSULAAV665;A1TA;degrade;FTF;p2;A1TAp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_080
+INSULAAV666;A1TA;degrade;FTF;p1;A1TAp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;2;AV_079
+INSULAAV667;A1TA;degrade;FTF;p2;A1TAp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;3;AV_080
+INSULAAV668;A1TA;degrade;FTF;p3;A1TAp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;2;AV_081
+INSULAAV669;A1TA;degrade;FTF;p1;A1TAp1;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_079
+INSULAAV670;A1TA;degrade;FTF;p3;A1TAp3;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;2;AV_081
+INSULAAV671;A1CH;degrade;FTF;p1;A1CHp1;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;1;AV_082
+INSULAAV672;A1CH;degrade;FTF;p2;A1CHp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_083
+INSULAAV673;A1CH;degrade;FTF;p1;A1CHp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_082
+INSULAAV674;A1CH;degrade;FTF;p3;A1CHp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_084
+INSULAAV675;A1CH;degrade;FTF;p2;A1CHp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_083
+INSULAAV676;A1CH;degrade;FTF;p1;A1CHp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_082
+INSULAAV677;A1CH;degrade;FTF;p3;A1CHp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_084
+INSULAAV678;A1CH;degrade;FTF;p1;A1CHp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_082
+INSULAAV679;A1CH;degrade;FTF;p3;A1CHp3;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;1;AV_084
+INSULAAV680;A1CH;degrade;FTF;p2;A1CHp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_083
+INSULAAV681;A1CH;degrade;FTF;p1;A1CHp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_082
+INSULAAV682;A1CH;degrade;FTF;p3;A1CHp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_084
+INSULAAV683;A1CH;degrade;FTF;p1;A1CHp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_082
+INSULAAV684;A1CH;degrade;FTF;p3;A1CHp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;3;AV_084
+INSULAAV685;A1CH;degrade;FTF;p2;A1CHp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_083
+INSULAAV686;A1CH;degrade;FTF;p1;A1CHp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_082
+INSULAAV687;A1CH;degrade;FTF;p3;A1CHp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_084
+INSULAAV688;A0ME;nndegrade;FTF;p1;A0MEp1;Animalia;Cuculidae;Coccyzus;minor;Coccyzus minor;Coulicou manioc;3140;1;AV_085
+INSULAAV689;A0ME;nndegrade;FTF;p2;A0MEp2;Animalia;Cuculidae;Coccyzus;minor;Coccyzus minor;Coulicou manioc;3140;1;AV_086
+INSULAAV690;A0ME;nndegrade;FTF;p1;A0MEp1;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;1;AV_085
+INSULAAV691;A0ME;nndegrade;FTF;p1;A0MEp1;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;2;AV_085
+INSULAAV692;A0ME;nndegrade;FTF;p2;A0MEp2;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;3;AV_086
+INSULAAV693;A0ME;nndegrade;FTF;p3;A0MEp3;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;4;AV_087
+INSULAAV694;A0ME;nndegrade;FTF;p1;A0MEp1;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_085
+INSULAAV695;A0ME;nndegrade;FTF;p2;A0MEp2;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_086
+INSULAAV696;A0ME;nndegrade;FTF;p3;A0MEp3;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_087
+INSULAAV697;A0ME;nndegrade;FTF;p1;A0MEp1;Animalia;Tyrannidae;Myiarchus;oberi;Myiarchus oberi;Tyran janeau;16576;1;AV_085
+INSULAAV698;A0ME;nndegrade;FTF;p3;A0MEp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_087
+INSULAAV699;A0ME;nndegrade;FTF;p2;A0MEp2;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;1;AV_086
+INSULAAV700;A0ME;nndegrade;FTF;p3;A0MEp3;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;1;AV_087
+INSULAAV701;A0ME;nndegrade;FTF;p1;A0MEp1;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;2;AV_085
+INSULAAV702;A0ME;nndegrade;FTF;p2;A0MEp2;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;2;AV_086
+INSULAAV703;A0ME;nndegrade;FTF;p3;A0MEp3;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;2;AV_087
+INSULAAV704;A0ME;nndegrade;FTF;p1;A0MEp1;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_085
+INSULAAV705;A0ME;nndegrade;FTF;p2;A0MEp2;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_086
+INSULAAV706;A0ME;nndegrade;FTF;p3;A0MEp3;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_087
+INSULAAV707;A0ME;nndegrade;FTF;p2;A0MEp2;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_086
+INSULAAV708;A0ME;nndegrade;FTF;p3;A0MEp3;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_087
+INSULAAV709;A0MO;nndegrade;FTF;p1;A0MOp1;Animalia;Cuculidae;Coccyzus;minor;Coccyzus minor;Coulicou manioc;3140;1;AV_088
+INSULAAV710;A0MO;nndegrade;FTF;p2;A0MOp2;Animalia;Cuculidae;Coccyzus;minor;Coccyzus minor;Coulicou manioc;3140;1;AV_089
+INSULAAV711;A0MO;nndegrade;FTF;p3;A0MOp3;Animalia;Cuculidae;Coccyzus;minor;Coccyzus minor;Coulicou manioc;3140;1;AV_090
+INSULAAV712;A0MO;nndegrade;FTF;p2;A0MOp2;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;1;AV_089
+INSULAAV713;A0MO;nndegrade;FTF;p3;A0MOp3;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;1;AV_090
+INSULAAV714;A0MO;nndegrade;FTF;p1;A0MOp1;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;2;AV_088
+INSULAAV715;A0MO;nndegrade;FTF;p2;A0MOp2;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;2;AV_089
+INSULAAV716;A0MO;nndegrade;FTF;p3;A0MOp3;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_090
+INSULAAV717;A0MO;nndegrade;FTF;p2;A0MOp2;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;2;AV_089
+INSULAAV718;A0MO;nndegrade;FTF;p1;A0MOp1;Animalia;Tyrannidae;Contopus;latirostris;Contopus latirostris;Moucherolle gobemouche;16158;1;AV_088
+INSULAAV719;A0MO;nndegrade;FTF;p3;A0MOp3;Animalia;Tyrannidae;Myiarchus;oberi;Myiarchus oberi;Tyran janeau;16576;1;AV_090
+INSULAAV720;A0MO;nndegrade;FTF;p1;A0MOp1;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_088
+INSULAAV721;A0MO;nndegrade;FTF;p3;A0MOp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_090
+INSULAAV722;A0MO;nndegrade;FTF;p1;A0MOp1;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;2;AV_088
+INSULAAV723;A0MO;nndegrade;FTF;p2;A0MOp2;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;2;AV_089
+INSULAAV724;A0MO;nndegrade;FTF;p3;A0MOp3;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;2;AV_090
+INSULAAV725;A0MO;nndegrade;FTF;p1;A0MOp1;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;1;AV_088
+INSULAAV726;A0MO;nndegrade;FTF;p2;A0MOp2;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;2;AV_089
+INSULAAV727;A0MO;nndegrade;FTF;p1;A0MOp1;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_088
+INSULAAV728;A0MO;nndegrade;FTF;p1;A0MOp1;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_088
+INSULAAV729;A0MO;nndegrade;FTF;p1;A0MOp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_088
+INSULAAV730;A0MO;nndegrade;FTF;p2;A0MOp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;2;AV_089
+INSULAAV731;A0MO;nndegrade;FTF;p3;A0MOp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_090
+INSULAAV732;A1MO;degrade;FTF;p1;A1MOp1;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_091
+INSULAAV733;A1MO;degrade;FTF;p1;A1MOp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_091
+INSULAAV734;A1MO;degrade;FTF;p2;A1MOp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_092
+INSULAAV735;A1MO;degrade;FTF;p3;A1MOp3;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;1;AV_093
+INSULAAV736;A1MO;degrade;FTF;p1;A1MOp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_091
+INSULAAV737;A1MO;degrade;FTF;p2;A1MOp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_092
+INSULAAV738;A1MO;degrade;FTF;p1;A1MOp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;4;AV_091
+INSULAAV739;A1MO;degrade;FTF;p2;A1MOp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;5;AV_092
+INSULAAV740;A1MO;degrade;FTF;p3;A1MOp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;9;AV_093
+INSULAAV741;A1MO;degrade;FTF;p1;A1MOp1;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_091
+INSULAAV742;A1MO;degrade;FTF;p2;A1MOp2;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;2;AV_092
+INSULAAV743;A1MO;degrade;FTF;p3;A1MOp3;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_093
+INSULAAV744;A1ME;degrade;FTF;p1;A1MEp1;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;1;AV_094
+INSULAAV745;A1ME;degrade;FTF;p2;A1MEp2;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;1;AV_095
+INSULAAV746;A1ME;degrade;FTF;p3;A1MEp3;Animalia;Ardeidae;Bubulcus;ibis;Bubulcus ibis;Héron garde-boeufs;7170;1;AV_096
+INSULAAV747;A1ME;degrade;FTF;p1;A1MEp1;Animalia;Ardeidae;Butorides;virescens;Butorides virescens;Héron vert;7183;1;AV_094
+INSULAAV748;A1ME;degrade;FTF;p1;A1MEp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_094
+INSULAAV749;A1ME;degrade;FTF;p2;A1MEp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;4;AV_095
+INSULAAV750;A1ME;degrade;FTF;p3;A1MEp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;3;AV_096
+INSULAAV751;A1ME;degrade;FTF;p1;A1MEp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_094
+INSULAAV752;A1ME;degrade;FTF;p2;A1MEp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_095
+INSULAAV753;A1ME;degrade;FTF;p3;A1MEp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;2;AV_096
+INSULAAV754;A1ME;degrade;FTF;p2;A1MEp2;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_095
+INSULAAV755;A1ME;degrade;FTF;p3;A1MEp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_096
+INSULAAV756;A1ME;degrade;FTF;p1;A1MEp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;1;AV_094
+INSULAAV757;A1ME;degrade;FTF;p1;A1MEp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_094
+INSULAAV758;A1ME;degrade;FTF;p2;A1MEp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_095
+INSULAAV759;A1ME;degrade;FTF;p3;A1MEp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_096
+INSULAAV760;A1ME;degrade;FTF;p1;A1MEp1;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_094
+INSULAAV761;A1ME;degrade;FTF;p2;A1MEp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_095
+INSULAAV762;A1ME;degrade;FTF;p3;A1MEp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_096
+INSULAAV763;A1ME;degrade;FTF;p1;A1MEp1;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_094
+INSULAAV764;A0TR;nndegrade;FTF;p1;A0TRp1;Animalia;Cuculidae;Coccyzus;minor;Coccyzus minor;Coulicou manioc;3140;1;AV_097
+INSULAAV765;A0TR;nndegrade;FTF;p2;A0TRp2;Animalia;Cuculidae;Coccyzus;minor;Coccyzus minor;Coulicou manioc;3140;2;AV_098
+INSULAAV766;A0TR;nndegrade;FTF;p3;A0TRp3;Animalia;Cuculidae;Coccyzus;minor;Coccyzus minor;Coulicou manioc;3140;2;AV_099
+INSULAAV767;A0TR;nndegrade;FTF;p3;A0TRp3;Animalia;Apodidae;Chaetura;martinica;Chaetura martinica;Martinet chiquesol;3792;4;AV_099
+INSULAAV768;A0TR;nndegrade;FTF;p2;A0TRp2;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_098
+INSULAAV769;A0TR;nndegrade;FTF;p3;A0TRp3;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_099
+INSULAAV770;A0TR;nndegrade;FTF;p1;A0TRp1;Animalia;Trochilidae;Trochilidae;sp.;Trochilidae sp.;Colibri sp.;5038;1;AV_097
+INSULAAV771;A0TR;nndegrade;FTF;p1;A0TRp1;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;2;AV_097
+INSULAAV772;A0TR;nndegrade;FTF;p1;A0TRp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_097
+INSULAAV773;A0TR;nndegrade;FTF;p2;A0TRp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_098
+INSULAAV774;A0TR;nndegrade;FTF;p3;A0TRp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_099
+INSULAAV775;A0TR;nndegrade;FTF;p2;A0TRp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;1;AV_098
+INSULAAV776;A0TR;nndegrade;FTF;p1;A0TRp1;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;3;AV_097
+INSULAAV777;A0TR;nndegrade;FTF;p2;A0TRp2;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_098
+INSULAAV778;A0TR;nndegrade;FTF;p3;A0TRp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;2;AV_099
+INSULAAV779;A0TR;nndegrade;FTF;p1;A0TRp1;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;3;AV_097
+INSULAAV780;A0TR;nndegrade;FTF;p2;A0TRp2;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;2;AV_098
+INSULAAV781;A0TR;nndegrade;FTF;p3;A0TRp3;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;1;AV_099
+INSULAAV782;A0TR;nndegrade;FTF;p3;A0TRp3;Animalia;Mimidae;Cinclocerthia;ruficauda;Cinclocerthia ruficauda;Trembleur brun;26928;1;AV_099
+INSULAAV783;A0TR;nndegrade;FTF;p2;A0TRp2;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_098
+INSULAAV784;A0TR;nndegrade;FTF;p2;A0TRp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_098
+INSULAAV785;A0TR;nndegrade;FTF;p3;A0TRp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_099
+INSULAAV786;A1TR;degrade;FTF;p1;A1TRp1;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;1;AV_100
+INSULAAV787;A1TR;degrade;FTF;p1;A1TRp1;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_100
+INSULAAV788;A1TR;degrade;FTF;p2;A1TRp2;Animalia;Trochilidae;Orthorhyncus;cristatus;Orthorhyncus cristatus;Colibri huppé;4755;1;AV_101
+INSULAAV789;A1TR;degrade;FTF;p3;A1TRp3;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_102
+INSULAAV790;A1TR;degrade;FTF;p3;A1TRp3;Animalia;Falconidae;Falco;sparverius;Falco sparverius;Crécerelle d'Amérique;11407;1;AV_102
+INSULAAV791;A1TR;degrade;FTF;p1;A1TRp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_100
+INSULAAV792;A1TR;degrade;FTF;p3;A1TRp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_102
+INSULAAV793;A1TR;degrade;FTF;p1;A1TRp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_100
+INSULAAV794;A1TR;degrade;FTF;p2;A1TRp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_101
+INSULAAV795;A1TR;degrade;FTF;p3;A1TRp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;2;AV_102
+INSULAAV796;A1TR;degrade;FTF;p3;A1TRp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_102
+INSULAAV797;A1TR;degrade;FTF;p1;A1TRp1;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;2;AV_100
+INSULAAV798;A1TR;degrade;FTF;p2;A1TRp2;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;1;AV_101
+INSULAAV799;A1TR;degrade;FTF;p3;A1TRp3;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;2;AV_102
+INSULAAV800;A1TR;degrade;FTF;p1;A1TRp1;Animalia;Turdidae;Turdus;nudigenis;Turdus nudigenis;Merle à  lunettes;27419;1;AV_100
+INSULAAV801;A1TR;degrade;FTF;p2;A1TRp2;Animalia;Turdidae;Turdus;nudigenis;Turdus nudigenis;Merle à  lunettes;27419;1;AV_101
+INSULAAV802;A1TR;degrade;FTF;p1;A1TRp1;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_100
+INSULAAV803;A1TR;degrade;FTF;p2;A1TRp2;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_101
+INSULAAV804;A1TR;degrade;FTF;p3;A1TRp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;2;AV_102
+INSULAAV805;A1TR;degrade;FTF;p3;A1TRp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_102
+INSULAAV806;A1TR;degrade;FTF;p1;A1TRp1;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;2;AV_100
+INSULAAV807;A1TR;degrade;FTF;p2;A1TRp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_101
+INSULAAV808;A1TR;degrade;FTF;p1;A1TRp1;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_100
+INSULAAV809;A1TR;degrade;FTF;p2;A1TRp2;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;2;AV_101
+INSULAAV810;A1TR;degrade;FTF;p3;A1TRp3;Animalia;Thraupidae;Melanospiza;bicolor;Melanospiza bicolor;Sporophile cici;34372;1;AV_102
+INSULAAV811;A1TR;degrade;FTF;p2;A1TRp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_101
+INSULAAV812;A1TR;degrade;FTF;p3;A1TRp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_102
+INSULAAV813;A0SO;nndegrade;FTF;p1;A0SOp1;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;2;AV_103
+INSULAAV814;A0SO;nndegrade;FTF;p2;A0SOp2;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_104
+INSULAAV815;A0SO;nndegrade;FTF;p3;A0SOp3;Animalia;Columbidae;Geotrygon;mystacea;Geotrygon mystacea;Colombe à  croissants;2250;1;AV_105
+INSULAAV816;A0SO;nndegrade;FTF;p3;A0SOp3;Animalia;Trochilidae;Eulampis;jugularis;Eulampis jugularis;Colibri madère;4268;1;AV_105
+INSULAAV817;A0SO;nndegrade;FTF;p3;A0SOp3;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;2;AV_105
+INSULAAV818;A0SO;nndegrade;FTF;p3;A0SOp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_105
+INSULAAV819;A0SO;nndegrade;FTF;p1;A0SOp1;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;3;AV_103
+INSULAAV820;A0SO;nndegrade;FTF;p2;A0SOp2;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;3;AV_104
+INSULAAV821;A0SO;nndegrade;FTF;p3;A0SOp3;Animalia;Mimidae;Margarops;fuscatus;Margarops fuscatus;Moqueur corossol;26922;3;AV_105
+INSULAAV822;A0SO;nndegrade;FTF;p1;A0SOp1;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;2;AV_103
+INSULAAV823;A0SO;nndegrade;FTF;p3;A0SOp3;Animalia;Turdidae;Turdus;lherminieri;Turdus lherminieri;Grive à  pieds jaunes;27450;1;AV_105
+INSULAAV824;A0SO;nndegrade;FTF;p3;A0SOp3;Animalia;Parulidae;Setophaga;plumbea;Setophaga plumbea;Paruline caféiette;32769;1;AV_105
+INSULAAV825;A0SO;nndegrade;FTF;p3;A0SOp3;Animalia;Parulidae;Setophaga;ruticilla;Setophaga ruticilla;Paruline flamboyante;32773;1;AV_105
+INSULAAV826;A1SO;degrade;FTF;p1;A1SOp1;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_106
+INSULAAV827;A1SO;degrade;FTF;p2;A1SOp2;Animalia;Picidae;Melanerpes;herminieri;Melanerpes herminieri;Pic de Guadeloupe;10565;1;AV_107
+INSULAAV828;A1SO;degrade;FTF;p1;A1SOp1;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;1;AV_106
+INSULAAV829;A1SO;degrade;FTF;p2;A1SOp2;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_107
+INSULAAV830;A1SO;degrade;FTF;p3;A1SOp3;Animalia;Tyrannidae;Elaenia;martinica;Elaenia martinica;Elénie siffleuse;15958;2;AV_108
+INSULAAV831;A1SO;degrade;FTF;p1;A1SOp1;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;3;AV_106
+INSULAAV832;A1SO;degrade;FTF;p2;A1SOp2;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;3;AV_107
+INSULAAV833;A1SO;degrade;FTF;p3;A1SOp3;Animalia;Tyrannidae;Tyrannus;dominicensis;Tyrannus dominicensis;Tyran gris;16693;3;AV_108
+INSULAAV834;A1SO;degrade;FTF;p1;A1SOp1;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_106
+INSULAAV835;A1SO;degrade;FTF;p2;A1SOp2;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_107
+INSULAAV836;A1SO;degrade;FTF;p3;A1SOp3;Animalia;Vireonidae;Vireo;altiloquus;Vireo altiloquus;Viréo à  moustaches;18439;1;AV_108
+INSULAAV837;A1SO;degrade;FTF;p2;A1SOp2;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_107
+INSULAAV838;A1SO;degrade;FTF;p3;A1SOp3;Animalia;Mimidae;Allenia;fusca;Allenia fusca;Moqueur grivotte;26916;1;AV_108
+INSULAAV839;A1SO;degrade;FTF;p1;A1SOp1;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;2;AV_106
+INSULAAV840;A1SO;degrade;FTF;p2;A1SOp2;Animalia;Icteridae;Quiscalus;lugubris;Quiscalus lugubris;Quiscale merle;32612;1;AV_107
+INSULAAV841;A1SO;degrade;FTF;p3;A1SOp3;Animalia;Parulidae;Setophaga;petechia;Setophaga petechia;Paruline jaune;32798;1;AV_108
+INSULAAV842;A1SO;degrade;FTF;p2;A1SOp2;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_107
+INSULAAV843;A1SO;degrade;FTF;p3;A1SOp3;Animalia;Thraupidae;Coereba;flaveola;Coereba flaveola;Sucrier à  ventre jaune;34294;1;AV_108
+INSULAAV844;A1SO;degrade;FTF;p2;A1SOp2;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_107
+INSULAAV845;A1SO;degrade;FTF;p3;A1SOp3;Animalia;Thraupidae;Loxigilla;noctis;Loxigilla noctis;Sporophile rouge-gorge;34361;1;AV_108
+INSULAAV846;A1SO;degrade;FTF;p1;A1SOp1;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;1;AV_106
+INSULAAV847;A1SO;degrade;FTF;p2;A1SOp2;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_107
+INSULAAV848;A1SO;degrade;FTF;p3;A1SOp3;Animalia;Thraupidae;Saltator;albicollis;Saltator albicollis;Saltator gros-bec;34479;2;AV_108
