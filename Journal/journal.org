@@ -3109,3 +3109,35 @@ Entered on [2021-04-30 ven. 11:16]
 
   
   [[file:~/TRAVAIL/github/guyader-lab-inra/Journal/journal.org]]
+*** 2021-06-07 Monday
+**** *Webinaire référents données*
+Esther Dzalé Yeumo et Eric Cahuzac
+- contexte interne INRAE : engagements science ouverte, chantier
+  gouvernance données -> réseau de correspondants au niveau des dpts
+  en cours de constitution
+- renforcer et mieux identifier pour aller vers principes FAIR
+- plateforme nationale en cours de réfléxion (MESRI)
+- professionalisation de la gestion des données est une étape
+  nécessaire
+- exemples internationaux : Wageningen, U. Cambridge UK (Data
+  Champions, tous métiers dont scientifiques), U. Tech. Delft NL (Data
+  Stewards, scientifiques uniquement)
+- proposition animation :
+  * qui : toute personne motivée par 1 ou plusieurs dimensions, avec
+    accord hiérarchie
+  * le Référent Opérationnel (RO) ne dépend pas de la DipSO, mais
+    ccompagné/formé par elle
+  * rôle du RO : sensibiliser, accompagner, contribuer, interagir
+    (lettre de mission convenue avec hiérarchie)
+  * combien de temps : selon lettre de mission ; prévoir 1
+    rassemblement annuel ou bisannuel en présentiel (2-3 jours max) ;
+    implication dans le réseau sur base du volontariat (relai,
+    pro-actif,...)
+  * reconnaissance : rôle inscrit dans le doc de référence de
+    l'établissement -> lettre de mission
+  * il peut y avoir 1 ou plusieurs RO selon la taille de l'unité
+  * accompagnement : parcours de formation, 1ETP DipSO dédié à
+    l'accompagnement du réseau, aide de la DipSO à la co-construction
+    d'outils et de ressources utiles
+  * parcours de formation à partir de l'automne 2021 (tronc commun +
+    modules à la carte)
