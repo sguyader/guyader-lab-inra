@@ -49,7 +49,6 @@ matrice_a<-matrice_a[,-1]
 View(matrice_a)
 
 
-###### glmmm
 ggplot(data = he, aes(x=id_site, y=qmoy)) +
   geom_boxplot() +
   #geom_jitter() +
@@ -57,15 +56,17 @@ ggplot(data = he, aes(x=id_site, y=qmoy)) +
   facet_grid(.~biotope) +
   theme_bw()
 
+###### cpglmmm
+library(cplm)
 test <- cpglmm(qmoy ~ biotope + (biotope|id_site), data=he)
-test2 <- cpglm(qmoy ~ biotope + (1|biotope:id_site) data=he)
+test2 <- cpglm(qmoy ~ biotope + id_site, data=he)
+anova(test,test2)
 summary(test)
 fixef(test)
 ranef(test)
 
-test[[coefs]]
-
 plot(fitted(test)~test$y)
+plot(fitted(test2)~test2$y)
 plot(resid(test)~fitted(test))
 
 

@@ -44,6 +44,9 @@ summary(test)
 fixef(test)
 ranef(test)
 
+plot(fitted(test)~he$qmoy)
+plot(resid(test)~fitted(test))
+
     ### changer en 1 tout sauf 0 
     #E1'' : Mettre l'abondance  des sp en variable / les sites en données
   
