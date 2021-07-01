@@ -3141,3 +3141,20 @@ Esther Dzalé Yeumo et Eric Cahuzac
     d'outils et de ressources utiles
   * parcours de formation à partir de l'automne 2021 (tronc commun +
     modules à la carte)
+*** 2021-06-18 Friday
+**** *Réunion FEDER Projet One Health*
+- coordination des WP :
+  * WP1 : J.-C. Bambou + S. Breurec
+  * WP2 : A. Vega-Rua + S. Lecollinet
+*WP1*
+- tâche 1.1 : établissement du risque
+- tâche 1.2 : impact du risque
+- tâche 1.3 : gestion du risque
+
+  [[file:~/TRAVAIL/git-repo/guyader-lab-inra/Journal/journal.org]]
+*** 2021-06-24 Thursday
+**** *Réunion CUS*
+- retour sur l'animation scientifique du Thème 1
+- CambioNet :
+  
+  [[file:~/TRAVAIL/git-repo/guyader-lab-inra/Journal/journal.org]]
