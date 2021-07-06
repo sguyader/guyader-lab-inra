@@ -3158,3 +3158,53 @@ Esther Dzalé Yeumo et Eric Cahuzac
 - CambioNet :
   
   [[file:~/TRAVAIL/git-repo/guyader-lab-inra/Journal/journal.org]]
+** 2021-07 July
+*** 2021-07-02 Friday
+**** *Réunion pôle MIND*
+- ODJ :
+  1- rappel du périmètre
+  2- PGD unité
+  3- inventaire besoins postes de travail
+  4- alias CDD astro 
+
+1- Périmètre
+  * personnes invitées :
+    + adjoints : Franciane Nuissier, Francois Causeret, Loïc Guindé
+    + membres : Alfred Venthou-Dumaine, Thierry Bajazet, Yoana Faure,
+      Antoine Richard, Jean-Marc Blazy, Lucienne Desfontaines
+
+  * actions :
+    + gestion du parc informatique : rationaliser, renouveler, couvrir les besoins 
+    + établir un PGD de l’unité : où stocker/centraliser les données ? 
+    + aider les scientifiques à établir des PGDs (projets / équipes) 
+    + cahiers de laboratoire / de notes électroniques 
+    + séminaires / formations / retours d’expérience : autour des données, des méthodes d’analyse… 
+    + “base de données” logiciels libres / équivalents fermés
+
+  * calendrier :
+    + activer la liaison entre le référent données opérationnel et la DipSO
+    + inventaire des ressources dès que possible, puis faire une commande groupée avec financements sur projets
+    + prendre en main l’outil de création de PGD (DMP OPIDoR) dès que
+      possible en appui au PGD du CRB-PT, en parallèle, commencer le PGD Astro (v.1 avant fin de l’année)
+    + débuter le cycle de séminaires/réunions pour septembre ?
+
+2- PGD unité :
+  * faire un sous-groupe de travail (2-3 parsonnes) : se faire la
+      main sur le PGD collection igname ?
+
+3- Postes de travail :
+  * état des lieux ?
+  * montant dispo pour achat groupé :
+    + MALIN 2000€
+    + Insula : 1250€ (+ 650€ vidéoprojecteur)
+
+4- Questions diverses :
+  * recnsement des besoins en stackage de données 
+  * séminaire/animation pour la rentrée ? quel sujet ?
+    
+
+  * data astro : coment filtrer les accès ?
+  * réunion CUS modélisation intégrée ?
+  * une 10zaine de postes obsolètes à remplacer
+  * enquête à faire : agents perso / postes instrumentation
+*** 2021-07-05 Monday
