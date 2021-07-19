@@ -3203,8 +3203,16 @@ Esther Dzalé Yeumo et Eric Cahuzac
   * séminaire/animation pour la rentrée ? quel sujet ?
     
 
-  * data astro : coment filtrer les accès ?
+  * data astro : comment filtrer les accès ?
   * réunion CUS modélisation intégrée ?
   * une 10zaine de postes obsolètes à remplacer
   * enquête à faire : agents perso / postes instrumentation
 *** 2021-07-05 Monday
+*** 2021-07-06 Tuesday
+**** *Conseil d'Unité Astro*
+- présentation des pôles
+  
+  [[file:~/TRAVAIL/git-repo/guyader-lab-inra/Journal/journal.org]]
+*** 2021-07-08 Thursday
+**** *Réunion CUS*
+
